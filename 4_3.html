@@ -135,6 +135,17 @@ var data = {"BMW":[{"age":"18-24","gender":"male","interactions":21600},
 {"age":"65+","gender":"male","interactions":500},
 {"age":"65+","gender":"female","interactions":-200}]};
 
+
+var data_2= []
+d3.csv("https://raw.githubusercontent.com/guidovalla/dataviz/main/data/USA_counted_trees.csv", function(data) {
+  for ( i in data ) {
+    marker_2.push( {long:data[i].long, lat:data[i].lat, count:data[i].count, city:data[i].city} )
+  }
+  //erase the last element of the array
+  marker_2.pop()
+  console.log("marker2", marker_2)
+})
+
 for (var i in data) {
   var chart = tornadoChart()
   d3.select("#example")
