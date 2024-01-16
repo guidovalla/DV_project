@@ -1,4 +1,4 @@
-Entity,Code,Year,Life expectancy - Sex: all - Age: at birth - Variant: estimates,"GDP per capita, PPP (constant 2017 international $)",Population (historical estimates),Continent
+Entity,Code,Year,Lifeexpectancy,GDPpercapita,Population,Continent
 Abkhazia,OWID_ABK,2015,,,,Asia
 Afghanistan,AFG,1950,27.7,,7480464,
 Afghanistan,AFG,1951,28,,7571542,
