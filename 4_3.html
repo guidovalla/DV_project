@@ -27,22 +27,9 @@ text {
   stroke-width: 0.3px;
   stroke-opacity: 0.3;
 }
-text.chart-title {
-  font-size: 14px;
-  font-weight: bold;
-  fill:#222222
-}
 text.chart-label {
   font-size: 10px;
   font-weight: 400;
-  fill: #999999;
-}
-text.chart-source {
-  font-size: 8px;
-  fill: #999999;
-}
-text.copyright {
-  font-size: 8px;
   fill: #999999;
 }
 .tooltip {
@@ -80,8 +67,8 @@ const margin = {top: 60, right: 20, bottom: 50, left: 60};
   .then(function(data){
 
 
-    var allYears = d3.map(data, function(d){return(d.Year)}).keys();
-    console.log(allYears)
+    var allYears = d3.map(data, function(d){return(d.Year)});
+    console.log("years", allYears)
 
 
     
@@ -91,8 +78,8 @@ d3.select("#YearsButton")
              .data(allYears)
             .enter()
             .append('option')
-          .text(function (d) { return d.Year; }) // text showed in the menu
-          .attr("value", function (d) { return d.Year; }) // corresponding value returned by the button
+          .text(function (d) { return d; }) // text showed in the menu
+          .attr("value", function (d) { return d; }) // corresponding value returned by the button
 
 
   // X scale and Axis
@@ -160,13 +147,13 @@ d3.select("#YearsButton")
   const mousemove1 = function(event,d) {
 
       tooltip
-      .html( `${d.male*100}%`)
+      .html( `${d.male}`)
         .style("top", event.pageY - 10 + "px")
         .style("left", event.pageX + 10 + "px");
   };
   const mousemove2 = function(event,d) {
     tooltip
-    .html( `${d.female*100}%`)
+    .html( `${d.female}`)
       .style("top", event.pageY - 10 + "px")
       .style("left", event.pageX + 10 + "px")
 };
@@ -178,10 +165,14 @@ d3.select("#YearsButton")
         .style("opacity", 1)
   };
 
+  var starting_year = "2023"
+
+  var dataFilter = data.filter(function(d){return d.Year==starting_year})
+
   // create male bars
   svg
     .selectAll(".maleBar")
-      .data(data)
+      .data(dataFilter)
     .join("rect")
       .attr("class", "barMale")
       .attr("x", d => xScaleMale(d.male))
@@ -196,7 +187,7 @@ d3.select("#YearsButton")
   // create female bars
   svg
       .selectAll(".femaleBar")
-        .data(data)
+        .data(dataFilter)
       .join("rect")
         .attr("class", "barFemale")
         .attr("x", xScaleFemale(0))
@@ -207,31 +198,6 @@ d3.select("#YearsButton")
       .on("mouseover", mouseover)
       .on("mousemove", mousemove2)
       .on("mouseleave", mouseleave)
-
-  // set title
-  svg
-    .append("text")
-      .attr("class", "chart-title")
-      .attr("x", -(margin.left)*0.7)
-      .attr("y", -(margin.top)/1.5)
-      .attr("text-anchor", "start")
-    .text("Demographics of forcibly displaced people | 2020")
-
-  // set source
-  svg
-    .append("text")
-      .attr("class", "chart-source")
-      .attr("x", -(margin.left)*0.7)
-      .attr("y", height + margin.bottom*0.7)
-      .attr("text-anchor", "start")
-
-  // set copyright
-  svg
-    .append("text")
-      .attr("class", "copyright")
-      .attr("x", -(margin.left)*0.7)
-      .attr("y", height + margin.bottom*0.9)
-      .attr("text-anchor", "start")
 
   //set legend
   svg
@@ -261,6 +227,16 @@ d3.select("#YearsButton")
           .attr("y", -(margin.top/5.5))
       .text("Female")
 
+
+
+  function update(selectedYear){
+    svg.selectAll(".barMale").remove()
+  }
+    
   })
+
+
+
+  
 
 </script>
