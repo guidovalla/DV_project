@@ -10,8 +10,8 @@
 
 <style>
     svg {
-  width: 100%;
-  height: 100%;
+  width: 300;
+  height: 300;
 }
 text {
   font-family: lato;
@@ -55,8 +55,8 @@ const margin = {top: 60, right: 20, bottom: 50, left: 60};
   // append the svg object to the body of the page
   const svg = d3.select("#viz_container")
     .append("svg")
-      .attr("width", "100%")
-      .attr("height", "100%")
+      .attr("width", "300")
+      .attr("height", "300")
       .attr("viewBox", "0 0 450 350")
       .attr("preserveAspectRatio", "xMinYMin")
     .append("g")
@@ -66,8 +66,8 @@ const margin = {top: 60, right: 20, bottom: 50, left: 60};
   d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/4_3.csv")
   .then(function(data){
 
-
-    var allYears = d3.map(data, function(d){return(d.Year)});
+    var uniqueYearsSet = new Set(data.map(d => d.Year));
+    var allYears = Array.from(uniqueYearsSet);
     console.log("years", allYears)
 
 
@@ -84,21 +84,21 @@ d3.select("#YearsButton")
 
   // X scale and Axis
   const xScaleMale = d3.scaleLinear()
-    .domain([0, d3.max(data, d => +d.male)])
+    .domain([0, 1.2*d3.max(data, d => +d.male)])
     .range([width/2, 0]);
   svg
     .append("g")
         .attr("transform", `translate(0, ${height})`)
-    .call(d3.axisBottom(xScaleMale).tickSize(0).tickPadding(3).ticks(7, "%"))
+    .call(d3.axisBottom(xScaleMale).tickSize(0).tickPadding(3).ticks(7, ""))
     .call(function(d) { return d.select(".domain").remove()});
 
   const xScaleFemale = d3.scaleLinear()
-    .domain([0, d3.max(data, d => +d.female)])
+    .domain([0, 1.2* d3.max(data, d => +d.female)])
     .range([width/2, width]);
   svg
     .append("g")
         .attr("transform", `translate(0, ${height})`)
-    .call(d3.axisBottom(xScaleFemale).tickSize(0).tickPadding(3).ticks(7, "%"))
+    .call(d3.axisBottom(xScaleFemale).tickSize(0).tickPadding(3).ticks(7, ""))
     .call(function(d) { return d.select(".domain").remove()});
 
   // set vertical grid line
@@ -147,13 +147,13 @@ d3.select("#YearsButton")
   const mousemove1 = function(event,d) {
 
       tooltip
-      .html( `${d.male}`)
+      .html( `${d3.format(".2f")(d.male)}  Billions`)
         .style("top", event.pageY - 10 + "px")
         .style("left", event.pageX + 10 + "px");
   };
   const mousemove2 = function(event,d) {
     tooltip
-    .html( `${d.female}`)
+    .html(`${d3.format(".2f")(d.female)}  Billions`)
       .style("top", event.pageY - 10 + "px")
       .style("left", event.pageX + 10 + "px")
 };
@@ -165,9 +165,9 @@ d3.select("#YearsButton")
         .style("opacity", 1)
   };
 
-  var starting_year = "2023"
+  var Pippo = "2023"
 
-  var dataFilter = data.filter(function(d){return d.Year==starting_year})
+  var dataFilter = data.filter(function(d){return d.Year==Pippo})
 
   // create male bars
   svg
@@ -199,6 +199,14 @@ d3.select("#YearsButton")
       .on("mousemove", mousemove2)
       .on("mouseleave", mouseleave)
 
+  // set x axis label
+  svg
+      .append("text")
+          .attr("class", "chart-label")
+          .attr("x", width/3.5)
+          .attr("y", height + margin.bottom/1.5)
+      .text("Population (billions)")
+
   //set legend
   svg
       .append("rect")
@@ -229,10 +237,56 @@ d3.select("#YearsButton")
 
 
 
-  function update(selectedYear){
-    svg.selectAll(".barMale").remove()
-  }
-    
+      function update(selectedYear) {
+  // Remove existing bars
+  svg.selectAll(".barMale").remove();
+  svg.selectAll(".barFemale").remove();
+
+  // Filter data for the selected year
+  const dataFilter = data.filter(function (d) {
+    return d.Year == selectedYear;
+  });
+
+  // Update male bars
+  svg
+    .selectAll(".maleBar")
+    .data(dataFilter)
+    .enter()
+    .append("rect")
+    .attr("class", "barMale")
+    .attr("x", (d) => xScaleMale(d.male))
+    .attr("y", (d) => yScale(d.ages))
+    .attr("width", (d) => width / 2 - xScaleMale(d.male))
+    .attr("height", yScale.bandwidth())
+    .style("fill", "#18375F")
+    .on("mouseover", mouseover)
+    .on("mousemove", mousemove1)
+    .on("mouseleave", mouseleave);
+
+  // Update female bars (similar code as above)
+  svg
+    .selectAll(".femaleBar")
+    .data(dataFilter)
+    .enter()
+    .append("rect")
+    .attr("class", "barFemale")
+    .attr("x", xScaleFemale(0))
+    .attr("y", (d) => yScale(d.ages))
+    .attr("width", (d) => xScaleFemale(d.female) - xScaleFemale(0))
+    .attr("height", yScale.bandwidth())
+    .style("fill", "#0072BC")
+    .on("mouseover", mouseover)
+    .on("mousemove", mousemove2)
+    .on("mouseleave", mouseleave);
+}
+
+
+  
+  d3.select("#YearsButton").on("change", function(d) {
+    Pippo = d3.select(this).property("value")
+    update(Pippo)
+  })
+
   })
 
 
