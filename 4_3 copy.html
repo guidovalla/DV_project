@@ -8,8 +8,10 @@
 
 
 <!-- Create a container to host the chart -->
+<div id="treemap_container"></div>
 <div id="viz_container"></div>
 <div id="slider-range"></div>
+
 
 
 
@@ -37,6 +39,21 @@ text.chart-label {
   font-weight: 400;
   fill: #999999;
 }
+
+text.chart-title {
+  font-size: 14px;
+  font-weight: bold;
+  fill:#222222
+}
+text.chart-source {
+  font-size: 8px;
+  fill: #999999;
+}
+text.copyright {
+  font-size: 8px;
+  fill: #999999;
+}
+
 .tooltip {
   background-color: #ffffff;
   font-family: lato;
@@ -51,21 +68,154 @@ text.chart-label {
 }
 </style>
 
-<script>  
+<script>
 // set the dimensions and margins of the graph
-const margin = {top: 60, right: 20, bottom: 50, left: 60};
-  const width = 450 - margin.left - margin.right;
-  const height = 350 - margin.top - margin.bottom;
+const margin = {top: 30, right: 20, bottom: 30, left: 20};
+const width = 450 - margin.left - margin.right;
+const height = 350 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+const svg = d3.select("#viz_container")
+  .append("svg")
+    .attr("width", "100%")
+    .attr("height", "100%")
+    .attr("viewBox", "0 0 450 350")
+    .attr("preserveAspectRatio", "xMinYMin")
+  .append("g")
+    .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+// parse the Data
+d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/part_to_a_whole/treemap_d3.csv")
+.then(function(data){
+
+data.forEach(function(d) {
+    d.staff_number = +d.staff_number;
+    d.enabled = true;
+  });
+
+const total = d3.sum(data.map(function(d) {
+  return (d.enabled) ? d.staff_number : 0;  }));
+
+// reshape data
+const treeData = d3.stratify()
+  .id(d => d.region)
+  .parentId(d => d.parent)
+  (data);
+
+treeData.sum(d => d.staff_number)
+
+d3.treemap()
+  .size([width, height])
+  .padding(2)
+  (treeData);
+
+// create a tooltip
+const tooltip = d3.select("body")
+  .append("div")
+    .attr("class", "tooltip");
+
+// tooltip events
+const mouseover = function(d) {
+  tooltip
+      .style("opacity", 1)
+  d3.select(this)
+      .style("opacity", .5)
+};
+const mousemove = function(event,d) {
+  f = d3.format(",")
+  tooltip
+  .html("Number of staff: " + `${f(d.data.staff_number)}`)
+    .style("top", event.pageY - 10 + "px")
+    .style("left", event.pageX + 10 + "px")
+};
+const mouseleave = function(d) {
+  tooltip
+    .style("opacity", 0)
+  d3.select(this)
+    .style("stroke", "none")
+    .style("opacity", 1)
+};
+
+// create rectangle
+svg
+  .selectAll("rect")
+  .data(treeData.leaves())
+  .join("rect")
+    .attr('x', d => d.x0)
+    .attr('y', d => d.y0)
+    .attr('width', d => d.x1 - d.x0)
+    .attr('height', d=> d.y1 - d.y0)
+    .style("stroke", "none")
+    .style("fill", "#0072BC")
+  .on("mouseover", mouseover)
+  .on("mousemove", mousemove)
+  .on("mouseleave", mouseleave);
+
+// add labels to the graph
+svg
+  .selectAll("text-number")
+  .data(treeData.leaves())
+  .join("text")
+    .attr("class", "tree-label")
+    .attr("x", d => d.x0+5)
+    .attr("y", d => d.y0+15)
+    .text(d => Math.round(1000 * d.data.staff_number / total) / 10 + "%")
+    .attr("font-size", "10px")
+    .attr("fill", "#ffffff");
+svg
+  .selectAll("text-region")
+  .data(treeData.leaves())
+  .join("text")
+    .attr("class", "tree-label")
+    .attr("x", d => d.x0+5)
+    .attr("y", d => d.y0+30)
+    .text(d => d.data.region)
+    .attr("font-size", "10px")
+    .attr("fill", "#ffffff");
+
+// set title
+svg
+  .append("text")
+    .attr("class", "chart-title")
+    .attr("x", 0)
+    .attr("y", -(margin.top)/1.5)
+    .attr("text-anchor", "start")
+  .text("UNHCR global workforce by region | 2021");
+
+// set source
+svg
+  .append("text")
+    .attr("class", "chart-source")
+    .attr("x", 0)
+    .attr("y", height + margin.bottom*0.4)
+    .attr("text-anchor", "start")
+  .text("Source: UNHCR")
+
+// set copyright
+svg
+  .append("text")
+    .attr("class", "copyright")
+    .attr("x", 0)
+    .attr("y", height + margin.bottom*0.7)
+    .attr("text-anchor", "start")
+  .text("©UNHCR, The UN Refugee Agency")
+})
+
+
+// set the dimensions and margins of the graph
+const margin2 = {top: 60, right: 20, bottom: 50, left: 60};
+  const width2 = 450 - margin2.left - margin2.right;
+  const height2 = 350 - margin2.top - margin2.bottom;
 
   // append the svg object to the body of the page
-  const svg = d3.select("#viz_container")
+  const svg2 = d3.select("#viz_container")
     .append("svg")
       .attr("width", "300")
       .attr("height", "200")
       .attr("viewBox", "0 0 450 350")
       .attr("preserveAspectRatio", "xMinYMin")
     .append("g")
-      .attr("transform", `translate(${margin.left}, ${margin.top})`);
+      .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
 
   // parse the Data
   d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/4_3_new.csv")
@@ -90,38 +240,38 @@ d3.select("#YearsButton")
   // X scale and Axis
   const xScaleMale = d3.scaleLinear()
     .domain([0, 1.2*d3.max(data, d => +d.male)])
-    .range([width/2, 0]);
-  svg
+    .range([width2/2, 0]);
+  svg2
     .append("g")
-        .attr("transform", `translate(0, ${height})`)
+        .attr("transform", `translate(0, ${height2})`)
     .call(d3.axisBottom(xScaleMale).tickSize(0).tickPadding(3).ticks(7, ""))
     .call(function(d) { return d.select(".domain").remove()});
 
   const xScaleFemale = d3.scaleLinear()
     .domain([0, 1.2* d3.max(data, d => +d.female)])
-    .range([width/2, width]);
-  svg
+    .range([width2/2, width2]);
+  svg2
     .append("g")
-        .attr("transform", `translate(0, ${height})`)
+        .attr("transform", `translate(0, ${height2})`)
     .call(d3.axisBottom(xScaleFemale).tickSize(0).tickPadding(3).ticks(7, ""))
     .call(function(d) { return d.select(".domain").remove()});
 
   // set vertical grid line
   const GridLineF = function() { return d3.axisBottom().scale(xScaleFemale)};
-  svg
+  svg2
     .append("g")
       .attr("class", "grid")
     .call(GridLineF()
-      .tickSize(height,0,0)
+      .tickSize(height2,0,0)
       .tickFormat("")
       .ticks(7)
   );
   const GridLineM = function() { return d3.axisBottom().scale(xScaleMale)};
-  svg
+  svg2
     .append("g")
       .attr("class", "grid")
     .call(GridLineM()
-      .tickSize(height,0,0)
+      .tickSize(height2,0,0)
       .tickFormat("")
       .ticks(7)
   );
@@ -129,9 +279,9 @@ d3.select("#YearsButton")
   // Y scale and Axis
   const yScale = d3.scaleBand()
       .domain(data.map(d => d.ages))
-      .range([height, 0])
+      .range([height2, 0])
       .padding(.25);
-  svg
+  svg2
       .append("g")
       .call(d3.axisLeft(yScale).tickSize(0).tickPadding(15))
       .call(d => d.select(".domain").remove());
@@ -175,14 +325,14 @@ d3.select("#YearsButton")
   var dataFilter = data.filter(function(d){return d.Year==Pippo})
 
   // create male bars
-  svg
+  svg2
     .selectAll(".maleBar")
       .data(dataFilter)
     .join("rect")
       .attr("class", "barMale")
       .attr("x", d => xScaleMale(d.male))
       .attr("y", d => yScale(d.ages))
-      .attr("width", d => width/2 - xScaleMale(d.male))
+      .attr("width", d => width2/2 - xScaleMale(d.male))
       .attr("height", yScale.bandwidth())
       .style("fill", "#18375F")
     .on("mouseover", mouseover)
@@ -190,7 +340,7 @@ d3.select("#YearsButton")
     .on("mouseleave", mouseleave)
 
   // create female bars
-  svg
+  svg2
       .selectAll(".femaleBar")
         .data(dataFilter)
       .join("rect")
@@ -205,39 +355,39 @@ d3.select("#YearsButton")
       .on("mouseleave", mouseleave)
 
   // set x axis label
-  svg
+  svg2
       .append("text")
           .attr("class", "chart-label")
-          .attr("x", width/3.5)
-          .attr("y", height + margin.bottom/1.5)
+          .attr("x", width2/3.5)
+          .attr("y", height2 + margin2.bottom/1.5)
       .text("Population (billions)")
 
   //set legend
-  svg
+  svg2
       .append("rect")
-          .attr("x", -(margin.left)*0.7)
-          .attr("y", -(margin.top/3))
+          .attr("x", -(margin2.left)*0.7)
+          .attr("y", -(margin2.top/3))
           .attr("width", 13)
           .attr("height", 13)
           .style("fill", "#18375F")
-  svg
+  svg2
       .append("text")
           .attr("class", "legend")
-          .attr("x", -(margin.left)*0.6+15)
-          .attr("y", -(margin.top/5.5))
+          .attr("x", -(margin2.left)*0.6+15)
+          .attr("y", -(margin2.top/5.5))
       .text("Male")
-  svg
+  svg2
       .append("rect")
           .attr("x", 40)
-          .attr("y", -(margin.top/3))
+          .attr("y", -(margin2.top/3))
           .attr("width", 13)
           .attr("height", 13)
           .style("fill", "#0072BC")
-  svg
+  svg2
       .append("text")
           .attr("class", "legend")
           .attr("x", 60)
-          .attr("y", -(margin.top/5.5))
+          .attr("y", -(margin2.top/5.5))
       .text("Female")
 
          //add slider 
@@ -258,10 +408,10 @@ d3.select("#YearsButton")
         const gRange= d3.
         select('#slider-range')
         .append("svg")
-        .attr("width", 200+ margin.left + margin.right)
-        .attr("height", 40+ margin.bottom)
+        .attr("width", 200+ margin2.left + margin2.right)
+        .attr("height", 40+ margin2.bottom)
         .append("g")
-        .attr("transform","translate(" + margin.right+ "," + margin.bottom + ")")
+        .attr("transform","translate(" + margin2.right+ "," + margin2.bottom + ")")
         .call(sliderRange);
 
 
@@ -269,8 +419,8 @@ d3.select("#YearsButton")
 
       function update(selectedYear) {
   // Remove existing bars
-  svg.selectAll(".barMale").remove();
-  svg.selectAll(".barFemale").remove();
+  svg2.selectAll(".barMale").remove();
+  svg2.selectAll(".barFemale").remove();
 
   // Filter data for the selected year
   const dataFilter = data.filter(function (d) {
@@ -278,7 +428,7 @@ d3.select("#YearsButton")
   });
 
   // Update male bars
-  svg
+  svg2
     .selectAll(".maleBar")
     .data(dataFilter)
     .enter()
@@ -286,7 +436,7 @@ d3.select("#YearsButton")
     .attr("class", "barMale")
     .attr("x", (d) => xScaleMale(d.male))
     .attr("y", (d) => yScale(d.ages))
-    .attr("width", (d) => width / 2 - xScaleMale(d.male))
+    .attr("width", (d) => width2 / 2 - xScaleMale(d.male))
     .attr("height", yScale.bandwidth())
     .style("fill", "#18375F")
     .on("mouseover", mouseover)
@@ -294,7 +444,7 @@ d3.select("#YearsButton")
     .on("mouseleave", mouseleave);
 
   // Update female bars (similar code as above)
-  svg
+  svg2
     .selectAll(".femaleBar")
     .data(dataFilter)
     .enter()
