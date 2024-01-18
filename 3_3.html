@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section 3</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <!-- Create a container to host the chart -->
+    <div id="container"></div>
+    <!-- Initialize a Dropdown -->
+    <select id="year_btn"></select>
+
+    <script>
+        // Declare the chart dimensions and margins.
+        const margin = { top: 10, right: 60, bottom: 60, left: 60 }
+        const width = 700 - margin.left - margin.right;
+        const height = 300 - margin.top - margin.bottom;
+
+        // Create the SVG container.
+        const svg = d3.select("#container")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        // Load CSV data
+        d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_3.csv")
+            .then((data) => {
+                // Extract unique years and age categories
+                const years = [...new Set(data.map(d => d.Period))];
+                // Declare years Dropdown
+                d3.select("#year_btn")
+                    .selectAll('myOptions')
+                    .data(years)
+                    .enter()
+                    .append('option')
+                    .text((d) => d) // text showed in the menu
+                    .attr("value", (d) => d) // corresponding value returned by the button
+
+                // Declare the x (horizontal position) scale.
+                const x = d3.scaleBand()
+                    .domain(data.map(e => e.Dim3))
+                    .range([0, width])
+                    .padding(0.2);
+                // Declare the y (vertical position) scale.
+                const y = d3.scaleLinear()
+                    .domain([0, Math.max(...data.map(e => e.Value)) + 50])
+                    .range([height, 0]);
+
+                // Initial bars
+                updateBars(data[0].Period);
+
+                // Update bars when year changes
+                function updateBars(selectedYear) {
+                    svg.selectAll(".bar").remove(); // Remove previous bars
+                    const dataFilter = data.filter(d => {
+                        if (d.Period == selectedYear) {
+                            return {
+                                Dim3: d.Dim3,
+                                Value: d.Value
+                            }
+                        }
+                    });
+
+                    // Bars
+                    svg.selectAll(".bar")
+                        .data(dataFilter)  // Start from the third entry to avoid "Period" and "Dim3"
+                        .enter()
+                        .append("rect")
+                        .attr("class", "bar")
+                        .attr("x", (e) => x(e.Dim3))
+                        .attr("y", (e) => y(+e.Value))
+                        .attr("width", x.bandwidth())
+                        .attr("height", (e) => height - y(+e.Value))
+                        .attr("fill", "blue");
+
+                    // X-axis
+                    svg.append("g")
+                        .attr("transform", "translate(0," + height + ")")
+                        .call(d3.axisBottom(x))
+                        .selectAll("text")
+                        .attr("transform", "translate(-10,0)rotate(-45)")
+                        .style("text-anchor", "end");
+
+                    // Y-axis
+                    svg.append("g")
+                        .call(d3.axisLeft(y));
+                }
+
+                // Handle year change event
+                d3.select("#year_btn").on("change", function () {
+                    const selectedYear = d3.select(this).property("value");
+                    updateBars(selectedYear);
+                });
+
+            })
+            .catch((err) => {
+                console.log({ err });
+            });
+    </script>
+</body>
+
+</html>
