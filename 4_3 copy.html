@@ -86,23 +86,24 @@ const svg = d3.select("#viz_container")
 
 // parse the Data
 d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/part_to_a_whole/treemap_d3.csv")
+d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/try_treemap.csv")
 .then(function(data){
 
 data.forEach(function(d) {
-    d.staff_number = +d.staff_number;
+    d.population = +d.population;
     d.enabled = true;
   });
 
 const total = d3.sum(data.map(function(d) {
-  return (d.enabled) ? d.staff_number : 0;  }));
+  return (d.enabled) ? d.population : 0;  }));
 
 // reshape data
 const treeData = d3.stratify()
-  .id(d => d.region)
-  .parentId(d => d.parent)
+  .id(d => d.ages)
+  .parentId(d => "root")
   (data);
 
-treeData.sum(d => d.staff_number)
+treeData.sum(d => d.population)
 
 d3.treemap()
   .size([width, height])
@@ -124,7 +125,7 @@ const mouseover = function(d) {
 const mousemove = function(event,d) {
   f = d3.format(",")
   tooltip
-  .html("Number of staff: " + `${f(d.data.staff_number)}`)
+  .html("Number of staff: " + `${f(d.data.population)}`)
     .style("top", event.pageY - 10 + "px")
     .style("left", event.pageX + 10 + "px")
 };
@@ -159,7 +160,7 @@ svg
     .attr("class", "tree-label")
     .attr("x", d => d.x0+5)
     .attr("y", d => d.y0+15)
-    .text(d => Math.round(1000 * d.data.staff_number / total) / 10 + "%")
+    .text(d => Math.round(1000 * d.data.population / total) / 10 + "%")
     .attr("font-size", "10px")
     .attr("fill", "#ffffff");
 svg
@@ -169,7 +170,7 @@ svg
     .attr("class", "tree-label")
     .attr("x", d => d.x0+5)
     .attr("y", d => d.y0+30)
-    .text(d => d.data.region)
+    .text(d => d.data.ages)
     .attr("font-size", "10px")
     .attr("fill", "#ffffff");
 
