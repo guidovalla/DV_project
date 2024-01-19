@@ -85,7 +85,7 @@ const svg = d3.select("#viz_container")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // parse the Data
-d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/part_to_a_whole/treemap_d3.csv")
+//d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/part_to_a_whole/treemap_d3.csv")
 d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/try_treemap.csv")
 .then(function(data){
 
@@ -100,7 +100,7 @@ const total = d3.sum(data.map(function(d) {
 // reshape data
 const treeData = d3.stratify()
   .id(d => d.ages)
-  .parentId(d => "root")
+  .parentId(d => d.parent)
   (data);
 
 treeData.sum(d => d.population)
