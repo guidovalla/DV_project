@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<!-- Load d3.js -->
+<script src="http://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+
+<!-- Create an element where the map will take place -->
+<svg id="my_dataviz" width="400" height="600"></svg>
+
+<!-- Initialize a Dropdown menu -->
+ <select  id="diseaseSelector"></select>
+
+<style>
+
+#my_dataviz {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    top: 80px;
+    display: block;
+  }
+  #diseaseSelector {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    top: 80px;
+    display: block;
+  }
+</style>
+<script>
+
+    // The svg
+    var svg = d3.select("svg"),
+      width = +svg.attr("width"),
+      height = +svg.attr("height");
+    
+    // Map and projection
+    var path = d3.geoPath();
+    var projection = d3.geoMercator()
+      .scale(70)
+      .center([0,20])
+      .translate([width / 2, height / 2]);
+    
+    // Data and color scale
+    var data = d3.map();
+    var colorScale = d3.scaleThreshold()
+      .domain([100000, 1000000, 10000000, 30000000, 100000000, 500000000])
+      .range(d3.schemeBlues[7]);
+    
+    // Load external data and boot
+    d3.queue()
+      .defer(d3.json, "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")
+      .defer(d3.csv, "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv", function(d) { data.set(d.code, +d.pop); })
+      .await(ready);
+    
+    function ready(error, topo) {
+    
+      let mouseOver = function(d) {
+        d3.selectAll(".Country")
+          .transition()
+          .duration(200)
+          .style("opacity", .5)
+        d3.select(this)
+          .transition()
+          .duration(200)
+          .style("opacity", 1)
+          .style("stroke", "black")
+      }
+    
+      let mouseLeave = function(d) {
+        d3.selectAll(".Country")
+          .transition()
+          .duration(200)
+          .style("opacity", .8)
+        d3.select(this)
+          .transition()
+          .duration(200)
+          .style("stroke", "transparent")
+      }
+    
+      // Draw the map
+      svg.append("g")
+        .selectAll("path")
+        .data(topo.features)
+        .enter()
+        .append("path")
+          // draw each country
+          .attr("d", d3.geoPath()
+            .projection(projection)
+          )
+          // set the color of each country
+          .attr("fill", function (d) {
+            d.total = data.get(d.id) || 0;
+            return colorScale(d.total);
+          })
+          .style("stroke", "transparent")
+          .attr("class", function(d){ return "Country" } )
+          .style("opacity", .8)
+          .on("mouseover", mouseOver )
+          .on("mouseleave", mouseLeave )
+        }
+       
+
+// The svg
+var svg = d3.select("svg"),
+  width = +svg.attr("width"),
+  height = +svg.attr("height");
+
+// Map and projection
+var path = d3.geoPath();
+var projection = d3.geoMercator()
+  .scale(70)
+  .center([0,20])
+  .translate([width / 2, height / 2]);
+
+// Data and color scale
+var data = d3.map();
+var colorScale = d3.scaleThreshold()
+
+// Expand the domain to include more values
+var expandedDomain = [10000, 50000, 100000, 500000, 1000000, 5000000, 10000000, 30000000, 100000000, 300000000, 400000000, 500000000];
+
+// Choose a color scale with more colors (e.g., d3.interpolateRainbow)
+var colorScale = d3.scaleSequential(d3.interpolateRainbow)
+  .domain(expandedDomain);
+
+// Use the color scale as needed in your code
+var color = colorScale(150000); // Replace 150000 with your actual data value
+
+// extend the domain to more colors than blue
+  // .domain([10000, 50000, 100000, 500000, 1000000, 5000000, 10000000, 30000000, 100000000, 300000000, 400000000, 500000000])
+  // .range(d3.schemeBlues[7]);
+
+// Load external data and boot
+d3.queue()
+  .defer(d3.json, "https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson")
+  // .defer(d3.csv, "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv", function(d) { data.set(d.code, +d.pop); })
+  .await(ready);
+
+  console.log('data',data)
+
+function ready(error, topo) {
+
+  let mouseOver = function(d) {
+    d3.selectAll(".Country")
+      .transition()
+      .duration(200)
+      .style("opacity", .5)
+    d3.select(this)
+      .transition()
+      .duration(200)
+      .style("opacity", 1)
+      .style("stroke", "black")
+  }
+
+  let mouseLeave = function(d) {
+    d3.selectAll(".Country")
+      .transition()
+      .duration(200)
+      .style("opacity", .8)
+    d3.select(this)
+      .transition()
+      .duration(200)
+      .style("stroke", "transparent")
+  }
+
+  // Draw the map
+  svg.append("g")
+    .selectAll("path")
+    .data(topo.features)
+    .enter()
+    .append("path")
+      // draw each country
+      .attr("d", d3.geoPath()
+        .projection(projection)
+      )
+      // set the color of each country
+      .attr("fill", function (d) {
+        d.total = data.get(d.id) || 0;
+        return colorScale(d.total);
+      })
+      // .style("stroke", "transparent")
+      .attr("class", function(d){ return "Country" } )
+      .style("opacity", .8)
+      .on("mouseover", mouseOver )
+      .on("mouseleave", mouseLeave )
+    }
+
+
+myMap = new Map();
+myMap.set("HIV/AIDS", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("HIV/AIDS"));
+ myMap.set("Malaria", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("Malaria"));
+  myMap.set("Tuberculosis", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv"); 
+console.log(myMap.get("Tuberculosis"));
+  myMap.set("Diarrhoeal diseases", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("Diarrhoeal diseases"));
+  myMap.set("Lower respiratory infections", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("Lower respiratory infections"));
+  myMap.set("Neonatal disorders", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("Neonatal disorders"));
+  myMap.set("Neglected tropical diseases", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");  
+console.log(myMap.get("Neglected tropical diseases"));
+  myMap.set("Maternal disorders", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("Maternal disorders"));
+  myMap.set("Nutritional deficiencies", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("Nutritional deficiencies"));
+  myMap.set("Road injuries", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("Road injuries"));
+  myMap.set("Self-harm", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("Self-harm"));
+  myMap.set("Interpersonal violence", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("Interpersonal violence"));
+  myMap.set("Hepatitis", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("Hepatitis"));
+  myMap.set("Alcohol use disorders", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("Alcohol use disorders"));
+  myMap.set("Drug use disorders", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("Drug use disorders"));
+  myMap.set("Diabetes", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("Diabetes"));
+  myMap.set("Kidney diseases", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("Kidney diseases"));
+  myMap.set("Digestive diseases", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("Digestive diseases"));
+  myMap.set("Neoplasms", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("Neoplasms"));
+  myMap.set("Cardiovascular diseases", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("Cardiovascular diseases"));
+  myMap.set("Chronic respiratory diseases", "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv");
+console.log(myMap.get("Chronic respiratory diseases"));
+
+for (const key of myMap.keys()) {
+  console.log(key);
+}
+
+// Initialize a Dropdown  
+document.addEventListener('DOMContentLoaded', function () {
+  // Initialize a Dropdown
+  d3.select("#diseaseSelector")
+    .selectAll('option') // Select option elements
+    .data(Array.from(myMap.keys())) // Convert Map keys to an array
+    .enter()
+    .append('option')
+    .text((d) => d) // text showed in the menu
+    .attr("value", (d) => d); // corresponding value returned by the button
+});
+
+
+// When the button is changed, run the updateChart function 
+d3.select("#diseaseSelector").on("change", function(d) {
+  // recover the option that has been chosen
+  var selectedOption = d3.select(this).property("value")
+  // run the updateChart function with this selected option
+  update(selectedOption)
+})
+    </script>
