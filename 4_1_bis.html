@@ -7,52 +7,56 @@
 
 
 <style>
-svg {
-  width: 100%;
-  height: 100%;
-}
-text {
-  font-family: lato;
-  font-size: 11px;
-  fill: #666666;
-}
-.grid path {
-  stroke-width: 0;
-  stroke: #333333;
-}
-.grid .tick line {
-  stroke: #333333;
-  stroke-width: 0.3px;
-  stroke-opacity: 0.3;
-}
-text.chart-title {
-  font-size: 15px;
-  font-weight: 600;
-  fill:#222222
-}
-text.chart-label {
-  font-size: 11px;
-  font-weight: 400;
-  fill: #999999;
-}
-text.chart-source {
-  font-size: 9px;
-  fill: #999999;
-}
-text.copyright {
-  font-size: 9px;
-  fill: #999999;
-}
-.tooltip {
-  background-color: #ffffff;
-  font-family: lato;
-  font-size: 11px;
-  padding: 4px;
-  color: #666666;
-  border: none;
-  box-shadow: 0px 0px 3px 0px #E6E6E6;
-} 
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  text {
+    font-family: lato;
+    font-size: 11px;
+    fill: #666666;
+  }
+  grid path {
+    stroke-width: 0;
+    stroke: #333333;
+  }
+  grid .tick line {
+    stroke: #333333;
+    stroke-width: 0.3px;
+    stroke-opacity: 0.3;
+  }
+  text.chart-title {
+    font-size: 15px;
+    font-weight: 600;
+    fill: #222222;
+  }
+  text.chart-label {
+    font-size: 11px;
+    font-weight: 400;
+    fill: #999999;
+  }
+  text.chart-source {
+    font-size: 9px;
+    fill: #999999;
+  }
+  text.copyright {
+    font-size: 9px;
+    fill: #999999;
+  }
+  .tooltip {
+    background-color: #ffffff;
+    font-family: lato;
+    font-size: 11px;
+    padding: 4px;
+    color: #666666;
+    border: none;
+    box-shadow: 0px 0px 3px 0px #E6E6E6;
+    display: none; /* Initially hide the tooltip */
+    position: absolute;
+    pointer-events: none;
+  }
 </style>
+
 
 <script>
 // set the dimensions and margins of the graph
@@ -121,21 +125,52 @@ svg
 const color = d3.scaleOrdinal()
   .range(["#0072BC","#00B398"])
 
-// create line
-const lines = svg
+  
+  // Add Tooltip
+  const tooltip = d3.select("#viz_container")
+    .append("div")
+    .attr("class", "tooltip");
+
+  // What happens when the mouse moves over the line
+  function mouseover(event, d) {
+    tooltip.style("display", "block");
+  }
+
+  function mousemove(event, d) {
+    var x0 = xScale.invert(d3.pointer(event));
+    console.log(x0)
+    tooltip
+      .html("Year: " + d.date + "<br>Population: " + data.popNumber)
+      .style("left", (event.pageX + 10) + "px")
+      .style("top", (event.pageY - 10) + "px");
+  }
+
+  function mouseout() {
+    tooltip.style("display", "none");
+  }
+
+
+  // Create line with tooltip events
+  const lines = svg
     .selectAll("lines")
     .data(dataGrouped)
     .join("path")
-      .attr("fill", "none")
-      .attr("stroke", d => color(d[0]))
-      .attr("stroke-width", 2)
-      .attr("d", function(d){
-        return d3.line()
-          .curve(d3.curveCardinal)
-          .x(d => xScale(d.year))
-          .y(d => yScale(d.popNumber))
-          (d[1])
-      });
+    .attr("fill", "none")
+    .attr("stroke", d => color(d[0]))
+    .attr("stroke-width", 2)
+    .attr("d", function (d) {
+      return d3.line()
+        .curve(d3.curveCardinal)
+        .x(d => xScale(d.year))
+        .y(d => yScale(d.popNumber))
+        (d[1])
+    })
+    .on("mouseover", mouseover)
+    .on("mousemove", mousemove)
+    .on("mouseout", mouseout);
+
+
+
 
 // set title
 svg
