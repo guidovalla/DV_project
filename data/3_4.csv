@@ -1,0 +1,4467 @@
+Country,Year,HepatitisVax,PolioVax,TetanusVax,Life expectancy,Continent
+Democratic People's Republic of Korea,2022,0.0,0.0,0,,
+Papua New Guinea,2022,36.0,36.0,36,,
+Angola,2022,42.0,41.0,42,,
+Central African Republic,2022,42.0,46.0,42,,
+Somalia,2022,42.0,47.0,42,,
+Syrian Arab Republic,2022,46.0,48.0,46,,
+Guinea,2022,47.0,48.0,47,,
+Haiti,2022,51.0,51.0,51,,
+Equatorial Guinea,2022,53.0,55.0,53,,
+Venezuela (Bolivarian Republic of),2022,56.0,50.0,56,,
+Madagascar,2022,57.0,55.0,57,,
+Djibouti,2022,59.0,59.0,59,,
+Chad,2022,60.0,57.0,60,,
+Gabon,2022,60.0,59.0,60,,
+Mozambique,2022,61.0,67.0,61,,
+Nigeria,2022,62.0,62.0,62,,
+Democratic Republic of the Congo,2022,65.0,66.0,65,,
+Ethiopia,2022,65.0,64.0,65,,
+Lebanon,2022,67.0,64.0,67,,
+Cameroon,2022,68.0,59.0,68,,
+Vanuatu,2022,68.0,68.0,68,,
+Afghanistan,2022,69.0,76.0,69,,
+Bolivia (Plurinational State of),2022,69.0,69.0,69,,
+Micronesia (Federated States of),2022,75.0,68.0,69,,
+Paraguay,2022,69.0,58.0,69,,
+Ecuador,2022,70.0,59.0,70,,
+Myanmar,2022,71.0,75.0,71,,
+Cook Islands,2022,72.0,72.0,72,,
+Philippines,2022,72.0,73.0,72,,
+Libya,2022,73.0,73.0,73,,
+South Sudan,2022,73.0,72.0,73,,
+Ukraine,2022,62.0,69.0,73,,
+Guinea-Bissau,2022,74.0,51.0,74,,
+Yemen,2022,74.0,68.0,74,,
+Bosnia and Herzegovina,2022,78.0,75.0,75,,
+El Salvador,2022,75.0,74.0,75,,
+Benin,2022,76.0,75.0,76,,
+Côte d’Ivoire,2022,76.0,73.0,76,,
+Mauritania,2022,76.0,71.0,76,,
+Samoa,2022,76.0,76.0,76,,
+Algeria,2022,77.0,77.0,77,,
+Brazil,2022,77.0,75.0,77,,
+Grenada,2022,77.0,73.0,77,,
+Jordan,2022,77.0,76.0,77,,
+Mali,2022,77.0,72.0,77,,
+Suriname,2022,77.0,78.0,77,,
+Congo,2022,78.0,52.0,78,,
+Honduras,2022,78.0,78.0,78,,
+Liberia,2022,78.0,52.0,78,,
+Gambia,2022,79.0,69.0,79,,
+Guatemala,2022,79.0,76.0,79,,
+Lao People's Democratic Republic,2022,80.0,69.0,80,,
+Montenegro,2022,45.0,80.0,80,,
+Argentina,2022,81.0,81.0,81,,
+Saint Lucia,2022,81.0,80.0,81,,
+Peru,2022,82.0,82.0,82,,
+Togo,2022,82.0,75.0,82,,
+Zambia,2022,82.0,84.0,82,,
+Azerbaijan,2022,83.0,88.0,83,,
+Mexico,2022,83.0,83.0,83,,
+Austria,2022,84.0,84.0,84,,
+Belize,2022,84.0,84.0,84,,
+Namibia,2022,84.0,86.0,84,,
+Niger,2022,84.0,84.0,84,,
+The former Yugoslav Republic of Macedonia,2022,84.0,84.0,84,,
+Sudan,2022,84.0,85.0,84,,
+Cambodia,2022,85.0,83.0,85,,
+Estonia,2022,85.0,85.0,85,,
+Georgia,2022,85.0,85.0,85,,
+Indonesia,2022,86.0,86.0,85,,
+Pakistan,2022,85.0,85.0,85,,
+Romania,2022,85.0,85.0,85,,
+South Africa,2022,85.0,85.0,85,,
+Barbados,2022,86.0,86.0,86,,
+Botswana,2022,86.0,96.0,86,,
+Malawi,2022,86.0,87.0,86,,
+Marshall Islands,2022,87.0,86.0,86,,
+Timor-Leste,2022,86.0,86.0,86,,
+Bahamas,2022,87.0,87.0,87,,
+Colombia,2022,87.0,86.0,87,,
+Lesotho,2022,87.0,65.0,87,,
+Panama,2022,87.0,87.0,87,,
+Comoros,2022,88.0,88.0,88,,
+Dominican Republic,2022,87.0,88.0,88,,
+Republic of Moldova,2022,90.0,88.0,88,,
+Senegal,2022,88.0,88.0,88,,
+United Republic of Tanzania,2022,88.0,88.0,88,,
+New Zealand,2022,89.0,89.0,89,,
+Slovenia,2022,89.0,89.0,89,,
+Solomon Islands,2022,89.0,89.0,89,,
+Uganda,2022,89.0,90.0,89,,
+Kenya,2022,90.0,87.0,90,,
+Kyrgyzstan,2022,90.0,92.0,90,,
+Lithuania,2022,90.0,90.0,90,,
+Nepal,2022,90.0,87.0,90,,
+Poland,2022,90.0,91.0,90,,
+Zimbabwe,2022,90.0,90.0,90,,
+Bulgaria,2022,91.0,91.0,91,,
+Burkina Faso,2022,91.0,91.0,91,,
+Burundi,2022,91.0,91.0,91,,
+Finland,2022,,91.0,91,,
+Germany,2022,87.0,91.0,91,,
+Kiribati,2022,91.0,90.0,91,,
+Sierra Leone,2022,91.0,91.0,91,,
+Tuvalu,2022,91.0,90.0,91,,
+Viet Nam,2022,91.0,70.0,91,,
+Canada,2022,83.0,92.0,92,,
+Croatia,2022,90.0,92.0,92,,
+Dominica,2022,92.0,92.0,92,,
+Iceland,2022,,92.0,92,,
+Nicaragua,2022,92.0,93.0,92,,
+Saint Vincent and the Grenadines,2022,99.0,92.0,92,,
+San Marino,2022,91.0,92.0,92,,
+Serbia,2022,92.0,92.0,92,,
+United Kingdom of Great Britain and Northern Ireland,2022,92.0,92.0,92,,
+Armenia,2022,96.0,93.0,93,,
+Cabo Verde,2022,94.0,94.0,93,,
+India,2022,93.0,93.0,93,,
+Iraq,2022,93.0,92.0,93,,
+Ireland,2022,93.0,93.0,93,,
+Netherlands,2022,88.0,93.0,93,,
+Spain,2022,93.0,93.0,93,,
+Trinidad and Tobago,2022,93.0,94.0,93,,
+Australia,2022,94.0,94.0,94,,
+Czechia,2022,94.0,94.0,94,,
+Palau,2022,95.0,94.0,94,,
+Sweden,2022,94.0,94.0,94,,
+United States of America,2022,93.0,93.0,94,,
+Uruguay,2022,94.0,94.0,94,,
+Costa Rica,2022,94.0,95.0,95,,
+Eritrea,2022,95.0,95.0,95,,
+Italy,2022,95.0,95.0,95,,
+Latvia,2022,95.0,95.0,95,,
+Mauritius,2022,95.0,95.0,95,,
+Mongolia,2022,95.0,95.0,95,,
+Chile,2022,96.0,96.0,96,,
+Cyprus,2022,94.0,96.0,96,,
+France,2022,95.0,96.0,96,,
+Kuwait,2022,96.0,95.0,96,,
+Saint Kitts and Nevis,2022,96.0,96.0,96,,
+Switzerland,2022,76.0,96.0,96,,
+United Arab Emirates,2022,95.0,95.0,96,,
+Albania,2022,97.0,98.0,97,,
+Bahrain,2022,97.0,97.0,97,,
+Denmark,2022,,98.0,97,,
+Egypt,2022,97.0,97.0,97,,
+Eswatini,2022,97.0,97.0,97,,
+Malaysia,2022,96.0,97.0,97,,
+Norway,2022,96.0,97.0,97,,
+Russian Federation,2022,97.0,97.0,97,,
+Sao Tome and Principe,2022,97.0,93.0,97,,
+Seychelles,2022,97.0,97.0,97,,
+Singapore,2022,96.0,97.0,97,,
+Slovakia,2022,97.0,97.0,97,,
+Tajikistan,2022,97.0,97.0,97,,
+Thailand,2022,97.0,97.0,97,,
+Tunisia,2022,97.0,97.0,97,,
+Andorra,2022,96.0,97.0,98,,
+Bangladesh,2022,98.0,98.0,98,,
+Belarus,2022,98.0,98.0,98,,
+Belgium,2022,97.0,98.0,98,,
+Bhutan,2022,98.0,98.0,98,,
+Guyana,2022,98.0,97.0,98,,
+Israel,2022,96.0,98.0,98,,
+Jamaica,2022,98.0,94.0,98,,
+Malta,2022,98.0,98.0,98,,
+Nauru,2022,98.0,98.0,98,,
+Occupied Palestinian territory,2022,99.0,99.0,98,,
+Qatar,2022,98.0,99.0,98,,
+Republic of Korea,2022,97.0,97.0,98,,
+Rwanda,2022,98.0,98.0,98,,
+Saudi Arabia,2022,98.0,98.0,98,,
+Sri Lanka,2022,98.0,98.0,98,,
+Turkmenistan,2022,98.0,98.0,98,,
+Antigua and Barbuda,2022,99.0,99.0,99,,
+Brunei Darussalam,2022,99.0,99.0,99,,
+China,2022,99.0,99.0,99,,
+Cuba,2022,99.0,98.0,99,,
+Fiji,2022,99.0,99.0,99,,
+Ghana,2022,99.0,90.0,99,,
+Greece,2022,96.0,99.0,99,,
+Hungary,2022,,99.0,99,,
+Iran (Islamic Republic of),2022,99.0,99.0,99,,
+Japan,2022,96.0,99.0,99,,
+Kazakhstan,2022,99.0,99.0,99,,
+Luxembourg,2022,96.0,99.0,99,,
+Maldives,2022,99.0,99.0,99,,
+Monaco,2022,99.0,99.0,99,,
+Morocco,2022,99.0,99.0,99,,
+Niue,2022,99.0,99.0,99,,
+Oman,2022,99.0,97.0,99,,
+Portugal,2022,99.0,99.0,99,,
+Türkiye,2022,99.0,99.0,99,,
+Tonga,2022,99.0,99.0,99,,
+Uzbekistan,2022,99.0,99.0,99,,
+Papua New Guinea,2021,31.0,32.0,31,65.4,Oceania
+Myanmar,2021,37.0,43.0,37,65.7,Asia
+Democratic People's Republic of Korea,2021,41.0,0.0,41,,
+Central African Republic,2021,42.0,46.0,42,53.9,Africa
+Somalia,2021,42.0,47.0,42,55.3,Africa
+Angola,2021,45.0,43.0,45,61.6,Africa
+Guinea,2021,47.0,48.0,47,58.9,Africa
+Syrian Arab Republic,2021,48.0,52.0,48,,
+Haiti,2021,51.0,51.0,51,63.2,North America
+Equatorial Guinea,2021,53.0,55.0,53,60.6,Africa
+Venezuela (Bolivarian Republic of),2021,56.0,50.0,56,,
+Madagascar,2021,57.0,55.0,57,64.5,Africa
+Philippines,2021,57.0,56.0,57,69.3,Asia
+Chad,2021,58.0,58.0,58,52.5,Africa
+Djibouti,2021,59.0,59.0,59,62.3,Africa
+Mozambique,2021,61.0,67.0,61,59.3,Africa
+Nigeria,2021,62.0,62.0,62,52.7,Africa
+Vanuatu,2021,62.0,62.0,62,70.4,Oceania
+Democratic Republic of the Congo,2021,65.0,65.0,65,,
+Ethiopia,2021,65.0,68.0,65,65.0,Africa
+Afghanistan,2021,66.0,71.0,66,62.0,Asia
+Liberia,2021,66.0,64.0,66,60.7,Africa
+Guinea-Bissau,2021,67.0,23.0,67,59.7,Africa
+Indonesia,2021,67.0,68.0,67,67.6,Asia
+Lebanon,2021,67.0,64.0,67,75.0,Asia
+Brazil,2021,68.0,68.0,68,72.8,South America
+Mauritania,2021,68.0,66.0,68,64.4,Africa
+Cameroon,2021,69.0,70.0,69,60.3,Africa
+South Sudan,2021,69.0,69.0,69,55.0,Africa
+Bolivia (Plurinational State of),2021,70.0,70.0,70,,
+Paraguay,2021,70.0,66.0,70,70.3,South America
+Ecuador,2021,68.0,62.0,72,73.7,South America
+Micronesia (Federated States of),2021,79.0,72.0,72,,
+Suriname,2021,72.0,72.0,72,70.3,South America
+Yemen,2021,72.0,66.0,72,63.8,Asia
+Libya,2021,73.0,73.0,73,71.9,Africa
+Gabon,2021,75.0,69.0,75,65.8,Africa
+Lao People's Democratic Republic,2021,75.0,74.0,75,,
+Benin,2021,76.0,75.0,76,59.8,Africa
+Bosnia and Herzegovina,2021,79.0,75.0,76,75.3,Europe
+Côte d’Ivoire,2021,76.0,73.0,76,,
+Congo,2021,77.0,75.0,77,63.5,Africa
+Eswatini,2021,77.0,61.0,77,57.1,Africa
+Grenada,2021,77.0,77.0,77,74.9,North America
+Honduras,2021,77.0,77.0,77,70.1,North America
+Jordan,2021,77.0,76.0,77,74.3,Asia
+Mali,2021,77.0,72.0,77,58.9,Africa
+El Salvador,2021,78.0,78.0,78,70.7,North America
+Iraq,2021,78.0,78.0,78,70.4,Asia
+Mexico,2021,80.0,78.0,78,70.2,North America
+Ukraine,2021,77.0,78.0,78,71.6,Europe
+Guatemala,2021,79.0,78.0,79,69.2,North America
+Saint Lucia,2021,80.0,75.0,80,71.1,North America
+Algeria,2021,81.0,81.0,81,76.4,Africa
+Argentina,2021,81.0,79.0,81,75.4,South America
+Cook Islands,2021,81.0,81.0,81,74.8,Oceania
+The former Yugoslav Republic of Macedonia,2021,79.0,81.0,81,,
+United Republic of Tanzania,2021,81.0,70.0,81,,
+Barbados,2021,82.0,84.0,82,77.6,North America
+Gambia,2021,82.0,89.0,82,62.1,Africa
+Niger,2021,82.0,82.0,82,61.6,Africa
+Peru,2021,82.0,79.0,82,72.4,South America
+Belize,2021,83.0,83.0,83,70.5,North America
+Montenegro,2021,51.0,83.0,83,76.3,Europe
+Pakistan,2021,83.0,83.0,83,66.1,Asia
+Togo,2021,83.0,81.0,83,61.6,Africa
+Viet Nam,2021,83.0,81.0,83,,
+Dominican Republic,2021,83.0,83.0,84,72.6,North America
+Sudan,2021,84.0,85.0,84,65.3,Africa
+Georgia,2021,85.0,85.0,85,71.7,Asia
+India,2021,85.0,85.0,85,67.2,Asia
+Samoa,2021,85.0,80.0,85,72.8,Oceania
+Senegal,2021,85.0,85.0,85,67.1,Africa
+Austria,2021,86.0,86.0,86,81.6,Europe
+Bahamas,2021,86.0,86.0,86,71.6,North America
+Colombia,2021,86.0,86.0,86,72.8,South America
+Marshall Islands,2021,89.0,85.0,86,65.3,Oceania
+Romania,2021,86.0,86.0,86,74.2,Europe
+Slovenia,2021,86.0,86.0,86,80.7,Europe
+South Africa,2021,86.0,86.0,86,62.3,Africa
+Timor-Leste,2021,86.0,86.0,86,,
+Cambodia,2021,87.0,87.0,87,69.6,Asia
+Lesotho,2021,87.0,87.0,87,53.1,Africa
+Nicaragua,2021,87.0,88.0,87,73.8,North America
+Panama,2021,87.0,87.0,87,76.2,North America
+Republic of Moldova,2021,87.0,88.0,87,,
+Solomon Islands,2021,87.0,84.0,87,70.3,Oceania
+Rwanda,2021,88.0,88.0,88,66.1,Africa
+Zimbabwe,2021,88.0,88.0,88,59.3,Africa
+Azerbaijan,2021,89.0,93.0,89,69.4,Asia
+Bulgaria,2021,89.0,89.0,89,71.8,Europe
+Finland,2021,,89.0,89,82.0,Europe
+Kyrgyzstan,2021,89.0,90.0,89,70.0,Asia
+Estonia,2021,84.0,89.0,90,77.1,Europe
+Jamaica,2021,89.0,90.0,90,70.5,North America
+Kiribati,2021,90.0,86.0,90,67.4,Oceania
+Lithuania,2021,90.0,90.0,90,73.7,Europe
+New Zealand,2021,90.0,90.0,90,82.5,Oceania
+Poland,2021,90.0,91.0,90,76.5,Europe
+San Marino,2021,90.0,90.0,90,80.9,Europe
+Burkina Faso,2021,91.0,91.0,91,59.3,Africa
+Comoros,2021,91.0,94.0,91,63.4,Africa
+Germany,2021,87.0,91.0,91,80.6,Europe
+Kenya,2021,91.0,91.0,91,61.4,Africa
+Nepal,2021,91.0,91.0,91,68.4,Asia
+Serbia,2021,89.0,91.0,91,74.2,Europe
+Uganda,2021,91.0,91.0,91,62.7,Africa
+Uruguay,2021,91.0,90.0,91,75.4,South America
+Zambia,2021,91.0,87.0,91,61.2,Africa
+Antigua and Barbuda,2021,92.0,92.0,92,78.5,North America
+Canada,2021,84.0,92.0,92,82.7,North America
+Croatia,2021,90.0,92.0,92,77.6,Europe
+Dominica,2021,92.0,92.0,92,72.8,North America
+Iceland,2021,,92.0,92,82.7,Europe
+Mauritius,2021,92.0,93.0,92,73.6,Africa
+Saint Vincent and the Grenadines,2021,99.0,92.0,92,69.6,North America
+Sierra Leone,2021,92.0,90.0,92,60.1,Africa
+Spain,2021,92.0,92.0,92,83.0,Europe
+Armenia,2021,93.0,93.0,93,72.0,Asia
+Cabo Verde,2021,94.0,94.0,93,,
+Costa Rica,2021,87.0,92.0,93,77.0,North America
+Malawi,2021,93.0,89.0,93,62.9,Africa
+United Kingdom of Great Britain and Northern Ireland,2021,93.0,93.0,93,,
+Burundi,2021,94.0,94.0,94,61.7,Africa
+Czechia,2021,94.0,94.0,94,77.7,Europe
+Ireland,2021,93.0,94.0,94,82.0,Europe
+Italy,2021,94.0,94.0,94,82.9,Europe
+Kuwait,2021,94.0,94.0,94,78.7,Asia
+Latvia,2021,94.0,94.0,94,73.6,Europe
+Namibia,2021,94.0,73.0,94,59.3,Africa
+Seychelles,2021,94.0,94.0,94,71.3,Africa
+Trinidad and Tobago,2021,94.0,94.0,94,73.0,North America
+Tuvalu,2021,94.0,87.0,94,64.5,Oceania
+United States of America,2021,92.0,93.0,94,,
+Australia,2021,95.0,95.0,95,84.5,Oceania
+Botswana,2021,95.0,96.0,95,61.1,Africa
+Chile,2021,95.0,95.0,95,78.9,South America
+Eritrea,2021,95.0,95.0,95,66.5,Africa
+Kazakhstan,2021,95.0,95.0,95,69.4,Asia
+Malaysia,2021,94.0,95.0,95,74.9,Asia
+Mongolia,2021,95.0,96.0,95,71.0,Asia
+Netherlands,2021,93.0,95.0,95,81.7,Europe
+Occupied Palestinian territory,2021,95.0,95.0,95,,
+Palau,2021,96.0,95.0,95,66.0,Oceania
+Türkiye,2021,96.0,95.0,95,,
+Cyprus,2021,94.0,96.0,96,81.2,Europe
+Egypt,2021,96.0,96.0,96,70.2,Africa
+France,2021,95.0,96.0,96,82.5,Europe
+Maldives,2021,96.0,97.0,96,79.9,Asia
+Saint Kitts and Nevis,2021,96.0,96.0,96,71.7,North America
+Sri Lanka,2021,96.0,96.0,96,76.4,Asia
+Switzerland,2021,73.0,96.0,96,84.0,Europe
+United Arab Emirates,2021,95.0,96.0,96,78.7,Asia
+Denmark,2021,,97.0,97,81.4,Europe
+Norway,2021,96.0,97.0,97,83.2,Europe
+Russian Federation,2021,97.0,97.0,97,,
+Sao Tome and Principe,2021,97.0,93.0,97,67.6,Africa
+Saudi Arabia,2021,97.0,97.0,97,76.9,Asia
+Slovakia,2021,97.0,97.0,97,74.9,Europe
+Tajikistan,2021,97.0,97.0,97,71.6,Asia
+Thailand,2021,97.0,97.0,97,78.7,Asia
+Tunisia,2021,97.0,97.0,97,73.8,Africa
+Turkmenistan,2021,97.0,97.0,97,69.3,Asia
+Albania,2021,98.0,98.0,98,76.5,Europe
+Bahrain,2021,98.0,99.0,98,78.8,Asia
+Bangladesh,2021,98.0,98.0,98,72.4,Asia
+Belarus,2021,98.0,97.0,98,72.4,Europe
+Belgium,2021,97.0,98.0,98,81.9,Europe
+Bhutan,2021,98.0,98.0,98,71.8,Asia
+Ghana,2021,98.0,98.0,98,63.8,Africa
+Guyana,2021,98.0,97.0,98,65.7,South America
+Iran (Islamic Republic of),2021,98.0,98.0,98,,
+Israel,2021,96.0,98.0,98,82.3,Asia
+Nauru,2021,98.0,98.0,98,63.6,Oceania
+Qatar,2021,98.0,98.0,98,79.3,Asia
+Republic of Korea,2021,98.0,98.0,98,,
+Singapore,2021,97.0,98.0,98,82.8,Asia
+Sweden,2021,98.0,98.0,98,83.0,Europe
+Uzbekistan,2021,98.0,99.0,98,70.9,Asia
+Andorra,2021,98.0,98.0,99,80.4,Europe
+Brunei Darussalam,2021,99.0,99.0,99,,
+China,2021,99.0,99.0,99,78.2,Asia
+Cuba,2021,99.0,98.0,99,73.7,North America
+Fiji,2021,99.0,99.0,99,67.1,Oceania
+Greece,2021,96.0,99.0,99,80.1,Europe
+Hungary,2021,,99.0,99,74.5,Europe
+Japan,2021,96.0,99.0,99,84.8,Asia
+Luxembourg,2021,96.0,99.0,99,82.6,Europe
+Malta,2021,99.0,99.0,99,83.8,Europe
+Monaco,2021,99.0,99.0,99,85.9,Europe
+Morocco,2021,99.0,99.0,99,74.0,Africa
+Niue,2021,99.0,99.0,99,70.8,Oceania
+Oman,2021,99.0,99.0,99,72.5,Asia
+Portugal,2021,99.0,99.0,99,81.0,Europe
+Tonga,2021,99.0,99.0,99,71.0,Oceania
+Papua New Guinea,2020,39.0,41.0,39,65.8,Oceania
+Central African Republic,2020,42.0,46.0,42,54.6,Africa
+Somalia,2020,42.0,47.0,42,56.0,Africa
+Guinea,2020,47.0,48.0,47,59.3,Africa
+Syrian Arab Republic,2020,49.0,53.0,49,,
+Angola,2020,51.0,51.0,51,62.3,Africa
+Haiti,2020,51.0,51.0,51,64.1,North America
+Suriname,2020,51.0,51.0,51,72.6,South America
+Chad,2020,52.0,52.0,52,52.8,Africa
+Equatorial Guinea,2020,53.0,55.0,53,60.7,Africa
+Venezuela (Bolivarian Republic of),2020,54.0,62.0,54,,
+Nigeria,2020,62.0,62.0,62,52.9,Africa
+Gabon,2020,63.0,62.0,63,66.5,Africa
+Liberia,2020,65.0,67.0,65,60.9,Africa
+South Sudan,2020,67.0,65.0,67,55.5,Africa
+Bolivia (Plurinational State of),2020,68.0,68.0,68,,
+Madagascar,2020,68.0,67.0,68,65.2,Africa
+Cameroon,2020,69.0,70.0,69,60.8,Africa
+Afghanistan,2020,70.0,75.0,70,62.6,Asia
+Democratic Republic of the Congo,2020,70.0,72.0,70,,
+Djibouti,2020,70.0,70.0,70,62.7,Africa
+Ecuador,2020,70.0,72.0,70,72.2,South America
+Mali,2020,70.0,65.0,70,58.6,Africa
+Ethiopia,2020,71.0,74.0,71,65.4,Africa
+Lebanon,2020,71.0,67.0,71,77.8,Asia
+Philippines,2020,71.0,72.0,71,72.1,Asia
+Benin,2020,72.0,73.0,72,60.1,Africa
+Bosnia and Herzegovina,2020,79.0,74.0,72,76.2,Europe
+Grenada,2020,72.0,72.0,72,74.9,North America
+Mauritania,2020,72.0,71.0,72,64.5,Africa
+Mexico,2020,77.0,72.0,72,70.1,North America
+Peru,2020,72.0,72.0,72,73.7,South America
+Yemen,2020,72.0,66.0,72,64.7,Asia
+Congo,2020,73.0,73.0,73,63.8,Africa
+Libya,2020,73.0,73.0,73,72.5,Africa
+Argentina,2020,74.0,74.0,74,75.9,South America
+Guinea-Bissau,2020,74.0,63.0,74,60.0,Africa
+Iraq,2020,74.0,78.0,74,69.1,Asia
+Panama,2020,74.0,74.0,74,76.7,North America
+Côte d’Ivoire,2020,75.0,67.0,75,,
+El Salvador,2020,76.0,73.0,76,71.1,North America
+Brazil,2020,77.0,74.0,77,74.0,South America
+Indonesia,2020,77.0,76.0,77,68.8,Asia
+Jordan,2020,77.0,76.0,77,75.2,Asia
+Vanuatu,2020,78.0,76.0,78,70.3,Oceania
+Azerbaijan,2020,79.0,85.0,79,66.9,Asia
+Belize,2020,79.0,79.0,79,72.9,North America
+Lao People's Democratic Republic,2020,79.0,78.0,79,,
+Mozambique,2020,79.0,73.0,79,61.2,Africa
+Paraguay,2020,79.0,78.0,79,73.2,South America
+Honduras,2020,80.0,80.0,80,71.5,North America
+Pakistan,2020,80.0,83.0,80,66.3,Asia
+Niger,2020,81.0,81.0,81,61.5,Africa
+Ukraine,2020,81.0,84.0,81,72.6,Europe
+Dominican Republic,2020,81.0,80.0,82,72.9,North America
+Marshall Islands,2020,86.0,82.0,82,65.0,Oceania
+Togo,2020,82.0,80.0,82,61.0,Africa
+Bahamas,2020,83.0,83.0,83,72.7,North America
+Eswatini,2020,83.0,82.0,83,59.7,Africa
+Guatemala,2020,83.0,83.0,83,71.8,North America
+Micronesia (Federated States of),2020,88.0,82.0,83,,
+Algeria,2020,84.0,84.0,84,74.5,Africa
+Montenegro,2020,52.0,84.0,84,76.3,Europe
+Myanmar,2020,84.0,86.0,84,66.8,Asia
+Nepal,2020,84.0,84.0,84,69.2,Asia
+The former Yugoslav Republic of Macedonia,2020,84.0,84.0,84,,
+South Africa,2020,84.0,84.0,84,65.3,Africa
+Zambia,2020,84.0,83.0,84,62.4,Africa
+Austria,2020,85.0,85.0,85,81.5,Europe
+Barbados,2020,85.0,85.0,85,77.4,North America
+Gambia,2020,85.0,89.0,85,62.6,Africa
+India,2020,85.0,85.0,85,70.1,Asia
+Republic of Moldova,2020,87.0,87.0,86,,
+Saint Lucia,2020,86.0,88.0,86,73.4,North America
+Timor-Leste,2020,86.0,86.0,86,,
+United Republic of Tanzania,2020,86.0,65.0,86,,
+Zimbabwe,2020,86.0,86.0,86,61.1,Africa
+Cambodia,2020,87.0,88.0,87,70.4,Asia
+Kyrgyzstan,2020,86.0,87.0,87,69.6,Asia
+Lesotho,2020,87.0,87.0,87,54.7,Africa
+Romania,2020,87.0,87.0,87,75.3,Europe
+Colombia,2020,88.0,88.0,88,74.8,South America
+Georgia,2020,88.0,88.0,88,72.8,Asia
+Kazakhstan,2020,88.0,88.0,88,70.0,Asia
+Cook Islands,2020,89.0,89.0,89,74.7,Oceania
+Kenya,2020,89.0,89.0,89,62.7,Africa
+Qatar,2020,89.0,89.0,89,79.1,Asia
+Samoa,2020,89.0,89.0,89,72.8,Oceania
+San Marino,2020,89.0,89.0,89,79.6,Europe
+Uganda,2020,89.0,88.0,89,62.9,Africa
+Finland,2020,,90.0,90,81.9,Europe
+Poland,2020,90.0,91.0,90,76.9,Europe
+Sudan,2020,90.0,90.0,90,65.6,Africa
+United Arab Emirates,2020,91.0,80.0,90,78.9,Asia
+Armenia,2020,92.0,86.0,91,72.2,Asia
+Bulgaria,2020,91.0,91.0,91,73.6,Europe
+Burkina Faso,2020,91.0,91.0,91,59.7,Africa
+Comoros,2020,91.0,94.0,91,64.2,Africa
+Estonia,2020,90.0,91.0,91,78.3,Europe
+Germany,2020,88.0,91.0,91,81.1,Europe
+Lithuania,2020,91.0,91.0,91,75.1,Europe
+Rwanda,2020,91.0,91.0,91,66.8,Africa
+Senegal,2020,91.0,91.0,91,68.0,Africa
+Sierra Leone,2020,91.0,90.0,91,59.8,Africa
+Canada,2020,84.0,92.0,92,82.0,North America
+Kiribati,2020,92.0,91.0,92,67.3,Oceania
+New Zealand,2020,92.0,92.0,92,82.7,Oceania
+Nicaragua,2020,92.0,93.0,92,71.8,North America
+Serbia,2020,87.0,92.0,92,75.4,Europe
+Uruguay,2020,92.0,91.0,92,78.4,South America
+Burundi,2020,93.0,93.0,93,61.6,Africa
+Cabo Verde,2020,94.0,94.0,93,,
+Chile,2020,93.0,93.0,93,79.4,South America
+Iceland,2020,,93.0,93,82.6,Europe
+Kuwait,2020,93.0,95.0,93,76.9,Asia
+Mauritius,2020,93.0,94.0,93,74.3,Africa
+Namibia,2020,93.0,92.0,93,62.8,Africa
+United Kingdom of Great Britain and Northern Ireland,2020,93.0,93.0,93,,
+United States of America,2020,91.0,92.0,93,,
+Croatia,2020,91.0,94.0,94,78.0,Europe
+Egypt,2020,94.0,95.0,94,71.0,Africa
+Ghana,2020,94.0,92.0,94,64.1,Africa
+Ireland,2020,94.0,94.0,94,82.5,Europe
+Italy,2020,94.0,94.0,94,82.4,Europe
+Malawi,2020,94.0,93.0,94,63.7,Africa
+Netherlands,2020,93.0,94.0,94,81.6,Europe
+Solomon Islands,2020,94.0,92.0,94,70.2,Oceania
+Spain,2020,94.0,94.0,94,82.3,Europe
+Viet Nam,2020,94.0,80.0,94,,
+Australia,2020,95.0,95.0,95,84.3,Oceania
+Bhutan,2020,96.0,96.0,95,71.6,Asia
+Botswana,2020,95.0,96.0,95,65.6,Africa
+Eritrea,2020,95.0,95.0,95,67.1,Africa
+Nauru,2020,95.0,95.0,95,63.4,Oceania
+Saudi Arabia,2020,95.0,95.0,95,76.2,Asia
+Slovenia,2020,,95.0,95,80.4,Europe
+Tuvalu,2020,93.0,90.0,95,64.4,Oceania
+Uzbekistan,2020,95.0,97.0,95,70.3,Asia
+Antigua and Barbuda,2020,95.0,95.0,96,78.8,North America
+Cyprus,2020,94.0,96.0,96,81.4,Europe
+Dominica,2020,97.0,96.0,96,73.6,North America
+France,2020,95.0,96.0,96,82.2,Europe
+Jamaica,2020,95.0,95.0,96,71.9,North America
+Japan,2020,92.0,96.0,96,84.7,Asia
+Mongolia,2020,96.0,97.0,96,72.1,Asia
+Palau,2020,93.0,96.0,96,65.3,Oceania
+Sao Tome and Principe,2020,96.0,94.0,96,67.8,Africa
+Sri Lanka,2020,96.0,96.0,96,76.4,Asia
+Switzerland,2020,72.0,96.0,96,83.1,Europe
+Trinidad and Tobago,2020,96.0,93.0,96,74.4,North America
+Belarus,2020,97.0,97.0,97,72.5,Europe
+Belgium,2020,97.0,98.0,97,80.8,Europe
+Costa Rica,2020,91.0,97.0,97,79.3,North America
+Czechia,2020,96.0,96.0,97,78.6,Europe
+Democratic People's Republic of Korea,2020,97.0,70.0,97,,
+Denmark,2020,,97.0,97,81.5,Europe
+Norway,2020,97.0,97.0,97,83.2,Europe
+Russian Federation,2020,97.0,97.0,97,,
+Saint Vincent and the Grenadines,2020,98.0,99.0,97,72.1,North America
+Seychelles,2020,97.0,97.0,97,73.5,Africa
+Slovakia,2020,97.0,97.0,97,77.0,Europe
+Sweden,2020,97.0,97.0,97,82.4,Europe
+Tajikistan,2020,97.0,97.0,97,68.0,Asia
+Thailand,2020,97.0,97.0,97,79.3,Asia
+Tunisia,2020,97.0,97.0,97,75.3,Africa
+Albania,2020,98.0,98.0,98,77.0,Europe
+Bahrain,2020,98.0,98.0,98,79.2,Asia
+Bangladesh,2020,98.0,98.0,98,72.0,Asia
+Israel,2020,96.0,98.0,98,82.4,Asia
+Malaysia,2020,99.0,98.0,98,75.9,Asia
+Malta,2020,98.0,98.0,98,83.4,Europe
+Occupied Palestinian territory,2020,98.0,98.0,98,,
+Republic of Korea,2020,98.0,98.0,98,,
+Singapore,2020,97.0,98.0,98,82.9,Asia
+Türkiye,2020,98.0,98.0,98,,
+Turkmenistan,2020,99.0,98.0,98,68.7,Asia
+Andorra,2020,98.0,99.0,99,79.0,Europe
+Brunei Darussalam,2020,99.0,99.0,99,,
+China,2020,99.0,99.0,99,78.1,Asia
+Cuba,2020,99.0,98.0,99,77.6,North America
+Fiji,2020,99.0,99.0,99,67.9,Oceania
+Greece,2020,96.0,99.0,99,80.9,Europe
+Guyana,2020,99.0,91.0,99,68.5,South America
+Hungary,2020,,99.0,99,75.7,Europe
+Iran (Islamic Republic of),2020,99.0,99.0,99,,
+Latvia,2020,99.0,99.0,99,75.5,Europe
+Luxembourg,2020,96.0,99.0,99,81.4,Europe
+Maldives,2020,99.0,99.0,99,79.9,Asia
+Monaco,2020,99.0,99.0,99,86.5,Europe
+Morocco,2020,99.0,99.0,99,73.9,Africa
+Niue,2020,99.0,99.0,99,70.8,Oceania
+Oman,2020,99.0,99.0,99,74.8,Asia
+Portugal,2020,99.0,99.0,99,81.1,Europe
+Saint Kitts and Nevis,2020,99.0,99.0,99,71.6,North America
+Tonga,2020,99.0,99.0,99,70.9,Oceania
+Papua New Guinea,2019,35.0,42.0,35,65.5,Oceania
+Central African Republic,2019,42.0,46.0,42,55.0,Africa
+Somalia,2019,42.0,47.0,42,57.1,Africa
+Guinea,2019,47.0,48.0,47,59.7,Africa
+Chad,2019,50.0,47.0,50,53.3,Africa
+Haiti,2019,51.0,51.0,51,64.3,North America
+Equatorial Guinea,2019,53.0,55.0,53,61.6,Africa
+Syrian Arab Republic,2019,54.0,60.0,54,,
+Angola,2019,57.0,56.0,57,62.4,Africa
+South Sudan,2019,61.0,61.0,61,55.9,Africa
+Venezuela (Bolivarian Republic of),2019,64.0,62.0,64,,
+Nigeria,2019,66.0,66.0,66,52.9,Africa
+Cameroon,2019,67.0,68.0,67,61.6,Africa
+Ethiopia,2019,68.0,71.0,68,65.8,Africa
+Samoa,2019,68.0,68.0,68,72.2,Oceania
+Brazil,2019,72.0,85.0,70,75.3,South America
+Gabon,2019,70.0,70.0,70,66.6,Africa
+Liberia,2019,70.0,69.0,70,61.1,Africa
+Madagascar,2019,70.0,69.0,70,65.9,Africa
+Philippines,2019,71.0,78.0,71,71.9,Asia
+Afghanistan,2019,72.0,75.0,72,63.6,Asia
+Bosnia and Herzegovina,2019,80.0,74.0,73,77.2,Europe
+Democratic Republic of the Congo,2019,73.0,74.0,73,,
+Libya,2019,73.0,73.0,73,72.5,Africa
+Yemen,2019,73.0,67.0,73,65.1,Asia
+Bolivia (Plurinational State of),2019,75.0,75.0,75,,
+Benin,2019,76.0,75.0,76,60.5,Africa
+Mali,2019,77.0,72.0,77,59.7,Africa
+Suriname,2019,77.0,76.0,77,72.2,South America
+Guinea-Bissau,2019,78.0,60.0,78,60.9,Africa
+Micronesia (Federated States of),2019,84.0,78.0,78,,
+Congo,2019,79.0,78.0,79,62.7,Africa
+Marshall Islands,2019,82.0,78.0,79,64.7,Oceania
+Lao People's Democratic Republic,2019,80.0,80.0,80,,
+Mauritania,2019,80.0,75.0,80,65.7,Africa
+Ukraine,2019,76.0,78.0,80,74.5,Europe
+Côte d’Ivoire,2019,81.0,80.0,81,,
+Niger,2019,81.0,81.0,81,62.9,Africa
+Mexico,2019,56.0,82.0,82,74.2,North America
+Argentina,2019,83.0,83.0,83,77.3,South America
+Lebanon,2019,80.0,81.0,83,79.2,Asia
+Iraq,2019,84.0,85.0,84,71.6,Asia
+Pakistan,2019,84.0,84.0,84,66.8,Asia
+Togo,2019,84.0,78.0,84,60.9,Africa
+Austria,2019,85.0,85.0,85,81.9,Europe
+Djibouti,2019,85.0,85.0,85,63.1,Africa
+Ecuador,2019,85.0,85.0,85,77.3,South America
+Guatemala,2019,85.0,84.0,85,73.1,North America
+Indonesia,2019,85.0,85.0,85,70.5,Asia
+Montenegro,2019,62.0,85.0,85,77.0,Europe
+South Africa,2019,85.0,85.0,85,66.2,Africa
+Paraguay,2019,86.0,84.0,86,73.6,South America
+Lesotho,2019,87.0,87.0,87,54.2,Africa
+Namibia,2019,87.0,84.0,87,63.1,Africa
+Algeria,2019,88.0,88.0,88,76.5,Africa
+Cambodia,2019,88.0,89.0,88,70.7,Asia
+Gambia,2019,88.0,88.0,88,63.8,Africa
+Honduras,2019,88.0,88.0,88,72.9,North America
+Mozambique,2019,88.0,88.0,88,61.2,Africa
+Panama,2019,88.0,88.0,88,77.8,North America
+Peru,2019,88.0,87.0,88,76.2,South America
+Romania,2019,90.0,88.0,88,76.5,Europe
+San Marino,2019,87.0,88.0,88,83.0,Europe
+Zambia,2019,88.0,89.0,88,62.8,Africa
+Bahamas,2019,89.0,89.0,89,71.2,North America
+Dominican Republic,2019,87.0,92.0,89,73.6,North America
+Jordan,2019,89.0,87.0,89,76.0,Asia
+United Republic of Tanzania,2019,89.0,89.0,89,,
+Viet Nam,2019,89.0,89.0,89,,
+Barbados,2019,90.0,91.0,90,77.3,North America
+El Salvador,2019,90.0,90.0,90,72.6,North America
+Eswatini,2019,90.0,89.0,90,60.5,Africa
+Myanmar,2019,90.0,90.0,90,66.6,Asia
+Timor-Leste,2019,90.0,90.0,90,,
+Vanuatu,2019,90.0,90.0,90,69.9,Oceania
+Zimbabwe,2019,90.0,90.0,90,61.3,Africa
+Burkina Faso,2019,91.0,91.0,91,60.0,Africa
+Canada,2019,84.0,92.0,91,82.4,North America
+Comoros,2019,91.0,88.0,91,64.1,Africa
+Estonia,2019,91.0,91.0,91,78.7,Europe
+Finland,2019,,91.0,91,81.9,Europe
+Germany,2019,88.0,91.0,91,81.6,Europe
+India,2019,91.0,90.0,91,70.9,Asia
+Kenya,2019,91.0,91.0,91,62.9,Africa
+Republic of Moldova,2019,94.0,94.0,91,,
+Armenia,2019,92.0,94.0,92,75.4,Asia
+Iceland,2019,,93.0,92,82.4,Europe
+Kuwait,2019,92.0,97.0,92,79.7,Asia
+Lithuania,2019,92.0,92.0,92,76.2,Europe
+New Zealand,2019,92.0,92.0,92,82.6,Oceania
+The former Yugoslav Republic of Macedonia,2019,92.0,92.0,92,,
+Saint Lucia,2019,92.0,91.0,92,73.4,North America
+Tuvalu,2019,92.0,92.0,92,64.3,Oceania
+Bulgaria,2019,93.0,93.0,93,75.1,Europe
+Burundi,2019,93.0,93.0,93,62.4,Africa
+Nepal,2019,93.0,92.0,93,69.6,Asia
+Sudan,2019,93.0,93.0,93,65.9,Africa
+Trinidad and Tobago,2019,93.0,93.0,93,74.2,North America
+Uganda,2019,93.0,92.0,93,63.0,Africa
+United Kingdom of Great Britain and Northern Ireland,2019,93.0,93.0,93,,
+Azerbaijan,2019,94.0,96.0,94,73.1,Asia
+Colombia,2019,92.0,94.0,94,76.8,South America
+Croatia,2019,93.0,94.0,94,78.7,Europe
+Georgia,2019,94.0,94.0,94,73.5,Asia
+Grenada,2019,94.0,94.0,94,74.9,North America
+Ireland,2019,93.0,94.0,94,82.3,Europe
+Netherlands,2019,92.0,94.0,94,82.0,Europe
+Solomon Islands,2019,94.0,93.0,94,70.4,Oceania
+United States of America,2019,91.0,93.0,94,,
+Uruguay,2019,94.0,93.0,94,77.5,South America
+Antigua and Barbuda,2019,99.0,95.0,95,78.7,North America
+Australia,2019,95.0,95.0,95,83.1,Oceania
+Botswana,2019,95.0,96.0,95,65.5,Africa
+Costa Rica,2019,94.0,96.0,95,79.4,North America
+Egypt,2019,95.0,95.0,95,71.4,Africa
+Eritrea,2019,95.0,95.0,95,67.3,Africa
+Kyrgyzstan,2019,95.0,96.0,95,71.2,Asia
+Malawi,2019,95.0,94.0,95,64.1,Africa
+Poland,2019,91.0,87.0,95,77.9,Europe
+Sao Tome and Principe,2019,95.0,95.0,95,68.5,Africa
+Senegal,2019,95.0,96.0,95,68.5,Africa
+Sierra Leone,2019,95.0,95.0,95,60.3,Africa
+Slovenia,2019,,95.0,95,81.6,Europe
+Spain,2019,95.0,95.0,95,83.5,Europe
+Cabo Verde,2019,97.0,97.0,96,,
+Chile,2019,96.0,96.0,96,80.3,South America
+Cyprus,2019,94.0,96.0,96,81.4,Europe
+France,2019,93.0,96.0,96,82.7,Europe
+Italy,2019,95.0,96.0,96,83.6,Europe
+Jamaica,2019,96.0,96.0,96,71.8,North America
+Mauritius,2019,97.0,97.0,96,75.1,Africa
+Nauru,2019,96.0,96.0,96,63.5,Oceania
+Saudi Arabia,2019,96.0,97.0,96,77.3,Asia
+Switzerland,2019,69.0,96.0,96,83.8,Europe
+Uzbekistan,2019,96.0,98.0,96,71.3,Asia
+Belgium,2019,97.0,98.0,97,81.8,Europe
+Bhutan,2019,97.0,97.0,97,71.4,Asia
+Czechia,2019,97.0,97.0,97,79.2,Europe
+Democratic People's Republic of Korea,2019,97.0,98.0,97,,
+Denmark,2019,,97.0,97,81.4,Europe
+Fiji,2019,97.0,97.0,97,67.9,Oceania
+Ghana,2019,97.0,97.0,97,64.7,Africa
+Kazakhstan,2019,97.0,97.0,97,71.6,Asia
+Kiribati,2019,97.0,94.0,97,67.1,Oceania
+Norway,2019,96.0,97.0,97,83.0,Europe
+Palau,2019,98.0,97.0,97,64.8,Oceania
+Russian Federation,2019,97.0,96.0,97,,
+Saint Kitts and Nevis,2019,97.0,97.0,97,71.6,North America
+Saint Vincent and the Grenadines,2019,98.0,99.0,97,72.8,North America
+Serbia,2019,94.0,97.0,97,76.7,Europe
+Singapore,2019,96.0,97.0,97,83.8,Asia
+Slovakia,2019,97.0,97.0,97,77.7,Europe
+Tajikistan,2019,97.0,97.0,97,70.9,Asia
+Thailand,2019,97.0,97.0,97,79.0,Asia
+Bangladesh,2019,98.0,98.0,98,72.8,Asia
+Belarus,2019,97.0,98.0,98,74.2,Europe
+Belize,2019,98.0,98.0,98,73.9,North America
+Cook Islands,2019,98.0,98.0,98,74.6,Oceania
+Israel,2019,96.0,98.0,98,82.8,Asia
+Japan,2019,99.0,98.0,98,84.4,Asia
+Malaysia,2019,97.0,98.0,98,75.8,Asia
+Maldives,2019,98.0,99.0,98,80.1,Asia
+Malta,2019,98.0,98.0,98,83.2,Europe
+Mongolia,2019,98.0,98.0,98,71.8,Asia
+Nicaragua,2019,98.0,99.0,98,74.1,North America
+Qatar,2019,98.0,99.0,98,81.0,Asia
+Republic of Korea,2019,98.0,98.0,98,,
+Rwanda,2019,98.0,98.0,98,66.4,Africa
+Sweden,2019,97.0,98.0,98,83.1,Europe
+Tunisia,2019,98.0,98.0,98,76.0,Africa
+Albania,2019,99.0,99.0,99,79.3,Europe
+Andorra,2019,98.0,99.0,99,83.0,Europe
+Bahrain,2019,99.0,99.0,99,80.0,Asia
+Brunei Darussalam,2019,99.0,99.0,99,,
+China,2019,99.0,99.0,99,78.0,Asia
+Cuba,2019,99.0,99.0,99,77.6,North America
+Dominica,2019,99.0,99.0,99,73.6,North America
+Greece,2019,96.0,99.0,99,81.2,Europe
+Guyana,2019,99.0,97.0,99,69.1,South America
+Hungary,2019,,99.0,99,76.5,Europe
+Iran (Islamic Republic of),2019,99.0,99.0,99,,
+Latvia,2019,99.0,99.0,99,75.5,Europe
+Luxembourg,2019,96.0,99.0,99,82.1,Europe
+Monaco,2019,99.0,99.0,99,86.5,Europe
+Morocco,2019,99.0,99.0,99,74.3,Africa
+Niue,2019,99.0,99.0,99,70.7,Oceania
+Occupied Palestinian territory,2019,99.0,99.0,99,,
+Oman,2019,99.0,99.0,99,78.0,Asia
+Portugal,2019,98.0,99.0,99,81.7,Europe
+Seychelles,2019,99.0,99.0,99,74.2,Africa
+Sri Lanka,2019,99.0,99.0,99,76.0,Asia
+Türkiye,2019,99.0,99.0,99,,
+Tonga,2019,99.0,99.0,99,70.9,Oceania
+Turkmenistan,2019,99.0,99.0,99,69.0,Asia
+United Arab Emirates,2019,98.0,95.0,99,79.7,Asia
+Papua New Guinea,2018,35.0,42.0,35,65.2,Oceania
+Central African Republic,2018,42.0,46.0,42,54.4,Africa
+Somalia,2018,42.0,47.0,42,56.4,Africa
+Samoa,2018,44.0,44.0,44,72.6,Oceania
+Chad,2018,46.0,41.0,46,52.8,Africa
+Guinea,2018,47.0,48.0,47,59.3,Africa
+Syrian Arab Republic,2018,47.0,53.0,47,,
+Equatorial Guinea,2018,53.0,55.0,53,61.2,Africa
+South Sudan,2018,59.0,60.0,59,55.9,Africa
+Venezuela (Bolivarian Republic of),2018,60.0,53.0,60,,
+Nigeria,2018,61.0,61.0,61,52.6,Africa
+Angola,2018,63.0,61.0,63,62.1,Africa
+Haiti,2018,64.0,64.0,64,64.0,North America
+Yemen,2018,65.0,59.0,65,64.6,Asia
+Cameroon,2018,67.0,68.0,67,61.2,Africa
+Ethiopia,2018,67.0,70.0,67,65.4,Africa
+Ukraine,2018,67.0,71.0,69,74.4,Europe
+Gabon,2018,70.0,64.0,70,66.3,Africa
+Democratic Republic of the Congo,2018,71.0,72.0,71,,
+Afghanistan,2018,72.0,76.0,72,63.1,Asia
+Bosnia and Herzegovina,2018,80.0,73.0,73,77.1,Europe
+Libya,2018,73.0,73.0,73,72.8,Africa
+Madagascar,2018,74.0,71.0,74,65.3,Africa
+Congo,2018,75.0,75.0,75,64.1,Africa
+Micronesia (Federated States of),2018,83.0,75.0,75,,
+Philippines,2018,75.0,79.0,75,71.7,Asia
+Viet Nam,2018,75.0,90.0,75,,
+Benin,2018,76.0,75.0,76,60.1,Africa
+Mali,2018,77.0,72.0,77,59.4,Africa
+Mauritania,2018,77.0,72.0,77,65.3,Africa
+Niger,2018,79.0,79.0,79,62.5,Africa
+Liberia,2018,80.0,79.0,80,60.9,Africa
+Pakistan,2018,80.0,75.0,80,66.5,Asia
+Marshall Islands,2018,84.0,80.0,81,64.5,Oceania
+Suriname,2018,81.0,81.0,81,72.6,South America
+Togo,2018,81.0,58.0,81,60.2,Africa
+Guinea-Bissau,2018,82.0,82.0,82,60.5,Africa
+South Africa,2018,82.0,82.0,82,65.7,Africa
+Bolivia (Plurinational State of),2018,83.0,83.0,83,,
+Lebanon,2018,80.0,81.0,83,79.7,Asia
+Timor-Leste,2018,83.0,83.0,83,,
+Côte d’Ivoire,2018,84.0,84.0,84,,
+Djibouti,2018,84.0,84.0,84,63.0,Africa
+Austria,2018,85.0,85.0,85,81.7,Europe
+Ecuador,2018,85.0,85.0,85,77.1,South America
+Guatemala,2018,85.0,85.0,85,72.7,North America
+Indonesia,2018,85.0,87.0,85,70.3,Asia
+Lao People's Democratic Republic,2018,85.0,85.0,85,,
+Solomon Islands,2018,85.0,85.0,85,70.2,Oceania
+Vanuatu,2018,85.0,85.0,85,69.8,Oceania
+Argentina,2018,86.0,84.0,86,77.0,South America
+Iraq,2018,86.0,74.0,86,71.5,Asia
+Montenegro,2018,72.0,86.0,86,77.2,Europe
+Romania,2018,93.0,86.0,86,76.2,Europe
+Brazil,2018,87.0,85.0,87,75.1,South America
+Dominican Republic,2018,84.0,86.0,87,73.2,North America
+Lesotho,2018,87.0,87.0,87,53.7,Africa
+Mexico,2018,55.0,88.0,88,74.0,North America
+Mozambique,2018,88.0,91.0,88,60.5,Africa
+Panama,2018,88.0,88.0,88,77.9,North America
+Paraguay,2018,88.0,88.0,88,73.6,South America
+Peru,2018,88.0,87.0,88,76.0,South America
+Cambodia,2018,89.0,86.0,89,70.6,Asia
+El Salvador,2018,89.0,89.0,89,72.6,North America
+Namibia,2018,89.0,84.0,89,62.6,Africa
+Tuvalu,2018,89.0,89.0,89,64.2,Oceania
+United Republic of Tanzania,2018,89.0,82.0,89,,
+Zimbabwe,2018,89.0,89.0,89,61.4,Africa
+Bahamas,2018,90.0,90.0,90,73.8,North America
+Burundi,2018,90.0,90.0,90,61.7,Africa
+Eswatini,2018,90.0,90.0,90,59.4,Africa
+India,2018,90.0,90.0,90,70.7,Asia
+Nauru,2018,90.0,90.0,90,63.2,Oceania
+San Marino,2018,78.0,91.0,90,82.9,Europe
+Zambia,2018,90.0,90.0,90,62.3,Africa
+Algeria,2018,91.0,91.0,91,76.1,Africa
+Burkina Faso,2018,91.0,91.0,91,60.0,Africa
+Canada,2018,71.0,91.0,91,82.1,North America
+Comoros,2018,91.0,94.0,91,63.9,Africa
+Finland,2018,,91.0,91,81.6,Europe
+Germany,2018,88.0,91.0,91,81.2,Europe
+Honduras,2018,91.0,91.0,91,72.8,North America
+Iceland,2018,,91.0,91,82.8,Europe
+Kuwait,2018,91.0,98.0,91,79.7,Asia
+Myanmar,2018,91.0,91.0,91,66.5,Asia
+Nepal,2018,91.0,91.0,91,69.0,Asia
+Uruguay,2018,91.0,91.0,91,77.6,South America
+Armenia,2018,92.0,92.0,92,75.1,Asia
+Bulgaria,2018,85.0,92.0,92,74.9,Europe
+Colombia,2018,92.0,92.0,92,76.7,South America
+Estonia,2018,93.0,92.0,92,78.1,Europe
+Kenya,2018,92.0,92.0,92,62.7,Africa
+Lithuania,2018,93.0,92.0,92,75.7,Europe
+Malawi,2018,92.0,91.0,92,63.3,Africa
+The former Yugoslav Republic of Macedonia,2018,92.0,92.0,92,,
+Senegal,2018,92.0,92.0,92,68.1,Africa
+Croatia,2018,93.0,94.0,93,78.3,Europe
+Gambia,2018,93.0,93.0,93,63.0,Africa
+Georgia,2018,93.0,93.0,93,73.3,Asia
+Netherlands,2018,92.0,93.0,93,81.8,Europe
+New Zealand,2018,93.0,93.0,93,82.4,Oceania
+Republic of Moldova,2018,94.0,94.0,93,,
+Sierra Leone,2018,93.0,93.0,93,59.8,Africa
+Slovenia,2018,,93.0,93,81.4,Europe
+Sudan,2018,93.0,93.0,93,65.7,Africa
+Uganda,2018,93.0,88.0,93,62.7,Africa
+Costa Rica,2018,98.0,94.0,94,79.5,North America
+Dominica,2018,94.0,94.0,94,73.6,North America
+Fiji,2018,94.0,94.0,94,67.8,Oceania
+Ireland,2018,94.0,94.0,94,82.1,Europe
+Kyrgyzstan,2018,94.0,92.0,94,70.7,Asia
+United Kingdom of Great Britain and Northern Ireland,2018,,94.0,94,,
+United States of America,2018,91.0,93.0,94,,
+Antigua and Barbuda,2018,95.0,94.0,95,78.5,North America
+Australia,2018,95.0,95.0,95,83.4,Oceania
+Azerbaijan,2018,95.0,96.0,95,72.8,Asia
+Barbados,2018,95.0,94.0,95,77.1,North America
+Botswana,2018,95.0,96.0,95,65.4,Africa
+Chile,2018,95.0,95.0,95,80.1,South America
+Egypt,2018,95.0,95.0,95,71.4,Africa
+Eritrea,2018,95.0,95.0,95,67.1,Africa
+Grenada,2018,95.0,96.0,95,74.8,North America
+Guyana,2018,95.0,94.0,95,68.9,South America
+Italy,2018,95.0,95.0,95,83.2,Europe
+Kiribati,2018,95.0,93.0,95,66.9,Oceania
+Palau,2018,98.0,98.0,95,64.4,Oceania
+Poland,2018,91.0,87.0,95,77.6,Europe
+Saint Lucia,2018,95.0,95.0,95,73.4,North America
+Sao Tome and Principe,2018,95.0,95.0,95,68.4,Africa
+Belize,2018,96.0,96.0,96,73.7,North America
+France,2018,91.0,96.0,96,82.6,Europe
+Jordan,2018,96.0,92.0,96,75.8,Asia
+Latvia,2018,96.0,96.0,96,75.0,Europe
+Norway,2018,,96.0,96,82.8,Europe
+Saudi Arabia,2018,97.0,98.0,96,77.2,Asia
+Serbia,2018,91.0,96.0,96,76.5,Europe
+Slovakia,2018,96.0,96.0,96,77.3,Europe
+Spain,2018,96.0,96.0,96,83.1,Europe
+Switzerland,2018,69.0,96.0,96,83.6,Europe
+Tajikistan,2018,96.0,96.0,96,70.4,Asia
+Belarus,2018,98.0,98.0,97,74.6,Europe
+Bhutan,2018,97.0,97.0,97,71.1,Asia
+Czechia,2018,96.0,96.0,97,79.0,Europe
+Democratic People's Republic of Korea,2018,97.0,99.0,97,,
+Denmark,2018,,97.0,97,81.0,Europe
+Ghana,2018,97.0,98.0,97,64.1,Africa
+Jamaica,2018,97.0,98.0,97,71.8,North America
+Malta,2018,98.0,97.0,97,83.3,Europe
+Mauritius,2018,97.0,98.0,97,74.9,Africa
+Russian Federation,2018,97.0,96.0,97,,
+Rwanda,2018,97.0,97.0,97,66.3,Africa
+Saint Vincent and the Grenadines,2018,97.0,99.0,97,74.1,North America
+Singapore,2018,97.0,97.0,97,83.5,Asia
+Sweden,2018,92.0,97.0,97,82.5,Europe
+Thailand,2018,97.0,97.0,97,78.7,Asia
+Tunisia,2018,97.0,97.0,97,76.0,Africa
+Bangladesh,2018,98.0,98.0,98,72.6,Asia
+Belgium,2018,97.0,98.0,98,81.5,Europe
+Cabo Verde,2018,99.0,98.0,98,,
+Israel,2018,96.0,98.0,98,82.8,Asia
+Japan,2018,,98.0,98,84.3,Asia
+Kazakhstan,2018,98.0,98.0,98,71.5,Asia
+Nicaragua,2018,98.0,99.0,98,73.8,North America
+Qatar,2018,98.0,98.0,98,80.9,Asia
+Republic of Korea,2018,98.0,98.0,98,,
+Saint Kitts and Nevis,2018,98.0,98.0,98,71.5,North America
+Türkiye,2018,98.0,98.0,98,,
+Uzbekistan,2018,98.0,98.0,98,71.1,Asia
+Albania,2018,99.0,99.0,99,79.2,Europe
+Andorra,2018,98.0,99.0,99,83.0,Europe
+Bahrain,2018,99.0,99.0,99,79.9,Asia
+Brunei Darussalam,2018,99.0,99.0,99,,
+China,2018,99.0,99.0,99,77.7,Asia
+Cook Islands,2018,99.0,99.0,99,74.5,Oceania
+Cuba,2018,99.0,99.0,99,77.5,North America
+Cyprus,2018,97.0,97.0,99,81.4,Europe
+Greece,2018,96.0,99.0,99,81.4,Europe
+Hungary,2018,,99.0,99,76.2,Europe
+Iran (Islamic Republic of),2018,99.0,99.0,99,,
+Luxembourg,2018,96.0,99.0,99,81.8,Europe
+Malaysia,2018,99.0,99.0,99,75.6,Asia
+Maldives,2018,99.0,99.0,99,80.0,Asia
+Monaco,2018,99.0,99.0,99,86.5,Europe
+Mongolia,2018,99.0,99.0,99,71.2,Asia
+Morocco,2018,99.0,99.0,99,74.0,Africa
+Niue,2018,99.0,99.0,99,70.6,Oceania
+Occupied Palestinian territory,2018,99.0,99.0,99,,
+Oman,2018,99.0,99.0,99,78.0,Asia
+Portugal,2018,98.0,99.0,99,81.4,Europe
+Seychelles,2018,99.0,99.0,99,74.0,Africa
+Sri Lanka,2018,99.0,99.0,99,75.7,Asia
+Tonga,2018,99.0,99.0,99,70.8,Oceania
+Trinidad and Tobago,2018,99.0,99.0,99,73.8,North America
+Turkmenistan,2018,99.0,99.0,99,68.8,Asia
+United Arab Emirates,2018,99.0,99.0,99,79.6,Asia
+Papua New Guinea,2017,36.0,35.0,36,65.1,Oceania
+Chad,2017,41.0,44.0,41,52.3,Africa
+Central African Republic,2017,42.0,46.0,42,53.7,Africa
+Somalia,2017,42.0,47.0,42,55.7,Africa
+Guinea,2017,47.0,48.0,47,59.1,Africa
+Syrian Arab Republic,2017,48.0,53.0,48,,
+Ukraine,2017,52.0,48.0,50,74.7,Europe
+South Sudan,2017,52.0,60.0,52,55.3,Africa
+Equatorial Guinea,2017,53.0,55.0,53,60.8,Africa
+Nigeria,2017,55.0,55.0,55,52.3,Africa
+Angola,2017,56.0,52.0,56,61.7,Africa
+Haiti,2017,64.0,64.0,64,63.9,North America
+Madagascar,2017,65.0,69.0,65,65.1,Africa
+Afghanistan,2017,66.0,71.0,66,63.0,Asia
+Venezuela (Bolivarian Republic of),2017,66.0,79.0,66,,
+Samoa,2017,67.0,66.0,67,72.6,Oceania
+Suriname,2017,67.0,51.0,67,72.4,South America
+Ethiopia,2017,68.0,68.0,68,64.8,Africa
+Yemen,2017,68.0,62.0,68,66.0,Asia
+Congo,2017,69.0,69.0,69,63.8,Africa
+Democratic Republic of the Congo,2017,71.0,71.0,71,,
+Micronesia (Federated States of),2017,80.0,72.0,73,,
+Cameroon,2017,74.0,74.0,74,60.8,Africa
+Bosnia and Herzegovina,2017,77.0,75.0,75,76.9,Europe
+Gabon,2017,75.0,74.0,75,66.2,Africa
+Pakistan,2017,75.0,75.0,75,66.3,Asia
+Benin,2017,76.0,75.0,76,59.9,Africa
+Djibouti,2017,76.0,76.0,76,62.8,Africa
+Mauritania,2017,76.0,70.0,76,65.1,Africa
+Mali,2017,77.0,72.0,77,59.1,Africa
+Guinea-Bissau,2017,79.0,79.0,79,60.1,Africa
+Liberia,2017,80.0,79.0,80,60.6,Africa
+Marshall Islands,2017,82.0,79.0,80,64.3,Oceania
+Philippines,2017,80.0,80.0,80,71.5,Asia
+Saint Lucia,2017,80.0,80.0,80,73.1,North America
+Iraq,2017,81.0,82.0,81,70.4,Asia
+Panama,2017,81.0,81.0,81,77.8,North America
+Kenya,2017,82.0,81.0,82,62.5,Africa
+Romania,2017,92.0,82.0,82,76.0,Europe
+Brazil,2017,82.0,84.0,83,74.8,South America
+Côte d’Ivoire,2017,83.0,82.0,83,,
+Lebanon,2017,80.0,81.0,83,79.7,Asia
+Solomon Islands,2017,83.0,80.0,83,70.0,Oceania
+Timor-Leste,2017,83.0,83.0,83,,
+Togo,2017,83.0,76.0,83,60.2,Africa
+Bolivia (Plurinational State of),2017,84.0,83.0,84,,
+Dominican Republic,2017,81.0,80.0,84,73.1,North America
+Lao People's Democratic Republic,2017,84.0,84.0,84,,
+South Africa,2017,84.0,84.0,84,65.4,Africa
+Ecuador,2017,85.0,83.0,85,77.0,South America
+Indonesia,2017,85.0,88.0,85,69.9,Asia
+Mexico,2017,58.0,85.0,85,74.1,North America
+Niger,2017,85.0,85.0,85,62.2,Africa
+Vanuatu,2017,85.0,83.0,85,69.7,Oceania
+Argentina,2017,86.0,84.0,86,76.8,South America
+Lesotho,2017,87.0,87.0,87,53.1,Africa
+Montenegro,2017,73.0,87.0,87,76.9,Europe
+Nauru,2017,87.0,87.0,87,63.0,Oceania
+Belize,2017,88.0,88.0,88,73.6,North America
+Malawi,2017,88.0,87.0,88,63.0,Africa
+Mozambique,2017,88.0,91.0,88,59.8,Africa
+Namibia,2017,88.0,83.0,88,62.3,Africa
+Republic of Moldova,2017,89.0,90.0,88,,
+San Marino,2017,82.0,89.0,88,82.9,Europe
+Finland,2017,,89.0,89,81.5,Europe
+Iceland,2017,,89.0,89,82.5,Europe
+India,2017,89.0,89.0,89,70.5,Asia
+Myanmar,2017,89.0,89.0,89,65.8,Asia
+Peru,2017,89.0,88.0,89,75.9,South America
+Trinidad and Tobago,2017,89.0,94.0,89,74.2,North America
+Zimbabwe,2017,89.0,89.0,89,60.7,Africa
+Austria,2017,90.0,90.0,90,81.6,Europe
+Barbados,2017,90.0,91.0,90,76.9,North America
+Cambodia,2017,90.0,88.0,90,70.5,Asia
+Eswatini,2017,90.0,90.0,90,57.9,Africa
+Honduras,2017,90.0,90.0,90,72.7,North America
+Kiribati,2017,90.0,90.0,90,66.6,Oceania
+Nepal,2017,90.0,90.0,90,68.9,Asia
+Sierra Leone,2017,90.0,90.0,90,58.7,Africa
+United Republic of Tanzania,2017,90.0,89.0,90,,
+Algeria,2017,91.0,91.0,91,75.7,Africa
+Burkina Faso,2017,91.0,91.0,91,59.5,Africa
+Burundi,2017,91.0,91.0,91,61.6,Africa
+Canada,2017,71.0,91.0,91,82.0,North America
+Comoros,2017,91.0,94.0,91,63.6,Africa
+Dominica,2017,91.0,91.0,91,67.5,North America
+Fiji,2017,91.0,91.0,91,67.8,Oceania
+Georgia,2017,91.0,91.0,91,73.6,Asia
+Germany,2017,88.0,91.0,91,80.9,Europe
+Guatemala,2017,91.0,90.0,91,72.6,North America
+The former Yugoslav Republic of Macedonia,2017,91.0,91.0,91,,
+Paraguay,2017,91.0,92.0,91,73.6,South America
+Bulgaria,2017,92.0,92.0,92,74.8,Europe
+Colombia,2017,92.0,92.0,92,76.6,South America
+Croatia,2017,92.0,92.0,92,78.1,Europe
+El Salvador,2017,92.0,83.0,92,72.3,North America
+Gambia,2017,92.0,92.0,92,63.0,Africa
+Kyrgyzstan,2017,92.0,93.0,92,70.6,Asia
+Chile,2017,93.0,93.0,93,80.4,South America
+Estonia,2017,92.0,93.0,93,78.0,Europe
+Jamaica,2017,93.0,93.0,93,71.9,North America
+Senegal,2017,93.0,91.0,93,67.8,Africa
+Uruguay,2017,93.0,93.0,93,77.6,South America
+Armenia,2017,94.0,96.0,94,74.9,Asia
+Bahamas,2017,94.0,94.0,94,73.6,North America
+Egypt,2017,94.0,94.0,94,71.3,Africa
+Lithuania,2017,94.0,94.0,94,75.4,Europe
+Mauritius,2017,96.0,95.0,94,74.9,Africa
+Netherlands,2017,92.0,94.0,94,81.7,Europe
+New Zealand,2017,94.0,94.0,94,82.2,Oceania
+Slovenia,2017,,94.0,94,81.1,Europe
+Uganda,2017,94.0,90.0,94,62.1,Africa
+United Kingdom of Great Britain and Northern Ireland,2017,,94.0,94,,
+United States of America,2017,91.0,92.0,94,,
+Viet Nam,2017,94.0,94.0,94,,
+Zambia,2017,94.0,92.0,94,62.1,Africa
+Antigua and Barbuda,2017,95.0,94.0,95,78.3,North America
+Australia,2017,95.0,95.0,95,83.0,Oceania
+Azerbaijan,2017,95.0,97.0,95,72.2,Asia
+Botswana,2017,95.0,96.0,95,66.8,Africa
+Eritrea,2017,95.0,95.0,95,66.6,Africa
+Ireland,2017,95.0,95.0,95,81.9,Europe
+Italy,2017,94.0,95.0,95,82.7,Europe
+Sao Tome and Principe,2017,95.0,95.0,95,68.3,Africa
+Serbia,2017,93.0,95.0,95,76.2,Europe
+Spain,2017,94.0,95.0,95,83.0,Europe
+Sudan,2017,95.0,95.0,95,65.4,Africa
+Cabo Verde,2017,97.0,96.0,96,,
+Costa Rica,2017,97.0,96.0,96,79.4,North America
+Czechia,2017,94.0,94.0,96,79.0,Europe
+France,2017,90.0,96.0,96,82.5,Europe
+Grenada,2017,96.0,91.0,96,74.8,North America
+Libya,2017,96.0,96.0,96,72.5,Africa
+Norway,2017,,96.0,96,82.6,Europe
+Poland,2017,93.0,90.0,96,77.7,Europe
+Singapore,2017,96.0,96.0,96,83.2,Asia
+Slovakia,2017,96.0,96.0,96,77.2,Europe
+Switzerland,2017,69.0,96.0,96,83.4,Europe
+Türkiye,2017,96.0,96.0,96,,
+Tajikistan,2017,96.0,97.0,96,69.9,Asia
+Tuvalu,2017,96.0,96.0,96,64.1,Oceania
+Bahrain,2017,98.0,98.0,97,79.7,Asia
+Belarus,2017,98.0,98.0,97,74.5,Europe
+Cyprus,2017,97.0,97.0,97,81.3,Europe
+Democratic People's Republic of Korea,2017,97.0,99.0,97,,
+Guyana,2017,97.0,94.0,97,68.7,South America
+Palau,2017,98.0,97.0,97,64.1,Oceania
+Qatar,2017,97.0,97.0,97,80.7,Asia
+Republic of Korea,2017,98.0,97.0,97,,
+Russian Federation,2017,97.0,96.0,97,,
+Seychelles,2017,97.0,97.0,97,73.8,Africa
+Sweden,2017,76.0,97.0,97,82.4,Europe
+United Arab Emirates,2017,98.0,96.0,97,79.5,Asia
+Bangladesh,2017,98.0,98.0,98,71.8,Asia
+Belgium,2017,97.0,98.0,98,81.4,Europe
+Bhutan,2017,98.0,97.0,98,70.8,Asia
+Denmark,2017,,98.0,98,81.1,Europe
+Israel,2017,97.0,98.0,98,82.7,Asia
+Latvia,2017,98.0,98.0,98,74.8,Europe
+Malta,2017,88.0,98.0,98,83.6,Europe
+Nicaragua,2017,98.0,99.0,98,73.6,North America
+Portugal,2017,98.0,98.0,98,81.5,Europe
+Rwanda,2017,98.0,98.0,98,65.9,Africa
+Saint Kitts and Nevis,2017,98.0,97.0,98,71.8,North America
+Saudi Arabia,2017,98.0,97.0,98,77.2,Asia
+Tunisia,2017,98.0,98.0,98,75.8,Africa
+Albania,2017,99.0,99.0,99,79.0,Europe
+Andorra,2017,98.0,99.0,99,83.0,Europe
+Brunei Darussalam,2017,99.0,99.0,99,,
+China,2017,99.0,99.0,99,77.2,Asia
+Cook Islands,2017,99.0,99.0,99,74.4,Oceania
+Cuba,2017,99.0,98.0,99,77.5,North America
+Ghana,2017,99.0,94.0,99,64.0,Africa
+Greece,2017,96.0,99.0,99,80.9,Europe
+Hungary,2017,,99.0,99,76.0,Europe
+Iran (Islamic Republic of),2017,99.0,99.0,99,,
+Japan,2017,,97.0,99,84.2,Asia
+Jordan,2017,99.0,99.0,99,75.5,Asia
+Kazakhstan,2017,99.0,99.0,99,71.4,Asia
+Kuwait,2017,99.0,99.0,99,79.8,Asia
+Luxembourg,2017,94.0,99.0,99,81.7,Europe
+Malaysia,2017,98.0,99.0,99,75.5,Asia
+Maldives,2017,99.0,99.0,99,79.9,Asia
+Monaco,2017,99.0,99.0,99,85.7,Europe
+Mongolia,2017,99.0,99.0,99,70.2,Asia
+Morocco,2017,99.0,99.0,99,73.7,Africa
+Niue,2017,99.0,99.0,99,70.5,Oceania
+Occupied Palestinian territory,2017,99.0,99.0,99,,
+Oman,2017,99.0,99.0,99,77.9,Asia
+Saint Vincent and the Grenadines,2017,99.0,99.0,99,74.3,North America
+Sri Lanka,2017,99.0,99.0,99,75.4,Asia
+Thailand,2017,99.0,99.0,99,78.4,Asia
+Tonga,2017,99.0,99.0,99,70.7,Oceania
+Turkmenistan,2017,99.0,99.0,99,68.9,Asia
+Uzbekistan,2017,99.0,99.0,99,71.0,Asia
+Ukraine,2016,26.0,56.0,19,74.3,Europe
+Chad,2016,41.0,44.0,41,52.1,Africa
+Central African Republic,2016,42.0,52.0,42,53.5,Africa
+Somalia,2016,42.0,47.0,42,55.0,Africa
+Syrian Arab Republic,2016,42.0,48.0,42,,
+South Sudan,2016,45.0,45.0,45,55.5,Africa
+Papua New Guinea,2016,46.0,48.0,46,64.8,Oceania
+Guinea,2016,47.0,48.0,47,58.8,Africa
+Equatorial Guinea,2016,53.0,55.0,53,60.5,Africa
+Nigeria,2016,53.0,53.0,53,52.0,Africa
+Angola,2016,59.0,58.0,59,61.1,Africa
+Haiti,2016,64.0,65.0,64,63.4,North America
+Afghanistan,2016,66.0,71.0,66,63.1,Asia
+Ethiopia,2016,66.0,69.0,66,64.4,Africa
+Djibouti,2016,68.0,68.0,68,62.2,Africa
+Madagascar,2016,68.0,72.0,68,65.0,Africa
+Micronesia (Federated States of),2016,76.0,68.0,69,,
+Democratic Republic of the Congo,2016,70.0,66.0,70,,
+Congo,2016,71.0,71.0,71,63.6,Africa
+Iraq,2016,71.0,76.0,71,69.0,Asia
+Marshall Islands,2016,73.0,69.0,71,64.1,Oceania
+Yemen,2016,71.0,65.0,71,66.1,Asia
+Liberia,2016,73.0,73.0,73,60.4,Africa
+Mauritania,2016,74.0,69.0,74,64.8,Africa
+Samoa,2016,74.0,73.0,74,72.5,Oceania
+Cameroon,2016,75.0,75.0,75,60.2,Africa
+Gabon,2016,75.0,74.0,75,65.8,Africa
+Pakistan,2016,75.0,75.0,75,65.9,Asia
+Benin,2016,76.0,75.0,76,59.5,Africa
+Mali,2016,76.0,72.0,76,58.7,Africa
+Suriname,2016,77.0,77.0,77,71.6,South America
+Bosnia and Herzegovina,2016,78.0,79.0,78,76.8,Europe
+Timor-Leste,2016,79.0,79.0,79,,
+Niger,2016,80.0,82.0,80,61.6,Africa
+Kiribati,2016,81.0,82.0,81,66.3,Oceania
+Vanuatu,2016,81.0,81.0,81,69.6,Oceania
+Kazakhstan,2016,82.0,82.0,82,70.9,Asia
+Togo,2016,82.0,81.0,82,59.6,Africa
+Ecuador,2016,83.0,79.0,83,76.8,South America
+Guatemala,2016,83.0,84.0,83,72.4,North America
+Lao People's Democratic Republic,2016,83.0,83.0,83,,
+Lebanon,2016,80.0,81.0,83,79.5,Asia
+Indonesia,2016,84.0,85.0,84,69.8,Asia
+Malawi,2016,84.0,83.0,84,62.2,Africa
+Philippines,2016,84.0,81.0,84,71.4,Asia
+Sierra Leone,2016,84.0,84.0,84,58.4,Africa
+Venezuela (Bolivarian Republic of),2016,84.0,82.0,84,,
+Guinea-Bissau,2016,85.0,81.0,85,59.7,Africa
+Namibia,2016,85.0,84.0,85,61.7,Africa
+South Africa,2016,85.0,85.0,85,64.7,Africa
+Panama,2016,86.0,86.0,86,77.7,North America
+San Marino,2016,86.0,86.0,86,83.0,Europe
+Austria,2016,87.0,87.0,87,81.6,Europe
+Bolivia (Plurinational State of),2016,87.0,87.0,87,,
+Côte d’Ivoire,2016,87.0,81.0,87,,
+Dominican Republic,2016,80.0,82.0,87,73.0,North America
+Lesotho,2016,87.0,87.0,87,52.3,Africa
+Nepal,2016,87.0,85.0,87,68.8,Asia
+India,2016,88.0,86.0,88,70.1,Asia
+Mozambique,2016,88.0,90.0,88,59.0,Africa
+Brazil,2016,89.0,72.0,89,74.4,South America
+Kenya,2016,89.0,88.0,89,62.2,Africa
+Montenegro,2016,75.0,89.0,89,76.7,Europe
+Peru,2016,89.0,88.0,89,75.8,South America
+Republic of Moldova,2016,90.0,91.0,89,,
+Romania,2016,90.0,89.0,89,75.2,Europe
+Eswatini,2016,90.0,90.0,90,56.7,Africa
+Myanmar,2016,90.0,89.0,90,65.7,Asia
+Zimbabwe,2016,90.0,90.0,90,60.3,Africa
+Algeria,2016,91.0,91.0,91,75.7,Africa
+Burkina Faso,2016,91.0,91.0,91,59.3,Africa
+Cambodia,2016,91.0,88.0,91,70.2,Asia
+Canada,2016,70.0,91.0,91,82.0,North America
+Colombia,2016,91.0,91.0,91,76.5,South America
+Comoros,2016,91.0,92.0,91,63.2,Africa
+Germany,2016,88.0,91.0,91,80.8,Europe
+Iceland,2016,,91.0,91,82.0,Europe
+Antigua and Barbuda,2016,92.0,87.0,92,78.2,North America
+Argentina,2016,92.0,87.0,92,76.3,South America
+Bulgaria,2016,91.0,92.0,92,74.8,Europe
+Finland,2016,,92.0,92,81.3,Europe
+Georgia,2016,92.0,92.0,92,73.6,Asia
+New Zealand,2016,92.0,92.0,92,82.1,Oceania
+Paraguay,2016,92.0,93.0,92,73.5,South America
+Serbia,2016,91.0,93.0,92,76.3,Europe
+United Republic of Tanzania,2016,92.0,89.0,92,,
+Croatia,2016,92.0,93.0,93,78.2,Europe
+Estonia,2016,93.0,93.0,93,77.8,Europe
+Ghana,2016,93.0,95.0,93,63.9,Africa
+Mexico,2016,82.0,93.0,93,74.4,North America
+Senegal,2016,93.0,92.0,93,67.5,Africa
+Sudan,2016,93.0,93.0,93,64.8,Africa
+Uganda,2016,93.0,88.0,93,61.6,Africa
+Armenia,2016,94.0,96.0,94,74.7,Asia
+Australia,2016,94.0,94.0,94,82.9,Oceania
+Bahamas,2016,94.0,94.0,94,73.5,North America
+Burundi,2016,94.0,94.0,94,60.8,Africa
+Denmark,2016,,94.0,94,80.9,Europe
+Israel,2016,95.0,94.0,94,82.5,Asia
+Italy,2016,93.0,93.0,94,83.0,Europe
+Lithuania,2016,95.0,94.0,94,74.9,Europe
+Slovenia,2016,,94.0,94,81.2,Europe
+Solomon Islands,2016,94.0,89.0,94,69.8,Oceania
+Tuvalu,2016,94.0,94.0,94,64.1,Oceania
+United Kingdom of Great Britain and Northern Ireland,2016,,94.0,94,,
+Belize,2016,95.0,96.0,95,73.4,North America
+Botswana,2016,95.0,96.0,95,65.5,Africa
+Chile,2016,95.0,95.0,95,80.1,South America
+Egypt,2016,95.0,95.0,95,70.8,Africa
+Eritrea,2016,95.0,95.0,95,66.3,Africa
+Fiji,2016,95.0,89.0,95,67.2,Oceania
+Gambia,2016,95.0,95.0,95,63.0,Africa
+Honduras,2016,95.0,95.0,95,72.6,North America
+Ireland,2016,95.0,95.0,95,81.5,Europe
+Netherlands,2016,93.0,95.0,95,81.5,Europe
+The former Yugoslav Republic of Macedonia,2016,94.0,95.0,95,,
+Saint Lucia,2016,95.0,95.0,95,73.1,North America
+United States of America,2016,93.0,94.0,95,,
+Uruguay,2016,95.0,95.0,95,77.6,South America
+Zambia,2016,95.0,91.0,95,61.8,Africa
+Cabo Verde,2016,96.0,95.0,96,,
+Czechia,2016,96.0,96.0,96,79.0,Europe
+Democratic People's Republic of Korea,2016,96.0,99.0,96,,
+France,2016,90.0,96.0,96,82.4,Europe
+Grenada,2016,96.0,98.0,96,74.8,North America
+Kyrgyzstan,2016,96.0,97.0,96,70.3,Asia
+Mauritius,2016,72.0,96.0,96,75.0,Africa
+Norway,2016,,96.0,96,82.4,Europe
+Sao Tome and Principe,2016,96.0,96.0,96,67.5,Africa
+Seychelles,2016,96.0,96.0,96,73.6,Africa
+Slovakia,2016,96.0,96.0,96,77.2,Europe
+Switzerland,2016,,96.0,96,83.4,Europe
+Tajikistan,2016,97.0,97.0,96,69.5,Asia
+Tonga,2016,96.0,96.0,96,70.7,Oceania
+Viet Nam,2016,96.0,95.0,96,,
+Azerbaijan,2016,97.0,98.0,97,72.0,Asia
+Barbados,2016,97.0,97.0,97,76.8,North America
+Costa Rica,2016,97.0,97.0,97,79.5,North America
+Cyprus,2016,97.0,97.0,97,81.1,Europe
+Guyana,2016,97.0,94.0,97,68.4,South America
+Libya,2016,97.0,97.0,97,71.8,Africa
+Malta,2016,97.0,97.0,97,83.1,Europe
+Nauru,2016,97.0,97.0,97,62.7,Oceania
+Russian Federation,2016,97.0,97.0,97,,
+Singapore,2016,96.0,96.0,97,83.0,Asia
+Spain,2016,97.0,97.0,97,83.0,Europe
+Trinidad and Tobago,2016,97.0,84.0,97,74.3,North America
+Albania,2016,98.0,98.0,98,78.9,Europe
+Andorra,2016,94.0,98.0,98,83.0,Europe
+Bangladesh,2016,98.0,98.0,98,71.1,Asia
+Belarus,2016,96.0,98.0,98,74.3,Europe
+Belgium,2016,97.0,98.0,98,81.3,Europe
+Bhutan,2016,98.0,97.0,98,70.6,Asia
+El Salvador,2016,98.0,98.0,98,72.0,North America
+Jordan,2016,98.0,98.0,98,75.2,Asia
+Latvia,2016,98.0,98.0,98,74.8,Europe
+Malaysia,2016,98.0,98.0,98,75.3,Asia
+Nicaragua,2016,98.0,99.0,98,73.3,North America
+Palau,2016,98.0,98.0,98,63.9,Oceania
+Poland,2016,95.0,92.0,98,77.8,Europe
+Portugal,2016,98.0,98.0,98,81.2,Europe
+Qatar,2016,98.0,98.0,98,80.4,Asia
+Republic of Korea,2016,98.0,98.0,98,,
+Rwanda,2016,98.0,99.0,98,65.7,Africa
+Saint Kitts and Nevis,2016,98.0,99.0,98,71.7,North America
+Saudi Arabia,2016,98.0,97.0,98,77.1,Asia
+Sweden,2016,67.0,98.0,98,82.3,Europe
+Türkiye,2016,98.0,98.0,98,,
+Tunisia,2016,98.0,98.0,98,75.8,Africa
+Turkmenistan,2016,98.0,98.0,98,68.8,Asia
+Bahrain,2016,99.0,99.0,99,79.6,Asia
+Brunei Darussalam,2016,99.0,99.0,99,,
+China,2016,99.0,99.0,99,77.2,Asia
+Cook Islands,2016,99.0,99.0,99,74.3,Oceania
+Cuba,2016,99.0,98.0,99,77.6,North America
+Dominica,2016,99.0,99.0,99,70.1,North America
+Greece,2016,96.0,99.0,99,81.2,Europe
+Hungary,2016,,99.0,99,76.2,Europe
+Iran (Islamic Republic of),2016,99.0,99.0,99,,
+Jamaica,2016,98.0,99.0,99,72.0,North America
+Japan,2016,,99.0,99,84.1,Asia
+Kuwait,2016,99.0,99.0,99,79.7,Asia
+Luxembourg,2016,94.0,99.0,99,82.1,Europe
+Maldives,2016,99.0,99.0,99,79.9,Asia
+Monaco,2016,99.0,99.0,99,85.7,Europe
+Mongolia,2016,99.0,99.0,99,69.9,Asia
+Morocco,2016,99.0,99.0,99,73.3,Africa
+Niue,2016,99.0,99.0,99,70.3,Oceania
+Occupied Palestinian territory,2016,99.0,99.0,99,,
+Oman,2016,99.0,99.0,99,77.9,Asia
+Saint Vincent and the Grenadines,2016,99.0,99.0,99,74.3,North America
+Sri Lanka,2016,99.0,99.0,99,75.3,Asia
+Thailand,2016,99.0,99.0,99,78.0,Asia
+United Arab Emirates,2016,99.0,99.0,99,79.3,Asia
+Uzbekistan,2016,99.0,99.0,99,70.8,Asia
+Ukraine,2015,22.0,51.0,23,73.5,Europe
+Equatorial Guinea,2015,40.0,37.0,40,60.1,Africa
+Syrian Arab Republic,2015,41.0,50.0,41,,
+Chad,2015,42.0,52.0,42,51.6,Africa
+Nigeria,2015,42.0,42.0,42,51.8,Africa
+Somalia,2015,42.0,47.0,42,54.9,Africa
+Central African Republic,2015,43.0,51.0,43,52.8,Africa
+South Sudan,2015,46.0,52.0,46,55.6,Africa
+Guinea,2015,47.0,47.0,47,58.1,Africa
+Papua New Guinea,2015,49.0,51.0,49,64.7,Oceania
+Angola,2015,59.0,62.0,59,60.7,Africa
+Madagascar,2015,62.0,68.0,62,64.3,Africa
+Ethiopia,2015,63.0,75.0,63,63.6,Africa
+Afghanistan,2015,64.0,67.0,64,62.7,Asia
+Haiti,2015,64.0,65.0,64,63.2,North America
+Liberia,2015,65.0,65.0,65,59.1,Africa
+Iraq,2015,68.0,72.0,68,69.4,Asia
+Yemen,2015,69.0,63.0,69,65.9,Asia
+Democratic Republic of the Congo,2015,70.0,69.0,70,,
+Guatemala,2015,70.0,80.0,70,72.1,North America
+Mali,2015,71.0,67.0,71,58.4,Africa
+Micronesia (Federated States of),2015,78.0,71.0,72,,
+Pakistan,2015,72.0,72.0,72,65.7,Asia
+Mauritania,2015,73.0,67.0,73,64.5,Africa
+Panama,2015,73.0,72.0,73,77.5,North America
+Suriname,2015,73.0,78.0,73,70.8,South America
+Benin,2015,74.0,72.0,74,59.4,Africa
+Philippines,2015,74.0,79.0,74,71.3,Asia
+Timor-Leste,2015,76.0,75.0,76,,
+Cameroon,2015,78.0,77.0,78,59.7,Africa
+Ecuador,2015,78.0,84.0,78,76.8,South America
+Kiribati,2015,82.0,80.0,78,66.1,Oceania
+Côte d’Ivoire,2015,79.0,77.0,79,,
+Congo,2015,80.0,80.0,80,63.2,Africa
+Gabon,2015,80.0,79.0,80,65.5,Africa
+Samoa,2015,80.0,78.0,80,72.5,Oceania
+Vanuatu,2015,80.0,80.0,80,69.5,Oceania
+Bosnia and Herzegovina,2015,82.0,74.0,82,76.2,Europe
+Togo,2015,82.0,82.0,82,59.4,Africa
+Lao People's Democratic Republic,2015,83.0,83.0,83,,
+Lebanon,2015,80.0,81.0,83,79.2,Asia
+Lesotho,2015,83.0,85.0,83,51.1,Africa
+Djibouti,2015,84.0,84.0,84,62.0,Africa
+Indonesia,2015,84.0,85.0,84,69.7,Asia
+Niger,2015,84.0,83.0,84,61.1,Africa
+Dominican Republic,2015,81.0,87.0,85,73.0,North America
+Marshall Islands,2015,85.0,85.0,85,63.8,Oceania
+San Marino,2015,84.0,85.0,85,82.9,Europe
+South Africa,2015,85.0,85.0,85,63.9,Africa
+Guinea-Bissau,2015,86.0,83.0,86,59.1,Africa
+Sierra Leone,2015,86.0,86.0,86,57.2,Africa
+India,2015,87.0,86.0,87,69.6,Asia
+Mexico,2015,76.0,87.0,87,74.7,North America
+Republic of Moldova,2015,88.0,88.0,87,,
+Solomon Islands,2015,87.0,85.0,87,69.6,Oceania
+Venezuela (Bolivarian Republic of),2015,87.0,87.0,87,,
+Zimbabwe,2015,87.0,88.0,87,59.6,Africa
+Ghana,2015,88.0,88.0,88,63.2,Africa
+Malawi,2015,88.0,88.0,88,61.4,Africa
+Mozambique,2015,88.0,89.0,88,58.2,Africa
+Bolivia (Plurinational State of),2015,89.0,88.0,89,,
+Kenya,2015,89.0,83.0,89,61.9,Africa
+Montenegro,2015,82.0,89.0,89,76.8,Europe
+Myanmar,2015,89.0,89.0,89,65.6,Asia
+Romania,2015,90.0,89.0,89,74.8,Europe
+Senegal,2015,89.0,85.0,89,66.9,Africa
+Uganda,2015,89.0,85.0,89,61.1,Africa
+Eswatini,2015,90.0,84.0,90,55.0,Africa
+Palau,2015,90.0,89.0,90,63.7,Oceania
+Peru,2015,90.0,88.0,90,75.6,South America
+Zambia,2015,90.0,90.0,90,61.2,Africa
+Bulgaria,2015,92.0,91.0,91,74.6,Europe
+Burkina Faso,2015,91.0,91.0,91,58.8,Africa
+Cambodia,2015,91.0,90.0,91,69.9,Asia
+Canada,2015,69.0,91.0,91,81.9,North America
+Colombia,2015,91.0,91.0,91,76.3,South America
+Comoros,2015,91.0,92.0,91,62.9,Africa
+Jamaica,2015,91.0,91.0,91,72.4,North America
+Nauru,2015,91.0,91.0,91,62.3,Oceania
+Nepal,2015,91.0,90.0,91,67.5,Asia
+The former Yugoslav Republic of Macedonia,2015,92.0,92.0,91,,
+Costa Rica,2015,92.0,92.0,92,79.1,North America
+Grenada,2015,92.0,99.0,92,75.0,North America
+Iceland,2015,,92.0,92,82.4,Europe
+Namibia,2015,92.0,92.0,92,60.7,Africa
+New Zealand,2015,92.0,92.0,92,82.0,Oceania
+Paraguay,2015,92.0,93.0,92,73.2,South America
+Australia,2015,93.0,93.0,93,82.7,Oceania
+Austria,2015,93.0,93.0,93,81.2,Europe
+Cabo Verde,2015,93.0,93.0,93,,
+Denmark,2015,,93.0,93,80.7,Europe
+Egypt,2015,93.0,93.0,93,70.5,Africa
+Estonia,2015,91.0,93.0,93,77.7,Europe
+Germany,2015,87.0,92.0,93,80.6,Europe
+Italy,2015,93.0,93.0,93,82.5,Europe
+Lithuania,2015,94.0,93.0,93,74.6,Europe
+Sudan,2015,93.0,93.0,93,64.7,Africa
+Argentina,2015,94.0,93.0,94,76.8,South America
+Armenia,2015,94.0,96.0,94,74.4,Asia
+Belize,2015,94.0,94.0,94,73.2,North America
+Burundi,2015,94.0,94.0,94,60.2,Africa
+Croatia,2015,94.0,94.0,94,77.6,Europe
+El Salvador,2015,94.0,94.0,94,71.8,North America
+Georgia,2015,94.0,91.0,94,73.3,Asia
+Latvia,2015,94.0,94.0,94,74.7,Europe
+Saint Kitts and Nevis,2015,94.0,91.0,94,70.8,North America
+Algeria,2015,95.0,95.0,95,75.6,Africa
+Bahamas,2015,95.0,95.0,95,73.1,North America
+Botswana,2015,95.0,96.0,95,63.8,Africa
+Eritrea,2015,95.0,95.0,95,66.0,Africa
+Guyana,2015,95.0,92.0,95,68.2,South America
+Ireland,2015,95.0,95.0,95,81.4,Europe
+Israel,2015,96.0,95.0,95,82.1,Asia
+Netherlands,2015,94.0,95.0,95,81.5,Europe
+Norway,2015,,95.0,95,82.3,Europe
+Serbia,2015,94.0,95.0,95,75.8,Europe
+Slovenia,2015,,95.0,95,80.8,Europe
+United Kingdom of Great Britain and Northern Ireland,2015,,95.0,95,,
+United States of America,2015,92.0,93.0,95,,
+Uruguay,2015,95.0,95.0,95,77.5,South America
+Azerbaijan,2015,96.0,98.0,96,71.5,Asia
+Brazil,2015,96.0,98.0,96,74.3,South America
+Chile,2015,97.0,96.0,96,79.7,South America
+Democratic People's Republic of Korea,2015,96.0,99.0,96,,
+Japan,2015,,99.0,96,83.9,Asia
+Sao Tome and Principe,2015,96.0,96.0,96,67.2,Africa
+Singapore,2015,96.0,96.0,96,82.8,Asia
+Slovakia,2015,96.0,96.0,96,76.6,Europe
+Switzerland,2015,,96.0,96,82.8,Europe
+Tajikistan,2015,96.0,96.0,96,69.3,Asia
+Tonga,2015,96.0,96.0,96,70.6,Oceania
+Trinidad and Tobago,2015,90.0,88.0,96,74.5,North America
+Tuvalu,2015,96.0,96.0,96,64.1,Oceania
+United Republic of Tanzania,2015,96.0,93.0,96,,
+Andorra,2015,94.0,97.0,97,83.0,Europe
+Barbados,2015,97.0,97.0,97,76.7,North America
+Cyprus,2015,97.0,97.0,97,81.0,Europe
+Czechia,2015,97.0,97.0,97,78.6,Europe
+Finland,2015,,97.0,97,81.4,Europe
+France,2015,88.0,97.0,97,82.2,Europe
+Gambia,2015,97.0,96.0,97,62.5,Africa
+Kyrgyzstan,2015,97.0,97.0,97,70.0,Asia
+Libya,2015,97.0,97.0,97,71.7,Africa
+Malta,2015,95.0,97.0,97,83.0,Europe
+Mauritius,2015,97.0,98.0,97,75.0,Africa
+Russian Federation,2015,97.0,97.0,97,,
+Seychelles,2015,97.0,97.0,97,73.7,Africa
+Spain,2015,97.0,97.0,97,82.6,Europe
+Türkiye,2015,97.0,97.0,97,,
+Viet Nam,2015,97.0,97.0,97,,
+Bahrain,2015,98.0,98.0,98,79.4,Asia
+Bangladesh,2015,98.0,98.0,98,70.5,Asia
+Dominica,2015,98.0,98.0,98,68.7,North America
+Honduras,2015,98.0,98.0,98,72.5,North America
+Iran (Islamic Republic of),2015,98.0,98.0,98,,
+Kazakhstan,2015,98.0,98.0,98,70.7,Asia
+Nicaragua,2015,98.0,99.0,98,73.0,North America
+Poland,2015,96.0,92.0,98,77.4,Europe
+Portugal,2015,98.0,98.0,98,81.2,Europe
+Republic of Korea,2015,98.0,98.0,98,,
+Rwanda,2015,98.0,99.0,98,65.3,Africa
+Saudi Arabia,2015,98.0,97.0,98,76.9,Asia
+Sweden,2015,53.0,98.0,98,82.2,Europe
+Tunisia,2015,98.0,98.0,98,75.7,Africa
+Albania,2015,99.0,99.0,99,78.6,Europe
+Antigua and Barbuda,2015,99.0,86.0,99,77.9,North America
+Belarus,2015,99.0,99.0,99,74.0,Europe
+Belgium,2015,98.0,99.0,99,80.9,Europe
+Bhutan,2015,99.0,98.0,99,70.3,Asia
+Brunei Darussalam,2015,99.0,99.0,99,,
+China,2015,99.0,99.0,99,77.0,Asia
+Cook Islands,2015,99.0,99.0,99,74.2,Oceania
+Cuba,2015,99.0,99.0,99,77.8,North America
+Fiji,2015,99.0,99.0,99,66.8,Oceania
+Greece,2015,96.0,99.0,99,80.7,Europe
+Hungary,2015,,99.0,99,75.7,Europe
+Jordan,2015,99.0,99.0,99,75.0,Asia
+Kuwait,2015,99.0,99.0,99,79.6,Asia
+Luxembourg,2015,94.0,99.0,99,81.8,Europe
+Malaysia,2015,99.0,99.0,99,75.1,Asia
+Maldives,2015,99.0,99.0,99,79.7,Asia
+Monaco,2015,99.0,99.0,99,85.3,Europe
+Mongolia,2015,99.0,99.0,99,69.5,Asia
+Morocco,2015,99.0,99.0,99,72.9,Africa
+Niue,2015,99.0,99.0,99,70.1,Oceania
+Occupied Palestinian territory,2015,99.0,99.0,99,,
+Oman,2015,99.0,99.0,99,77.7,Asia
+Qatar,2015,99.0,99.0,99,80.1,Asia
+Saint Lucia,2015,99.0,99.0,99,73.1,North America
+Saint Vincent and the Grenadines,2015,99.0,99.0,99,74.4,North America
+Sri Lanka,2015,99.0,99.0,99,74.9,Asia
+Thailand,2015,99.0,99.0,99,77.7,Asia
+Turkmenistan,2015,99.0,99.0,99,68.8,Asia
+United Arab Emirates,2015,99.0,99.0,99,79.2,Asia
+Uzbekistan,2015,99.0,99.0,99,70.5,Asia
+Ukraine,2014,22.0,45.0,23,72.6,Europe
+Chad,2014,36.0,44.0,36,51.2,Africa
+Somalia,2014,42.0,47.0,42,54.3,Africa
+Nigeria,2014,43.0,40.0,43,51.8,Africa
+Syrian Arab Republic,2014,47.0,52.0,43,,
+Guinea,2014,44.0,42.0,44,57.9,Africa
+Central African Republic,2014,45.0,50.0,45,50.6,Africa
+South Sudan,2014,,52.0,50,55.0,Africa
+Papua New Guinea,2014,52.0,43.0,52,64.3,Oceania
+Equatorial Guinea,2014,53.0,55.0,53,59.6,Africa
+Angola,2014,55.0,55.0,55,60.0,Africa
+Ethiopia,2014,61.0,68.0,61,62.9,Africa
+Afghanistan,2014,62.0,62.0,62,62.5,Asia
+Haiti,2014,63.0,63.0,63,63.0,North America
+Liberia,2014,63.0,62.0,63,59.1,Africa
+Mali,2014,66.0,62.0,66,57.9,Africa
+Madagascar,2014,68.0,71.0,68,64.3,Africa
+Pakistan,2014,69.0,69.0,69,65.3,Asia
+Gabon,2014,70.0,68.0,70,65.0,Africa
+Suriname,2014,71.0,76.0,71,69.8,South America
+Côte d’Ivoire,2014,73.0,71.0,73,,
+Democratic Republic of the Congo,2014,73.0,72.0,73,,
+Iraq,2014,69.0,76.0,73,68.9,Asia
+Yemen,2014,73.0,67.0,73,67.4,Asia
+Benin,2014,74.0,71.0,74,59.1,Africa
+Guatemala,2014,74.0,66.0,74,72.0,North America
+Kiribati,2014,75.0,79.0,75,65.8,Oceania
+Micronesia (Federated States of),2014,81.0,76.0,77,,
+Solomon Islands,2014,77.0,78.0,77,69.2,Oceania
+Timor-Leste,2014,77.0,76.0,77,,
+Djibouti,2014,78.0,78.0,78,61.6,Africa
+Marshall Islands,2014,79.0,77.0,78,63.6,Oceania
+Samoa,2014,81.0,76.0,78,72.5,Oceania
+Venezuela (Bolivarian Republic of),2014,78.0,79.0,78,,
+Philippines,2014,79.0,82.0,79,71.2,Asia
+Panama,2014,80.0,80.0,80,77.2,North America
+Mauritania,2014,81.0,81.0,81,64.2,Africa
+Niger,2014,81.0,79.0,81,60.8,Africa
+Cameroon,2014,83.0,84.0,83,58.9,Africa
+Ecuador,2014,83.0,84.0,83,76.6,South America
+Lao People's Democratic Republic,2014,83.0,83.0,83,,
+Lebanon,2014,80.0,81.0,83,79.0,Asia
+Sierra Leone,2014,83.0,83.0,83,56.4,Africa
+San Marino,2014,83.0,84.0,84,82.9,Europe
+Togo,2014,84.0,82.0,84,58.9,Africa
+Bolivia (Plurinational State of),2014,85.0,85.0,85,,
+India,2014,79.0,84.0,85,69.1,Asia
+South Africa,2014,85.0,85.0,85,63.4,Africa
+Uganda,2014,85.0,78.0,85,60.4,Africa
+Bosnia and Herzegovina,2014,89.0,86.0,86,75.7,Europe
+Guinea-Bissau,2014,86.0,84.0,86,58.6,Africa
+Vanuatu,2014,86.0,80.0,86,69.5,Oceania
+Zambia,2014,86.0,78.0,86,60.7,Africa
+Comoros,2014,88.0,87.0,87,62.5,Africa
+Mexico,2014,84.0,87.0,87,74.8,North America
+Bulgaria,2014,95.0,88.0,88,74.5,Europe
+Indonesia,2014,88.0,90.0,88,69.5,Asia
+Lesotho,2014,88.0,88.0,88,50.0,Africa
+Mozambique,2014,88.0,88.0,88,57.3,Africa
+Myanmar,2014,88.0,88.0,88,65.1,Asia
+Namibia,2014,88.0,88.0,88,59.8,Africa
+Peru,2014,88.0,78.0,88,75.3,South America
+Qatar,2014,89.0,99.0,89,79.8,Asia
+Senegal,2014,89.0,85.0,89,66.5,Africa
+Tuvalu,2014,89.0,89.0,89,64.0,Oceania
+Cambodia,2014,90.0,91.0,90,69.7,Asia
+Colombia,2014,90.0,90.0,90,76.0,South America
+Congo,2014,90.0,90.0,90,63.0,Africa
+Iceland,2014,,90.0,90,82.6,Europe
+Republic of Moldova,2014,92.0,92.0,90,,
+Burkina Faso,2014,91.0,91.0,91,58.4,Africa
+Canada,2014,55.0,91.0,91,81.9,North America
+Costa Rica,2014,91.0,91.0,91,78.8,North America
+Dominican Republic,2014,89.0,90.0,91,72.9,North America
+Georgia,2014,91.0,91.0,91,73.1,Asia
+Malawi,2014,91.0,87.0,91,60.9,Africa
+Montenegro,2014,87.0,91.0,91,76.7,Europe
+Zimbabwe,2014,91.0,92.0,91,58.8,Africa
+Australia,2014,91.0,92.0,92,82.6,Oceania
+Jamaica,2014,92.0,93.0,92,73.0,North America
+Kenya,2014,92.0,93.0,92,61.8,Africa
+Latvia,2014,92.0,92.0,92,74.4,Europe
+Nepal,2014,92.0,92.0,92,68.1,Asia
+Trinidad and Tobago,2014,92.0,94.0,92,74.2,North America
+Armenia,2014,93.0,95.0,93,74.1,Asia
+Brazil,2014,96.0,96.0,93,74.3,South America
+Democratic People's Republic of Korea,2014,93.0,99.0,93,,
+Estonia,2014,93.0,93.0,93,77.1,Europe
+Germany,2014,87.0,93.0,93,80.9,Europe
+Lithuania,2014,94.0,93.0,93,74.8,Europe
+New Zealand,2014,93.0,93.0,93,81.8,Oceania
+Norway,2014,,93.0,93,82.1,Europe
+Paraguay,2014,93.0,93.0,93,72.9,South America
+Serbia,2014,92.0,93.0,93,75.7,Europe
+Argentina,2014,94.0,92.0,94,76.8,South America
+Azerbaijan,2014,94.0,97.0,94,71.1,Asia
+Barbados,2014,94.0,95.0,94,76.5,North America
+Denmark,2014,,94.0,94,80.6,Europe
+Egypt,2014,94.0,94.0,94,70.4,Africa
+El Salvador,2014,94.0,94.0,94,71.7,North America
+Eritrea,2014,94.0,94.0,94,65.6,Africa
+Libya,2014,94.0,94.0,94,71.5,Africa
+Romania,2014,94.0,94.0,94,74.9,Europe
+Sudan,2014,94.0,94.0,94,64.3,Africa
+Algeria,2014,95.0,95.0,95,75.1,Africa
+Belize,2014,95.0,95.0,95,73.3,North America
+Botswana,2014,95.0,96.0,95,62.6,Africa
+Burundi,2014,95.0,95.0,95,59.9,Africa
+Cabo Verde,2014,95.0,95.0,95,,
+Chile,2014,95.0,95.0,95,79.5,South America
+Croatia,2014,95.0,95.0,95,78.0,Europe
+Israel,2014,97.0,95.0,95,82.2,Asia
+Italy,2014,95.0,95.0,95,82.9,Europe
+Kazakhstan,2014,95.0,95.0,95,70.3,Asia
+Kuwait,2014,96.0,94.0,95,79.4,Asia
+Nauru,2014,95.0,95.0,95,61.8,Oceania
+The former Yugoslav Republic of Macedonia,2014,97.0,96.0,95,,
+Palau,2014,99.0,95.0,95,63.9,Oceania
+Sao Tome and Principe,2014,95.0,95.0,95,66.8,Africa
+Slovenia,2014,,95.0,95,80.9,Europe
+United Kingdom of Great Britain and Northern Ireland,2014,,95.0,95,,
+United States of America,2014,92.0,93.0,95,,
+Uruguay,2014,95.0,95.0,95,77.4,South America
+Viet Nam,2014,95.0,96.0,95,,
+Bahamas,2014,96.0,96.0,96,73.4,North America
+Gambia,2014,96.0,97.0,96,62.3,Africa
+Ireland,2014,95.0,96.0,96,81.3,Europe
+Japan,2014,,99.0,96,83.7,Asia
+Kyrgyzstan,2014,96.0,95.0,96,69.9,Asia
+Netherlands,2014,94.0,96.0,96,81.6,Europe
+Singapore,2014,96.0,96.0,96,82.7,Asia
+Switzerland,2014,,96.0,96,83.1,Europe
+Türkiye,2014,96.0,96.0,96,,
+Andorra,2014,95.0,97.0,97,82.9,Europe
+Bangladesh,2014,97.0,97.0,97,70.0,Asia
+Belarus,2014,97.0,97.0,97,73.6,Europe
+Czechia,2014,99.0,99.0,97,78.8,Europe
+Dominica,2014,97.0,97.0,97,69.4,North America
+Grenada,2014,97.0,81.0,97,75.0,North America
+Malaysia,2014,96.0,97.0,97,75.1,Asia
+Mauritius,2014,97.0,98.0,97,74.9,Africa
+Russian Federation,2014,97.0,97.0,97,,
+Slovakia,2014,97.0,97.0,97,76.8,Europe
+Spain,2014,96.0,97.0,97,82.9,Europe
+Sweden,2014,42.0,97.0,97,82.2,Europe
+Tajikistan,2014,97.0,94.0,97,69.1,Asia
+United Republic of Tanzania,2014,97.0,97.0,97,,
+Albania,2014,98.0,98.0,98,78.4,Europe
+Austria,2014,98.0,98.0,98,81.4,Europe
+Eswatini,2014,98.0,98.0,98,53.0,Africa
+Finland,2014,,98.0,98,81.0,Europe
+France,2014,83.0,98.0,98,82.5,Europe
+Ghana,2014,98.0,94.0,98,63.0,Africa
+Guyana,2014,98.0,97.0,98,67.9,South America
+Jordan,2014,98.0,98.0,98,74.8,Asia
+Nicaragua,2014,98.0,99.0,98,72.8,North America
+Poland,2014,96.0,94.0,98,77.6,Europe
+Portugal,2014,98.0,98.0,98,81.2,Europe
+Rwanda,2014,98.0,98.0,98,64.9,Africa
+Saint Kitts and Nevis,2014,98.0,96.0,98,71.0,North America
+Saint Vincent and the Grenadines,2014,98.0,97.0,98,74.5,North America
+Saudi Arabia,2014,98.0,98.0,98,76.8,Asia
+Tonga,2014,98.0,98.0,98,70.5,Oceania
+Tunisia,2014,98.0,98.0,98,75.6,Africa
+Turkmenistan,2014,97.0,98.0,98,68.6,Asia
+Antigua and Barbuda,2014,99.0,96.0,99,77.9,North America
+Bahrain,2014,98.0,99.0,99,79.3,Asia
+Belgium,2014,98.0,99.0,99,81.1,Europe
+Bhutan,2014,99.0,98.0,99,70.0,Asia
+Brunei Darussalam,2014,99.0,99.0,99,,
+China,2014,99.0,99.0,99,76.7,Asia
+Cook Islands,2014,99.0,99.0,99,74.1,Oceania
+Cuba,2014,97.0,99.0,99,77.9,North America
+Cyprus,2014,96.0,99.0,99,80.8,Europe
+Fiji,2014,99.0,99.0,99,67.4,Oceania
+Greece,2014,96.0,99.0,99,81.0,Europe
+Honduras,2014,99.0,99.0,99,72.3,North America
+Hungary,2014,,99.0,99,75.8,Europe
+Iran (Islamic Republic of),2014,99.0,99.0,99,,
+Luxembourg,2014,94.0,99.0,99,81.7,Europe
+Maldives,2014,99.0,99.0,99,79.4,Asia
+Malta,2014,90.0,99.0,99,82.7,Europe
+Monaco,2014,99.0,99.0,99,84.9,Europe
+Mongolia,2014,99.0,99.0,99,69.0,Asia
+Morocco,2014,99.0,99.0,99,72.5,Africa
+Niue,2014,99.0,99.0,99,69.9,Oceania
+Occupied Palestinian territory,2014,99.0,99.0,99,,
+Oman,2014,99.0,99.0,99,77.4,Asia
+Republic of Korea,2014,99.0,99.0,99,,
+Saint Lucia,2014,99.0,99.0,99,72.9,North America
+Seychelles,2014,99.0,99.0,99,73.7,Africa
+Sri Lanka,2014,99.0,99.0,99,74.7,Asia
+Thailand,2014,99.0,99.0,99,77.4,Asia
+United Arab Emirates,2014,99.0,99.0,99,79.0,Asia
+Uzbekistan,2014,99.0,99.0,99,70.2,Asia
+Central African Republic,2013,23.0,23.0,23,50.9,Africa
+Chad,2013,39.0,46.0,39,50.8,Africa
+Syrian Arab Republic,2013,71.0,50.0,41,,
+Somalia,2013,42.0,47.0,42,53.8,Africa
+Nigeria,2013,43.0,40.0,43,51.7,Africa
+Guinea,2013,50.0,49.0,50,57.8,Africa
+Equatorial Guinea,2013,,57.0,53,59.2,Africa
+South Sudan,2013,,56.0,53,55.8,Africa
+Angola,2013,54.0,48.0,54,59.3,Africa
+Ethiopia,2013,59.0,70.0,59,62.4,Africa
+Viet Nam,2013,59.0,93.0,59,,
+Papua New Guinea,2013,59.0,62.0,60,64.0,Oceania
+Afghanistan,2013,64.0,64.0,64,62.4,Asia
+Mali,2013,64.0,57.0,64,57.4,Africa
+Haiti,2013,68.0,64.0,65,62.6,North America
+Pakistan,2013,65.0,65.0,65,65.1,Asia
+Madagascar,2013,70.0,72.0,70,64.0,Africa
+Democratic Republic of the Congo,2013,71.0,71.0,71,,
+Iraq,2013,68.0,75.0,73,68.3,Asia
+Niger,2013,73.0,62.0,73,60.2,Africa
+Yemen,2013,73.0,67.0,73,67.5,Asia
+Côte d’Ivoire,2013,75.0,74.0,75,,
+Myanmar,2013,75.0,76.0,75,64.8,Asia
+Suriname,2013,76.0,78.0,76,69.7,South America
+Ukraine,2013,46.0,72.0,76,71.9,Europe
+Benin,2013,77.0,73.0,77,59.0,Africa
+Gabon,2013,79.0,77.0,79,64.8,Africa
+Marshall Islands,2013,80.0,79.0,79,63.5,Oceania
+Zambia,2013,79.0,74.0,79,59.9,Africa
+Liberia,2013,80.0,80.0,80,59.9,Africa
+Mauritania,2013,80.0,80.0,80,63.9,Africa
+Panama,2013,80.0,81.0,80,77.0,North America
+Micronesia (Federated States of),2013,83.0,81.0,81,,
+South Africa,2013,73.0,79.0,81,62.5,Africa
+Djibouti,2013,82.0,82.0,82,61.2,Africa
+Timor-Leste,2013,82.0,82.0,82,,
+Venezuela (Bolivarian Republic of),2013,82.0,82.0,82,,
+Dominican Republic,2013,80.0,82.0,83,72.7,North America
+India,2013,70.0,82.0,83,68.5,Asia
+Lao People's Democratic Republic,2013,83.0,82.0,83,,
+Lebanon,2013,80.0,81.0,83,78.8,Asia
+Mexico,2013,82.0,83.0,83,74.7,North America
+Solomon Islands,2013,83.0,85.0,83,69.2,Oceania
+Philippines,2013,84.0,85.0,84,70.8,Asia
+Samoa,2013,85.0,81.0,84,72.4,Oceania
+Togo,2013,84.0,84.0,84,58.7,Africa
+Uganda,2013,84.0,78.0,84,59.8,Africa
+Vanuatu,2013,83.0,78.0,84,69.5,Oceania
+Congo,2013,85.0,85.0,85,62.7,Africa
+Mozambique,2013,85.0,84.0,85,56.5,Africa
+Cambodia,2013,86.0,71.0,86,69.3,Asia
+San Marino,2013,83.0,86.0,86,82.4,Europe
+Bolivia (Plurinational State of),2013,87.0,88.0,87,,
+Comoros,2013,88.0,85.0,87,62.2,Africa
+Ecuador,2013,87.0,87.0,87,76.4,South America
+Guinea-Bissau,2013,87.0,86.0,87,58.2,Africa
+Kenya,2013,93.0,94.0,87,61.4,Africa
+Nauru,2013,87.0,87.0,87,61.2,Oceania
+Burkina Faso,2013,88.0,89.0,88,57.8,Africa
+Peru,2013,88.0,71.0,88,75.0,South America
+Bosnia and Herzegovina,2013,91.0,87.0,89,76.3,Europe
+Cameroon,2013,89.0,88.0,89,58.5,Africa
+Malawi,2013,89.0,89.0,89,59.7,Africa
+Namibia,2013,89.0,89.0,89,58.7,Africa
+Ghana,2013,90.0,91.0,90,62.4,Africa
+Republic of Moldova,2013,91.0,92.0,90,,
+Tuvalu,2013,90.0,90.0,90,64.0,Oceania
+Australia,2013,91.0,91.0,91,82.6,Oceania
+Barbados,2013,91.0,91.0,91,76.3,North America
+Canada,2013,55.0,91.0,91,81.8,North America
+Chile,2013,90.0,90.0,91,79.3,South America
+Colombia,2013,91.0,91.0,91,75.8,South America
+Iceland,2013,,91.0,91,81.9,Europe
+Paraguay,2013,90.0,89.0,91,72.8,South America
+United Republic of Tanzania,2013,91.0,91.0,91,,
+El Salvador,2013,92.0,90.0,92,71.8,North America
+Indonesia,2013,92.0,92.0,92,69.3,Asia
+Nepal,2013,92.0,92.0,92,68.0,Asia
+New Zealand,2013,93.0,92.0,92,81.7,Oceania
+Romania,2013,96.0,88.0,92,75.0,Europe
+Senegal,2013,92.0,89.0,92,66.1,Africa
+Sierra Leone,2013,92.0,92.0,92,56.3,Africa
+Trinidad and Tobago,2013,92.0,94.0,92,74.0,North America
+Azerbaijan,2013,93.0,96.0,93,70.9,Asia
+Cabo Verde,2013,93.0,93.0,93,,
+Democratic People's Republic of Korea,2013,93.0,99.0,93,,
+Georgia,2013,96.0,94.0,93,72.6,Asia
+Germany,2013,87.0,93.0,93,80.5,Europe
+Jamaica,2013,93.0,86.0,93,73.4,North America
+Lesotho,2013,93.0,90.0,93,49.0,Africa
+Lithuania,2013,93.0,93.0,93,74.3,Europe
+Sudan,2013,93.0,93.0,93,63.7,Africa
+Argentina,2013,94.0,90.0,94,76.5,South America
+Denmark,2013,,94.0,94,80.3,Europe
+Eritrea,2013,94.0,94.0,94,65.1,Africa
+Estonia,2013,93.0,94.0,94,77.1,Europe
+Latvia,2013,94.0,94.0,94,74.2,Europe
+Montenegro,2013,90.0,94.0,94,76.6,Europe
+Norway,2013,,94.0,94,81.7,Europe
+United States of America,2013,91.0,93.0,94,,
+Uruguay,2013,94.0,94.0,94,77.2,South America
+Algeria,2013,95.0,95.0,95,74.6,Africa
+Armenia,2013,95.0,96.0,95,73.7,Asia
+Austria,2013,95.0,95.0,95,81.1,Europe
+Belize,2013,95.0,95.0,95,73.7,North America
+Botswana,2013,95.0,96.0,95,62.0,Africa
+Bulgaria,2013,95.0,95.0,95,74.8,Europe
+Costa Rica,2013,94.0,95.0,95,79.4,North America
+Kiribati,2013,95.0,91.0,95,65.6,Oceania
+Serbia,2013,91.0,97.0,95,75.6,Europe
+Slovenia,2013,,95.0,95,80.3,Europe
+United Kingdom of Great Britain and Northern Ireland,2013,,95.0,95,,
+Zimbabwe,2013,95.0,95.0,95,57.5,Africa
+Andorra,2013,94.0,96.0,96,82.9,Europe
+Bangladesh,2013,96.0,96.0,96,69.6,Asia
+Burundi,2013,96.0,96.0,96,59.2,Africa
+Croatia,2013,96.0,96.0,96,77.8,Europe
+Dominica,2013,96.0,96.0,96,68.9,North America
+Guatemala,2013,96.0,94.0,96,71.7,North America
+Ireland,2013,95.0,96.0,96,81.0,Europe
+Israel,2013,97.0,96.0,96,82.1,Asia
+Italy,2013,96.0,96.0,96,82.7,Europe
+Japan,2013,,99.0,96,83.4,Asia
+Libya,2013,96.0,96.0,96,72.3,Africa
+Spain,2013,95.0,96.0,96,82.7,Europe
+Switzerland,2013,,96.0,96,82.7,Europe
+Tajikistan,2013,96.0,97.0,96,68.9,Asia
+Bahamas,2013,97.0,97.0,97,73.0,North America
+Bhutan,2013,97.0,97.0,97,69.7,Asia
+Brazil,2013,96.0,96.0,97,73.9,South America
+Egypt,2013,97.0,97.0,97,70.1,Africa
+Gambia,2013,97.0,96.0,97,62.1,Africa
+Grenada,2013,97.0,98.0,97,75.1,North America
+Kyrgyzstan,2013,97.0,97.0,97,69.2,Asia
+Malaysia,2013,96.0,97.0,97,75.0,Asia
+Netherlands,2013,51.0,97.0,97,81.3,Europe
+Qatar,2013,97.0,99.0,97,79.5,Asia
+Russian Federation,2013,97.0,98.0,97,,
+Saint Kitts and Nevis,2013,97.0,97.0,97,71.5,North America
+Saint Vincent and the Grenadines,2013,97.0,97.0,97,73.8,North America
+Sao Tome and Principe,2013,97.0,97.0,97,66.3,Africa
+Singapore,2013,97.0,97.0,97,82.5,Asia
+Belarus,2013,98.0,98.0,98,73.0,Europe
+Cook Islands,2013,98.0,98.0,98,74.1,Oceania
+Czechia,2013,99.0,99.0,98,78.2,Europe
+Eswatini,2013,98.0,98.0,98,51.5,Africa
+Finland,2013,,98.0,98,80.9,Europe
+Guyana,2013,98.0,98.0,98,67.5,South America
+Iran (Islamic Republic of),2013,99.0,98.0,98,,
+Jordan,2013,98.0,98.0,98,74.6,Asia
+Kazakhstan,2013,99.0,98.0,98,69.8,Asia
+Mauritius,2013,98.0,98.0,98,74.7,Africa
+Mongolia,2013,98.0,98.0,98,68.6,Asia
+Nicaragua,2013,98.0,99.0,98,72.7,North America
+The former Yugoslav Republic of Macedonia,2013,97.0,98.0,98,,
+Oman,2013,98.0,99.0,98,77.2,Asia
+Portugal,2013,98.0,98.0,98,80.8,Europe
+Rwanda,2013,98.0,98.0,98,64.4,Africa
+Saudi Arabia,2013,98.0,98.0,98,76.6,Asia
+Seychelles,2013,98.0,98.0,98,73.8,Africa
+Slovakia,2013,98.0,98.0,98,76.5,Europe
+Sweden,2013,35.0,98.0,98,81.9,Europe
+Türkiye,2013,97.0,98.0,98,,
+Tunisia,2013,98.0,98.0,98,75.7,Africa
+Turkmenistan,2013,98.0,98.0,98,68.7,Asia
+United Arab Emirates,2013,98.0,98.0,98,78.9,Asia
+Albania,2013,99.0,99.0,99,78.1,Europe
+Antigua and Barbuda,2013,99.0,98.0,99,77.6,North America
+Bahrain,2013,99.0,99.0,99,79.2,Asia
+Belgium,2013,98.0,99.0,99,80.5,Europe
+Brunei Darussalam,2013,98.0,99.0,99,,
+China,2013,99.0,99.0,99,76.5,Asia
+Cuba,2013,96.0,99.0,99,77.9,North America
+Cyprus,2013,96.0,99.0,99,80.4,Europe
+Fiji,2013,99.0,99.0,99,67.4,Oceania
+France,2013,82.0,99.0,99,82.0,Europe
+Greece,2013,98.0,99.0,99,81.0,Europe
+Honduras,2013,99.0,99.0,99,72.0,North America
+Hungary,2013,,99.0,99,75.7,Europe
+Kuwait,2013,99.0,99.0,99,79.2,Asia
+Luxembourg,2013,94.0,99.0,99,81.4,Europe
+Maldives,2013,99.0,99.0,99,79.1,Asia
+Malta,2013,94.0,99.0,99,82.0,Europe
+Monaco,2013,99.0,99.0,99,84.9,Europe
+Morocco,2013,99.0,99.0,99,72.1,Africa
+Niue,2013,99.0,99.0,99,69.6,Oceania
+Occupied Palestinian territory,2013,99.0,99.0,99,,
+Palau,2013,99.0,99.0,99,64.2,Oceania
+Poland,2013,96.0,95.0,99,77.0,Europe
+Republic of Korea,2013,99.0,99.0,99,,
+Saint Lucia,2013,99.0,99.0,99,72.7,North America
+Sri Lanka,2013,99.0,99.0,99,74.2,Asia
+Thailand,2013,99.0,99.0,99,77.1,Asia
+Tonga,2013,99.0,99.0,99,70.5,Oceania
+Uzbekistan,2013,99.0,99.0,99,70.0,Asia
+Chad,2012,40.0,51.0,40,50.5,Africa
+Nigeria,2012,42.0,42.0,42,51.5,Africa
+Somalia,2012,,47.0,42,53.2,Africa
+Syrian Arab Republic,2012,43.0,47.0,45,,
+Central African Republic,2012,47.0,47.0,47,50.7,Africa
+Angola,2012,52.0,54.0,53,58.6,Africa
+Equatorial Guinea,2012,,58.0,54,58.9,Africa
+Guinea,2012,57.0,56.0,57,57.4,Africa
+Papua New Guinea,2012,57.0,65.0,57,63.7,Oceania
+Ethiopia,2012,62.0,70.0,62,61.5,Africa
+South Sudan,2012,,67.0,63,55.9,Africa
+Pakistan,2012,64.0,64.0,64,64.8,Asia
+Mali,2012,65.0,65.0,65,57.1,Africa
+Haiti,2012,,66.0,66,62.3,North America
+Afghanistan,2012,67.0,67.0,67,61.9,Asia
+Yemen,2012,67.0,68.0,67,67.3,Asia
+Madagascar,2012,68.0,71.0,68,63.5,Africa
+Democratic Republic of the Congo,2012,71.0,69.0,71,,
+Niger,2012,71.0,71.0,71,59.6,Africa
+South Africa,2012,70.0,69.0,71,61.8,Africa
+Iraq,2012,65.0,73.0,72,68.0,Asia
+Suriname,2012,76.0,79.0,76,69.8,South America
+Ukraine,2012,46.0,72.0,76,71.6,Europe
+Lao People's Democratic Republic,2012,77.0,76.0,77,,
+Zambia,2012,78.0,70.0,78,58.9,Africa
+Nauru,2012,79.0,79.0,79,60.7,Oceania
+Benin,2012,80.0,80.0,80,58.7,Africa
+Liberia,2012,80.0,80.0,80,59.9,Africa
+Marshall Islands,2012,80.0,80.0,80,63.4,Oceania
+Mauritania,2012,80.0,80.0,80,63.6,Africa
+Djibouti,2012,81.0,81.0,81,60.8,Africa
+Micronesia (Federated States of),2012,82.0,81.0,81,,
+Mozambique,2012,81.0,81.0,81,55.6,Africa
+Venezuela (Bolivarian Republic of),2012,81.0,73.0,81,,
+Côte d’Ivoire,2012,82.0,83.0,82,,
+Gabon,2012,82.0,80.0,82,64.6,Africa
+India,2012,73.0,79.0,82,67.9,Asia
+Samoa,2012,82.0,82.0,82,72.2,Oceania
+Vanuatu,2012,79.0,77.0,82,69.5,Oceania
+Lebanon,2012,80.0,80.0,83,78.6,Asia
+Timor-Leste,2012,83.0,83.0,83,,
+Uganda,2012,83.0,79.0,83,58.8,Africa
+Myanmar,2012,58.0,87.0,84,64.1,Asia
+Namibia,2012,84.0,84.0,84,57.6,Africa
+Togo,2012,84.0,84.0,84,58.1,Africa
+Cameroon,2012,85.0,85.0,85,57.8,Africa
+Congo,2012,62.0,68.0,85,62.3,Africa
+Dominican Republic,2012,74.0,85.0,85,72.5,North America
+Panama,2012,85.0,87.0,85,76.8,North America
+Comoros,2012,89.0,85.0,86,61.8,Africa
+Barbados,2012,87.0,88.0,87,76.1,North America
+Ecuador,2012,88.0,85.0,87,76.1,South America
+Guinea-Bissau,2012,87.0,87.0,87,57.7,Africa
+Indonesia,2012,86.0,87.0,87,69.0,Asia
+Azerbaijan,2012,88.0,92.0,89,70.4,Asia
+Iceland,2012,,89.0,89,82.6,Europe
+Palau,2012,89.0,89.0,89,64.7,Oceania
+Philippines,2012,89.0,88.0,89,70.9,Asia
+San Marino,2012,88.0,89.0,89,82.6,Europe
+Burkina Faso,2012,90.0,90.0,90,57.6,Africa
+Cambodia,2012,91.0,90.0,90,68.9,Asia
+Chile,2012,90.0,90.0,90,79.0,South America
+Nepal,2012,90.0,90.0,90,67.5,Asia
+Argentina,2012,91.0,90.0,91,76.5,South America
+Canada,2012,70.0,91.0,91,81.7,North America
+Colombia,2012,92.0,91.0,91,75.6,South America
+Costa Rica,2012,91.0,90.0,91,79.3,North America
+Latvia,2012,90.0,91.0,91,73.7,Europe
+Paraguay,2012,91.0,89.0,91,72.5,South America
+Romania,2012,96.0,92.0,91,74.4,Europe
+Senegal,2012,91.0,83.0,91,65.5,Africa
+Serbia,2012,97.0,93.0,91,75.1,Europe
+Sierra Leone,2012,91.0,91.0,91,55.5,Africa
+Australia,2012,91.0,92.0,92,82.3,Oceania
+Austria,2012,92.0,92.0,92,80.8,Europe
+Bosnia and Herzegovina,2012,92.0,87.0,92,77.2,Europe
+Georgia,2012,92.0,93.0,92,72.4,Asia
+Ghana,2012,92.0,91.0,92,62.1,Africa
+Qatar,2012,93.0,93.0,92,79.2,Asia
+Republic of Moldova,2012,94.0,92.0,92,,
+Solomon Islands,2012,92.0,88.0,92,69.1,Oceania
+Sudan,2012,92.0,92.0,92,63.8,Africa
+Trinidad and Tobago,2012,92.0,91.0,92,73.7,North America
+United Republic of Tanzania,2012,92.0,90.0,92,,
+Bolivia (Plurinational State of),2012,93.0,93.0,93,,
+Egypt,2012,93.0,93.0,93,70.1,Africa
+El Salvador,2012,92.0,93.0,93,71.8,North America
+Lithuania,2012,93.0,93.0,93,74.2,Europe
+New Zealand,2012,93.0,93.0,93,81.2,Oceania
+Bangladesh,2012,94.0,94.0,94,69.6,Asia
+Cabo Verde,2012,94.0,94.0,94,,
+Denmark,2012,,94.0,94,80.1,Europe
+Eritrea,2012,94.0,94.0,94,64.8,Africa
+Estonia,2012,94.0,94.0,94,76.5,Europe
+Israel,2012,97.0,94.0,94,81.7,Asia
+Kenya,2012,94.0,94.0,94,61.1,Africa
+Kiribati,2012,94.0,92.0,94,65.4,Oceania
+Montenegro,2012,90.0,94.0,94,76.3,Europe
+Tajikistan,2012,94.0,96.0,94,68.5,Asia
+United States of America,2012,90.0,93.0,94,,
+Algeria,2012,95.0,95.0,95,74.2,Africa
+Armenia,2012,95.0,96.0,95,73.5,Asia
+Botswana,2012,95.0,96.0,95,60.8,Africa
+Brazil,2012,96.0,96.0,95,73.6,South America
+Brunei Darussalam,2012,99.0,92.0,95,,
+Bulgaria,2012,95.0,95.0,95,74.4,Europe
+Eswatini,2012,95.0,92.0,95,49.8,Africa
+Germany,2012,87.0,94.0,95,80.5,Europe
+Ireland,2012,95.0,95.0,95,80.8,Europe
+Lesotho,2012,95.0,93.0,95,47.8,Africa
+The former Yugoslav Republic of Macedonia,2012,98.0,97.0,95,,
+Norway,2012,,95.0,95,81.4,Europe
+Peru,2012,95.0,94.0,95,74.5,South America
+Tonga,2012,95.0,95.0,95,70.4,Oceania
+United Kingdom of Great Britain and Northern Ireland,2012,,95.0,95,,
+Uruguay,2012,95.0,95.0,95,77.1,South America
+Zimbabwe,2012,97.0,95.0,95,55.6,Africa
+Burundi,2012,96.0,96.0,96,58.5,Africa
+Croatia,2012,96.0,96.0,96,77.3,Europe
+Democratic People's Republic of Korea,2012,96.0,99.0,96,,
+Guatemala,2012,96.0,94.0,96,71.5,North America
+Jamaica,2012,96.0,96.0,96,73.4,North America
+Kyrgyzstan,2012,96.0,94.0,96,69.0,Asia
+Malawi,2012,96.0,95.0,96,58.7,Africa
+Saint Vincent and the Grenadines,2012,96.0,96.0,96,74.1,North America
+Sao Tome and Principe,2012,96.0,96.0,96,65.7,Africa
+Slovenia,2012,,96.0,96,80.1,Europe
+Spain,2012,96.0,96.0,96,82.2,Europe
+Switzerland,2012,,96.0,96,82.6,Europe
+United Arab Emirates,2012,96.0,96.0,96,78.7,Asia
+Bhutan,2012,97.0,97.0,97,69.3,Asia
+Dominica,2012,97.0,97.0,97,70.5,North America
+Grenada,2012,97.0,98.0,97,75.0,North America
+Guyana,2012,97.0,97.0,97,67.2,South America
+Italy,2012,96.0,96.0,97,82.3,Europe
+Japan,2012,,99.0,97,83.2,Asia
+Malaysia,2012,97.0,97.0,97,74.9,Asia
+Netherlands,2012,20.0,97.0,97,81.0,Europe
+Occupied Palestinian territory,2012,99.0,98.0,97,,
+Russian Federation,2012,97.0,98.0,97,,
+Singapore,2012,97.0,97.0,97,82.2,Asia
+Türkiye,2012,97.0,97.0,97,,
+Tunisia,2012,97.0,97.0,97,75.5,Africa
+Turkmenistan,2012,98.0,98.0,97,68.7,Asia
+Tuvalu,2012,97.0,97.0,97,64.0,Oceania
+Viet Nam,2012,97.0,97.0,97,,
+Antigua and Barbuda,2012,98.0,97.0,98,77.4,North America
+Bahamas,2012,96.0,99.0,98,72.8,North America
+Belarus,2012,97.0,98.0,98,72.6,Europe
+Belize,2012,98.0,98.0,98,73.2,North America
+Cook Islands,2012,98.0,98.0,98,73.9,Oceania
+Gambia,2012,98.0,98.0,98,62.1,Africa
+Honduras,2012,98.0,98.0,98,71.7,North America
+Jordan,2012,98.0,98.0,98,74.4,Asia
+Kuwait,2012,98.0,98.0,98,78.8,Asia
+Libya,2012,98.0,98.0,98,72.2,Africa
+Mauritius,2012,98.0,98.0,98,74.4,Africa
+Nicaragua,2012,98.0,99.0,98,72.6,North America
+Oman,2012,98.0,99.0,98,77.1,Asia
+Portugal,2012,98.0,98.0,98,80.5,Europe
+Rwanda,2012,98.0,98.0,98,64.0,Africa
+Saint Kitts and Nevis,2012,98.0,98.0,98,71.7,North America
+Saint Lucia,2012,98.0,98.0,98,72.9,North America
+Saudi Arabia,2012,98.0,98.0,98,76.5,Asia
+Seychelles,2012,98.0,98.0,98,73.6,Africa
+Sweden,2012,30.0,98.0,98,81.7,Europe
+Albania,2012,99.0,99.0,99,78.1,Europe
+Andorra,2012,96.0,99.0,99,82.9,Europe
+Bahrain,2012,99.0,99.0,99,79.1,Asia
+Belgium,2012,98.0,99.0,99,80.3,Europe
+China,2012,99.0,99.0,99,76.2,Asia
+Cuba,2012,96.0,98.0,99,77.8,North America
+Cyprus,2012,96.0,99.0,99,80.1,Europe
+Czechia,2012,99.0,99.0,99,78.0,Europe
+Fiji,2012,99.0,99.0,99,67.6,Oceania
+Finland,2012,,99.0,99,80.5,Europe
+France,2012,78.0,99.0,99,81.8,Europe
+Greece,2012,98.0,99.0,99,80.3,Europe
+Hungary,2012,,99.0,99,75.2,Europe
+Iran (Islamic Republic of),2012,98.0,99.0,99,,
+Kazakhstan,2012,95.0,98.0,99,69.1,Asia
+Luxembourg,2012,94.0,99.0,99,81.0,Europe
+Maldives,2012,99.0,99.0,99,78.7,Asia
+Malta,2012,93.0,99.0,99,81.4,Europe
+Mexico,2012,99.0,99.0,99,74.6,North America
+Monaco,2012,99.0,99.0,99,84.5,Europe
+Mongolia,2012,99.0,99.0,99,68.1,Asia
+Morocco,2012,99.0,99.0,99,71.7,Africa
+Niue,2012,99.0,99.0,99,69.3,Oceania
+Poland,2012,97.0,95.0,99,76.7,Europe
+Republic of Korea,2012,99.0,99.0,99,,
+Slovakia,2012,99.0,99.0,99,76.2,Europe
+Sri Lanka,2012,99.0,99.0,99,73.9,Asia
+Thailand,2012,98.0,99.0,99,76.8,Asia
+Uzbekistan,2012,99.0,99.0,99,69.9,Asia
+Chad,2011,33.0,40.0,33,50.0,Africa
+Somalia,2011,,49.0,41,51.3,Africa
+Central African Republic,2011,47.0,47.0,47,49.9,Africa
+Nigeria,2011,45.0,48.0,48,51.4,Africa
+Ukraine,2011,21.0,54.0,50,71.4,Europe
+Angola,2011,50.0,50.0,52,57.6,Africa
+Equatorial Guinea,2011,,60.0,54,58.4,Africa
+Papua New Guinea,2011,58.0,55.0,58,63.5,Oceania
+Côte d’Ivoire,2011,62.0,58.0,61,,
+South Sudan,2011,,66.0,61,54.9,Africa
+Guinea,2011,63.0,63.0,63,57.0,Africa
+Pakistan,2011,63.0,63.0,63,64.6,Asia
+Ethiopia,2011,65.0,70.0,65,60.7,Africa
+Mali,2011,66.0,72.0,66,56.8,Africa
+Timor-Leste,2011,67.0,66.0,67,,
+Afghanistan,2011,68.0,68.0,68,61.4,Asia
+Haiti,2011,,67.0,68,61.6,North America
+Yemen,2011,69.0,69.0,69,67.4,Asia
+Democratic Republic of the Congo,2011,70.0,65.0,70,,
+Syrian Arab Republic,2011,66.0,60.0,72,,
+Madagascar,2011,73.0,73.0,73,63.5,Africa
+Benin,2011,75.0,77.0,75,58.5,Africa
+Gabon,2011,75.0,75.0,75,64.0,Africa
+Mauritania,2011,75.0,73.0,75,63.3,Africa
+Niger,2011,75.0,40.0,75,59.0,Africa
+South Africa,2011,76.0,71.0,75,60.7,Africa
+Lao People's Democratic Republic,2011,76.0,78.0,76,,
+Liberia,2011,77.0,77.0,77,59.6,Africa
+Mozambique,2011,78.0,77.0,78,54.9,Africa
+Venezuela (Bolivarian Republic of),2011,78.0,78.0,78,,
+Vanuatu,2011,76.0,75.0,79,69.6,Oceania
+Suriname,2011,80.0,83.0,80,69.9,South America
+Indonesia,2011,81.0,81.0,81,68.8,Asia
+Iraq,2011,78.0,82.0,81,67.7,Asia
+Zambia,2011,81.0,83.0,81,57.8,Africa
+Cameroon,2011,82.0,80.0,82,57.1,Africa
+Congo,2011,70.0,72.0,82,62.0,Africa
+India,2011,44.0,79.0,82,67.4,Asia
+Lebanon,2011,80.0,79.0,82,78.4,Asia
+Namibia,2011,82.0,85.0,82,56.6,Africa
+Samoa,2011,75.0,79.0,82,72.3,Oceania
+Uganda,2011,82.0,79.0,82,58.0,Africa
+Comoros,2011,83.0,85.0,83,61.5,Africa
+Dominican Republic,2011,80.0,84.0,84,72.2,North America
+Micronesia (Federated States of),2011,83.0,83.0,84,,
+Myanmar,2011,40.0,90.0,84,63.9,Asia
+Palau,2011,91.0,98.0,84,65.2,Oceania
+Colombia,2011,85.0,85.0,85,75.3,South America
+Costa Rica,2011,84.0,82.0,85,79.3,North America
+Togo,2011,85.0,85.0,85,57.9,Africa
+Guinea-Bissau,2011,89.0,85.0,86,57.0,Africa
+Azerbaijan,2011,84.0,91.0,87,70.0,Asia
+Canada,2011,70.0,87.0,87,81.5,North America
+Djibouti,2011,87.0,87.0,87,60.4,Africa
+Marshall Islands,2011,89.0,88.0,87,63.3,Oceania
+Panama,2011,87.0,91.0,87,76.6,North America
+Bosnia and Herzegovina,2011,88.0,89.0,88,77.0,Europe
+Ecuador,2011,88.0,85.0,88,75.7,South America
+Guatemala,2011,88.0,88.0,88,71.2,North America
+Austria,2011,89.0,89.0,89,80.8,Europe
+El Salvador,2011,89.0,90.0,89,71.9,North America
+Philippines,2011,89.0,88.0,89,70.8,Asia
+Romania,2011,96.0,89.0,89,74.4,Europe
+Sierra Leone,2011,89.0,88.0,89,54.6,Africa
+Cabo Verde,2011,90.0,90.0,90,,
+Trinidad and Tobago,2011,90.0,91.0,90,73.3,North America
+United Republic of Tanzania,2011,90.0,88.0,90,,
+Argentina,2011,91.0,93.0,91,76.1,South America
+Barbados,2011,91.0,91.0,91,75.9,North America
+Burkina Faso,2011,91.0,90.0,91,57.1,Africa
+Cambodia,2011,91.0,91.0,91,68.4,Asia
+Denmark,2011,,91.0,91,79.8,Europe
+Eswatini,2011,91.0,85.0,91,48.2,Africa
+Ghana,2011,91.0,91.0,91,61.7,Africa
+Peru,2011,91.0,91.0,91,74.1,South America
+Solomon Islands,2011,92.0,97.0,91,68.9,Oceania
+Australia,2011,92.0,92.0,92,82.1,Oceania
+Jamaica,2011,92.0,93.0,92,73.1,North America
+Latvia,2011,89.0,92.0,92,73.7,Europe
+Lithuania,2011,95.0,92.0,92,73.9,Europe
+Nepal,2011,92.0,92.0,92,67.3,Asia
+Paraguay,2011,91.0,89.0,92,72.1,South America
+San Marino,2011,92.0,92.0,92,82.8,Europe
+Senegal,2011,92.0,89.0,92,65.3,Africa
+Cook Islands,2011,93.0,93.0,93,73.8,Oceania
+Estonia,2011,94.0,93.0,93,76.5,Europe
+Guyana,2011,93.0,93.0,93,67.0,South America
+Qatar,2011,93.0,92.0,93,78.9,Asia
+Republic of Moldova,2011,96.0,96.0,93,,
+Sudan,2011,93.0,93.0,93,63.2,Africa
+Zimbabwe,2011,94.0,93.0,93,53.3,Africa
+Chile,2011,94.0,93.0,94,79.1,South America
+Democratic People's Republic of Korea,2011,94.0,99.0,94,,
+Eritrea,2011,94.0,94.0,94,64.4,Africa
+Georgia,2011,89.0,88.0,94,72.4,Asia
+Israel,2011,98.0,94.0,94,81.7,Asia
+Norway,2011,,94.0,94,81.2,Europe
+Serbia,2011,94.0,94.0,94,74.8,Europe
+Algeria,2011,95.0,95.0,95,74.1,Africa
+Armenia,2011,95.0,96.0,95,73.3,Asia
+Belize,2011,95.0,95.0,95,72.7,North America
+Bhutan,2011,95.0,95.0,95,68.9,Asia
+Bolivia (Plurinational State of),2011,95.0,95.0,95,,
+Botswana,2011,95.0,96.0,95,60.5,Africa
+Bulgaria,2011,96.0,95.0,95,74.2,Europe
+Germany,2011,87.0,94.0,95,80.4,Europe
+Grenada,2011,94.0,95.0,95,75.3,North America
+Iceland,2011,,95.0,95,82.2,Europe
+Ireland,2011,95.0,95.0,95,80.6,Europe
+Montenegro,2011,91.0,95.0,95,76.1,Europe
+New Zealand,2011,95.0,95.0,95,80.9,Oceania
+United Arab Emirates,2011,95.0,95.0,95,78.5,Asia
+United Kingdom of Great Britain and Northern Ireland,2011,,95.0,95,,
+Uruguay,2011,95.0,95.0,95,77.0,South America
+Viet Nam,2011,95.0,96.0,95,,
+Bangladesh,2011,96.0,96.0,96,68.8,Asia
+Burundi,2011,96.0,95.0,96,57.8,Africa
+Croatia,2011,96.0,96.0,96,77.2,Europe
+Egypt,2011,96.0,96.0,96,69.9,Africa
+Gambia,2011,96.0,95.0,96,61.5,Africa
+Italy,2011,96.0,96.0,96,82.2,Europe
+Kenya,2011,96.0,97.0,96,61.0,Africa
+Kyrgyzstan,2011,96.0,94.0,96,68.6,Asia
+Lesotho,2011,96.0,95.0,96,46.7,Africa
+Malaysia,2011,96.0,96.0,96,74.7,Asia
+Maldives,2011,96.0,96.0,96,78.1,Asia
+Malta,2011,82.0,96.0,96,81.1,Europe
+The former Yugoslav Republic of Macedonia,2011,96.0,97.0,96,,
+Saint Vincent and the Grenadines,2011,96.0,96.0,96,74.6,North America
+Sao Tome and Principe,2011,96.0,96.0,96,64.9,Africa
+Singapore,2011,96.0,96.0,96,82.0,Asia
+Slovenia,2011,,96.0,96,80.0,Europe
+Switzerland,2011,,96.0,96,82.6,Europe
+Tajikistan,2011,96.0,97.0,96,68.1,Asia
+Tuvalu,2011,96.0,96.0,96,64.0,Oceania
+United States of America,2011,91.0,94.0,96,,
+Brunei Darussalam,2011,93.0,96.0,97,,
+Cuba,2011,96.0,99.0,97,77.8,North America
+Honduras,2011,97.0,97.0,97,71.4,North America
+Japan,2011,,96.0,97,82.7,Asia
+Malawi,2011,97.0,97.0,97,57.5,Africa
+Mexico,2011,98.0,97.0,97,74.4,North America
+Netherlands,2011,20.0,97.0,97,81.1,Europe
+Portugal,2011,97.0,97.0,97,80.5,Europe
+Russian Federation,2011,97.0,97.0,97,,
+Rwanda,2011,97.0,93.0,97,63.3,Africa
+Spain,2011,97.0,97.0,97,82.2,Europe
+Türkiye,2011,96.0,97.0,97,,
+Turkmenistan,2011,97.0,97.0,97,68.6,Asia
+Bahamas,2011,95.0,97.0,98,72.6,North America
+Belarus,2011,98.0,98.0,98,71.5,Europe
+Belgium,2011,97.0,98.0,98,80.4,Europe
+Dominica,2011,98.0,98.0,98,69.7,North America
+Jordan,2011,98.0,98.0,98,74.2,Asia
+Libya,2011,98.0,98.0,98,70.1,Africa
+Mauritius,2011,98.0,98.0,98,74.2,Africa
+Nicaragua,2011,98.0,99.0,98,72.4,North America
+Saint Kitts and Nevis,2011,98.0,99.0,98,71.5,North America
+Saudi Arabia,2011,98.0,98.0,98,76.2,Asia
+Sweden,2011,29.0,98.0,98,81.8,Europe
+Tunisia,2011,98.0,98.0,98,75.5,Africa
+Albania,2011,99.0,99.0,99,78.1,Europe
+Andorra,2011,99.0,99.0,99,82.9,Europe
+Antigua and Barbuda,2011,99.0,99.0,99,77.1,North America
+Bahrain,2011,99.0,99.0,99,78.9,Asia
+Brazil,2011,98.0,98.0,99,73.3,South America
+China,2011,99.0,99.0,99,75.9,Asia
+Cyprus,2011,96.0,99.0,99,80.0,Europe
+Czechia,2011,99.0,99.0,99,77.8,Europe
+Fiji,2011,99.0,99.0,99,67.5,Oceania
+Finland,2011,,99.0,99,80.4,Europe
+France,2011,74.0,99.0,99,81.8,Europe
+Greece,2011,95.0,99.0,99,80.5,Europe
+Hungary,2011,,99.0,99,74.9,Europe
+Iran (Islamic Republic of),2011,99.0,99.0,99,,
+Kazakhstan,2011,99.0,99.0,99,68.7,Asia
+Kiribati,2011,95.0,95.0,99,65.2,Oceania
+Kuwait,2011,99.0,99.0,99,78.5,Asia
+Luxembourg,2011,95.0,96.0,99,80.8,Europe
+Monaco,2011,99.0,99.0,99,85.6,Europe
+Mongolia,2011,99.0,99.0,99,67.4,Asia
+Morocco,2011,98.0,98.0,99,71.3,Africa
+Nauru,2011,99.0,99.0,99,60.2,Oceania
+Niue,2011,99.0,99.0,99,68.9,Oceania
+Occupied Palestinian territory,2011,99.0,99.0,99,,
+Oman,2011,99.0,99.0,99,76.6,Asia
+Poland,2011,98.0,96.0,99,76.7,Europe
+Republic of Korea,2011,99.0,98.0,99,,
+Saint Lucia,2011,99.0,99.0,99,72.9,North America
+Seychelles,2011,99.0,99.0,99,73.8,Africa
+Slovakia,2011,99.0,99.0,99,76.0,Europe
+Sri Lanka,2011,99.0,99.0,99,73.4,Asia
+Thailand,2011,98.0,99.0,99,76.4,Asia
+Tonga,2011,99.0,99.0,99,70.4,Oceania
+Uzbekistan,2011,99.0,99.0,99,69.6,Asia
+Chad,2010,39.0,44.0,39,49.6,Africa
+Central African Republic,2010,45.0,46.0,45,49.3,Africa
+Somalia,2010,,49.0,45,50.6,Africa
+Angola,2010,49.0,56.0,51,56.7,Africa
+Pakistan,2010,52.0,52.0,52,64.4,Asia
+Ukraine,2010,48.0,57.0,52,70.6,Europe
+Equatorial Guinea,2010,,61.0,54,57.9,Africa
+Nigeria,2010,49.0,54.0,54,50.9,Africa
+Papua New Guinea,2010,55.0,61.0,55,63.0,Oceania
+Democratic Republic of the Congo,2010,60.0,68.0,60,,
+Ethiopia,2010,62.0,69.0,61,59.7,Africa
+Guinea,2010,64.0,62.0,64,56.7,Africa
+Mauritania,2010,64.0,52.0,64,63.1,Africa
+Afghanistan,2010,66.0,66.0,66,60.9,Asia
+Gabon,2010,67.0,68.0,67,63.9,Africa
+Haiti,2010,,66.0,67,46.0,North America
+Palau,2010,80.0,68.0,69,65.6,Oceania
+Liberia,2010,70.0,71.0,70,59.4,Africa
+Madagascar,2010,70.0,70.0,70,62.9,Africa
+Niger,2010,70.0,75.0,70,58.4,Africa
+Timor-Leste,2010,72.0,72.0,72,,
+Mali,2010,72.0,77.0,73,56.4,Africa
+Comoros,2010,74.0,82.0,74,61.1,Africa
+Congo,2010,74.0,72.0,74,61.7,Africa
+Iraq,2010,72.0,74.0,74,67.1,Asia
+Lao People's Democratic Republic,2010,74.0,76.0,74,,
+Mozambique,2010,74.0,73.0,74,54.2,Africa
+Benin,2010,76.0,77.0,76,58.4,Africa
+Malta,2010,75.0,76.0,76,81.8,Europe
+Yemen,2010,76.0,77.0,76,67.3,Asia
+South Africa,2010,71.0,72.0,77,58.9,Africa
+Vanuatu,2010,73.0,74.0,77,69.6,Oceania
+Côte d’Ivoire,2010,79.0,75.0,78,,
+Samoa,2010,72.0,74.0,78,72.2,Oceania
+Venezuela (Bolivarian Republic of),2010,78.0,74.0,78,,
+India,2010,38.0,76.0,79,66.9,Asia
+Syrian Arab Republic,2010,84.0,83.0,80,,
+Uganda,2010,80.0,79.0,80,57.1,Africa
+Azerbaijan,2010,80.0,85.0,81,69.5,Asia
+Indonesia,2010,83.0,82.0,81,68.7,Asia
+Lebanon,2010,81.0,77.0,82,78.2,Asia
+Nepal,2010,82.0,83.0,82,66.8,Asia
+Guinea-Bissau,2010,82.0,82.0,83,56.2,Africa
+Namibia,2010,83.0,83.0,83,56.0,Africa
+Solomon Islands,2010,87.0,84.0,83,68.7,Oceania
+Togo,2010,83.0,83.0,83,57.3,Africa
+Zambia,2010,83.0,80.0,83,56.8,Africa
+Cameroon,2010,84.0,83.0,84,56.6,Africa
+Micronesia (Federated States of),2010,88.0,85.0,85,,
+Austria,2010,86.0,86.0,86,80.5,Europe
+Barbados,2010,86.0,90.0,86,75.7,North America
+Sierra Leone,2010,86.0,84.0,86,53.7,Africa
+Colombia,2010,88.0,88.0,88,75.0,South America
+Costa Rica,2010,89.0,93.0,88,78.7,North America
+Djibouti,2010,88.0,88.0,88,60.3,Africa
+Dominican Republic,2010,83.0,85.0,88,72.1,North America
+Philippines,2010,88.0,88.0,88,70.8,Asia
+Bosnia and Herzegovina,2010,89.0,90.0,89,77.1,Europe
+Canada,2010,56.0,90.0,89,81.3,North America
+El Salvador,2010,89.0,89.0,89,71.8,North America
+Eswatini,2010,89.0,89.0,89,46.6,Africa
+Senegal,2010,89.0,76.0,89,64.6,Africa
+Tuvalu,2010,89.0,89.0,89,64.0,Oceania
+Zimbabwe,2010,90.0,89.0,89,50.7,Africa
+Cambodia,2010,91.0,90.0,90,67.7,Asia
+Denmark,2010,,90.0,90,79.2,Europe
+Kenya,2010,90.0,90.0,90,60.6,Africa
+Myanmar,2010,92.0,90.0,90,63.3,Asia
+Republic of Moldova,2010,98.0,97.0,90,,
+San Marino,2010,89.0,89.0,90,82.7,Europe
+Sudan,2010,75.0,90.0,90,63.0,Africa
+Trinidad and Tobago,2010,90.0,91.0,90,72.7,North America
+Bhutan,2010,91.0,92.0,91,68.4,Asia
+Bolivia (Plurinational State of),2010,91.0,90.0,91,,
+Burkina Faso,2010,91.0,90.0,91,56.5,Africa
+Ecuador,2010,90.0,88.0,91,75.4,South America
+Kiribati,2010,91.0,95.0,91,65.0,Oceania
+Paraguay,2010,91.0,89.0,91,71.9,South America
+Serbia,2010,89.0,91.0,91,74.4,Europe
+United Republic of Tanzania,2010,91.0,94.0,91,,
+Australia,2010,92.0,92.0,92,82.1,Oceania
+Chile,2010,92.0,92.0,92,78.5,South America
+Georgia,2010,95.0,88.0,92,72.1,Asia
+Latvia,2010,91.0,92.0,92,73.0,Europe
+Democratic People's Republic of Korea,2010,93.0,99.0,93,,
+Lesotho,2010,93.0,92.0,93,45.6,Africa
+Malawi,2010,93.0,86.0,93,56.4,Africa
+New Zealand,2010,90.0,93.0,93,81.1,Oceania
+Norway,2010,,93.0,93,81.0,Europe
+Peru,2010,93.0,92.0,93,73.7,South America
+Tajikistan,2010,93.0,95.0,93,67.7,Asia
+Viet Nam,2010,88.0,94.0,93,,
+Argentina,2010,94.0,95.0,94,75.7,South America
+Armenia,2010,94.0,96.0,94,73.2,Asia
+Bangladesh,2010,94.0,94.0,94,68.6,Asia
+Bulgaria,2010,95.0,94.0,94,73.8,Europe
+Estonia,2010,94.0,94.0,94,75.7,Europe
+Ghana,2010,94.0,94.0,94,61.2,Africa
+Guatemala,2010,94.0,94.0,94,70.9,North America
+Ireland,2010,46.0,94.0,94,80.5,Europe
+Jamaica,2010,94.0,94.0,94,72.6,North America
+Marshall Islands,2010,97.0,95.0,94,63.2,Oceania
+Montenegro,2010,90.0,93.0,94,76.1,Europe
+Panama,2010,94.0,95.0,94,76.4,North America
+Republic of Korea,2010,94.0,95.0,94,,
+Romania,2010,98.0,94.0,94,74.0,Europe
+Suriname,2010,84.0,94.0,94,69.9,South America
+United Arab Emirates,2010,94.0,94.0,94,78.3,Asia
+United Kingdom of Great Britain and Northern Ireland,2010,,94.0,94,,
+Algeria,2010,95.0,95.0,95,73.8,Africa
+Botswana,2010,95.0,96.0,95,60.0,Africa
+Brunei Darussalam,2010,96.0,99.0,95,,
+Eritrea,2010,95.0,95.0,95,63.8,Africa
+Guyana,2010,95.0,95.0,95,66.7,South America
+Israel,2010,97.0,95.0,95,81.7,Asia
+Lithuania,2010,94.0,95.0,95,73.4,Europe
+Mexico,2010,93.0,95.0,95,74.2,North America
+The former Yugoslav Republic of Macedonia,2010,90.0,95.0,95,,
+Switzerland,2010,,96.0,95,82.3,Europe
+United States of America,2010,92.0,93.0,95,,
+Uruguay,2010,95.0,95.0,95,76.9,South America
+Belize,2010,96.0,96.0,96,72.3,North America
+Burundi,2010,96.0,94.0,96,57.1,Africa
+Cuba,2010,96.0,99.0,96,77.7,North America
+Germany,2010,88.0,94.0,96,80.1,Europe
+Iceland,2010,,96.0,96,81.7,Europe
+Italy,2010,96.0,96.0,96,82.1,Europe
+Kyrgyzstan,2010,96.0,88.0,96,68.3,Asia
+Malaysia,2010,96.0,96.0,96,74.4,Asia
+Maldives,2010,97.0,97.0,96,77.7,Asia
+Mongolia,2010,96.0,96.0,96,67.2,Asia
+Saint Kitts and Nevis,2010,96.0,91.0,96,71.3,North America
+Singapore,2010,96.0,96.0,96,81.7,Asia
+Slovenia,2010,,96.0,96,79.7,Europe
+Turkmenistan,2010,96.0,96.0,96,68.3,Asia
+Croatia,2010,97.0,97.0,97,76.8,Europe
+Egypt,2010,97.0,97.0,97,69.7,Africa
+Gambia,2010,97.0,97.0,97,60.7,Africa
+Grenada,2010,97.0,94.0,97,75.0,North America
+Honduras,2010,97.0,97.0,97,71.1,North America
+Japan,2010,,98.0,97,82.9,Asia
+Netherlands,2010,,97.0,97,80.8,Europe
+Qatar,2010,97.0,98.0,97,78.4,Asia
+Russian Federation,2010,97.0,98.0,97,,
+Rwanda,2010,97.0,93.0,97,62.5,Africa
+Saint Lucia,2010,97.0,97.0,97,72.7,North America
+Spain,2010,97.0,97.0,97,82.0,Europe
+Türkiye,2010,96.0,97.0,97,,
+Antigua and Barbuda,2010,98.0,99.0,98,76.8,North America
+Belarus,2010,96.0,99.0,98,71.1,Europe
+Belgium,2010,97.0,98.0,98,80.0,Europe
+Dominica,2010,98.0,99.0,98,71.5,North America
+Jordan,2010,98.0,98.0,98,74.0,Asia
+Kuwait,2010,99.0,98.0,98,78.0,Asia
+Libya,2010,98.0,98.0,98,72.4,Africa
+Nicaragua,2010,98.0,99.0,98,72.0,North America
+Portugal,2010,97.0,97.0,98,80.0,Europe
+Sao Tome and Principe,2010,98.0,98.0,98,65.2,Africa
+Saudi Arabia,2010,98.0,98.0,98,75.8,Asia
+Sweden,2010,,98.0,98,81.5,Europe
+Tunisia,2010,98.0,98.0,98,75.4,Africa
+Albania,2010,99.0,99.0,99,77.9,Europe
+Andorra,2010,96.0,99.0,99,82.8,Europe
+Bahamas,2010,98.0,97.0,99,72.7,North America
+Bahrain,2010,99.0,99.0,99,78.7,Asia
+Brazil,2010,96.0,99.0,99,73.2,South America
+Cabo Verde,2010,98.0,99.0,99,,
+China,2010,99.0,99.0,99,75.6,Asia
+Cook Islands,2010,99.0,99.0,99,73.5,Oceania
+Cyprus,2010,96.0,99.0,99,79.7,Europe
+Czechia,2010,99.0,99.0,99,77.6,Europe
+Fiji,2010,98.0,98.0,99,67.3,Oceania
+Finland,2010,,99.0,99,80.0,Europe
+France,2010,64.0,99.0,99,81.4,Europe
+Greece,2010,95.0,99.0,99,80.5,Europe
+Hungary,2010,,99.0,99,74.5,Europe
+Iran (Islamic Republic of),2010,99.0,99.0,99,,
+Kazakhstan,2010,99.0,98.0,99,68.1,Asia
+Luxembourg,2010,94.0,96.0,99,80.6,Europe
+Mauritius,2010,99.0,99.0,99,74.0,Africa
+Monaco,2010,99.0,99.0,99,84.6,Europe
+Morocco,2010,98.0,99.0,99,70.8,Africa
+Nauru,2010,99.0,99.0,99,59.6,Oceania
+Niue,2010,99.0,99.0,99,68.4,Oceania
+Occupied Palestinian territory,2010,98.0,99.0,99,,
+Oman,2010,99.0,99.0,99,76.3,Asia
+Poland,2010,98.0,96.0,99,76.3,Europe
+Saint Vincent and the Grenadines,2010,99.0,99.0,99,74.7,North America
+Seychelles,2010,99.0,99.0,99,73.0,Africa
+Slovakia,2010,99.0,99.0,99,75.5,Europe
+Sri Lanka,2010,99.0,99.0,99,73.2,Asia
+Thailand,2010,98.0,99.0,99,76.1,Asia
+Tonga,2010,99.0,99.0,99,70.3,Oceania
+Uzbekistan,2010,99.0,99.0,99,69.2,Asia
+Chad,2009,24.0,34.0,25,49.2,Africa
+Central African Republic,2009,42.0,45.0,42,48.6,Africa
+Somalia,2009,,41.0,42,51.9,Africa
+Palau,2009,69.0,48.0,49,65.9,Oceania
+Angola,2009,47.0,36.0,50,55.8,Africa
+Equatorial Guinea,2009,,59.0,52,57.4,Africa
+Pakistan,2009,52.0,52.0,52,64.1,Asia
+Guinea,2009,57.0,60.0,57,56.3,Africa
+Ethiopia,2009,56.0,65.0,58,58.8,Africa
+Afghanistan,2009,63.0,63.0,63,60.4,Asia
+Nigeria,2009,63.0,66.0,63,50.7,Africa
+Mauritania,2009,64.0,63.0,64,62.8,Africa
+Papua New Guinea,2009,64.0,70.0,64,62.8,Oceania
+Samoa,2009,58.0,61.0,64,70.1,Oceania
+Haiti,2009,,65.0,65,61.7,North America
+Lao People's Democratic Republic,2009,67.0,67.0,67,,
+Democratic Republic of the Congo,2009,71.0,69.0,71,,
+Niger,2009,71.0,71.0,71,57.4,Africa
+Ukraine,2009,66.0,74.0,71,70.2,Europe
+Timor-Leste,2009,72.0,78.0,72,,
+Mali,2009,71.0,77.0,73,55.9,Africa
+Malta,2009,86.0,73.0,73,80.7,Europe
+Zimbabwe,2009,73.0,69.0,73,48.1,Africa
+India,2009,37.0,73.0,74,66.5,Asia
+Mozambique,2009,74.0,74.0,74,53.8,Africa
+Vanuatu,2009,69.0,72.0,75,69.7,Oceania
+Gabon,2009,79.0,74.0,76,63.3,Africa
+Yemen,2009,76.0,76.0,76,67.2,Asia
+Madagascar,2009,77.0,76.0,77,62.7,Africa
+Congo,2009,75.0,76.0,78,61.1,Africa
+Indonesia,2009,82.0,85.0,78,68.5,Asia
+Iraq,2009,75.0,78.0,78,66.4,Asia
+Togo,2009,78.0,78.0,78,57.0,Africa
+Benin,2009,79.0,80.0,79,58.0,Africa
+Uganda,2009,79.0,78.0,79,56.5,Africa
+Cameroon,2009,80.0,79.0,80,56.1,Africa
+Guinea-Bissau,2009,80.0,78.0,80,55.5,Africa
+Syrian Arab Republic,2009,84.0,83.0,80,,
+Azerbaijan,2009,74.0,84.0,81,69.4,Asia
+Côte d’Ivoire,2009,81.0,77.0,81,,
+Lebanon,2009,81.0,76.0,81,77.9,Asia
+Liberia,2009,81.0,84.0,81,59.2,Africa
+South Africa,2009,74.0,75.0,81,57.4,Africa
+Sudan,2009,72.0,81.0,81,62.6,Africa
+Cook Islands,2009,82.0,82.0,82,73.2,Oceania
+Dominican Republic,2009,80.0,85.0,82,71.9,North America
+Austria,2009,83.0,83.0,83,80.2,Europe
+Comoros,2009,83.0,84.0,83,60.8,Africa
+Namibia,2009,,83.0,83,55.5,Africa
+Sierra Leone,2009,84.0,81.0,84,52.6,Africa
+Venezuela (Bolivarian Republic of),2009,84.0,75.0,84,,
+Panama,2009,85.0,85.0,85,76.3,North America
+Republic of Moldova,2009,89.0,87.0,85,,
+United Republic of Tanzania,2009,85.0,88.0,85,,
+Costa Rica,2009,87.0,80.0,86,78.7,North America
+Kiribati,2009,86.0,84.0,86,64.9,Oceania
+Paraguay,2009,85.0,82.0,86,71.6,South America
+Senegal,2009,86.0,83.0,86,63.9,Africa
+Solomon Islands,2009,91.0,90.0,86,68.5,Oceania
+Suriname,2009,87.0,85.0,87,69.5,South America
+Eswatini,2009,88.0,89.0,88,44.6,Africa
+Georgia,2009,54.0,93.0,88,71.9,Asia
+Kenya,2009,88.0,89.0,88,60.4,Africa
+Philippines,2009,88.0,87.0,88,70.6,Asia
+Tuvalu,2009,91.0,85.0,88,63.9,Oceania
+Denmark,2009,,89.0,89,79.0,Europe
+Djibouti,2009,89.0,89.0,89,59.7,Africa
+Nepal,2009,89.0,93.0,89,66.8,Asia
+Bosnia and Herzegovina,2009,90.0,90.0,90,77.0,Europe
+Jamaica,2009,90.0,90.0,90,72.1,North America
+Myanmar,2009,91.0,90.0,90,63.2,Asia
+San Marino,2009,89.0,90.0,90,82.5,Europe
+Trinidad and Tobago,2009,90.0,90.0,90,73.1,North America
+Canada,2009,42.0,93.0,91,81.1,North America
+El Salvador,2009,91.0,91.0,91,71.6,North America
+Lesotho,2009,91.0,89.0,91,44.0,Africa
+Micronesia (Federated States of),2009,89.0,81.0,91,,
+Australia,2009,94.0,92.0,92,81.8,Oceania
+Burkina Faso,2009,92.0,91.0,92,56.0,Africa
+Colombia,2009,92.0,92.0,92,74.7,South America
+Guatemala,2009,92.0,92.0,92,70.6,North America
+Montenegro,2009,87.0,91.0,92,75.3,Europe
+New Zealand,2009,93.0,92.0,92,80.6,Oceania
+Armenia,2009,93.0,94.0,93,72.8,Asia
+Barbados,2009,93.0,93.0,93,75.7,North America
+Bhutan,2009,93.0,93.0,93,67.9,Asia
+Bolivia (Plurinational State of),2009,93.0,92.0,93,,
+Democratic People's Republic of Korea,2009,93.0,98.0,93,,
+Malawi,2009,93.0,93.0,93,55.4,Africa
+Peru,2009,93.0,92.0,93,73.5,South America
+Tajikistan,2009,93.0,93.0,93,68.0,Asia
+United Arab Emirates,2009,93.0,94.0,93,78.0,Asia
+United Kingdom of Great Britain and Northern Ireland,2009,,93.0,93,,
+Argentina,2009,94.0,97.0,94,75.9,South America
+Bulgaria,2009,96.0,94.0,94,73.7,Europe
+Burundi,2009,94.0,96.0,94,56.4,Africa
+Cambodia,2009,92.0,95.0,94,67.4,Asia
+Chile,2009,94.0,94.0,94,78.7,South America
+Ecuador,2009,91.0,91.0,94,75.2,South America
+Ghana,2009,94.0,94.0,94,60.9,Africa
+Ireland,2009,,94.0,94,80.0,Europe
+Latvia,2009,92.0,94.0,94,72.8,Europe
+Norway,2009,,94.0,94,80.9,Europe
+Republic of Korea,2009,94.0,95.0,94,,
+Zambia,2009,94.0,93.0,94,55.3,Africa
+Algeria,2009,94.0,94.0,95,73.6,Africa
+Eritrea,2009,95.0,95.0,95,63.3,Africa
+Estonia,2009,95.0,95.0,95,75.2,Europe
+Kyrgyzstan,2009,96.0,96.0,95,67.8,Asia
+Mexico,2009,95.0,95.0,95,74.1,North America
+Mongolia,2009,97.0,96.0,95,66.8,Asia
+Romania,2009,95.0,95.0,95,74.0,Europe
+Saint Lucia,2009,95.0,95.0,95,72.7,North America
+Serbia,2009,93.0,97.0,95,74.0,Europe
+Switzerland,2009,,96.0,95,82.0,Europe
+United States of America,2009,92.0,93.0,95,,
+Uruguay,2009,95.0,95.0,95,76.7,South America
+Bahamas,2009,95.0,97.0,96,72.6,North America
+Belarus,2009,98.0,98.0,96,71.1,Europe
+Botswana,2009,94.0,96.0,96,58.3,Africa
+Croatia,2009,97.0,96.0,96,76.4,Europe
+Cuba,2009,96.0,99.0,96,77.5,North America
+Germany,2009,88.0,95.0,96,79.9,Europe
+Iceland,2009,,96.0,96,81.6,Europe
+Israel,2009,98.0,96.0,96,81.6,Asia
+Italy,2009,96.0,96.0,96,81.8,Europe
+Marshall Islands,2009,99.0,99.0,96,63.2,Oceania
+The former Yugoslav Republic of Macedonia,2009,95.0,96.0,96,,
+Portugal,2009,96.0,96.0,96,79.8,Europe
+Slovenia,2009,,96.0,96,79.3,Europe
+Spain,2009,96.0,96.0,96,81.6,Europe
+Türkiye,2009,94.0,96.0,96,,
+Turkmenistan,2009,97.0,97.0,96,68.0,Asia
+Viet Nam,2009,94.0,97.0,96,,
+Bangladesh,2009,97.0,97.0,97,67.4,Asia
+Belize,2009,97.0,98.0,97,71.8,North America
+Egypt,2009,97.0,97.0,97,69.5,Africa
+Honduras,2009,97.0,97.0,97,70.9,North America
+Japan,2009,,99.0,97,83.0,Asia
+Malaysia,2009,96.0,97.0,97,74.2,Asia
+Netherlands,2009,,97.0,97,80.7,Europe
+Occupied Palestinian territory,2009,97.0,98.0,97,,
+Rwanda,2009,97.0,93.0,97,62.0,Africa
+Singapore,2009,96.0,97.0,97,81.5,Asia
+Sri Lanka,2009,97.0,97.0,97,69.2,Asia
+Albania,2009,98.0,98.0,98,77.8,Europe
+Bahrain,2009,98.0,97.0,98,78.5,Asia
+Belgium,2009,97.0,98.0,98,79.8,Europe
+France,2009,51.0,98.0,98,81.2,Europe
+Gambia,2009,97.0,97.0,98,60.4,Africa
+Guyana,2009,98.0,97.0,98,66.6,South America
+Jordan,2009,98.0,98.0,98,73.8,Asia
+Kazakhstan,2009,99.0,99.0,98,67.3,Asia
+Libya,2009,98.0,98.0,98,72.4,Africa
+Lithuania,2009,95.0,98.0,98,73.2,Europe
+Maldives,2009,98.0,98.0,98,77.1,Asia
+Nicaragua,2009,98.0,99.0,98,71.4,North America
+Oman,2009,98.0,96.0,98,74.7,Asia
+Russian Federation,2009,98.0,98.0,98,,
+Saint Kitts and Nevis,2009,97.0,95.0,98,71.4,North America
+Sao Tome and Principe,2009,98.0,99.0,98,65.1,Africa
+Saudi Arabia,2009,98.0,98.0,98,75.4,Asia
+Sweden,2009,,98.0,98,81.4,Europe
+Uzbekistan,2009,98.0,99.0,98,68.9,Asia
+Andorra,2009,96.0,99.0,99,82.8,Europe
+Antigua and Barbuda,2009,98.0,98.0,99,76.7,North America
+Brazil,2009,99.0,99.0,99,72.9,South America
+Brunei Darussalam,2009,96.0,99.0,99,,
+Cabo Verde,2009,98.0,99.0,99,,
+China,2009,99.0,99.0,99,75.3,Asia
+Cyprus,2009,96.0,99.0,99,79.4,Europe
+Czechia,2009,99.0,99.0,99,77.3,Europe
+Dominica,2009,99.0,99.0,99,72.2,North America
+Fiji,2009,99.0,99.0,99,67.1,Oceania
+Finland,2009,,99.0,99,79.8,Europe
+Greece,2009,95.0,99.0,99,80.3,Europe
+Grenada,2009,99.0,99.0,99,75.0,North America
+Hungary,2009,,99.0,99,74.2,Europe
+Iran (Islamic Republic of),2009,99.0,99.0,99,,
+Kuwait,2009,99.0,99.0,99,77.4,Asia
+Luxembourg,2009,95.0,96.0,99,80.6,Europe
+Mauritius,2009,99.0,99.0,99,73.6,Africa
+Monaco,2009,99.0,99.0,99,84.2,Europe
+Morocco,2009,98.0,99.0,99,70.5,Africa
+Nauru,2009,99.0,99.0,99,59.1,Oceania
+Niue,2009,99.0,99.0,99,67.9,Oceania
+Poland,2009,98.0,96.0,99,75.8,Europe
+Qatar,2009,99.0,98.0,99,77.9,Asia
+Saint Vincent and the Grenadines,2009,99.0,99.0,99,75.1,North America
+Seychelles,2009,98.0,99.0,99,72.7,Africa
+Slovakia,2009,99.0,99.0,99,75.2,Europe
+Thailand,2009,98.0,99.0,99,75.8,Asia
+Tonga,2009,99.0,99.0,99,70.0,Oceania
+Tunisia,2009,99.0,99.0,99,75.3,Africa
+Chad,2008,17.0,30.0,19,49.0,Africa
+Somalia,2008,,40.0,31,51.1,Africa
+Samoa,2008,26.0,69.0,39,72.2,Oceania
+Central African Republic,2008,,46.0,45,48.0,Africa
+Angola,2008,45.0,36.0,49,54.6,Africa
+Equatorial Guinea,2008,,57.0,50,57.1,Africa
+Venezuela (Bolivarian Republic of),2008,53.0,76.0,50,,
+Nigeria,2008,41.0,60.0,53,50.2,Africa
+Pakistan,2008,53.0,53.0,53,64.0,Asia
+Ethiopia,2008,52.0,63.0,54,57.6,Africa
+Papua New Guinea,2008,55.0,69.0,56,62.6,Oceania
+Guinea,2008,57.0,59.0,60,56.0,Africa
+Lao People's Democratic Republic,2008,61.0,60.0,61,,
+Afghanistan,2008,64.0,64.0,64,59.9,Asia
+Haiti,2008,,64.0,64,61.3,North America
+Niger,2008,,68.0,67,56.5,Africa
+Democratic Republic of the Congo,2008,68.0,67.0,68,,
+Iraq,2008,66.0,71.0,69,64.9,Asia
+India,2008,29.0,69.0,70,66.1,Asia
+Uganda,2008,71.0,69.0,71,55.8,Africa
+Malta,2008,86.0,72.0,72,80.1,Europe
+Vanuatu,2008,66.0,70.0,73,69.6,Oceania
+Côte d’Ivoire,2008,74.0,58.0,74,,
+Mali,2008,74.0,74.0,74,55.3,Africa
+Mauritania,2008,74.0,73.0,74,62.4,Africa
+Benin,2008,75.0,77.0,75,57.9,Africa
+Liberia,2008,75.0,79.0,75,58.8,Africa
+Mozambique,2008,75.0,74.0,75,53.2,Africa
+Zimbabwe,2008,75.0,75.0,75,46.7,Africa
+Guinea-Bissau,2008,,77.0,77,54.6,Africa
+Indonesia,2008,82.0,83.0,77,68.2,Asia
+Madagascar,2008,77.0,77.0,77,62.1,Africa
+Sierra Leone,2008,77.0,75.0,77,51.5,Africa
+Yemen,2008,78.0,78.0,78,67.0,Asia
+Congo,2008,73.0,77.0,79,60.4,Africa
+Syrian Arab Republic,2008,83.0,83.0,79,,
+Timor-Leste,2008,79.0,79.0,79,,
+Azerbaijan,2008,68.0,85.0,81,68.8,Asia
+Comoros,2008,81.0,81.0,81,60.5,Africa
+Lebanon,2008,81.0,75.0,81,77.6,Asia
+Togo,2008,24.0,80.0,81,56.7,Africa
+Dominican Republic,2008,81.0,86.0,82,71.7,North America
+Gabon,2008,82.0,81.0,82,63.1,Africa
+Kiribati,2008,83.0,74.0,82,64.8,Oceania
+Nepal,2008,82.0,82.0,82,66.4,Asia
+South Africa,2008,76.0,77.0,82,56.0,Africa
+Austria,2008,83.0,83.0,83,80.4,Europe
+Namibia,2008,,83.0,83,54.7,Africa
+Cameroon,2008,84.0,82.0,84,55.7,Africa
+Barbados,2008,85.0,85.0,85,75.4,North America
+Micronesia (Federated States of),2008,89.0,88.0,85,,
+Myanmar,2008,85.0,85.0,85,56.5,Asia
+Solomon Islands,2008,89.0,88.0,85,68.4,Oceania
+Suriname,2008,84.0,85.0,85,68.8,South America
+Panama,2008,86.0,86.0,86,76.2,North America
+Sudan,2008,78.0,85.0,86,61.2,Africa
+Tajikistan,2008,86.0,87.0,86,67.7,Asia
+United Republic of Tanzania,2008,86.0,89.0,86,,
+Philippines,2008,87.0,87.0,87,70.6,Asia
+Zambia,2008,87.0,90.0,87,53.9,Africa
+Bolivia (Plurinational State of),2008,88.0,87.0,88,,
+Denmark,2008,,88.0,88,78.7,Europe
+Eswatini,2008,90.0,89.0,88,44.2,Africa
+Kenya,2008,88.0,88.0,88,59.6,Africa
+Lesotho,2008,88.0,86.0,88,43.6,Africa
+Senegal,2008,88.0,87.0,88,63.2,Africa
+Armenia,2008,89.0,91.0,89,72.4,Asia
+Djibouti,2008,88.0,89.0,89,59.4,Africa
+New Zealand,2008,90.0,89.0,89,80.3,Oceania
+Paraguay,2008,87.0,85.0,89,71.4,South America
+Costa Rica,2008,89.0,89.0,90,78.4,North America
+Republic of Moldova,2008,97.0,96.0,90,,
+Trinidad and Tobago,2008,90.0,91.0,90,71.5,North America
+Ukraine,2008,84.0,91.0,90,69.1,Europe
+Bosnia and Herzegovina,2008,88.0,92.0,91,76.8,Europe
+Cambodia,2008,91.0,91.0,91,66.5,Asia
+Jamaica,2008,92.0,91.0,91,71.6,North America
+Malawi,2008,91.0,92.0,91,54.6,Africa
+San Marino,2008,91.0,90.0,91,82.2,Europe
+Australia,2008,94.0,92.0,92,81.5,Oceania
+Burundi,2008,92.0,89.0,92,55.7,Africa
+Canada,2008,28.0,96.0,92,80.7,North America
+Colombia,2008,92.0,92.0,92,74.3,South America
+Democratic People's Republic of Korea,2008,92.0,98.0,92,,
+Georgia,2008,89.0,90.0,92,71.3,Asia
+Palau,2008,92.0,92.0,92,66.2,Oceania
+United Arab Emirates,2008,92.0,94.0,92,77.5,Asia
+United Kingdom of Great Britain and Northern Ireland,2008,,92.0,92,,
+Algeria,2008,91.0,92.0,93,72.9,Africa
+Argentina,2008,90.0,94.0,93,75.6,South America
+Bahamas,2008,90.0,93.0,93,72.7,North America
+Burkina Faso,2008,93.0,92.0,93,55.3,Africa
+Ghana,2008,93.0,92.0,93,60.5,Africa
+Guyana,2008,93.0,93.0,93,66.3,South America
+Honduras,2008,92.0,93.0,93,70.4,North America
+Ireland,2008,,93.0,93,79.8,Europe
+Peru,2008,93.0,93.0,93,73.4,South America
+Viet Nam,2008,87.0,93.0,93,,
+Belize,2008,94.0,94.0,94,71.2,North America
+Israel,2008,99.0,94.0,94,81.1,Asia
+Latvia,2008,93.0,94.0,94,72.0,Europe
+Norway,2008,,94.0,94,80.7,Europe
+Republic of Korea,2008,94.0,92.0,94,,
+Uruguay,2008,94.0,94.0,94,76.6,South America
+Bulgaria,2008,96.0,96.0,95,73.4,Europe
+Chile,2008,95.0,95.0,95,78.5,South America
+Cuba,2008,95.0,99.0,95,77.4,North America
+Eritrea,2008,95.0,95.0,95,62.6,Africa
+Estonia,2008,94.0,95.0,95,74.4,Europe
+Guatemala,2008,95.0,96.0,95,70.4,North America
+Kyrgyzstan,2008,97.0,95.0,95,67.2,Asia
+Marshall Islands,2008,97.0,96.0,95,63.2,Oceania
+Montenegro,2008,93.0,95.0,95,75.3,Europe
+The former Yugoslav Republic of Macedonia,2008,97.0,96.0,95,,
+Serbia,2008,93.0,95.0,95,73.9,Europe
+Switzerland,2008,,96.0,95,82.0,Europe
+Bangladesh,2008,96.0,96.0,96,67.1,Asia
+Bhutan,2008,96.0,96.0,96,67.5,Asia
+Botswana,2008,94.0,96.0,96,57.1,Africa
+Croatia,2008,97.0,96.0,96,76.2,Europe
+Dominica,2008,96.0,95.0,96,73.3,North America
+Ecuador,2008,93.0,94.0,96,75.0,South America
+Gambia,2008,98.0,96.0,96,60.1,Africa
+Germany,2008,87.0,95.0,96,79.8,Europe
+Italy,2008,96.0,96.0,96,81.6,Europe
+Lithuania,2008,96.0,96.0,96,72.4,Europe
+Mexico,2008,97.0,96.0,96,74.2,North America
+Mongolia,2008,96.0,95.0,96,66.4,Asia
+Occupied Palestinian territory,2008,96.0,97.0,96,,
+Romania,2008,97.0,95.0,96,73.6,Europe
+Saint Lucia,2008,96.0,96.0,96,72.7,North America
+Türkiye,2008,92.0,96.0,96,,
+Turkmenistan,2008,96.0,96.0,96,67.4,Asia
+United States of America,2008,94.0,94.0,96,,
+Bahrain,2008,97.0,97.0,97,78.1,Asia
+Belarus,2008,98.0,98.0,97,70.9,Europe
+China,2008,95.0,99.0,97,74.9,Asia
+Cyprus,2008,93.0,97.0,97,79.0,Europe
+Egypt,2008,97.0,97.0,97,69.3,Africa
+Jordan,2008,97.0,98.0,97,73.6,Asia
+Malaysia,2008,97.0,97.0,97,74.3,Asia
+Netherlands,2008,,97.0,97,80.4,Europe
+Nicaragua,2008,97.0,97.0,97,70.6,North America
+Portugal,2008,97.0,97.0,97,79.6,Europe
+Qatar,2008,97.0,98.0,97,77.4,Asia
+Rwanda,2008,97.0,97.0,97,61.1,Africa
+Singapore,2008,97.0,97.0,97,81.2,Asia
+Slovenia,2008,,97.0,97,79.1,Europe
+Spain,2008,97.0,97.0,97,81.3,Europe
+Brunei Darussalam,2008,96.0,97.0,98,,
+El Salvador,2008,98.0,98.0,98,71.4,North America
+Iceland,2008,,98.0,98,81.4,Europe
+Japan,2008,,98.0,98,82.6,Asia
+Libya,2008,98.0,98.0,98,72.3,Africa
+Maldives,2008,98.0,98.0,98,76.5,Asia
+Russian Federation,2008,98.0,98.0,98,,
+Saudi Arabia,2008,98.0,98.0,98,75.3,Asia
+Sri Lanka,2008,98.0,98.0,98,71.7,Asia
+Sweden,2008,,98.0,98,81.1,Europe
+Uzbekistan,2008,91.0,98.0,98,68.8,Asia
+Albania,2008,99.0,99.0,99,77.7,Europe
+Andorra,2008,97.0,99.0,99,82.7,Europe
+Antigua and Barbuda,2008,98.0,99.0,99,76.4,North America
+Belgium,2008,98.0,99.0,99,79.6,Europe
+Brazil,2008,96.0,99.0,99,72.7,South America
+Cabo Verde,2008,98.0,99.0,99,,
+Cook Islands,2008,99.0,99.0,99,72.8,Oceania
+Czechia,2008,99.0,99.0,99,77.2,Europe
+Fiji,2008,98.0,98.0,99,66.9,Oceania
+Finland,2008,,97.0,99,79.7,Europe
+France,2008,47.0,99.0,99,81.0,Europe
+Greece,2008,95.0,99.0,99,80.0,Europe
+Grenada,2008,99.0,99.0,99,74.7,North America
+Hungary,2008,,99.0,99,74.0,Europe
+Iran (Islamic Republic of),2008,99.0,99.0,99,,
+Kazakhstan,2008,99.0,99.0,99,66.7,Asia
+Kuwait,2008,99.0,99.0,99,77.1,Asia
+Luxembourg,2008,94.0,96.0,99,80.5,Europe
+Mauritius,2008,99.0,99.0,99,73.3,Africa
+Monaco,2008,99.0,99.0,99,83.2,Europe
+Morocco,2008,97.0,99.0,99,70.0,Africa
+Nauru,2008,99.0,99.0,99,58.8,Oceania
+Niue,2008,99.0,99.0,99,67.6,Oceania
+Oman,2008,99.0,97.0,99,74.6,Asia
+Poland,2008,98.0,96.0,99,75.6,Europe
+Saint Kitts and Nevis,2008,98.0,98.0,99,71.4,North America
+Saint Vincent and the Grenadines,2008,99.0,99.0,99,75.1,North America
+Sao Tome and Principe,2008,99.0,99.0,99,65.1,Africa
+Seychelles,2008,99.0,99.0,99,72.4,Africa
+Slovakia,2008,99.0,99.0,99,74.9,Europe
+Thailand,2008,98.0,99.0,99,75.5,Asia
+Tonga,2008,98.0,99.0,99,70.2,Oceania
+Tunisia,2008,99.0,99.0,99,75.2,Africa
+Tuvalu,2008,99.0,99.0,99,63.9,Oceania
+Chad,2007,,40.0,28,48.8,Africa
+Somalia,2007,,40.0,40,50.5,Africa
+Nigeria,2007,42.0,54.0,42,50.0,Africa
+Angola,2007,43.0,43.0,48,53.6,Africa
+Central African Republic,2007,,46.0,48,47.4,Africa
+Equatorial Guinea,2007,,55.0,48,56.5,Africa
+Ethiopia,2007,47.0,61.0,50,56.4,Africa
+Lao People's Democratic Republic,2007,50.0,46.0,50,,
+Pakistan,2007,54.0,54.0,54,63.9,Asia
+Iraq,2007,56.0,74.0,57,63.6,Asia
+Niger,2007,,57.0,57,55.6,Africa
+Venezuela (Bolivarian Republic of),2007,62.0,67.0,62,,
+Afghanistan,2007,63.0,63.0,63,59.1,Asia
+Guinea,2007,57.0,46.0,63,55.6,Africa
+Haiti,2007,,62.0,64,61.1,North America
+India,2007,6.0,67.0,64,65.8,Asia
+Sierra Leone,2007,63.0,63.0,64,50.4,Africa
+Democratic Republic of the Congo,2007,65.0,64.0,65,,
+Liberia,2007,,67.0,65,58.3,Africa
+Samoa,2007,58.0,63.0,65,72.1,Oceania
+Papua New Guinea,2007,58.0,68.0,66,62.0,Oceania
+Timor-Leste,2007,,70.0,70,,
+Vanuatu,2007,62.0,69.0,70,69.5,Oceania
+Congo,2007,64.0,71.0,72,59.6,Africa
+Indonesia,2007,76.0,77.0,73,68.2,Asia
+Uganda,2007,73.0,70.0,73,55.2,Africa
+Zimbabwe,2007,72.0,73.0,73,45.6,Africa
+Guinea-Bissau,2007,,76.0,74,54.2,Africa
+Mali,2007,74.0,76.0,74,54.9,Africa
+Malta,2007,82.0,76.0,74,80.1,Europe
+Comoros,2007,75.0,75.0,75,60.1,Africa
+Mauritania,2007,74.0,75.0,75,62.2,Africa
+Mozambique,2007,75.0,75.0,75,52.6,Africa
+Côte d’Ivoire,2007,76.0,75.0,76,,
+Azerbaijan,2007,62.0,81.0,79,68.6,Asia
+Micronesia (Federated States of),2007,90.0,79.0,79,,
+Yemen,2007,79.0,79.0,79,66.6,Asia
+Lebanon,2007,80.0,75.0,80,77.1,Asia
+Syrian Arab Republic,2007,83.0,83.0,80,,
+Zambia,2007,80.0,77.0,80,52.7,Africa
+Gabon,2007,75.0,78.0,81,62.6,Africa
+Kenya,2007,81.0,76.0,81,58.9,Africa
+Benin,2007,82.0,82.0,82,57.7,Africa
+Cambodia,2007,82.0,82.0,82,65.7,Asia
+Cameroon,2007,82.0,81.0,82,55.2,Africa
+Nepal,2007,82.0,82.0,82,66.3,Asia
+Togo,2007,,72.0,82,56.5,Africa
+United Republic of Tanzania,2007,83.0,88.0,83,,
+Bolivia (Plurinational State of),2007,84.0,85.0,84,,
+Madagascar,2007,84.0,83.0,84,61.8,Africa
+Sudan,2007,78.0,84.0,84,61.3,Africa
+Suriname,2007,84.0,84.0,84,68.2,South America
+Austria,2007,85.0,85.0,85,80.2,Europe
+Dominican Republic,2007,81.0,86.0,85,71.4,North America
+Guatemala,2007,85.0,85.0,85,70.1,North America
+Panama,2007,85.0,84.0,85,76.2,North America
+South Africa,2007,83.0,79.0,85,55.0,Africa
+Myanmar,2007,85.0,84.0,86,62.4,Asia
+Namibia,2007,,81.0,86,53.7,Africa
+Tajikistan,2007,84.0,85.0,86,67.2,Asia
+Denmark,2007,,87.0,87,78.3,Europe
+Eswatini,2007,92.0,88.0,87,43.6,Africa
+Malawi,2007,87.0,88.0,87,53.9,Africa
+Philippines,2007,87.0,87.0,87,70.5,Asia
+Armenia,2007,85.0,90.0,88,72.3,Asia
+Djibouti,2007,25.0,88.0,88,59.0,Africa
+Lesotho,2007,90.0,87.0,88,43.1,Africa
+New Zealand,2007,88.0,88.0,88,80.2,Oceania
+Solomon Islands,2007,90.0,89.0,88,68.0,Oceania
+Trinidad and Tobago,2007,89.0,90.0,88,71.7,North America
+Burkina Faso,2007,89.0,93.0,89,54.4,Africa
+Costa Rica,2007,89.0,89.0,89,78.5,North America
+Argentina,2007,85.0,92.0,91,75.0,South America
+Republic of Korea,2007,91.0,91.0,91,,
+San Marino,2007,91.0,90.0,91,81.9,Europe
+Australia,2007,94.0,92.0,92,81.3,Oceania
+Democratic People's Republic of Korea,2007,92.0,99.0,92,,
+Ireland,2007,,92.0,92,79.6,Europe
+Jamaica,2007,92.0,94.0,92,71.4,North America
+Montenegro,2007,90.0,92.0,92,74.5,Europe
+Republic of Moldova,2007,95.0,93.0,92,,
+United Arab Emirates,2007,92.0,94.0,92,77.1,Asia
+United Kingdom of Great Britain and Northern Ireland,2007,,92.0,92,,
+Viet Nam,2007,67.0,92.0,92,,
+Barbados,2007,93.0,93.0,93,75.3,North America
+China,2007,92.0,94.0,93,74.8,Asia
+Cuba,2007,93.0,99.0,93,77.3,North America
+Kazakhstan,2007,94.0,94.0,93,65.9,Asia
+Marshall Islands,2007,93.0,91.0,93,63.4,Oceania
+Nicaragua,2007,93.0,93.0,93,69.6,North America
+Norway,2007,,93.0,93,80.5,Europe
+Peru,2007,93.0,93.0,93,73.2,South America
+Bangladesh,2007,95.0,96.0,94,66.7,Asia
+Canada,2007,14.0,99.0,94,80.5,North America
+Colombia,2007,94.0,93.0,94,73.8,South America
+Ghana,2007,94.0,94.0,94,60.2,Africa
+Guyana,2007,94.0,94.0,94,66.3,South America
+Honduras,2007,93.0,94.0,94,70.4,North America
+Kiribati,2007,96.0,93.0,94,64.8,Oceania
+Kyrgyzstan,2007,94.0,94.0,94,67.0,Asia
+Latvia,2007,91.0,94.0,94,71.1,Europe
+Palau,2007,91.0,94.0,94,66.5,Oceania
+Qatar,2007,94.0,97.0,94,77.0,Asia
+Senegal,2007,94.0,93.0,94,62.5,Africa
+Serbia,2007,99.0,93.0,94,73.6,Europe
+Switzerland,2007,,94.0,94,81.7,Europe
+Uruguay,2007,94.0,94.0,94,76.5,South America
+Algeria,2007,90.0,95.0,95,72.6,Africa
+Bahamas,2007,93.0,95.0,95,72.7,North America
+Belarus,2007,91.0,90.0,95,70.8,Europe
+Bhutan,2007,95.0,93.0,95,67.0,Asia
+Bosnia and Herzegovina,2007,94.0,95.0,95,76.2,Europe
+Bulgaria,2007,95.0,95.0,95,73.0,Europe
+Eritrea,2007,95.0,95.0,95,62.1,Africa
+Estonia,2007,95.0,95.0,95,73.6,Europe
+Gambia,2007,97.0,94.0,95,59.4,Africa
+Israel,2007,99.0,95.0,95,80.7,Asia
+Lithuania,2007,96.0,95.0,95,71.5,Europe
+Mongolia,2007,98.0,99.0,95,66.0,Asia
+Morocco,2007,95.0,95.0,95,69.6,Africa
+The former Yugoslav Republic of Macedonia,2007,96.0,96.0,95,,
+Paraguay,2007,86.0,95.0,95,71.1,South America
+Andorra,2007,91.0,96.0,96,82.7,Europe
+Belize,2007,96.0,97.0,96,70.7,North America
+Botswana,2007,93.0,96.0,96,55.7,Africa
+Chile,2007,92.0,95.0,96,77.8,South America
+Croatia,2007,94.0,96.0,96,75.9,Europe
+Dominica,2007,93.0,93.0,96,71.9,North America
+Ecuador,2007,94.0,95.0,96,74.8,South America
+Germany,2007,86.0,95.0,96,79.7,Europe
+Grenada,2007,96.0,96.0,96,74.3,North America
+Romania,2007,99.0,96.0,96,72.5,Europe
+Saudi Arabia,2007,96.0,96.0,96,75.0,Asia
+Spain,2007,96.0,96.0,96,81.0,Europe
+Türkiye,2007,96.0,96.0,96,,
+United States of America,2007,93.0,93.0,96,,
+Uzbekistan,2007,99.0,98.0,96,68.3,Asia
+Bahrain,2007,97.0,97.0,97,77.6,Asia
+Cyprus,2007,93.0,97.0,97,78.8,Europe
+Iceland,2007,,97.0,97,81.4,Europe
+Italy,2007,97.0,97.0,97,81.5,Europe
+Malaysia,2007,96.0,97.0,97,74.2,Asia
+Mauritius,2007,97.0,96.0,97,73.1,Africa
+Netherlands,2007,,97.0,97,80.2,Europe
+Portugal,2007,97.0,96.0,97,79.3,Europe
+Rwanda,2007,97.0,98.0,97,60.0,Africa
+Sao Tome and Principe,2007,87.0,98.0,97,64.7,Africa
+Singapore,2007,96.0,97.0,97,81.0,Asia
+Slovenia,2007,,97.0,97,78.6,Europe
+Tuvalu,2007,97.0,97.0,97,63.9,Oceania
+Albania,2007,98.0,99.0,98,77.5,Europe
+Belgium,2007,94.0,99.0,98,79.5,Europe
+Cabo Verde,2007,96.0,98.0,98,,
+Egypt,2007,98.0,98.0,98,69.1,Africa
+Georgia,2007,94.0,88.0,98,71.6,Asia
+Japan,2007,,97.0,98,82.6,Asia
+Jordan,2007,98.0,98.0,98,73.4,Asia
+Libya,2007,98.0,98.0,98,71.9,Africa
+Maldives,2007,98.0,98.0,98,75.7,Asia
+Mexico,2007,98.0,98.0,98,74.2,North America
+Russian Federation,2007,98.0,98.0,98,,
+Sri Lanka,2007,98.0,98.0,98,72.0,Asia
+Sweden,2007,,98.0,98,81.0,Europe
+Thailand,2007,96.0,98.0,98,75.2,Asia
+Tunisia,2007,98.0,98.0,98,75.1,Africa
+Turkmenistan,2007,98.0,98.0,98,66.9,Asia
+Ukraine,2007,92.0,98.0,98,68.8,Europe
+Antigua and Barbuda,2007,97.0,98.0,99,76.1,North America
+Brazil,2007,99.0,99.0,99,72.4,South America
+Brunei Darussalam,2007,97.0,95.0,99,,
+Burundi,2007,99.0,93.0,99,54.7,Africa
+Cook Islands,2007,99.0,99.0,99,72.4,Oceania
+Czechia,2007,99.0,99.0,99,76.9,Europe
+El Salvador,2007,99.0,99.0,99,71.1,North America
+Fiji,2007,99.0,99.0,99,66.8,Oceania
+Finland,2007,,97.0,99,79.4,Europe
+France,2007,42.0,99.0,99,81.0,Europe
+Greece,2007,95.0,99.0,99,79.6,Europe
+Hungary,2007,,99.0,99,73.4,Europe
+Iran (Islamic Republic of),2007,97.0,98.0,99,,
+Kuwait,2007,99.0,99.0,99,77.0,Asia
+Luxembourg,2007,87.0,96.0,99,79.5,Europe
+Monaco,2007,99.0,99.0,99,83.9,Europe
+Nauru,2007,99.0,99.0,99,58.5,Oceania
+Niue,2007,99.0,99.0,99,67.4,Oceania
+Occupied Palestinian territory,2007,98.0,99.0,99,,
+Oman,2007,99.0,97.0,99,74.5,Asia
+Poland,2007,98.0,99.0,99,75.3,Europe
+Saint Kitts and Nevis,2007,99.0,99.0,99,71.4,North America
+Saint Lucia,2007,99.0,99.0,99,72.6,North America
+Saint Vincent and the Grenadines,2007,99.0,99.0,99,74.7,North America
+Seychelles,2007,99.0,99.0,99,72.1,Africa
+Slovakia,2007,99.0,99.0,99,74.5,Europe
+Tonga,2007,99.0,99.0,99,70.0,Oceania
+Somalia,2006,,26.0,26,50.6,Africa
+Chad,2006,,50.0,40,48.3,Africa
+Nigeria,2006,27.0,46.0,40,49.7,Africa
+Angola,2006,,8.0,44,52.4,Africa
+Gabon,2006,52.0,44.0,45,62.4,Africa
+Equatorial Guinea,2006,,53.0,46,56.0,Africa
+Ethiopia,2006,,59.0,46,55.1,Africa
+Samoa,2006,46.0,49.0,50,72.0,Oceania
+Central African Republic,2006,,47.0,51,46.9,Africa
+Niger,2006,,52.0,51,54.6,Africa
+Guinea,2006,,53.0,57,55.1,Africa
+Lao People's Democratic Republic,2006,57.0,56.0,57,,
+Afghanistan,2006,,58.0,58,58.7,Asia
+Iraq,2006,59.0,63.0,59,63.6,Asia
+Pakistan,2006,60.0,58.0,59,63.7,Asia
+Liberia,2006,,66.0,60,57.6,Africa
+Democratic Republic of the Congo,2006,,62.0,62,,
+Haiti,2006,,61.0,62,60.8,North America
+Timor-Leste,2006,,62.0,63,,
+Sierra Leone,2006,,65.0,64,49.3,Africa
+Uganda,2006,64.0,62.0,64,54.4,Africa
+India,2006,6.0,66.0,65,65.4,Asia
+Micronesia (Federated States of),2006,84.0,81.0,67,,
+Mauritania,2006,68.0,68.0,68,61.9,Africa
+Vanuatu,2006,59.0,67.0,68,69.5,Oceania
+Comoros,2006,69.0,69.0,69,59.9,Africa
+Papua New Guinea,2006,69.0,65.0,70,61.9,Oceania
+Zimbabwe,2006,68.0,71.0,70,45.4,Africa
+Guinea-Bissau,2006,,74.0,71,53.4,Africa
+Venezuela (Bolivarian Republic of),2006,71.0,73.0,71,,
+Djibouti,2006,,72.0,72,58.7,Africa
+Indonesia,2006,66.0,78.0,72,67.9,Asia
+Nauru,2006,99.0,90.0,72,58.4,Oceania
+Congo,2006,,73.0,73,58.9,Africa
+Benin,2006,74.0,76.0,74,57.5,Africa
+Marshall Islands,2006,97.0,95.0,74,63.5,Oceania
+Côte d’Ivoire,2006,77.0,76.0,77,,
+Azerbaijan,2006,52.0,80.0,78,68.2,Asia
+Lebanon,2006,78.0,75.0,78,76.1,Asia
+Mali,2006,90.0,79.0,78,54.6,Africa
+Mozambique,2006,75.0,73.0,78,52.0,Africa
+Sudan,2006,60.0,77.0,78,60.3,Africa
+Yemen,2006,78.0,78.0,78,66.0,Asia
+Cambodia,2006,80.0,80.0,80,65.1,Asia
+Kenya,2006,80.0,77.0,80,58.2,Africa
+Syrian Arab Republic,2006,83.0,83.0,80,,
+Cameroon,2006,81.0,78.0,81,54.9,Africa
+Zambia,2006,81.0,83.0,81,51.8,Africa
+Myanmar,2006,75.0,82.0,82,61.9,Asia
+Austria,2006,83.0,83.0,83,80.0,Europe
+Bolivia (Plurinational State of),2006,83.0,82.0,83,,
+Tajikistan,2006,88.0,76.0,83,67.0,Asia
+Barbados,2006,84.0,85.0,84,75.1,North America
+Ghana,2006,84.0,84.0,84,60.0,Africa
+South Africa,2006,83.0,79.0,84,54.3,Africa
+Suriname,2006,84.0,84.0,84,67.6,South America
+Togo,2006,,85.0,84,56.2,Africa
+Madagascar,2006,82.0,83.0,85,61.3,Africa
+Malta,2006,86.0,83.0,85,79.8,Europe
+Saint Lucia,2006,85.0,85.0,85,72.5,North America
+Burkina Faso,2006,76.0,94.0,86,53.7,Africa
+Kiribati,2006,88.0,86.0,86,64.9,Oceania
+Namibia,2006,,74.0,86,52.7,Africa
+Armenia,2006,78.0,87.0,87,72.0,Asia
+Bosnia and Herzegovina,2006,90.0,91.0,87,76.2,Europe
+Eswatini,2006,93.0,88.0,87,43.1,Africa
+Georgia,2006,84.0,89.0,88,71.4,Asia
+Nicaragua,2006,88.0,88.0,88,68.7,North America
+Panama,2006,88.0,98.0,88,76.0,North America
+Philippines,2006,77.0,88.0,88,70.3,Asia
+Costa Rica,2006,88.0,89.0,89,78.5,North America
+Cuba,2006,89.0,99.0,89,77.2,North America
+Democratic People's Republic of Korea,2006,96.0,98.0,89,,
+Dominican Republic,2006,84.0,88.0,89,71.2,North America
+Guatemala,2006,89.0,90.0,89,69.8,North America
+Lesotho,2006,91.0,88.0,89,42.9,Africa
+Nepal,2006,69.0,91.0,89,65.9,Asia
+New Zealand,2006,87.0,89.0,89,80.0,Oceania
+Senegal,2006,89.0,89.0,89,61.8,Africa
+Montenegro,2006,90.0,90.0,90,74.0,Europe
+Türkiye,2006,82.0,90.0,90,,
+United Republic of Tanzania,2006,90.0,91.0,90,,
+Argentina,2006,84.0,92.0,91,75.4,South America
+Grenada,2006,91.0,91.0,91,73.7,North America
+Ireland,2006,,91.0,91,79.2,Europe
+Australia,2006,95.0,92.0,92,81.3,Oceania
+Burundi,2006,92.0,88.0,92,53.9,Africa
+Kyrgyzstan,2006,90.0,93.0,92,66.8,Asia
+San Marino,2006,92.0,91.0,92,81.6,Europe
+Serbia,2006,93.0,97.0,92,73.4,Europe
+Trinidad and Tobago,2006,89.0,89.0,92,71.3,North America
+United Arab Emirates,2006,92.0,94.0,92,76.9,Asia
+United Kingdom of Great Britain and Northern Ireland,2006,,92.0,92,,
+Andorra,2006,84.0,93.0,93,83.0,Europe
+China,2006,91.0,94.0,93,74.5,Asia
+Colombia,2006,93.0,94.0,93,73.5,South America
+Denmark,2006,,93.0,93,78.2,Europe
+Guyana,2006,93.0,92.0,93,65.7,South America
+The former Yugoslav Republic of Macedonia,2006,89.0,92.0,93,,
+Bangladesh,2006,86.0,95.0,94,67.2,Asia
+Chile,2006,95.0,94.0,94,78.3,South America
+Eritrea,2006,94.0,94.0,94,61.6,Africa
+Lithuania,2006,95.0,94.0,94,71.6,Europe
+Norway,2006,,94.0,94,80.4,Europe
+Peru,2006,94.0,94.0,94,73.2,South America
+Switzerland,2006,,94.0,94,81.5,Europe
+Viet Nam,2006,93.0,94.0,94,,
+Algeria,2006,80.0,95.0,95,72.3,Africa
+Bahamas,2006,96.0,94.0,95,72.9,North America
+Bhutan,2006,95.0,96.0,95,66.4,Asia
+Bulgaria,2006,96.0,96.0,95,72.7,Europe
+Canada,2006,14.0,95.0,95,80.5,North America
+Dominica,2006,7.0,96.0,95,72.8,North America
+Estonia,2006,95.0,95.0,95,73.5,Europe
+Gambia,2006,95.0,94.0,95,59.1,Africa
+Honduras,2006,94.0,94.0,95,70.3,North America
+Israel,2006,96.0,94.0,95,80.5,Asia
+Jamaica,2006,97.0,99.0,95,71.2,North America
+Malaysia,2006,95.0,95.0,95,74.2,Asia
+Singapore,2006,95.0,95.0,95,80.7,Asia
+Uruguay,2006,95.0,95.0,95,76.4,South America
+Botswana,2006,93.0,96.0,96,53.9,Africa
+Cabo Verde,2006,95.0,97.0,96,,
+Croatia,2006,,96.0,96,76.0,Europe
+Ecuador,2006,96.0,92.0,96,74.7,South America
+El Salvador,2006,96.0,96.0,96,70.8,North America
+Germany,2006,87.0,94.0,96,79.6,Europe
+Italy,2006,96.0,97.0,96,81.4,Europe
+Latvia,2006,94.0,96.0,96,70.9,Europe
+Netherlands,2006,,96.0,96,79.8,Europe
+Occupied Palestinian territory,2006,97.0,97.0,96,,
+Qatar,2006,96.0,95.0,96,76.6,Asia
+Saudi Arabia,2006,96.0,96.0,96,74.8,Asia
+United States of America,2006,93.0,93.0,96,,
+Uzbekistan,2006,98.0,94.0,96,67.9,Asia
+Albania,2006,98.0,97.0,97,76.8,Europe
+Brunei Darussalam,2006,99.0,94.0,97,,
+Cyprus,2006,93.0,97.0,97,78.4,Europe
+Finland,2006,,97.0,97,79.4,Europe
+Iceland,2006,,97.0,97,81.2,Europe
+Mauritius,2006,97.0,98.0,97,72.9,Africa
+Morocco,2006,95.0,97.0,97,69.1,Africa
+Portugal,2006,97.0,97.0,97,79.1,Europe
+Republic of Moldova,2006,98.0,98.0,97,,
+Romania,2006,99.0,97.0,97,71.5,Europe
+Sao Tome and Principe,2006,75.0,97.0,97,64.4,Africa
+Slovenia,2006,,97.0,97,78.4,Europe
+Tuvalu,2006,97.0,97.0,97,63.9,Oceania
+Bahrain,2006,98.0,98.0,98,77.2,Asia
+Belgium,2006,94.0,99.0,98,79.4,Europe
+Belize,2006,98.0,98.0,98,70.1,North America
+Czechia,2006,98.0,98.0,98,76.7,Europe
+Egypt,2006,98.0,98.0,98,69.0,Africa
+Fiji,2006,99.0,98.0,98,66.9,Oceania
+Greece,2006,94.0,98.0,98,79.7,Europe
+Iran (Islamic Republic of),2006,98.0,99.0,98,,
+Japan,2006,,95.0,98,82.4,Asia
+Jordan,2006,98.0,98.0,98,73.1,Asia
+Libya,2006,98.0,98.0,98,71.7,Africa
+Maldives,2006,98.0,98.0,98,75.1,Asia
+Mexico,2006,98.0,98.0,98,74.3,North America
+Oman,2006,99.0,98.0,98,74.5,Asia
+Palau,2006,98.0,98.0,98,66.7,Oceania
+Paraguay,2006,92.0,98.0,98,70.8,South America
+Republic of Korea,2006,99.0,98.0,98,,
+Russian Federation,2006,98.0,98.0,98,,
+Spain,2006,97.0,98.0,98,81.0,Europe
+Sri Lanka,2006,98.0,98.0,98,72.0,Asia
+Sweden,2006,,98.0,98,80.8,Europe
+Thailand,2006,96.0,98.0,98,74.9,Asia
+Turkmenistan,2006,98.0,98.0,98,66.5,Asia
+Ukraine,2006,96.0,99.0,98,68.7,Europe
+Antigua and Barbuda,2006,99.0,99.0,99,75.8,North America
+Belarus,2006,98.0,97.0,99,70.0,Europe
+Brazil,2006,99.0,99.0,99,72.0,South America
+Cook Islands,2006,99.0,99.0,99,72.0,Oceania
+France,2006,39.0,99.0,99,80.7,Europe
+Hungary,2006,,99.0,99,73.3,Europe
+Kazakhstan,2006,99.0,99.0,99,65.6,Asia
+Kuwait,2006,99.0,99.0,99,76.9,Asia
+Luxembourg,2006,95.0,99.0,99,79.4,Europe
+Malawi,2006,99.0,99.0,99,53.2,Africa
+Monaco,2006,99.0,99.0,99,84.6,Europe
+Mongolia,2006,98.0,98.0,99,65.5,Asia
+Niue,2006,99.0,99.0,99,67.2,Oceania
+Poland,2006,98.0,99.0,99,75.3,Europe
+Rwanda,2006,99.0,99.0,99,58.7,Africa
+Saint Kitts and Nevis,2006,99.0,99.0,99,71.3,North America
+Saint Vincent and the Grenadines,2006,99.0,99.0,99,74.0,North America
+Seychelles,2006,99.0,99.0,99,71.8,Africa
+Slovakia,2006,99.0,99.0,99,74.4,Europe
+Solomon Islands,2006,99.0,99.0,99,68.1,Oceania
+Tonga,2006,99.0,99.0,99,69.9,Oceania
+Tunisia,2006,99.0,99.0,99,74.9,Africa
+Chad,2005,,37.0,25,48.3,Africa
+Somalia,2005,,35.0,35,50.7,Africa
+Nigeria,2005,18.0,45.0,36,49.3,Africa
+Equatorial Guinea,2005,,51.0,44,55.5,Africa
+Ethiopia,2005,,56.0,44,54.0,Africa
+Gabon,2005,28.0,44.0,45,62.0,Africa
+Niger,2005,,46.0,45,53.6,Africa
+Angola,2005,,14.0,47,51.6,Africa
+Lao People's Democratic Republic,2005,49.0,50.0,49,,
+Central African Republic,2005,,47.0,54,46.4,Africa
+Timor-Leste,2005,,55.0,55,,
+Afghanistan,2005,,58.0,58,58.4,Asia
+Guinea,2005,,59.0,59,54.6,Africa
+Samoa,2005,51.0,66.0,59,71.8,Oceania
+Democratic Republic of the Congo,2005,,60.0,60,,
+Haiti,2005,,60.0,60,60.4,North America
+Liberia,2005,,66.0,60,56.9,Africa
+Congo,2005,,62.0,62,58.1,Africa
+Pakistan,2005,65.0,63.0,63,62.5,Asia
+Uganda,2005,64.0,59.0,64,53.0,Africa
+India,2005,8.0,65.0,65,65.0,Asia
+Iraq,2005,65.0,69.0,65,64.8,Asia
+Sierra Leone,2005,,67.0,65,48.2,Africa
+Comoros,2005,68.0,67.0,68,59.6,Africa
+Guinea-Bissau,2005,,73.0,68,52.2,Africa
+Vanuatu,2005,61.0,67.0,68,69.4,Oceania
+Zimbabwe,2005,65.0,69.0,68,44.8,Africa
+Benin,2005,70.0,73.0,70,57.1,Africa
+Djibouti,2005,,71.0,71,58.3,Africa
+Mauritania,2005,42.0,71.0,71,61.7,Africa
+Indonesia,2005,65.0,79.0,72,67.6,Asia
+Papua New Guinea,2005,63.0,61.0,72,61.8,Oceania
+Myanmar,2005,62.0,86.0,73,61.6,Asia
+Azerbaijan,2005,49.0,79.0,75,67.6,Asia
+Nepal,2005,41.0,78.0,75,65.5,Asia
+Côte d’Ivoire,2005,76.0,87.0,76,,
+Kenya,2005,76.0,70.0,76,57.3,Africa
+Lebanon,2005,77.0,74.0,77,76.3,Asia
+Mali,2005,83.0,78.0,77,54.0,Africa
+Marshall Islands,2005,89.0,88.0,77,63.6,Oceania
+Peru,2005,94.0,66.0,77,73.0,South America
+Sudan,2005,22.0,78.0,78,57.3,Africa
+Democratic People's Republic of Korea,2005,92.0,97.0,79,,
+Kiribati,2005,50.0,74.0,79,65.0,Oceania
+Yemen,2005,80.0,80.0,79,65.5,Asia
+Cameroon,2005,79.0,79.0,80,54.4,Africa
+Mozambique,2005,75.0,71.0,80,51.6,Africa
+Nauru,2005,80.0,80.0,80,58.2,Oceania
+Syrian Arab Republic,2005,83.0,83.0,80,,
+South Africa,2005,79.0,75.0,81,54.0,Africa
+Burkina Faso,2005,,94.0,82,53.1,Africa
+Cambodia,2005,,82.0,82,64.3,Asia
+Georgia,2005,79.0,82.0,82,71.1,Asia
+Togo,2005,,80.0,82,56.0,Africa
+Zambia,2005,82.0,84.0,82,50.7,Africa
+Suriname,2005,83.0,84.0,83,67.0,South America
+Ghana,2005,84.0,85.0,84,59.8,Africa
+Senegal,2005,84.0,84.0,84,60.9,Africa
+Tajikistan,2005,81.0,79.0,84,66.5,Asia
+Bolivia (Plurinational State of),2005,85.0,84.0,85,,
+Madagascar,2005,81.0,80.0,85,60.6,Africa
+Niue,2005,86.0,86.0,85,67.3,Oceania
+Austria,2005,86.0,86.0,86,79.5,Europe
+Eswatini,2005,95.0,88.0,86,42.1,Africa
+Namibia,2005,,86.0,86,51.8,Africa
+Nicaragua,2005,86.0,87.0,86,67.9,North America
+Burundi,2005,87.0,82.0,87,53.0,Africa
+China,2005,84.0,87.0,87,74.1,Asia
+Dominican Republic,2005,87.0,86.0,87,70.9,North America
+Guatemala,2005,87.0,87.0,87,69.2,North America
+Venezuela (Bolivarian Republic of),2005,88.0,80.0,87,,
+Algeria,2005,83.0,88.0,88,72.1,Africa
+Cuba,2005,95.0,99.0,89,77.0,North America
+El Salvador,2005,89.0,89.0,89,70.4,North America
+Lesotho,2005,87.0,88.0,89,43.2,Africa
+New Zealand,2005,87.0,89.0,89,80.1,Oceania
+Philippines,2005,49.0,90.0,89,70.2,Asia
+Solomon Islands,2005,83.0,90.0,89,67.9,Oceania
+Armenia,2005,91.0,92.0,90,71.8,Asia
+Ireland,2005,,90.0,90,78.9,Europe
+Türkiye,2005,85.0,90.0,90,,
+United Republic of Tanzania,2005,90.0,91.0,90,,
+Chile,2005,,92.0,91,78.0,South America
+Costa Rica,2005,90.0,91.0,91,78.5,North America
+Norway,2005,,91.0,91,80.2,Europe
+United Kingdom of Great Britain and Northern Ireland,2005,,91.0,91,,
+Australia,2005,95.0,92.0,92,81.1,Oceania
+Barbados,2005,92.0,91.0,92,74.9,North America
+Ecuador,2005,92.0,89.0,92,74.5,South America
+Malta,2005,85.0,94.0,92,79.6,Europe
+Panama,2005,92.0,88.0,92,75.8,North America
+Bahamas,2005,93.0,93.0,93,72.8,North America
+Bangladesh,2005,45.0,94.0,93,67.3,Asia
+Bosnia and Herzegovina,2005,93.0,95.0,93,75.4,Europe
+Canada,2005,14.0,93.0,93,80.1,North America
+Colombia,2005,93.0,93.0,93,73.1,South America
+Denmark,2005,,93.0,93,78.2,Europe
+Guyana,2005,93.0,93.0,93,65.1,South America
+Israel,2005,96.0,95.0,93,80.2,Asia
+Malawi,2005,93.0,94.0,93,52.0,Africa
+Portugal,2005,94.0,93.0,93,78.3,Europe
+Tuvalu,2005,79.0,99.0,93,63.8,Oceania
+Brunei Darussalam,2005,99.0,93.0,94,,
+Lithuania,2005,95.0,93.0,94,71.7,Europe
+Micronesia (Federated States of),2005,91.0,94.0,94,,
+Switzerland,2005,,94.0,94,81.2,Europe
+United Arab Emirates,2005,92.0,94.0,94,76.7,Asia
+Bhutan,2005,95.0,95.0,95,65.8,Asia
+Cabo Verde,2005,93.0,95.0,95,,
+Gambia,2005,95.0,94.0,95,58.4,Africa
+Iceland,2005,,95.0,95,81.2,Europe
+Iran (Islamic Republic of),2005,94.0,95.0,95,,
+Italy,2005,96.0,97.0,95,81.0,Europe
+Jordan,2005,95.0,95.0,95,72.9,Asia
+Rwanda,2005,95.0,95.0,95,57.3,Africa
+Saint Lucia,2005,95.0,95.0,95,72.2,North America
+Slovenia,2005,,95.0,95,77.7,Europe
+Trinidad and Tobago,2005,95.0,95.0,95,71.3,North America
+Viet Nam,2005,94.0,94.0,95,,
+Belize,2005,96.0,96.0,96,69.4,North America
+Botswana,2005,92.0,96.0,96,52.6,Africa
+Bulgaria,2005,96.0,97.0,96,72.6,Europe
+Croatia,2005,,96.0,96,75.4,Europe
+Eritrea,2005,96.0,96.0,96,60.6,Africa
+Estonia,2005,95.0,96.0,96,73.2,Europe
+Fiji,2005,99.0,97.0,96,66.6,Oceania
+Germany,2005,90.0,95.0,96,79.3,Europe
+Greece,2005,93.0,96.0,96,79.6,Europe
+Malaysia,2005,96.0,96.0,96,74.1,Asia
+Netherlands,2005,,96.0,96,79.5,Europe
+Occupied Palestinian territory,2005,99.0,99.0,96,,
+Paraguay,2005,92.0,96.0,96,70.5,South America
+Republic of Korea,2005,99.0,96.0,96,,
+San Marino,2005,95.0,94.0,96,81.2,Europe
+Saudi Arabia,2005,97.0,96.0,96,74.6,Asia
+Singapore,2005,96.0,96.0,96,80.4,Asia
+Spain,2005,96.0,96.0,96,80.3,Europe
+Ukraine,2005,97.0,95.0,96,68.2,Europe
+United States of America,2005,93.0,92.0,96,,
+Uruguay,2005,96.0,96.0,96,76.2,South America
+Belgium,2005,77.0,97.0,97,79.1,Europe
+Czechia,2005,99.0,96.0,97,76.2,Europe
+Finland,2005,,97.0,97,79.0,Europe
+Mauritius,2005,97.0,97.0,97,72.7,Africa
+The former Yugoslav Republic of Macedonia,2005,53.0,98.0,97,,
+Qatar,2005,97.0,98.0,97,76.1,Asia
+Romania,2005,98.0,97.0,97,70.6,Europe
+Sao Tome and Principe,2005,96.0,97.0,97,63.7,Africa
+Albania,2005,98.0,97.0,98,76.6,Europe
+Andorra,2005,79.0,98.0,98,81.8,Europe
+Argentina,2005,88.0,95.0,98,75.1,South America
+Bahrain,2005,98.0,98.0,98,76.9,Asia
+Cyprus,2005,88.0,98.0,98,78.1,Europe
+Dominica,2005,,98.0,98,72.3,North America
+Egypt,2005,98.0,98.0,98,68.8,Africa
+France,2005,35.0,98.0,98,80.3,Europe
+Honduras,2005,97.0,98.0,98,70.1,North America
+Japan,2005,,95.0,98,82.0,Asia
+Kazakhstan,2005,94.0,99.0,98,65.1,Asia
+Kyrgyzstan,2005,97.0,98.0,98,66.4,Asia
+Libya,2005,97.0,98.0,98,71.6,Africa
+Maldives,2005,98.0,98.0,98,74.8,Asia
+Mexico,2005,98.0,98.0,98,74.4,North America
+Morocco,2005,96.0,98.0,98,68.7,Africa
+Palau,2005,98.0,98.0,98,67.0,Oceania
+Republic of Moldova,2005,99.0,99.0,98,,
+Russian Federation,2005,97.0,98.0,98,,
+Serbia,2005,65.0,98.0,98,72.7,Europe
+Sweden,2005,,98.0,98,80.6,Europe
+Thailand,2005,96.0,98.0,98,73.8,Asia
+Tunisia,2005,97.0,98.0,98,74.8,Africa
+Antigua and Barbuda,2005,99.0,98.0,99,75.8,North America
+Belarus,2005,99.0,98.0,99,69.4,Europe
+Brazil,2005,98.0,99.0,99,71.8,South America
+Cook Islands,2005,99.0,99.0,99,71.6,Oceania
+Grenada,2005,99.0,99.0,99,73.5,North America
+Hungary,2005,,99.0,99,72.9,Europe
+Jamaica,2005,99.0,99.0,99,71.0,North America
+Kuwait,2005,99.0,99.0,99,76.9,Asia
+Latvia,2005,99.0,99.0,99,70.8,Europe
+Luxembourg,2005,95.0,99.0,99,79.4,Europe
+Monaco,2005,99.0,99.0,99,84.8,Europe
+Mongolia,2005,98.0,99.0,99,64.9,Asia
+Oman,2005,99.0,99.0,99,74.4,Asia
+Poland,2005,98.0,99.0,99,75.1,Europe
+Saint Kitts and Nevis,2005,99.0,99.0,99,71.4,North America
+Saint Vincent and the Grenadines,2005,99.0,93.0,99,73.5,North America
+Seychelles,2005,99.0,99.0,99,71.6,Africa
+Slovakia,2005,99.0,99.0,99,74.2,Europe
+Sri Lanka,2005,99.0,99.0,99,72.1,Asia
+Tonga,2005,99.0,99.0,99,69.8,Oceania
+Turkmenistan,2005,99.0,99.0,99,66.1,Asia
+Uzbekistan,2005,99.0,99.0,99,67.5,Asia
+Chad,2004,,32.0,21,48.2,Africa
+Somalia,2004,,30.0,30,50.5,Africa
+Liberia,2004,,47.0,31,56.0,Africa
+Nigeria,2004,,43.0,33,48.8,Africa
+Ethiopia,2004,,54.0,40,53.2,Africa
+Equatorial Guinea,2004,,49.0,43,55.0,Africa
+Niger,2004,,45.0,43,52.6,Africa
+Gabon,2004,,44.0,45,61.8,Africa
+Lao People's Democratic Republic,2004,45.0,46.0,45,,
+Angola,2004,,18.0,47,50.6,Africa
+Afghanistan,2004,,50.0,50,57.9,Asia
+Central African Republic,2004,,45.0,51,46.0,Africa
+Democratic Republic of the Congo,2004,,52.0,54,,
+Haiti,2004,,58.0,57,58.5,North America
+Timor-Leste,2004,,57.0,57,,
+Guinea,2004,,65.0,60,54.1,Africa
+Kiribati,2004,67.0,61.0,62,65.0,Oceania
+Papua New Guinea,2004,60.0,59.0,62,61.8,Oceania
+Uganda,2004,62.0,58.0,62,51.5,Africa
+India,2004,6.0,58.0,63,64.5,Asia
+Samoa,2004,62.0,35.0,63,71.7,Oceania
+Djibouti,2004,,64.0,64,57.8,Africa
+Guinea-Bissau,2004,,69.0,64,52.1,Africa
+Marshall Islands,2004,72.0,68.0,64,63.7,Oceania
+Sierra Leone,2004,,69.0,65,47.6,Africa
+Zimbabwe,2004,68.0,67.0,65,44.5,Africa
+Côte d’Ivoire,2004,67.0,76.0,67,,
+Congo,2004,,67.0,67,57.0,Africa
+Pakistan,2004,62.0,67.0,68,63.1,Asia
+Mali,2004,73.0,70.0,69,53.5,Africa
+Vanuatu,2004,63.0,67.0,69,69.3,Oceania
+Mauritania,2004,,68.0,70,61.6,Africa
+Indonesia,2004,64.0,79.0,71,65.8,Asia
+Togo,2004,,71.0,71,55.6,Africa
+Benin,2004,75.0,74.0,72,56.8,Africa
+Democratic People's Republic of Korea,2004,98.0,99.0,72,,
+Yemen,2004,43.0,72.0,72,65.0,Asia
+Cameroon,2004,,72.0,73,54.2,Africa
+Kenya,2004,73.0,73.0,73,56.4,Africa
+Iraq,2004,62.0,69.0,74,65.0,Asia
+South Africa,2004,76.0,73.0,74,54.0,Africa
+Sudan,2004,,74.0,74,56.8,Africa
+Lebanon,2004,75.0,74.0,75,76.0,Asia
+Comoros,2004,77.0,73.0,76,59.5,Africa
+Azerbaijan,2004,50.0,78.0,77,67.3,Asia
+Georgia,2004,64.0,66.0,78,70.6,Asia
+Madagascar,2004,71.0,74.0,78,60.1,Africa
+Micronesia (Federated States of),2004,80.0,82.0,78,,
+Burkina Faso,2004,,83.0,79,52.4,Africa
+Dominican Republic,2004,82.0,66.0,79,70.3,North America
+Nicaragua,2004,79.0,80.0,79,67.4,North America
+Ghana,2004,80.0,81.0,80,59.2,Africa
+Nauru,2004,78.0,73.0,80,58.1,Oceania
+Nepal,2004,27.0,80.0,80,64.8,Asia
+Namibia,2004,,81.0,81,51.2,Africa
+Syrian Arab Republic,2004,82.0,84.0,81,,
+Kazakhstan,2004,99.0,99.0,82,64.9,Asia
+Myanmar,2004,39.0,92.0,82,61.2,Asia
+Austria,2004,83.0,83.0,83,79.4,Europe
+Burundi,2004,83.0,76.0,83,52.0,Africa
+Grenada,2004,83.0,84.0,83,71.8,North America
+Mozambique,2004,76.0,69.0,83,51.2,Africa
+Zambia,2004,,84.0,83,49.5,Africa
+Bolivia (Plurinational State of),2004,84.0,84.0,84,,
+Bosnia and Herzegovina,2004,36.0,87.0,84,76.1,Europe
+Cambodia,2004,,86.0,85,63.6,Asia
+Suriname,2004,,84.0,85,66.4,South America
+Türkiye,2004,77.0,85.0,85,,
+Algeria,2004,81.0,86.0,86,71.8,Africa
+Eswatini,2004,93.0,88.0,86,42.5,Africa
+Peru,2004,92.0,81.0,86,72.7,South America
+Tajikistan,2004,81.0,82.0,86,66.0,Asia
+Venezuela (Bolivarian Republic of),2004,82.0,83.0,86,,
+China,2004,79.0,87.0,87,73.7,Asia
+Gambia,2004,95.0,88.0,87,58.1,Africa
+Guatemala,2004,,88.0,87,69.2,North America
+Senegal,2004,54.0,87.0,87,60.0,Africa
+Cuba,2004,99.0,98.0,88,76.9,North America
+Ecuador,2004,88.0,90.0,88,74.3,South America
+Philippines,2004,48.0,85.0,88,70.0,Asia
+Republic of Korea,2004,92.0,90.0,88,,
+Serbia,2004,89.0,96.0,88,72.6,Europe
+Bhutan,2004,89.0,90.0,89,65.3,Asia
+Colombia,2004,89.0,89.0,89,72.7,South America
+Ireland,2004,,89.0,89,78.5,Europe
+Malawi,2004,89.0,94.0,89,50.5,Africa
+Malta,2004,85.0,89.0,89,79.2,Europe
+New Zealand,2004,88.0,87.0,89,79.4,Oceania
+Rwanda,2004,89.0,89.0,89,55.5,Africa
+Costa Rica,2004,89.0,90.0,90,78.3,North America
+El Salvador,2004,90.0,90.0,90,70.3,North America
+Lesotho,2004,60.0,89.0,90,43.7,Africa
+Solomon Islands,2004,81.0,89.0,90,67.8,Oceania
+Armenia,2004,91.0,93.0,91,71.4,Asia
+Canada,2004,14.0,91.0,91,80.0,North America
+Guyana,2004,91.0,91.0,91,64.9,South America
+Saint Lucia,2004,91.0,91.0,91,72.0,North America
+Australia,2004,95.0,92.0,92,80.8,Oceania
+Brunei Darussalam,2004,99.0,92.0,92,,
+Norway,2004,,92.0,92,80.0,Europe
+Paraguay,2004,90.0,92.0,92,70.5,South America
+United Kingdom of Great Britain and Northern Ireland,2004,,92.0,92,,
+Bahamas,2004,93.0,92.0,93,72.5,North America
+Barbados,2004,93.0,93.0,93,74.7,North America
+Cabo Verde,2004,91.0,94.0,93,,
+Chile,2004,,94.0,93,77.6,South America
+Switzerland,2004,,95.0,93,81.1,Europe
+Estonia,2004,90.0,95.0,94,72.6,Europe
+Honduras,2004,93.0,94.0,94,69.8,North America
+Italy,2004,96.0,97.0,94,81.0,Europe
+Lithuania,2004,94.0,90.0,94,72.2,Europe
+The former Yugoslav Republic of Macedonia,2004,,95.0,94,,
+Slovenia,2004,,94.0,94,77.5,Europe
+Trinidad and Tobago,2004,94.0,94.0,94,71.1,North America
+United Arab Emirates,2004,92.0,94.0,94,76.5,Asia
+Uruguay,2004,94.0,95.0,94,76.0,South America
+Belgium,2004,64.0,96.0,95,79.0,Europe
+Bulgaria,2004,94.0,94.0,95,72.6,Europe
+Denmark,2004,,95.0,95,77.8,Europe
+Fiji,2004,99.0,96.0,95,66.4,Oceania
+Greece,2004,92.0,95.0,95,79.3,Europe
+Israel,2004,99.0,95.0,95,80.1,Asia
+Jordan,2004,95.0,95.0,95,72.8,Asia
+Malaysia,2004,94.0,95.0,95,73.9,Asia
+Panama,2004,95.0,92.0,95,75.5,North America
+Portugal,2004,94.0,95.0,95,78.4,Europe
+San Marino,2004,95.0,94.0,95,80.7,Europe
+Singapore,2004,94.0,95.0,95,79.8,Asia
+United Republic of Tanzania,2004,95.0,95.0,95,,
+Botswana,2004,91.0,96.0,96,51.6,Africa
+Croatia,2004,,96.0,96,75.5,Europe
+Germany,2004,88.0,96.0,96,79.1,Europe
+Maldives,2004,97.0,96.0,96,73.5,Asia
+Occupied Palestinian territory,2004,96.0,96.0,96,,
+Qatar,2004,97.0,95.0,96,76.0,Asia
+Saint Kitts and Nevis,2004,96.0,96.0,96,71.3,North America
+Sao Tome and Principe,2004,70.0,99.0,96,63.7,Africa
+Saudi Arabia,2004,96.0,96.0,96,74.2,Asia
+United States of America,2004,92.0,92.0,96,,
+Viet Nam,2004,94.0,96.0,96,,
+Albania,2004,99.0,98.0,97,76.4,Europe
+Antigua and Barbuda,2004,97.0,97.0,97,75.7,North America
+Belize,2004,97.0,97.0,97,69.2,North America
+Egypt,2004,97.0,97.0,97,68.6,Africa
+Libya,2004,99.0,97.0,97,71.5,Africa
+Morocco,2004,95.0,97.0,97,68.2,Africa
+Romania,2004,99.0,97.0,97,69.5,Europe
+Russian Federation,2004,96.0,98.0,97,,
+Spain,2004,97.0,97.0,97,80.3,Europe
+Sri Lanka,2004,62.0,97.0,97,67.1,Asia
+Tunisia,2004,96.0,97.0,97,74.5,Africa
+Turkmenistan,2004,96.0,98.0,97,66.1,Asia
+Argentina,2004,81.0,91.0,98,74.9,South America
+Bahrain,2004,98.0,98.0,98,76.6,Asia
+Cyprus,2004,88.0,98.0,98,77.9,Europe
+Czechia,2004,98.0,96.0,98,75.9,Europe
+Eritrea,2004,84.0,98.0,98,59.9,Africa
+Finland,2004,,96.0,98,78.8,Europe
+France,2004,35.0,99.0,98,80.3,Europe
+Jamaica,2004,98.0,97.0,98,70.9,North America
+Kuwait,2004,94.0,98.0,98,76.8,Asia
+Mauritius,2004,98.0,98.0,98,72.5,Africa
+Mexico,2004,98.0,98.0,98,74.4,North America
+Netherlands,2004,,98.0,98,79.2,Europe
+Palau,2004,98.0,98.0,98,67.2,Oceania
+Republic of Moldova,2004,99.0,98.0,98,,
+Thailand,2004,96.0,98.0,98,73.1,Asia
+Tuvalu,2004,98.0,98.0,98,63.7,Oceania
+Andorra,2004,77.0,99.0,99,80.1,Europe
+Bangladesh,2004,11.0,88.0,99,67.2,Asia
+Belarus,2004,99.0,99.0,99,69.4,Europe
+Brazil,2004,96.0,99.0,99,71.1,South America
+Cook Islands,2004,99.0,99.0,99,71.2,Oceania
+Dominica,2004,,99.0,99,72.4,North America
+Hungary,2004,,99.0,99,72.9,Europe
+Iceland,2004,,99.0,99,81.0,Europe
+Iran (Islamic Republic of),2004,95.0,98.0,99,,
+Japan,2004,,97.0,99,82.1,Asia
+Kyrgyzstan,2004,99.0,98.0,99,66.3,Asia
+Latvia,2004,98.0,99.0,99,70.9,Europe
+Luxembourg,2004,94.0,99.0,99,79.2,Europe
+Monaco,2004,99.0,99.0,99,84.2,Europe
+Mongolia,2004,98.0,99.0,99,64.8,Asia
+Niue,2004,99.0,99.0,99,66.0,Oceania
+Oman,2004,99.0,99.0,99,74.3,Asia
+Poland,2004,98.0,99.0,99,75.0,Europe
+Saint Vincent and the Grenadines,2004,99.0,99.0,99,73.0,North America
+Seychelles,2004,99.0,99.0,99,71.2,Africa
+Slovakia,2004,99.0,99.0,99,74.2,Europe
+Sweden,2004,,99.0,99,80.5,Europe
+Tonga,2004,99.0,99.0,99,69.7,Oceania
+Ukraine,2004,98.0,99.0,99,68.4,Europe
+Uzbekistan,2004,99.0,99.0,99,67.4,Asia
+Chad,2003,,36.0,22,48.2,Africa
+Nigeria,2003,,42.0,29,48.4,Africa
+Liberia,2003,,49.0,35,53.0,Africa
+Ethiopia,2003,,54.0,38,52.5,Africa
+Somalia,2003,,40.0,40,50.6,Africa
+Afghanistan,2003,,41.0,41,57.3,Asia
+Democratic Republic of the Congo,2003,,47.0,41,,
+Equatorial Guinea,2003,,47.0,41,54.6,Africa
+Niger,2003,,44.0,41,51.4,Africa
+Gabon,2003,,44.0,45,61.7,Africa
+Angola,2003,,21.0,46,49.6,Africa
+Central African Republic,2003,,44.0,47,45.8,Africa
+Lao People's Democratic Republic,2003,50.0,52.0,49,,
+Belarus,2003,56.0,53.0,50,68.9,Europe
+Congo,2003,,50.0,50,55.9,Africa
+Haiti,2003,,56.0,53,59.5,North America
+Timor-Leste,2003,,55.0,55,,
+Guinea,2003,,61.0,57,53.7,Africa
+Uganda,2003,44.0,57.0,59,50.4,Africa
+Guinea-Bissau,2003,,65.0,60,51.4,Africa
+Côte d’Ivoire,2003,63.0,68.0,61,,
+India,2003,,57.0,61,64.1,Asia
+Yemen,2003,38.0,61.0,61,64.5,Asia
+Mali,2003,79.0,67.0,63,52.9,Africa
+Madagascar,2003,61.0,65.0,66,59.5,Africa
+Pakistan,2003,62.0,66.0,66,62.8,Asia
+Democratic People's Republic of Korea,2003,27.0,99.0,68,,
+Djibouti,2003,,68.0,68,57.6,Africa
+Marshall Islands,2003,74.0,80.0,68,63.7,Oceania
+Papua New Guinea,2003,67.0,62.0,68,61.8,Oceania
+Türkiye,2003,68.0,69.0,68,,
+Venezuela (Bolivarian Republic of),2003,72.0,86.0,68,,
+Zimbabwe,2003,70.0,70.0,68,43.4,Africa
+Cambodia,2003,,69.0,69,62.5,Asia
+South Africa,2003,71.0,70.0,69,54.3,Africa
+Sudan,2003,,69.0,69,58.2,Africa
+Vanuatu,2003,64.0,67.0,69,69.3,Oceania
+Kiribati,2003,73.0,79.0,70,65.0,Oceania
+Indonesia,2003,64.0,80.0,71,67.4,Asia
+Cuba,2003,99.0,98.0,72,76.8,North America
+Togo,2003,,72.0,72,55.6,Africa
+Benin,2003,73.0,75.0,73,56.7,Africa
+Cameroon,2003,,72.0,73,53.9,Africa
+Kenya,2003,73.0,75.0,73,55.6,Africa
+Senegal,2003,,73.0,73,59.1,Africa
+Sierra Leone,2003,,66.0,73,47.0,Africa
+Lebanon,2003,74.0,74.0,74,75.6,Asia
+Georgia,2003,48.0,74.0,75,70.3,Asia
+Iraq,2003,63.0,73.0,75,65.6,Asia
+Suriname,2003,,74.0,75,65.6,South America
+Mauritania,2003,,75.0,76,61.3,Africa
+Azerbaijan,2003,51.0,79.0,77,66.8,Asia
+Myanmar,2003,8.0,86.0,78,61.0,Asia
+Nepal,2003,2.0,76.0,78,64.2,Asia
+Burkina Faso,2003,,83.0,79,51.8,Africa
+Dominican Republic,2003,79.0,65.0,79,70.3,North America
+Namibia,2003,,82.0,79,51.1,Africa
+Comoros,2003,28.0,80.0,80,59.3,Africa
+Ghana,2003,80.0,80.0,80,59.1,Africa
+Nauru,2003,77.0,66.0,80,58.1,Oceania
+Burundi,2003,,75.0,82,50.9,Africa
+Syrian Arab Republic,2003,81.0,85.0,83,,
+Turkmenistan,2003,97.0,66.0,83,65.7,Asia
+Zambia,2003,,85.0,83,48.3,Africa
+Austria,2003,83.0,84.0,84,78.8,Europe
+Guatemala,2003,,84.0,84,68.8,North America
+Malawi,2003,84.0,85.0,84,48.8,Africa
+Philippines,2003,52.0,85.0,84,69.9,Asia
+Solomon Islands,2003,79.0,84.0,84,67.6,Oceania
+Eswatini,2003,90.0,87.0,85,43.3,Africa
+Mozambique,2003,76.0,67.0,85,50.9,Africa
+Tajikistan,2003,58.0,82.0,85,65.6,Asia
+China,2003,75.0,87.0,86,73.4,Asia
+Ireland,2003,,86.0,86,78.1,Europe
+Nicaragua,2003,86.0,86.0,86,67.2,North America
+Paraguay,2003,86.0,86.0,86,70.3,South America
+Algeria,2003,,87.0,87,71.3,Africa
+Bangladesh,2003,5.0,90.0,87,66.8,Asia
+Bosnia and Herzegovina,2003,,87.0,87,75.8,Europe
+Ecuador,2003,82.0,97.0,87,74.0,South America
+Gambia,2003,94.0,87.0,87,57.6,Africa
+Bolivia (Plurinational State of),2003,80.0,82.0,88,,
+Costa Rica,2003,86.0,88.0,88,78.1,North America
+Barbados,2003,91.0,90.0,89,74.5,North America
+Serbia,2003,,89.0,89,72.4,Europe
+Guyana,2003,90.0,91.0,90,64.6,South America
+Lesotho,2003,17.0,90.0,90,44.5,Africa
+New Zealand,2003,89.0,86.0,90,79.2,Oceania
+Saint Lucia,2003,84.0,91.0,90,71.8,North America
+Samoa,2003,90.0,90.0,90,71.5,Oceania
+Canada,2003,14.0,88.0,91,79.7,North America
+Morocco,2003,90.0,91.0,91,67.9,Africa
+Trinidad and Tobago,2003,76.0,91.0,91,69.7,North America
+United Kingdom of Great Britain and Northern Ireland,2003,,91.0,91,,
+Uruguay,2003,91.0,91.0,91,75.8,South America
+Bahamas,2003,88.0,93.0,92,72.4,North America
+Brunei Darussalam,2003,99.0,99.0,92,,
+Cabo Verde,2003,66.0,93.0,92,,
+Colombia,2003,92.0,92.0,92,72.4,South America
+Honduras,2003,91.0,92.0,92,69.5,North America
+Micronesia (Federated States of),2003,89.0,88.0,92,,
+Norway,2003,,92.0,92,79.5,Europe
+Qatar,2003,93.0,93.0,92,75.6,Asia
+Australia,2003,95.0,92.0,93,80.5,Oceania
+Eritrea,2003,91.0,95.0,93,59.4,Africa
+Israel,2003,98.0,93.0,93,79.6,Asia
+Switzerland,2003,,95.0,93,80.5,Europe
+Tuvalu,2003,95.0,93.0,93,63.6,Oceania
+Armenia,2003,93.0,96.0,94,71.4,Asia
+Croatia,2003,,95.0,94,74.6,Europe
+El Salvador,2003,94.0,93.0,94,70.1,North America
+Estonia,2003,,95.0,94,72.2,Europe
+Fiji,2003,99.0,95.0,94,66.2,Oceania
+Greece,2003,92.0,93.0,94,79.0,Europe
+Lithuania,2003,95.0,91.0,94,72.1,Europe
+Malta,2003,89.0,94.0,94,78.8,Europe
+Peru,2003,65.0,95.0,94,72.2,South America
+Sao Tome and Principe,2003,43.0,94.0,94,63.2,Africa
+United Arab Emirates,2003,92.0,94.0,94,76.2,Asia
+Belgium,2003,64.0,96.0,95,78.3,Europe
+Bhutan,2003,95.0,96.0,95,64.7,Asia
+Libya,2003,96.0,95.0,95,71.1,Africa
+Niue,2003,95.0,95.0,95,67.5,Oceania
+Saudi Arabia,2003,95.0,95.0,95,73.6,Asia
+Slovenia,2003,,95.0,95,76.7,Europe
+Tunisia,2003,92.0,95.0,95,74.3,Africa
+United Republic of Tanzania,2003,95.0,97.0,95,,
+Argentina,2003,73.0,95.0,96,74.1,South America
+Belize,2003,96.0,95.0,96,68.9,North America
+Botswana,2003,90.0,96.0,96,50.9,Africa
+Bulgaria,2003,96.0,96.0,96,72.4,Europe
+Chile,2003,,96.0,96,77.4,South America
+Cook Islands,2003,93.0,95.0,96,70.9,Oceania
+Denmark,2003,,96.0,96,77.4,Europe
+Italy,2003,95.0,97.0,96,80.2,Europe
+Jamaica,2003,36.0,99.0,96,70.8,North America
+Malaysia,2003,95.0,96.0,96,73.8,Asia
+The former Yugoslav Republic of Macedonia,2003,,96.0,96,,
+Russian Federation,2003,94.0,97.0,96,,
+Rwanda,2003,96.0,96.0,96,53.4,Africa
+San Marino,2003,96.0,94.0,96,80.7,Europe
+Singapore,2003,95.0,96.0,96,79.4,Asia
+United States of America,2003,92.0,91.0,96,,
+Albania,2003,97.0,97.0,97,76.1,Europe
+Bahrain,2003,98.0,97.0,97,76.3,Asia
+Czechia,2003,92.0,97.0,97,75.4,Europe
+France,2003,28.0,96.0,97,79.4,Europe
+Germany,2003,90.0,96.0,97,78.5,Europe
+Grenada,2003,97.0,98.0,97,73.2,North America
+Iceland,2003,,97.0,97,80.8,Europe
+Japan,2003,,97.0,97,81.9,Asia
+Jordan,2003,97.0,97.0,97,72.6,Asia
+Republic of Korea,2003,91.0,94.0,97,,
+Romania,2003,98.0,97.0,97,69.8,Europe
+Ukraine,2003,77.0,99.0,97,68.2,Europe
+Cyprus,2003,88.0,98.0,98,77.8,Europe
+Egypt,2003,98.0,98.0,98,68.4,Africa
+Finland,2003,,96.0,98,78.5,Europe
+Kyrgyzstan,2003,99.0,98.0,98,66.2,Asia
+Latvia,2003,98.0,98.0,98,70.6,Europe
+Luxembourg,2003,95.0,99.0,98,77.8,Europe
+Maldives,2003,98.0,98.0,98,74.1,Asia
+Mexico,2003,98.0,98.0,98,74.3,North America
+Mongolia,2003,98.0,98.0,98,64.2,Asia
+Netherlands,2003,,98.0,98,78.7,Europe
+Occupied Palestinian territory,2003,97.0,98.0,98,,
+Panama,2003,98.0,95.0,98,75.2,North America
+Republic of Moldova,2003,99.0,98.0,98,,
+Spain,2003,81.0,99.0,98,79.8,Europe
+Thailand,2003,96.0,98.0,98,73.2,Asia
+Tonga,2003,93.0,98.0,98,69.5,Oceania
+Uzbekistan,2003,99.0,99.0,98,67.0,Asia
+Andorra,2003,81.0,99.0,99,83.9,Europe
+Antigua and Barbuda,2003,99.0,99.0,99,75.5,North America
+Brazil,2003,97.0,99.0,99,70.7,South America
+Dominica,2003,,99.0,99,71.4,North America
+Hungary,2003,,99.0,99,72.5,Europe
+Iran (Islamic Republic of),2003,98.0,99.0,99,,
+Kazakhstan,2003,99.0,99.0,99,64.6,Asia
+Kuwait,2003,99.0,99.0,99,77.0,Asia
+Mauritius,2003,97.0,99.0,99,72.3,Africa
+Monaco,2003,99.0,99.0,99,83.3,Europe
+Oman,2003,99.0,99.0,99,74.1,Asia
+Palau,2003,99.0,99.0,99,67.2,Oceania
+Poland,2003,97.0,98.0,99,74.7,Europe
+Portugal,2003,94.0,96.0,99,77.6,Europe
+Saint Kitts and Nevis,2003,99.0,99.0,99,70.8,North America
+Saint Vincent and the Grenadines,2003,31.0,99.0,99,72.4,North America
+Seychelles,2003,99.0,99.0,99,71.0,Africa
+Slovakia,2003,99.0,98.0,99,73.8,Europe
+Sri Lanka,2003,32.0,98.0,99,71.4,Asia
+Sweden,2003,,99.0,99,80.2,Europe
+Viet Nam,2003,78.0,96.0,99,,
+Chad,2002,,31.0,24,47.9,Africa
+Nigeria,2002,,40.0,25,47.9,Africa
+Ethiopia,2002,,55.0,35,51.5,Africa
+Afghanistan,2002,,36.0,36,56.5,Asia
+Democratic Republic of the Congo,2002,,40.0,38,,
+Equatorial Guinea,2002,,45.0,39,54.1,Africa
+Liberia,2002,,51.0,39,53.8,Africa
+Niger,2002,,43.0,39,50.6,Africa
+Somalia,2002,,40.0,40,50.7,Africa
+Congo,2002,,41.0,41,55.1,Africa
+Central African Republic,2002,,42.0,44,45.4,Africa
+Gabon,2002,,44.0,45,61.3,Africa
+Angola,2002,,22.0,47,47.4,Africa
+Haiti,2002,,54.0,50,58.9,North America
+Guinea,2002,,56.0,53,53.3,Africa
+Lao People's Democratic Republic,2002,,55.0,53,,
+Sierra Leone,2002,,54.0,53,46.4,Africa
+Cambodia,2002,,54.0,54,61.2,Asia
+Timor-Leste,2002,,38.0,54,,
+Guinea-Bissau,2002,,60.0,57,51.0,Africa
+Uganda,2002,29.0,57.0,57,49.6,Africa
+India,2002,,58.0,59,63.6,Asia
+Togo,2002,,58.0,59,55.3,Africa
+Senegal,2002,,60.0,60,58.2,Africa
+Sudan,2002,,60.0,60,59.0,Africa
+Mali,2002,,65.0,61,52.2,Africa
+Papua New Guinea,2002,60.0,54.0,61,61.7,Oceania
+Djibouti,2002,,62.0,62,57.2,Africa
+Madagascar,2002,51.0,61.0,62,58.9,Africa
+Pakistan,2002,,64.0,63,62.6,Asia
+Côte d’Ivoire,2002,48.0,70.0,64,,
+Democratic People's Republic of Korea,2002,,99.0,64,,
+Malawi,2002,64.0,79.0,64,47.2,Africa
+Venezuela (Bolivarian Republic of),2002,60.0,81.0,65,,
+Yemen,2002,31.0,64.0,65,63.9,Asia
+Cameroon,2002,,66.0,66,53.4,Africa
+Burkina Faso,2002,,69.0,69,51.3,Africa
+Indonesia,2002,63.0,80.0,70,67.1,Asia
+South Africa,2002,72.0,70.0,70,55.7,Africa
+Vanuatu,2002,66.0,67.0,70,69.2,Oceania
+Zimbabwe,2002,73.0,73.0,71,44.6,Africa
+Nepal,2002,,72.0,72,63.3,Asia
+Suriname,2002,,74.0,73,65.5,South America
+Saint Lucia,2002,14.0,90.0,74,71.5,North America
+Benin,2002,15.0,76.0,75,56.6,Africa
+Viet Nam,2002,,92.0,75,,
+Azerbaijan,2002,50.0,80.0,76,66.2,Asia
+Mozambique,2002,76.0,76.0,76,50.6,Africa
+Bolivia (Plurinational State of),2002,77.0,76.0,77,,
+Iraq,2002,65.0,76.0,77,67.1,Asia
+Kiribati,2002,79.0,96.0,77,64.8,Oceania
+Lebanon,2002,77.0,77.0,77,75.1,Asia
+Namibia,2002,,78.0,77,51.3,Africa
+Ghana,2002,80.0,80.0,78,58.6,Africa
+Solomon Islands,2002,75.0,78.0,78,67.5,Oceania
+Türkiye,2002,72.0,78.0,78,,
+Myanmar,2002,,84.0,79,60.7,Asia
+Philippines,2002,42.0,77.0,79,69.8,Asia
+Bosnia and Herzegovina,2002,,86.0,80,74.6,Europe
+Marshall Islands,2002,80.0,80.0,80,63.7,Oceania
+Nauru,2002,75.0,59.0,80,58.2,Oceania
+Burundi,2002,,74.0,81,49.9,Africa
+Colombia,2002,78.0,83.0,81,71.9,South America
+El Salvador,2002,81.0,81.0,81,70.2,North America
+Dominican Republic,2002,63.0,74.0,82,69.9,North America
+Guatemala,2002,,82.0,82,68.4,North America
+Austria,2002,81.0,82.0,83,78.8,Europe
+Bangladesh,2002,,83.0,83,66.6,Asia
+Ireland,2002,,83.0,83,77.6,Europe
+Georgia,2002,51.0,89.0,84,70.0,Asia
+Kenya,2002,84.0,83.0,84,55.0,Africa
+Lesotho,2002,,84.0,84,45.6,Africa
+Micronesia (Federated States of),2002,85.0,84.0,84,,
+Syrian Arab Republic,2002,80.0,86.0,84,,
+Zambia,2002,,85.0,84,47.0,Africa
+Eswatini,2002,88.0,87.0,85,44.5,Africa
+Nicaragua,2002,85.0,85.0,85,67.2,North America
+Tajikistan,2002,39.0,84.0,85,64.8,Asia
+Algeria,2002,,86.0,86,71.2,Africa
+Bhutan,2002,83.0,89.0,86,64.1,Asia
+China,2002,70.0,86.0,86,73.0,Asia
+Barbados,2002,66.0,86.0,87,74.4,North America
+Gambia,2002,92.0,86.0,87,57.1,Africa
+Paraguay,2002,,87.0,87,70.0,South America
+Canada,2002,,88.0,88,79.6,North America
+Ecuador,2002,75.0,88.0,88,73.6,South America
+Mauritius,2002,88.0,88.0,88,72.0,Africa
+Rwanda,2002,88.0,85.0,88,51.0,Africa
+Belize,2002,97.0,93.0,89,68.8,North America
+Comoros,2002,,98.0,89,59.1,Africa
+Mauritania,2002,,91.0,89,61.3,Africa
+United Republic of Tanzania,2002,89.0,91.0,89,,
+Eritrea,2002,86.0,92.0,90,58.8,Africa
+Israel,2002,98.0,91.0,90,79.3,Asia
+New Zealand,2002,89.0,84.0,90,78.9,Oceania
+Tonga,2002,95.0,90.0,90,69.3,Oceania
+Cabo Verde,2002,40.0,92.0,91,,
+Guyana,2002,91.0,93.0,91,64.7,South America
+United Kingdom of Great Britain and Northern Ireland,2002,,91.0,91,,
+Australia,2002,95.0,92.0,92,80.1,Oceania
+Greece,2002,91.0,92.0,92,79.0,Europe
+Samoa,2002,92.0,91.0,92,71.3,Oceania
+Sao Tome and Principe,2002,,92.0,92,62.6,Africa
+Argentina,2002,66.0,94.0,93,74.4,South America
+Bulgaria,2002,88.0,94.0,93,72.2,Europe
+Fiji,2002,99.0,94.0,93,65.7,Oceania
+Germany,2002,87.0,97.0,93,78.5,Europe
+Italy,2002,95.0,96.0,93,80.1,Europe
+Libya,2002,91.0,93.0,93,71.0,Africa
+Norway,2002,,93.0,93,79.0,Europe
+Slovenia,2002,,93.0,93,76.8,Europe
+Switzerland,2002,,95.0,93,80.4,Europe
+Armenia,2002,91.0,96.0,94,71.0,Asia
+Bahamas,2002,89.0,93.0,94,72.2,North America
+Brunei Darussalam,2002,99.0,99.0,94,,
+Costa Rica,2002,94.0,94.0,94,78.0,North America
+Estonia,2002,,94.0,94,71.9,Europe
+Malaysia,2002,95.0,94.0,94,73.6,Asia
+Morocco,2002,92.0,94.0,94,67.5,Africa
+Singapore,2002,95.0,94.0,94,79.3,Asia
+United Arab Emirates,2002,92.0,94.0,94,74.9,Asia
+United States of America,2002,88.0,90.0,94,,
+Belgium,2002,60.0,96.0,95,78.2,Europe
+Croatia,2002,,95.0,95,74.7,Europe
+Honduras,2002,94.0,95.0,95,69.4,North America
+Iceland,2002,,95.0,95,80.5,Europe
+Jordan,2002,95.0,95.0,95,72.4,Asia
+Kazakhstan,2002,95.0,95.0,95,64.3,Asia
+Lithuania,2002,94.0,97.0,95,71.8,Europe
+Malta,2002,,95.0,95,78.5,Europe
+Peru,2002,,95.0,95,71.7,South America
+Saudi Arabia,2002,97.0,95.0,95,73.3,Asia
+Serbia,2002,,95.0,95,72.3,Europe
+Uruguay,2002,95.0,93.0,95,75.5,South America
+Japan,2002,,89.0,96,81.8,Asia
+The former Yugoslav Republic of Macedonia,2002,,97.0,96,,
+Qatar,2002,98.0,96.0,96,75.4,Asia
+San Marino,2002,96.0,95.0,96,80.8,Europe
+Thailand,2002,95.0,97.0,96,72.9,Asia
+Trinidad and Tobago,2002,5.0,96.0,96,70.5,North America
+Tunisia,2002,93.0,96.0,96,74.1,Africa
+Andorra,2002,84.0,95.0,97,82.2,Europe
+Botswana,2002,88.0,97.0,97,50.6,Africa
+Chile,2002,,97.0,97,77.4,South America
+Cook Islands,2002,93.0,97.0,97,70.5,Oceania
+Egypt,2002,97.0,97.0,97,68.6,Africa
+France,2002,29.0,97.0,97,79.4,Europe
+Latvia,2002,98.0,98.0,97,70.4,Europe
+Mexico,2002,97.0,98.0,97,74.1,North America
+Netherlands,2002,,97.0,97,78.4,Europe
+Occupied Palestinian territory,2002,91.0,97.0,97,,
+Republic of Korea,2002,92.0,99.0,97,,
+Republic of Moldova,2002,99.0,98.0,97,,
+Russian Federation,2002,81.0,97.0,97,,
+Saint Kitts and Nevis,2002,96.0,97.0,97,70.5,North America
+Albania,2002,96.0,98.0,98,75.9,Europe
+Antigua and Barbuda,2002,99.0,93.0,98,75.5,North America
+Bahrain,2002,98.0,98.0,98,76.1,Asia
+Cyprus,2002,88.0,98.0,98,77.5,Europe
+Czechia,2002,86.0,97.0,98,75.4,Europe
+Denmark,2002,,98.0,98,77.1,Europe
+Dominica,2002,,98.0,98,72.3,North America
+Finland,2002,,95.0,98,78.3,Europe
+Grenada,2002,98.0,98.0,98,73.2,North America
+Kyrgyzstan,2002,99.0,99.0,98,65.9,Asia
+Maldives,2002,98.0,98.0,98,73.3,Asia
+Mongolia,2002,98.0,98.0,98,63.5,Asia
+Portugal,2002,82.0,96.0,98,77.4,Europe
+Romania,2002,99.0,98.0,98,70.7,Europe
+Spain,2002,82.0,98.0,98,79.8,Europe
+Sri Lanka,2002,,98.0,98,71.1,Asia
+Turkmenistan,2002,96.0,99.0,98,65.4,Asia
+Tuvalu,2002,99.0,98.0,98,63.6,Oceania
+Belarus,2002,99.0,99.0,99,68.5,Europe
+Brazil,2002,92.0,99.0,99,70.4,South America
+Cuba,2002,98.0,98.0,99,76.6,North America
+Hungary,2002,,98.0,99,72.5,Europe
+Iran (Islamic Republic of),2002,99.0,99.0,99,,
+Jamaica,2002,,99.0,99,70.9,North America
+Kuwait,2002,99.0,99.0,99,77.0,Asia
+Luxembourg,2002,95.0,99.0,99,78.4,Europe
+Monaco,2002,99.0,99.0,99,82.5,Europe
+Niue,2002,99.0,99.0,99,67.5,Oceania
+Oman,2002,99.0,99.0,99,73.9,Asia
+Palau,2002,99.0,99.0,99,67.0,Oceania
+Panama,2002,98.0,99.0,99,74.8,North America
+Poland,2002,98.0,98.0,99,74.6,Europe
+Saint Vincent and the Grenadines,2002,,99.0,99,72.2,North America
+Seychelles,2002,98.0,99.0,99,70.4,Africa
+Slovakia,2002,99.0,98.0,99,73.8,Europe
+Sweden,2002,,99.0,99,79.9,Europe
+Ukraine,2002,48.0,99.0,99,68.2,Europe
+Uzbekistan,2002,62.0,99.0,99,66.6,Asia
+Chad,2001,,26.0,26,47.8,Africa
+Nigeria,2001,,36.0,27,47.6,Africa
+Democratic Republic of the Congo,2001,,30.0,30,,
+Congo,2001,,32.0,31,54.4,Africa
+Afghanistan,2001,,35.0,33,55.8,Asia
+Ethiopia,2001,,54.0,33,51.0,Africa
+Somalia,2001,,33.0,33,50.7,Africa
+Niger,2001,,42.0,36,49.8,Africa
+Equatorial Guinea,2001,,43.0,37,53.6,Africa
+Sierra Leone,2001,,38.0,38,45.7,Africa
+Central African Republic,2001,,40.0,40,45.4,Africa
+Angola,2001,,28.0,42,46.6,Africa
+Liberia,2001,,54.0,42,52.8,Africa
+Gabon,2001,,44.0,45,61.3,Africa
+Haiti,2001,,52.0,46,58.5,North America
+Marshall Islands,2001,76.0,56.0,48,63.6,Oceania
+Mali,2001,,56.0,49,51.3,Africa
+Guinea,2001,,52.0,50,52.7,Africa
+Togo,2001,,51.0,50,54.9,Africa
+Lao People's Democratic Republic,2001,,55.0,52,,
+Senegal,2001,,49.0,52,57.6,Africa
+Djibouti,2001,,49.0,53,56.9,Africa
+Guinea-Bissau,2001,,56.0,53,50.4,Africa
+Papua New Guinea,2001,59.0,52.0,55,61.8,Oceania
+Uganda,2001,,56.0,55,49.0,Africa
+India,2001,,58.0,59,63.1,Asia
+Cambodia,2001,,59.0,60,60.0,Asia
+Madagascar,2001,,60.0,60,58.6,Africa
+Pakistan,2001,,63.0,61,62.4,Asia
+Burkina Faso,2001,,62.0,62,51.1,Africa
+Democratic People's Republic of Korea,2001,,98.0,62,,
+Cameroon,2001,,61.0,63,53.1,Africa
+Côte d’Ivoire,2001,10.0,70.0,66,,
+Sudan,2001,,66.0,66,58.6,Africa
+Suriname,2001,,65.0,68,65.5,South America
+Comoros,2001,,70.0,70,59.2,Africa
+Vanuatu,2001,68.0,67.0,70,69.0,Oceania
+Venezuela (Bolivarian Republic of),2001,53.0,87.0,70,,
+Bolivia (Plurinational State of),2001,77.0,71.0,71,,
+South Africa,2001,72.0,71.0,71,57.3,Africa
+Dominican Republic,2001,66.0,71.0,72,69.6,North America
+Nepal,2001,,73.0,72,63.3,Asia
+Mozambique,2001,25.0,72.0,73,50.1,Africa
+Myanmar,2001,,77.0,73,60.4,Asia
+Yemen,2001,19.0,73.0,73,63.2,Asia
+Mauritania,2001,,75.0,75,61.2,Africa
+Micronesia (Federated States of),2001,81.0,79.0,75,,
+Zimbabwe,2001,76.0,76.0,75,42.0,Africa
+Benin,2001,,77.0,76,56.7,Africa
+Indonesia,2001,62.0,77.0,76,66.8,Asia
+Azerbaijan,2001,,77.0,77,65.5,Asia
+Guatemala,2001,,78.0,77,67.9,North America
+Rwanda,2001,,76.0,77,49.0,Africa
+Iraq,2001,66.0,80.0,78,67.0,Asia
+Lesotho,2001,,78.0,78,46.8,Africa
+Namibia,2001,,79.0,78,51.3,Africa
+Ghana,2001,,81.0,79,58.1,Africa
+Philippines,2001,45.0,76.0,79,69.6,Asia
+Colombia,2001,80.0,83.0,80,71.5,South America
+Kenya,2001,,77.0,80,54.5,Africa
+Lebanon,2001,80.0,80.0,80,74.4,Asia
+Burundi,2001,,72.0,81,48.4,Africa
+Syrian Arab Republic,2001,80.0,83.0,82,,
+Argentina,2001,,85.0,83,74.2,South America
+Austria,2001,44.0,83.0,84,78.7,Europe
+Barbados,2001,18.0,93.0,84,74.2,North America
+Eswatini,2001,86.0,87.0,84,46.0,Africa
+Ireland,2001,,84.0,84,77.1,Europe
+Solomon Islands,2001,83.0,88.0,84,67.4,Oceania
+Bangladesh,2001,,85.0,85,66.1,Asia
+Guyana,2001,85.0,90.0,85,64.8,South America
+Kiribati,2001,85.0,88.0,85,64.7,Oceania
+Tajikistan,2001,,84.0,85,64.1,Asia
+Zambia,2001,,86.0,85,46.0,Africa
+China,2001,65.0,86.0,86,72.6,Asia
+Eritrea,2001,,89.0,86,58.3,Africa
+Gambia,2001,91.0,85.0,87,57.0,Africa
+Georgia,2001,61.0,83.0,87,69.6,Asia
+Nicaragua,2001,87.0,89.0,87,67.2,North America
+United Republic of Tanzania,2001,,65.0,87,,
+Bhutan,2001,89.0,88.0,88,63.4,Asia
+Türkiye,2001,77.0,88.0,88,,
+Algeria,2001,,89.0,89,70.8,Africa
+Canada,2001,,,89,79.5,North America
+Ecuador,2001,69.0,90.0,89,73.2,South America
+Paraguay,2001,,90.0,89,69.9,South America
+Cabo Verde,2001,,91.0,90,,
+Cook Islands,2001,93.0,90.0,90,70.2,Oceania
+Malawi,2001,,86.0,90,45.9,Africa
+New Zealand,2001,90.0,82.0,90,78.7,Oceania
+Peru,2001,,90.0,90,71.0,South America
+Samoa,2001,93.0,88.0,90,71.0,Oceania
+Bosnia and Herzegovina,2001,,92.0,91,75.1,Europe
+Costa Rica,2001,80.0,92.0,91,77.5,North America
+Fiji,2001,98.0,92.0,91,66.3,Oceania
+Greece,2001,90.0,90.0,91,78.8,Europe
+The former Yugoslav Republic of Macedonia,2001,,91.0,91,,
+Norway,2001,,91.0,91,78.9,Europe
+Trinidad and Tobago,2001,,91.0,91,69.6,North America
+United Kingdom of Great Britain and Northern Ireland,2001,,91.0,91,,
+Australia,2001,94.0,91.0,92,80.0,Oceania
+El Salvador,2001,75.0,94.0,92,69.6,North America
+Iceland,2001,,92.0,92,80.7,Europe
+Israel,2001,96.0,93.0,92,79.3,Asia
+Mauritius,2001,92.0,93.0,92,71.9,Africa
+Sao Tome and Principe,2001,,90.0,92,62.0,Africa
+Slovenia,2001,,93.0,92,76.5,Europe
+Germany,2001,86.0,96.0,93,78.4,Europe
+Italy,2001,95.0,96.0,93,79.9,Europe
+Qatar,2001,93.0,93.0,93,75.3,Asia
+Serbia,2001,,93.0,93,72.3,Europe
+Switzerland,2001,,95.0,93,80.3,Europe
+Armenia,2001,69.0,97.0,94,70.9,Asia
+Bulgaria,2001,93.0,94.0,94,71.9,Europe
+Croatia,2001,,94.0,94,74.6,Europe
+Estonia,2001,,94.0,94,71.4,Europe
+Libya,2001,93.0,94.0,94,70.9,Africa
+Tonga,2001,96.0,95.0,94,69.1,Oceania
+United Arab Emirates,2001,92.0,94.0,94,74.6,Asia
+United States of America,2001,89.0,89.0,94,,
+Uruguay,2001,94.0,94.0,94,75.3,South America
+Belgium,2001,60.0,96.0,95,78.1,Europe
+Japan,2001,,81.0,95,81.5,Asia
+Kazakhstan,2001,95.0,95.0,95,64.4,Asia
+Lithuania,2001,95.0,97.0,95,71.8,Europe
+Malta,2001,,95.0,95,79.0,Europe
+Mongolia,2001,95.0,95.0,95,63.3,Asia
+Nauru,2001,95.0,99.0,95,58.3,Oceania
+Turkmenistan,2001,,94.0,95,65.2,Asia
+Andorra,2001,84.0,95.0,96,81.7,Europe
+Belize,2001,96.0,96.0,96,68.4,North America
+Grenada,2001,96.0,96.0,96,73.1,North America
+Honduras,2001,95.0,99.0,96,69.0,North America
+Iran (Islamic Republic of),2001,94.0,95.0,96,,
+Malaysia,2001,95.0,95.0,96,73.3,Asia
+Morocco,2001,84.0,93.0,96,67.2,Africa
+Russian Federation,2001,43.0,97.0,96,,
+Seychelles,2001,95.0,96.0,96,70.0,Africa
+Singapore,2001,95.0,95.0,96,79.2,Asia
+Spain,2001,83.0,95.0,96,79.7,Europe
+Thailand,2001,95.0,97.0,96,72.6,Asia
+Tuvalu,2001,99.0,96.0,96,63.5,Oceania
+Viet Nam,2001,,96.0,96,,
+Albania,2001,96.0,97.0,97,75.6,Europe
+Antigua and Barbuda,2001,96.0,99.0,97,75.1,North America
+Botswana,2001,87.0,97.0,97,50.7,Africa
+Brunei Darussalam,2001,99.0,99.0,97,,
+Chile,2001,,96.0,97,76.8,South America
+Cyprus,2001,89.0,97.0,97,77.0,Europe
+Denmark,2001,,97.0,97,77.0,Europe
+France,2001,28.0,98.0,97,79.2,Europe
+Latvia,2001,96.0,97.0,97,70.1,Europe
+Mexico,2001,97.0,97.0,97,73.9,North America
+Netherlands,2001,,97.0,97,78.3,Europe
+Occupied Palestinian territory,2001,92.0,97.0,97,,
+Portugal,2001,70.0,96.0,97,77.2,Europe
+Republic of Korea,2001,89.0,99.0,97,,
+Republic of Moldova,2001,94.0,98.0,97,,
+San Marino,2001,96.0,95.0,97,80.4,Europe
+Saudi Arabia,2001,95.0,97.0,97,73.0,Asia
+Brazil,2001,91.0,99.0,98,70.2,South America
+Cuba,2001,98.0,99.0,98,76.4,North America
+Czechia,2001,,97.0,98,75.3,Europe
+Finland,2001,,95.0,98,78.1,Europe
+Maldives,2001,98.0,97.0,98,72.2,Asia
+Palau,2001,98.0,98.0,98,66.6,Oceania
+Poland,2001,95.0,98.0,98,74.2,Europe
+Sri Lanka,2001,,98.0,98,70.8,Asia
+Tunisia,2001,94.0,98.0,98,73.8,Africa
+Bahamas,2001,21.0,98.0,99,72.1,North America
+Bahrain,2001,99.0,99.0,99,75.9,Asia
+Belarus,2001,93.0,99.0,99,68.9,Europe
+Dominica,2001,,99.0,99,71.7,North America
+Egypt,2001,99.0,99.0,99,68.3,Africa
+Hungary,2001,,99.0,99,72.4,Europe
+Jamaica,2001,,99.0,99,70.8,North America
+Jordan,2001,97.0,97.0,99,72.1,Asia
+Kuwait,2001,99.0,99.0,99,76.9,Asia
+Kyrgyzstan,2001,57.0,99.0,99,65.8,Asia
+Luxembourg,2001,86.0,99.0,99,78.2,Europe
+Monaco,2001,99.0,99.0,99,82.1,Europe
+Niue,2001,99.0,99.0,99,67.4,Oceania
+Oman,2001,99.0,99.0,99,73.8,Asia
+Panama,2001,98.0,95.0,99,74.4,North America
+Romania,2001,98.0,99.0,99,71.3,Europe
+Saint Kitts and Nevis,2001,99.0,99.0,99,70.2,North America
+Saint Lucia,2001,,99.0,99,71.1,North America
+Saint Vincent and the Grenadines,2001,,99.0,99,71.9,North America
+Slovakia,2001,99.0,99.0,99,73.6,Europe
+Sweden,2001,,99.0,99,79.8,Europe
+Ukraine,2001,7.0,99.0,99,68.2,Europe
+Uzbekistan,2001,,99.0,99,66.1,Asia
+Afghanistan,2000,,24.0,24,55.3,Asia
+Nigeria,2000,,31.0,29,47.2,Africa
+Ethiopia,2000,,55.0,30,50.5,Africa
+Angola,2000,,21.0,31,46.0,Africa
+Congo,2000,,31.0,33,53.7,Africa
+Somalia,2000,,37.0,33,50.7,Africa
+Niger,2000,,41.0,34,49.3,Africa
+Equatorial Guinea,2000,,41.0,35,53.2,Africa
+Central African Republic,2000,,38.0,37,45.4,Africa
+Chad,2000,,30.0,37,47.4,Africa
+Marshall Islands,2000,38.0,36.0,39,63.3,Oceania
+Democratic Republic of the Congo,2000,,42.0,40,,
+Haiti,2000,,50.0,43,58.4,North America
+Mali,2000,,53.0,43,50.5,Africa
+Nauru,2000,58.0,27.0,44,58.7,Oceania
+Sierra Leone,2000,,46.0,44,45.1,Africa
+Burkina Faso,2000,,45.0,45,50.8,Africa
+Gabon,2000,,44.0,45,61.1,Africa
+Djibouti,2000,,46.0,46,56.6,Africa
+Guinea,2000,,47.0,46,52.5,Africa
+Liberia,2000,,56.0,46,51.4,Africa
+Guinea-Bissau,2000,,52.0,49,50.1,Africa
+Lao People's Democratic Republic,2000,,57.0,51,,
+Mauritania,2000,,58.0,51,61.0,Africa
+Senegal,2000,,49.0,52,56.9,Africa
+Uganda,2000,,55.0,52,48.3,Africa
+Democratic People's Republic of Korea,2000,,93.0,56,,
+Madagascar,2000,,58.0,57,57.9,Africa
+India,2000,,57.0,58,62.7,Asia
+Cambodia,2000,,62.0,59,58.6,Asia
+Pakistan,2000,,61.0,59,62.1,Asia
+Papua New Guinea,2000,57.0,51.0,59,61.7,Oceania
+Cameroon,2000,,57.0,62,52.9,Africa
+Sudan,2000,,62.0,62,58.3,Africa
+Togo,2000,,63.0,64,54.7,Africa
+Côte d’Ivoire,2000,,66.0,65,,
+Comoros,2000,,70.0,70,58.8,Africa
+Mozambique,2000,,69.0,70,49.5,Africa
+Saint Lucia,2000,,70.0,70,70.8,North America
+Suriname,2000,,70.0,71,65.5,South America
+Vanuatu,2000,70.0,67.0,71,69.0,Oceania
+South Africa,2000,73.0,71.0,73,58.5,Africa
+Nepal,2000,,74.0,74,62.6,Asia
+Yemen,2000,14.0,74.0,74,62.6,Asia
+Bolivia (Plurinational State of),2000,77.0,74.0,75,,
+Indonesia,2000,65.0,72.0,75,66.4,Asia
+Malawi,2000,,73.0,75,44.5,Africa
+Azerbaijan,2000,,75.0,76,64.9,Asia
+Venezuela (Bolivarian Republic of),2000,5.0,86.0,77,,
+Benin,2000,,78.0,78,56.6,Africa
+Dominican Republic,2000,68.0,71.0,78,69.4,North America
+Philippines,2000,7.0,74.0,78,69.4,Asia
+Zimbabwe,2000,79.0,78.0,78,44.7,Africa
+Colombia,2000,78.0,82.0,79,71.3,South America
+Namibia,2000,,80.0,79,52.0,Africa
+United Republic of Tanzania,2000,,64.0,79,,
+Burundi,2000,,71.0,80,47.5,Africa
+Gambia,2000,91.0,84.0,80,56.9,Africa
+Georgia,2000,55.0,81.0,80,69.6,Asia
+Iraq,2000,67.0,83.0,80,66.8,Asia
+Qatar,2000,89.0,91.0,80,74.8,Asia
+Austria,2000,33.0,71.0,81,78.2,Europe
+Eritrea,2000,,82.0,81,56.1,Africa
+Guatemala,2000,,80.0,81,67.4,North America
+Bangladesh,2000,,83.0,82,65.8,Asia
+Kenya,2000,,80.0,82,54.4,Africa
+Myanmar,2000,,88.0,82,60.2,Asia
+Sao Tome and Principe,2000,,87.0,82,61.7,Africa
+Tuvalu,2000,81.0,82.0,82,63.5,Oceania
+Argentina,2000,,88.0,83,73.9,South America
+Lebanon,2000,83.0,83.0,83,73.9,Asia
+Lesotho,2000,,82.0,83,48.4,Africa
+Nicaragua,2000,83.0,85.0,83,67.2,North America
+Tajikistan,2000,,86.0,83,63.3,Asia
+Eswatini,2000,83.0,87.0,84,47.3,Africa
+Syrian Arab Republic,2000,79.0,86.0,84,,
+Bosnia and Herzegovina,2000,,87.0,85,74.5,Europe
+China,2000,60.0,86.0,85,71.9,Asia
+Japan,2000,,98.0,85,81.2,Asia
+Micronesia (Federated States of),2000,87.0,85.0,85,,
+Türkiye,2000,71.0,85.0,85,,
+Zambia,2000,,85.0,85,45.2,Africa
+Algeria,2000,,86.0,86,70.5,Africa
+Ireland,2000,,86.0,86,76.5,Europe
+Paraguay,2000,,86.0,86,69.8,South America
+Solomon Islands,2000,81.0,88.0,86,67.2,Oceania
+Ecuador,2000,36.0,83.0,87,72.8,South America
+Italy,2000,94.0,97.0,87,79.6,Europe
+Costa Rica,2000,89.0,80.0,88,77.6,North America
+Ghana,2000,,88.0,88,58.2,Africa
+Guyana,2000,,79.0,88,64.5,South America
+Mauritius,2000,88.0,88.0,88,71.6,Africa
+Canada,2000,,,89,79.2,North America
+Greece,2000,89.0,89.0,89,78.4,Europe
+Australia,2000,,90.0,90,79.6,Oceania
+Cabo Verde,2000,,90.0,90,,
+Fiji,2000,98.0,91.0,90,66.3,Oceania
+Germany,2000,84.0,94.0,90,78.1,Europe
+Kiribati,2000,90.0,90.0,90,64.4,Oceania
+New Zealand,2000,90.0,82.0,90,78.7,Oceania
+Norway,2000,,91.0,90,78.7,Europe
+Rwanda,2000,,90.0,90,47.1,Africa
+Trinidad and Tobago,2000,,90.0,90,69.1,North America
+Uruguay,2000,92.0,92.0,90,75.0,South America
+Belize,2000,76.0,91.0,91,68.6,North America
+Chile,2000,,91.0,91,76.9,South America
+Jordan,2000,93.0,94.0,91,71.9,Asia
+Slovenia,2000,,93.0,91,76.2,Europe
+United Kingdom of Great Britain and Northern Ireland,2000,,91.0,91,,
+Bhutan,2000,98.0,98.0,92,62.0,Asia
+Cook Islands,2000,98.0,92.0,92,70.0,Oceania
+Armenia,2000,55.0,96.0,93,70.6,Asia
+Barbados,2000,,86.0,93,74.1,North America
+Bulgaria,2000,94.0,94.0,93,71.6,Europe
+Croatia,2000,,94.0,93,74.6,Europe
+Estonia,2000,,93.0,93,71.3,Europe
+Israel,2000,98.0,93.0,93,78.9,Asia
+Jamaica,2000,,95.0,93,70.9,North America
+Occupied Palestinian territory,2000,95.0,93.0,93,,
+Switzerland,2000,,95.0,93,79.8,Europe
+Honduras,2000,93.0,88.0,94,68.7,North America
+Libya,2000,92.0,94.0,94,70.7,Africa
+Lithuania,2000,98.0,92.0,94,72.1,Europe
+Malta,2000,,94.0,94,77.6,Europe
+Mongolia,2000,93.0,94.0,94,62.9,Asia
+United Arab Emirates,2000,92.0,94.0,94,74.4,Asia
+United States of America,2000,90.0,90.0,94,,
+Antigua and Barbuda,2000,,96.0,95,74.6,North America
+Belgium,2000,60.0,96.0,95,77.8,Europe
+Cuba,2000,98.0,98.0,95,76.2,North America
+Morocco,2000,43.0,95.0,95,66.8,Africa
+The former Yugoslav Republic of Macedonia,2000,,96.0,95,,
+Republic of Moldova,2000,92.0,97.0,95,,
+Saudi Arabia,2000,93.0,95.0,95,72.5,Asia
+Serbia,2000,,98.0,95,71.4,Europe
+Spain,2000,77.0,95.0,95,79.4,Europe
+Tonga,2000,97.0,95.0,95,69.0,Oceania
+Latvia,2000,95.0,96.0,96,70.3,Europe
+Palau,2000,96.0,96.0,96,65.9,Oceania
+Portugal,2000,58.0,96.0,96,76.8,Europe
+Russian Federation,2000,,97.0,96,,
+Viet Nam,2000,,96.0,96,,
+Albania,2000,96.0,97.0,97,75.4,Europe
+Bahrain,2000,97.0,97.0,97,75.5,Asia
+Botswana,2000,86.0,97.0,97,51.0,Africa
+Cyprus,2000,89.0,97.0,97,76.6,Europe
+Denmark,2000,,97.0,97,76.8,Europe
+France,2000,26.0,98.0,97,79.0,Europe
+Grenada,2000,,97.0,97,72.8,North America
+Kazakhstan,2000,99.0,96.0,97,64.2,Asia
+Mexico,2000,97.0,97.0,97,73.6,North America
+Netherlands,2000,,97.0,97,78.1,Europe
+Republic of Korea,2000,93.0,99.0,97,,
+Thailand,2000,95.0,97.0,97,72.3,Asia
+Tunisia,2000,94.0,97.0,97,73.7,Africa
+Turkmenistan,2000,,98.0,97,65.0,Asia
+Andorra,2000,84.0,95.0,98,80.9,Europe
+Brazil,2000,94.0,99.0,98,69.7,South America
+Czechia,2000,,98.0,98,75.0,Europe
+Egypt,2000,98.0,98.0,98,68.0,Africa
+Iceland,2000,,98.0,98,79.9,Europe
+Kuwait,2000,95.0,94.0,98,76.7,Asia
+Malaysia,2000,97.0,98.0,98,72.8,Asia
+Maldives,2000,96.0,98.0,98,70.9,Asia
+Panama,2000,,99.0,98,74.0,North America
+Peru,2000,,93.0,98,70.4,South America
+Poland,2000,99.0,98.0,98,73.7,Europe
+Saint Vincent and the Grenadines,2000,,99.0,98,71.4,North America
+Samoa,2000,93.0,98.0,98,70.7,Oceania
+San Marino,2000,97.0,96.0,98,79.9,Europe
+Seychelles,2000,97.0,98.0,98,69.7,Africa
+Singapore,2000,97.0,98.0,98,79.1,Asia
+Bahamas,2000,,91.0,99,72.0,North America
+Belarus,2000,70.0,99.0,99,69.2,Europe
+Brunei Darussalam,2000,99.0,99.0,99,,
+Dominica,2000,,99.0,99,72.7,North America
+El Salvador,2000,99.0,98.0,99,69.9,North America
+Finland,2000,,96.0,99,77.7,Europe
+Hungary,2000,,99.0,99,71.8,Europe
+Iran (Islamic Republic of),2000,99.0,99.0,99,,
+Kyrgyzstan,2000,44.0,99.0,99,65.4,Asia
+Luxembourg,2000,77.0,99.0,99,77.8,Europe
+Monaco,2000,99.0,99.0,99,81.6,Europe
+Niue,2000,99.0,99.0,99,67.4,Oceania
+Oman,2000,99.0,99.0,99,73.5,Asia
+Romania,2000,98.0,99.0,99,71.3,Europe
+Saint Kitts and Nevis,2000,99.0,99.0,99,69.8,North America
+Slovakia,2000,98.0,98.0,99,73.1,Europe
+Sri Lanka,2000,,99.0,99,70.4,Asia
+Sweden,2000,,99.0,99,79.7,Europe
+Ukraine,2000,4.0,99.0,99,67.9,Europe
+Uzbekistan,2000,,99.0,99,65.7,Asia
