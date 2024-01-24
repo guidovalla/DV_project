@@ -25,14 +25,15 @@
     // Data and color scale
     const data = new Map();
     const colorScale = d3.scaleThreshold()
-      .domain([100000, 1000000, 10000000, 30000000, 100000000, 500000000])
+      .domain([0.001, 0.01, 0.1, 0.2, 0.3, 0.5])
       .range(d3.schemeBlues[7]);
     
     // Load external data and boot
     Promise.all([
     d3.json("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world.geojson"),
-    d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world_population.csv", function(d) {
-        data.set(d.code, +d.pop)
+    //d3.csv("https://raw.githubusercontent.com/holtzy/D3-graph-gallery/master/DATA/world_population.csv", function(d) {
+    d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2_new.csv", function(d) {
+        data.set(d.code, +d.perc)
     })]).then(function(loadData){
         let topo = loadData[0]
     
