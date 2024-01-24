@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Life Expectancy</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+    <!-- End Logo -->
+
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <span>Introduction</span>
+        </a>
+      </li>
+      <!-- End Dashboard Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <span>Section 1</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <span>Section 2</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link " href="section3.html">
+          <span>Section 3</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <span>Section 4</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <span>Conclusion</span>
+        </a>
+      </li>
+
+    </ul>
+
+  </aside>
+  <!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Dashboard</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+      <div class="row">
+
+        <!-- Left side columns -->
+        <div class="col-lg-8">
+          <div class="row">
+
+            <!-- Chart One -->
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Chart 1</h5>
+                      <!-- Create a container to host the charts -->
+                      <!-- first chart -->
+                      <div id="container"></div>
+                      <!-- Initialize a Dropdown -->
+                      <select id="YearsButton"></select>
+
+                      <script>
+                          // Declare the chart dimensions and margins.
+                          const margin = { top: 10, right: 60, bottom: 60, left: 60 }
+                          const width = 700 - margin.left - margin.right;
+                          const height = 300 - margin.top - margin.bottom;
+
+                          // Create the SVG container.
+                          const svg = d3.select("#container")
+                              .append("svg")
+                              .attr("width","100%")
+                              .attr("height", "100%")
+                              .attr("viewBox", "0 0 700 300")
+                              .attr("preserveAspectRatio", "xMinYMin meet")
+                              .append("g")
+                              .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+                          // Load CSV data
+                          d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_1.csv")
+                              .then((data) => {
+                                  // Extract unique years and age categories
+                                  let years = [...new Set(data.map(d => d.Year))];
+                                  const ages = data.columns.slice(1); // Exclude 'Year' column
+
+                                  // Declare years Dropdown
+                                  d3.select("#YearsButton")
+                                      .selectAll('myOptions')
+                                      .data(years)
+                                      .enter()
+                                      .append('option')
+                                      .text((d) => d) // text showed in the menu
+                                      .attr("value", (d) => d) // corresponding value returned by the button
+
+                                  // Declare the x (horizontal position) scale.
+                                  const x = d3.scaleBand()
+                                      .domain(ages)
+                                      .range([0, width])
+                                      .padding(0.2);
+
+                                  // Declare the y (vertical position) scale.
+                                  const y = d3.scaleLinear()
+                                      .domain([0, d3.max(data, d => d3.max(ages.map(age => +d[age])))])
+                                      .range([height, 0]);
+
+                                  // Initial bars
+                                  updateBars(data[0].Year);
+
+                                  // Update bars when year changes
+                                  function updateBars(selectedYear) {
+                                      svg.selectAll(".bar").remove();
+
+                                      const dataFilter = data.find(d => d.Year == selectedYear);
+
+                                      svg.selectAll(".bar")
+                                          .data(ages)
+                                          .enter()
+                                          .append("rect")
+                                          .attr("class", "bar")
+                                          .attr("x", (age) => x(age))
+                                          .attr("y", (age) => y(dataFilter[age]))
+                                          .attr("width", x.bandwidth())
+                                          .attr("height", (age) => height - y(dataFilter[age]))
+                                          .attr("fill", "#69b3a2");
+
+                                      // X-axis
+                                      svg.append("g")
+                                          .attr("transform", "translate(0," + height + ")")
+                                          .call(d3.axisBottom(x))
+                                          .selectAll("text")
+                                          .attr("transform", "translate(-10,0)rotate(-45)")
+                                          .style("text-anchor", "end");
+
+                                      // Y-axis
+                                      svg.append("g")
+                                          .call(d3.axisLeft(y));
+                                  }
+
+                                  // Handle year change event
+                                  d3.select("#YearsButton").on("change", function () {
+                                      const selectedYear = d3.select(this).property("value");
+                                      updateBars(selectedYear);
+                                  });
+
+                              })
+                              .catch((err) => {
+                                  console.log({ err });
+                              });
+                      </script>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Chart Second -->
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Chart 3</h5>
+                      <!-- Create a container to host the charts -->
+                      <!-- third chart -->
+                      <div id="container_3"></div>
+                      <!-- Initialize a Dropdown -->
+                      <select id="year_btn_3"></select>
+
+                      <script>
+                          // Declare the chart dimensions and margins.
+                          const margin3 = { top: 10, right: 60, bottom: 60, left: 60 }
+                          const width3 = 700 - margin3.left - margin3.right;
+                          const height3 = 300 - margin3.top - margin3.bottom;
+
+                          // Create the SVG container.
+                          const svg3 = d3.select("#container_3")
+                              .append("svg")
+                              .attr("width","100%")
+                              .attr("height", "100%")
+                              .attr("viewBox", "0 0 700 300")
+                              .attr("preserveAspectRatio", "xMinYMin meet")
+                              .append("g")
+                              .attr("transform", "translate(" + margin3.left + "," + margin3.top + ")");
+
+                          // Load CSV data
+                          d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_3.csv")
+                              .then((data) => {
+                                  // Extract unique years and age categories
+                                  const years = [...new Set(data.map(d => d.Period))];
+                                  // Declare years Dropdown
+                                  d3.select("#year_btn_3")
+                                      .selectAll('myOptions')
+                                      .data(years)
+                                      .enter()
+                                      .append('option')
+                                      .text((d) => d) // text showed in the menu
+                                      .attr("value", (d) => d) // corresponding value returned by the button
+
+                                  // Declare the x (horizontal position) scale.
+                                  const x = d3.scaleBand()
+                                      .domain(data.map(e => e.Dim3))
+                                      .range([0, width])
+                                      .padding(0.2);
+                                  // Declare the y (vertical position) scale.
+                                  const y = d3.scaleLinear()
+                                      .domain([0, Math.max(...data.map(e => e.Value)) + 50])
+                                      .range([height, 0]);
+
+                                  // Initial bars
+                                  updateBars3(data[0].Period);
+
+                                  // Update bars when year changes
+                                  function updateBars3(selectedYear) {
+                                      svg3.selectAll(".bar3").remove(); // Remove previous bars
+                                      const dataFilter = data.filter(d => {
+                                          if (d.Period == selectedYear) {
+                                              return {
+                                                  Dim3: d.Dim3,
+                                                  Value: d.Value
+                                              }
+                                          }
+                                      });
+
+                                      // Bars
+                                      svg3.selectAll(".bar3")
+                                          .data(dataFilter)  // Start from the third entry to avoid "Period" and "Dim3"
+                                          .enter()
+                                          .append("rect")
+                                          .attr("class", "bar3")
+                                          .attr("x", (e) => x(e.Dim3))
+                                          .attr("y", (e) => y(+e.Value))
+                                          .attr("width", x.bandwidth())
+                                          .attr("height", (e) => height - y(+e.Value))
+                                          .attr("fill", "blue");
+
+                                      // X-axis
+                                      svg3.append("g")
+                                          .attr("transform", "translate(0," + height + ")")
+                                          .call(d3.axisBottom(x))
+                                          .selectAll("text")
+                                          .attr("transform", "translate(-10,0)rotate(-45)")
+                                          .style("text-anchor", "end");
+
+                                      // Y-axis
+                                      svg3.append("g")
+                                          .call(d3.axisLeft(y));
+                                  }
+
+                                  // Handle year change event
+                                  d3.select("#year_btn_3").on("change", function () {
+                                      const selectedYear = d3.select(this).property("value");
+                                      updateBars3(selectedYear);
+                                  });
+
+                              })
+                              .catch((err) => {
+                                  console.log({ err });
+                              });
+                      </script>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div><!-- End Left side columns -->
+
+    
+
+      </div>
+    </section>
+
+  </main>
+  <!-- End #main -->
+
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
