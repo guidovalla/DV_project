@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<!-- Include d3 library -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<!-- Create a container to host the chart -->
+<div id="viz_container"></div>
+<div id="slider-range"></div>
+
+<!-- Load slider -->
+<script src="https://unpkg.com/d3-simple-slider"></script>
+
+<style>
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+text {
+  font-family: lato;
+  font-size: 10px;
+  fill: #333333;
+}
+.grid path {
+  stroke-width: 0;
+}
+.grid .tick line {
+  stroke: #333333;
+  stroke-width: 0.3px;
+  stroke-opacity: 0.3;
+}
+text.chart-title {
+  font-size: 14px;
+  font-weight: bold;
+  fill:#222222
+}
+text.chart-label {
+  font-size: 10px;
+  font-weight: 400;
+  fill: #999999;
+}
+text.chart-source {
+  font-size: 8px;
+  fill: #999999;
+}
+text.copyright {
+  font-size: 8px;
+  fill: #999999;
+}
+.tooltip {
+  background-color: #ffffff;
+  font-family: lato;
+  font-size: 11px;
+  padding: 6px;
+  color: #333333;
+  border: none;
+  box-shadow: 0px 0px 3px 0px #E6E6E6;
+}
+</style>
+
+<script>
+// set the dimensions and margins of the graph
+const margin = {top: 60, right: 60, bottom: 50, left: 50};
+const width = 450 - margin.left - margin.right;
+const height = 350 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+const svg = d3.select("#viz_container")
+  .append("svg")
+    .attr("width", "100%")
+    .attr("height", "100%")
+    .attr("viewBox", "0 0 450 350")
+    .attr("preserveAspectRatio", "xMinYMin")
+  .append("g")
+    .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+    var year=2019
+// parse the Data
+d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/2_1_1.csv")
+.then(function(data){
+
+  filteredData = data.filter(function (d) {
+    return d.Year == year;
+  });
+  
+  filteredData =filteredData.filter(function (d) {
+    return d.GDPpercapita != "";
+  });
+  filteredData =filteredData.filter(function (d) {
+    return d.Population != "";
+  });
+  filteredData =filteredData.filter(function (d) {
+    return d.Lifeexpectancy != "";
+  });
+  filteredData =filteredData.filter(function (d) {
+    return d.Continent!= "";
+  });
+
+// list of value keys
+const typeKeys = data.columns.slice(1);
+
+// X scale and Axis
+const f =  d3.format("~s")
+const xScale = d3.scaleLog()
+  .domain(d3.extent(filteredData, d => +d.GDPpercapita)).nice()
+  .range([0, width])
+svg
+  .append('g')
+  .attr("transform", `translate(0, ${height})`)
+  .call(d3.axisBottom(xScale).tickSize(0).ticks(4).tickPadding(8).tickFormat(f))
+  .call(d => d.select(".domain").remove());
+
+// Y scale and Axis
+const yScale = d3.scaleLinear()
+    .domain([40,90])
+    .range([height, 0]);
+svg
+  .append('g')
+  .call(d3.axisLeft(yScale).tickSize(0).ticks(6).tickPadding(4).tickFormat(f))
+  .call(d => d.select(".domain").remove());
+
+// bubble size scale
+var zScale = d3.scaleSqrt()
+  .domain([200000, 1510000000])
+  .range([2, 50])
+
+// color palette
+const color = d3.scaleOrdinal()
+  .domain(typeKeys)
+  .range(["#EF4A60", "#8EBE0F", "#00B398", "#E1CC0D", "#589BE5", "#18375F", "#0072BC"])
+
+// set horizontal grid line
+const GridLineH = () => d3.axisLeft().scale(yScale);
+svg
+  .append("g")
+    .attr("class", "grid")
+  .call(GridLineH()
+    .tickSize(-width,0,0)
+    .tickFormat("")
+    .ticks(6)
+);
+
+// set vertical grid line
+const GridLineV = () => d3.axisBottom().scale(xScale);
+svg
+  .append("g")
+    .attr("class", "grid")
+  .call(GridLineV()
+    .tickSize(height,0,0)
+    .tickFormat("")
+    .ticks(5));
+
+// create a tooltip
+const tooltip = d3.select("#viz_container")
+  .append("div")
+    .attr("class", "tooltip")
+
+// tooltip events
+const mouseover = function(d) {
+    tooltip
+        .style("opacity", 1)
+    d3.select(this)
+        .style("stroke", "#EF4A60")
+        .style("opacity", 1)
+};
+const mousemove = function(event,d) {
+    const f = d3.format(",");
+    tooltip
+    .html("<div><b>Country:</b> "+ d.Entity+ "<div><b>Total Population:</b> " +f(d.Population)+ "</div><div><b>GDP per Capita:</b> " +f(d.GDPpercapita)+ "</div><div><b>Life Expectancy at birth:</b> "+ f(d.Lifeexpectancy) +"</div>")
+    .style("left", (d3.pointer(event)[0])*2+150 + "px")
+      .style("top", (d3.pointer(event)[1])*2+150 + "px")
+      .style("position", "absolute")
+};
+
+const mouseleave = function(d) {
+    tooltip
+        .style("opacity", 0)
+    d3.select(this)
+        .style("stroke", "none")
+        .style("opacity", 0.5)
+};
+
+// create graph
+svg.append("g")
+  .selectAll("g")
+  .data(filteredData)
+  .join("circle")
+      .attr("cx", d => xScale(+d.GDPpercapita))
+      .attr("cy", d => yScale(+d.Lifeexpectancy))
+      .attr("r", d =>zScale(+d.Population))
+      .style("fill", d => color(d.Continent))
+      .style("opacity", 0.6)
+  .on("mouseover", mouseover)
+  .on("mousemove", mousemove)
+  .on("mouseleave", mouseleave)
+
+// set data labels
+svg
+  .append("g")
+  .attr("font-size", 10)
+  .selectAll("text")
+  .data(filteredData)
+  .join("text")
+    .attr("dy", "0.35em")
+    .attr("x", d => xScale(+d.GDPpercapita))
+    .attr("y", d => yScale(+d.Lifeexpectancy));
+
+// set title
+svg
+  .append("text")
+    .attr("class", "chart-title")
+    .attr("x", -(margin.left)*0.5)
+    .attr("y", -(margin.top)/1.5)
+    .attr("text-anchor", "start")
+  .text("Life expectancs vs GDP per capita")
+
+// set X axis label
+svg
+  .append("text")
+    .attr("class", "chart-label")
+    .attr("x", width/1.7)
+    .attr("y", height+margin.bottom*0.6)
+    .attr("text-anchor", "middle")
+  .text("GDP per capita (dollars)");
+
+// set Y axis label
+svg
+  .append("text")
+    .attr("class", "chart-label")
+    .attr("x", -(margin.left)*0.5)
+    .attr("y", -(margin.top/8))
+    .attr("text-anchor", "start")
+  .text("Life Expectancy at birth (years)")
+
+   // Add legend: circles
+   var valuesToShow = [10000000, 100000000, 1000000000]
+    var xCircle = 390
+    var xLabel = 440
+    svg
+      .selectAll("legend")
+      .data(valuesToShow)
+      .enter()
+      .append("circle")
+        .attr("cx", xCircle)
+        .attr("cy", function(d){ return height - 100 - zScale(d) } )
+        .attr("r", function(d){ return zScale(d) })
+        .style("fill", "none")
+        .attr("stroke", "black")
+
+    // Add legend: segments
+    svg
+      .selectAll("legend")
+      .data(valuesToShow)
+      .enter()
+      .append("line")
+        .attr('x1', function(d){ return xCircle + zScale(d) } )
+        .attr('x2', xLabel)
+        .attr('y1', function(d){ return height - 100 - zScale(d) } )
+        .attr('y2', function(d){ return height - 100 - zScale(d) } )
+        .attr('stroke', 'black')
+        .style('stroke-dasharray', ('2,2'))
+
+    // Add legend: labels
+    svg
+      .selectAll("legend")
+      .data(valuesToShow)
+      .enter()
+      .append("text")
+        .attr('x', xLabel)
+        .attr('y', function(d){ return height - 100 - zScale(d) } )
+        .text( function(d){ return d/1000000 } )
+        .style("font-size", 10)
+        .attr('alignment-baseline', 'middle')
+
+    // Legend title
+    svg.append("text")
+      .attr('x', xCircle)
+      .attr("y", height - 100 +30)
+      .text("Population (M)")
+      .attr("text-anchor", "middle")
+
+    // Add one dot in the legend for each name.
+    var size = 20
+    var allgroups = ["Asia", "Europe", "North America", "South America", "Africa", "Oceania"]
+    svg.selectAll("myrect")
+      .data(allgroups)
+      .enter()
+      .append("circle")
+        .attr("cx", 390)
+        .attr("cy", function(d,i){ return 10 + i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
+        .attr("r", 7)
+        .style("fill", function(d){ return color(d)})
+        //.on("mouseover", highlight)
+       // .on("mouseleave", noHighlight)
+
+    // Add labels beside legend dots
+    svg.selectAll("mylabels")
+      .data(allgroups)
+      .enter()
+      .append("text")
+        .attr("x", 390 + size*.8)
+        .attr("y", function(d,i){ return i * (size + 5) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
+        .style("fill", function(d){ return color(d)})
+        .text(function(d){ return d})
+        .attr("text-anchor", "left")
+        .style("alignment-baseline", "middle")
+        //.on("mouseover", highlight)
+        //.on("mouseleave", noHighlight)
+
+        //add slider 
+        
+        const sliderRange= d3
+.sliderBottom()
+.min(1990)
+.max(2019)
+.width(300)
+.step(1)
+.tickFormat(d3.format('Y'))
+.ticks(5)
+.default(2019)
+.on('onchange', val => {
+    year = val
+      updateChart(year)
+    })
+        const gRange= d3.
+        select('#slider-range')
+        .append("svg")
+        .attr("width", 700 + margin.left + margin.right)
+        .attr("height", 200 + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+        .call(sliderRange);
+
+
+function updateChart(year){
+//remove all the bubbles
+d3.selectAll("circle").remove()
+//filter the data
+filteredData = data.filter(function (d) {
+    return d.Year == year;
+  });
+  filteredData =filteredData.filter(function (d) {
+    return d.GDPpercapita != "";
+  });
+  filteredData =filteredData.filter(function (d) {
+    return d.Population != "";
+  });
+  filteredData =filteredData.filter(function (d) {
+    return d.Lifeexpectancy != "";
+  });
+  filteredData =filteredData.filter(function (d) {
+    return d.Continent!= "";
+  });
+
+  svg.append("g")
+  .selectAll("g")
+  .data(filteredData)
+  .join("circle")
+      .attr("cx", d => xScale(+d.GDPpercapita))
+      .attr("cy", d => yScale(+d.Lifeexpectancy))
+      .attr("r", d =>zScale(+d.Population))
+      .style("fill", d => color(d.Continent))
+      .style("opacity", 0.6)
+  .on("mouseover", mouseover)
+  .on("mousemove", mousemove)
+  .on("mouseleave", mouseleave)
+}
+      })
+</script>
