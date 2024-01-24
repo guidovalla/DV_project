@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.png" alt="">
+        <span class="d-none d-lg-block">Life Expectancy</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div>
+    <!-- End Logo -->
+
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <span>Introduction</span>
+        </a>
+      </li>
+      <!-- End Dashboard Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <span>Section 1</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <span>Section 2</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link " href="section3.html">
+          <span>Section 3</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <span>Section 4</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link " href="index.html">
+          <span>Conclusion</span>
+        </a>
+      </li>
+
+    </ul>
+
+  </aside>
+  <!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Dashboard</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+      <div class="row">
+
+        <!-- Left side columns -->
+        <div class="col-lg-8">
+          <div class="row">
+
+            <!-- Chart One -->
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Chart 1</h5>
+                      <!-- Create a container to host the charts -->
+
+                      <!-- first chart -->
+                      <div id="viz_container"></div>
+
+                      <style>
+                        svg {
+                          width: 100%;
+                          height: 100%;
+                        }
+                        text {
+                          font-family: lato;
+                          font-size: 11px;
+                          fill: #666666;
+                        }
+                        grid path {
+                          stroke-width: 0;
+                          stroke: #333333;
+                        }
+                        grid .tick line {
+                          stroke: #333333;
+                          stroke-width: 0.3px;
+                          stroke-opacity: 0.3;
+                        }
+                        text.chart-title {
+                          font-size: 15px;
+                          font-weight: 600;
+                          fill: #222222;
+                        }
+                        text.chart-label {
+                          font-size: 11px;
+                          font-weight: 400;
+                          fill: #999999;
+                        }
+                        text.chart-source {
+                          font-size: 9px;
+                          fill: #999999;
+                        }
+                        text.copyright {
+                          font-size: 9px;
+                          fill: #999999;
+                        }
+                        .tooltip {
+                          background-color: #ffffff;
+                          font-family: lato;
+                          font-size: 11px;
+                          padding: 4px;
+                          color: #666666;
+                          border: none;
+                          box-shadow: 0px 0px 3px 0px #E6E6E6;
+                          display: none; /* Initially hide the tooltip */
+                          position: absolute;
+                          pointer-events: none;
+                        }
+                      </style>
+
+
+<script>
+    // set the dimensions and margins of the graph
+    const margin = {top: 80, right: 20, bottom: 50, left: 40};
+    const width = 450 - margin.left - margin.right;
+    const height = 350 - margin.top - margin.bottom;
+    
+    // append the svg object to the body of the page
+    const svg = d3.select("#viz_container")
+      .append("svg")
+        .attr("width", "100%")
+        .attr("height", "100%")
+        .attr("viewBox", "0 0 450 350")
+        .attr("preserveAspectRatio", "xMinYMin")
+      .append("g")
+        .attr("transform", `translate(${margin.left}, ${margin.top})`);
+    
+    // parse the data
+    //d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/change_over_time/line.csv", function(d) {
+    d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/4_1.csv",function(d) {
+    const parseTime = d3.timeParse("%Y")
+      return {
+        year: parseTime(d.date),
+        //popType: d.population_type,
+        popNumber: +d.Value
+      };
+    }).then(function(data){
+    
+    //pivot the data
+    const dataGrouped = d3.group(data, d => d.popType)
+    
+    // list of value keys
+    const typeKeys = ["Refugees", "IDPs"];
+    
+    // X scale and Axis
+    const xScale = d3.scaleTime()
+      .domain(d3.extent(data, d => d.year)).nice()
+      .range([0, width]);
+    svg
+      .append('g')
+      .attr("transform", `translate(0, ${height})`)
+      .call(d3.axisBottom(xScale).tickSize(0).tickPadding(8));
+    
+    // Y scale and Axis
+    const formatter =  d3.format("~s")
+    const yScale = d3.scaleLinear()
+    .domain([d3.min(data, d => d.popNumber), d3.max(data, d => d.popNumber)])
+    .range([height, 0]);
+    svg
+      .append('g')
+      .call(d3.axisLeft(yScale).ticks(6).tickSize(0).tickPadding(6).tickFormat(formatter))
+      .call(d => d.select(".domain").remove());
+    
+    // set horizontal grid line
+    const GridLine = () => d3.axisLeft().scale(yScale);
+    svg
+      .append("g")
+        .attr("class", "grid")
+      .call(GridLine()
+        .tickSize(-width,0,0)
+        .tickFormat("")
+        .ticks(6)
+    );
+    
+    // color palette
+    const color = d3.scaleOrdinal()
+      .range(["#0072BC","#00B398"])
+    
+      
+      // Add Tooltip
+      const tooltip = d3.select("#viz_container")
+        .append("div")
+        .attr("class", "tooltip");
+    
+      // What happens when the mouse moves over the line
+      function mouseover(event, d) {
+        tooltip.style("display", "block");
+      }
+    
+      function mousemove(event, d) {
+        var x0 = xScale.invert(d3.pointer(event));
+        console.log(x0)
+        tooltip
+          .html("Year: " + d.date + "<br>Population: " + data.popNumber)
+          .style("left", (event.pageX + 10) + "px")
+          .style("top", (event.pageY - 10) + "px");
+      }
+    
+      function mouseout() {
+        tooltip.style("display", "none");
+      }
+    
+    
+      // Create line with tooltip events
+      const lines = svg
+        .selectAll("lines")
+        .data(dataGrouped)
+        .join("path")
+        .attr("fill", "none")
+        .attr("stroke", d => color(d[0]))
+        .attr("stroke-width", 2)
+        .attr("d", function (d) {
+          return d3.line()
+            .curve(d3.curveCardinal)
+            .x(d => xScale(d.year))
+            .y(d => yScale(d.popNumber))
+            (d[1])
+        })
+        .on("mouseover", mouseover)
+        .on("mousemove", mousemove)
+        .on("mouseout", mouseout);
+    
+    
+    
+    
+    // set title
+    svg
+      .append("text")
+        .attr("class", "chart-title")
+        .attr("x", -(margin.left)*0.7)
+        .attr("y", -(margin.top)/1.5)
+        .attr("text-anchor", "start")
+      .text("Number of refugee and IDPs of concern to UNHCR | 1991-2021")
+    
+    // set Y axis label
+    svg
+      .append("text")
+        .attr("class", "chart-label")
+        .attr("x", -(margin.left)*0.7)
+        .attr("y", -(margin.top/9))
+        .attr("text-anchor", "start")
+      .text("Displaced population (millions)")
+    
+    // set source
+    svg
+      .append("text")
+        .attr("class", "chart-source")
+        .attr("x", -(margin.left)*0.7)
+        .attr("y", height + margin.bottom*0.7)
+        .attr("text-anchor", "start")
+      .text("Source: UNHCR Refugee Data Finder")
+    
+    // set copyright
+    svg
+      .append("text")
+        .attr("class", "copyright")
+        .attr("x", -(margin.left)*0.7)
+        .attr("y", height + margin.bottom*0.9)
+        .attr("text-anchor", "start")
+      .text("©UNHCR, The UN Refugee Agency")
+    
+    // set legend manually
+    svg
+        .append("circle")
+            .attr("cx", -(margin.left)*0.6)
+            .attr("cy", -(margin.top/2.5))
+            .attr("r", 5)
+            .style("fill", "#0072BC");
+    svg
+        .append("text")
+            .attr("class", "legend")
+            .attr("x", -(margin.left)*0.6+10)
+            .attr("y", -(margin.top/2.5))
+            .attr("alignment-baseline","middle")
+        .text("Refugees")
+    svg
+        .append("circle")
+            .attr("cx", 60)
+            .attr("cy", -(margin.top/2.5))
+            .attr("r", 5)
+            .style("fill", "#00B398")
+    svg
+        .append("text")
+            .attr("class", "legend")
+            .attr("x", 70)
+            .attr("y", -(margin.top/2.5))
+            .attr("alignment-baseline","middle")
+        .text("IDPs")
+    
+    })
+    
+    </script>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- Second chart -->
+            <div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Chart 2</h5>
+
+<!-- Include d3 library -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-geo@"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-geo-projection@4"></script>
+<script src="https://unpkg.com/topojson@3"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+<!-- Create a container to host the chart -->
+<div id="viz_container_2"></div>
+
+<style>
+    svg {
+  width: 300;
+  height: 300;
+}
+text {
+  font-family: lato;
+  font-size: 10px;
+  fill: #333333;
+}
+.grid path {
+  stroke-width: 0;
+  stroke: #333333;
+}
+.grid .tick line {
+  stroke: #333333;
+  stroke-width: 0.3px;
+  stroke-opacity: 0.3;
+}
+text.chart-label {
+  font-size: 10px;
+  font-weight: 400;
+  fill: #999999;
+}
+
+text.chart-title {
+  font-size: 14px;
+  font-weight: bold;
+  fill:#222222
+}
+text.chart-source {
+  font-size: 8px;
+  fill: #999999;
+}
+text.copyright {
+  font-size: 8px;
+  fill: #999999;
+}
+
+.tooltip {
+  background-color: #ffffff;
+  font-family: lato;
+  font-size: 11px;
+  padding: 4px;
+  color: #666666;
+  border: none;
+  box-shadow: 0px 0px 3px 0px #E6E6E6;
+}
+.legend{
+  font-size: 10px;
+}
+</style>
+
+<script>
+const margin2 = {top: 30, right: 20, bottom: 30, left: 20};
+const width2 = 450 - margin2.left - margin2.right;
+const height2 = 350 - margin2.top - margin2.bottom;
+
+// append the svg object to the body of the page
+const svg2 = d3.select("#viz_container_2")
+  .append("svg")
+    .attr("width", "600")
+    .attr("height", "400")
+    .attr("viewBox", "0 0 450 350")
+    .attr("preserveAspectRatio", "xMinYMin")
+  .append("g")
+    .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+// parse the Data
+//d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/part_to_a_whole/treemap_d3.csv")
+d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/try_treemap.csv")
+.then(function(data){
+
+data.forEach(function(d) {
+    d.population = +d.population;
+    d.enabled = true;
+  });
+
+const total = d3.sum(data.map(function(d) {
+  return (d.enabled) ? d.population : 0;  }));
+
+// reshape data
+const treeData = d3.stratify()
+  .id(d => d.ages)
+  .parentId(d => d.parent)
+  (data);
+
+treeData.sum(d => d.population)
+
+d3.treemap()
+  .size([width, height])
+  .padding(2)
+  (treeData);
+
+// create a tooltip
+const tooltip = d3.select("body")
+  .append("div")
+    .attr("class", "tooltip");
+
+// tooltip events
+const mouseover = function(d) {
+  tooltip
+      .style("opacity", 1)
+  d3.select(this)
+      .style("opacity", .5)
+};
+const mousemove = function(event,d) {
+  f = d3.format(",")
+  tooltip
+  .html("Number of staff: " + `${f(d.data.population)}`)
+    .style("top", event.pageY - 10 + "px")
+    .style("left", event.pageX + 10 + "px")
+};
+const mouseleave = function(d) {
+  tooltip
+    .style("opacity", 0)
+  d3.select(this)
+    .style("stroke", "none")
+    .style("opacity", 1)
+};
+
+// create rectangle
+svg2
+  .selectAll("rect")
+  .data(treeData.leaves())
+  .join("rect")
+    .attr('x', d => d.x0)
+    .attr('y', d => d.y0)
+    .attr('width', d => d.x1 - d.x0)
+    .attr('height', d=> d.y1 - d.y0)
+    .style("stroke", "none")
+    .style("fill", "#0072BC")
+  .on("mouseover", mouseover)
+  .on("mousemove", mousemove)
+  .on("mouseleave", mouseleave);
+
+// add labels to the graph
+svg2
+  .selectAll("text-number")
+  .data(treeData.leaves())
+  .join("text")
+    .attr("class", "tree-label")
+    .attr("x", d => d.x0+5)
+    .attr("y", d => d.y0+15)
+    .text(d => Math.round(1000 * d.data.population / total) / 10 + "%")
+    .attr("font-size", "10px")
+    .attr("fill", "#ffffff");
+svg2
+  .selectAll("text-region")
+  .data(treeData.leaves())
+  .join("text")
+    .attr("class", "tree-label")
+    .attr("x", d => d.x0+5)
+    .attr("y", d => d.y0+30)
+    .text(d => d.data.ages)
+    .attr("font-size", "10px")
+    .attr("fill", "#ffffff");
+
+// set title
+svg2
+  .append("text")
+    .attr("class", "chart-title")
+    .attr("x", 0)
+    .attr("y", -(margin.top)/1.5)
+    .attr("text-anchor", "start")
+  .text("UNHCR global workforce by region | 2021");
+
+// set source
+svg2
+  .append("text")
+    .attr("class", "chart-source")
+    .attr("x", 0)
+    .attr("y", height + margin.bottom*0.4)
+    .attr("text-anchor", "start")
+  .text("Source: UNHCR")
+
+// set copyright
+svg2
+  .append("text")
+    .attr("class", "copyright")
+    .attr("x", 0)
+    .attr("y", height + margin.bottom*0.7)
+    .attr("text-anchor", "start")
+  .text("©UNHCR, The UN Refugee Agency")
+})
+</script>
+                </div>
+
+              </div>
+
+            </div>
+                      <!-- third chart -->
+                      
+                        <div class="col-12">
+                        <div class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">Chart 3</h5>
+                             
+                            <!-- Load slider -->
+                            <script src="https://unpkg.com/d3-simple-slider"></script>
+                      
+                            <div id="container_3"></div>
+                      <div id="slider-range"></div>
+
+                      <script>
+                          // set the dimensions and margins of the graph
+const margin3 = {top: 60, right: 20, bottom: 50, left: 60};
+  const width3 = 450 - margin3.left - margin3.right;
+  const height3 = 350 - margin3.top - margin3.bottom;
+
+  // append the svg object to the body of the page
+  const svg3 = d3.select("#container_3")
+    .append("svg")
+      .attr("width", "600")
+      .attr("height", "400")
+      .attr("viewBox", "0 0 450 350")
+      .attr("preserveAspectRatio", "xMinYMin")
+    .append("g")
+      .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
+
+  // parse the Data
+  d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/4_3_new.csv")
+  .then(function(data){
+
+    var uniqueYearsSet = new Set(data.map(d => d.Year));
+    var allYears = Array.from(uniqueYearsSet);
+    console.log("years", allYears)
+
+
+    
+
+
+  // X scale and Axis
+  const xScaleMale = d3.scaleLinear()
+    .domain([0, 1.2*d3.max(data, d => +d.male)])
+    .range([width2/2, 0]);
+  svg3
+    .append("g")
+        .attr("transform", `translate(0, ${height2})`)
+    .call(d3.axisBottom(xScaleMale).tickSize(0).tickPadding(3).ticks(7, ""))
+    .call(function(d) { return d.select(".domain").remove()});
+
+  const xScaleFemale = d3.scaleLinear()
+    .domain([0, 1.2* d3.max(data, d => +d.female)])
+    .range([width2/2, width2]);
+  svg3
+    .append("g")
+        .attr("transform", `translate(0, ${height2})`)
+    .call(d3.axisBottom(xScaleFemale).tickSize(0).tickPadding(3).ticks(7, ""))
+    .call(function(d) { return d.select(".domain").remove()});
+
+  // set vertical grid line
+  const GridLineF = function() { return d3.axisBottom().scale(xScaleFemale)};
+  svg3
+    .append("g")
+      .attr("class", "grid")
+    .call(GridLineF()
+      .tickSize(height2,0,0)
+      .tickFormat("")
+      .ticks(7)
+  );
+  const GridLineM = function() { return d3.axisBottom().scale(xScaleMale)};
+  svg3
+    .append("g")
+      .attr("class", "grid")
+    .call(GridLineM()
+      .tickSize(height2,0,0)
+      .tickFormat("")
+      .ticks(7)
+  );
+
+  // Y scale and Axis
+  const yScale = d3.scaleBand()
+      .domain(data.map(d => d.ages))
+      .range([height2, 0])
+      .padding(.25);
+  svg3
+      .append("g")
+      .call(d3.axisLeft(yScale).tickSize(0).tickPadding(15))
+      .call(d => d.select(".domain").remove());
+
+  // create a tooltip
+  const tooltip = d3.select("body")
+    .append("div")
+      .attr("class", "tooltip");
+
+  // tooltip events
+  const mouseover = function(d) {
+      tooltip
+        .style("opacity", 1)
+      d3.select(this)
+        .style("stroke", "#EF4A60")
+        .style("opacity", .5)
+  };
+  const mousemove1 = function(event,d) {
+
+      tooltip
+      .html( `${d3.format(".2f")(d.male)}  Billions`)
+        .style("top", event.pageY - 10 + "px")
+        .style("left", event.pageX + 10 + "px");
+  };
+  const mousemove2 = function(event,d) {
+    tooltip
+    .html(`${d3.format(".2f")(d.female)}  Billions`)
+      .style("top", event.pageY - 10 + "px")
+      .style("left", event.pageX + 10 + "px")
+};
+  const mouseleave = function(d) {
+      tooltip
+        .style("opacity", 0)
+      d3.select(this)
+        .style("stroke", "none")
+        .style("opacity", 1)
+  };
+
+  var Pippo = "2023"
+
+  var dataFilter = data.filter(function(d){return d.Year==Pippo})
+
+  // create male bars
+  svg3
+    .selectAll(".maleBar")
+      .data(dataFilter)
+    .join("rect")
+      .attr("class", "barMale")
+      .attr("x", d => xScaleMale(d.male))
+      .attr("y", d => yScale(d.ages))
+      .attr("width", d => width2/2 - xScaleMale(d.male))
+      .attr("height", yScale.bandwidth())
+      .style("fill", "#18375F")
+    .on("mouseover", mouseover)
+    .on("mousemove", mousemove1)
+    .on("mouseleave", mouseleave)
+
+  // create female bars
+  svg3
+      .selectAll(".femaleBar")
+        .data(dataFilter)
+      .join("rect")
+        .attr("class", "barFemale")
+        .attr("x", xScaleFemale(0))
+        .attr("y", d => yScale(d.ages))
+        .attr("width", d => xScaleFemale(d.female) - xScaleFemale(0))
+        .attr("height", yScale.bandwidth())
+        .style("fill", "#0072BC")
+      .on("mouseover", mouseover)
+      .on("mousemove", mousemove2)
+      .on("mouseleave", mouseleave)
+
+  // set x axis label
+  svg3
+      .append("text")
+          .attr("class", "chart-label")
+          .attr("x", width2/3.5)
+          .attr("y", height2 + margin2.bottom/1.5)
+      .text("Population (billions)")
+
+  //set legend
+  svg3
+      .append("rect")
+          .attr("x", -(margin2.left)*0.7)
+          .attr("y", -(margin2.top/3))
+          .attr("width", 13)
+          .attr("height", 13)
+          .style("fill", "#18375F")
+  svg3
+      .append("text")
+          .attr("class", "legend")
+          .attr("x", -(margin2.left)*0.6+15)
+          .attr("y", -(margin2.top/5.5))
+      .text("Male")
+  svg3
+      .append("rect")
+          .attr("x", 40)
+          .attr("y", -(margin2.top/3))
+          .attr("width", 13)
+          .attr("height", 13)
+          .style("fill", "#0072BC")
+  svg3
+      .append("text")
+          .attr("class", "legend")
+          .attr("x", 60)
+          .attr("y", -(margin2.top/5.5))
+      .text("Female")
+
+         //add slider 
+        
+         const sliderRange= d3
+.sliderBottom()
+.min(2023)
+.max(2100)
+.width(200)
+.step(1)
+.tickFormat(d3.format('Y'))
+.ticks(5)
+.default(2023)
+.on('onchange', val => {
+    Pippo = val
+      update(Pippo)
+    })
+        const gRange= d3.
+        select('#slider-range')
+        .append("svg")
+        .attr("width", 200+ margin2.left + margin2.right)
+        .attr("height", 40+ margin2.bottom)
+        .append("g")
+        .attr("transform","translate(" + margin2.right+ "," + margin2.bottom + ")")
+        .call(sliderRange);
+
+
+
+
+      function update(selectedYear) {
+  // Remove existing bars
+  svg3.selectAll(".barMale").remove();
+  svg3.selectAll(".barFemale").remove();
+
+  // Filter data for the selected year
+  const dataFilter = data.filter(function (d) {
+    return d.Year == selectedYear;
+  });
+
+  // Update male bars
+  svg3
+    .selectAll(".maleBar")
+    .data(dataFilter)
+    .enter()
+    .append("rect")
+    .attr("class", "barMale")
+    .attr("x", (d) => xScaleMale(d.male))
+    .attr("y", (d) => yScale(d.ages))
+    .attr("width", (d) => width2 / 2 - xScaleMale(d.male))
+    .attr("height", yScale.bandwidth())
+    .style("fill", "#18375F")
+    .on("mouseover", mouseover)
+    .on("mousemove", mousemove1)
+    .on("mouseleave", mouseleave);
+
+  // Update female bars (similar code as above)
+  svg3
+    .selectAll(".femaleBar")
+    .data(dataFilter)
+    .enter()
+    .append("rect")
+    .attr("class", "barFemale")
+    .attr("x", xScaleFemale(0))
+    .attr("y", (d) => yScale(d.ages))
+    .attr("width", (d) => xScaleFemale(d.female) - xScaleFemale(0))
+    .attr("height", yScale.bandwidth())
+    .style("fill", "#0072BC")
+    .on("mouseover", mouseover)
+    .on("mousemove", mousemove2)
+    .on("mouseleave", mouseleave);
+}
+
+
+  
+  d3.select("#YearsButton").on("change", function(d) {
+    Pippo = d3.select(this).property("value")
+    update(Pippo)
+  })
+
+  })
+                      </script>
+                          </div>
+
+                        </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+        
+        <!-- End Left side columns -->
+
+    
+
+      </div>
+    </section>
+
+  </main>
+  <!-- End #main -->
+
+
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
