@@ -52,24 +52,26 @@ const svg = d3.select("#viz_container")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // parse the Data
-d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/part_to_a_whole/treemap_d3.csv")
+//d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/part_to_a_whole/treemap_d3.csv")
+d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/2_3.csv")
+
 .then(function(data){
 
 data.forEach(function(d) {
-    d.staff_number = +d.staff_number;
+    d.val = +d.val;
     d.enabled = true;
   });
 
 const total = d3.sum(data.map(function(d) {
-  return (d.enabled) ? d.staff_number : 0;  }));
+  return (d.enabled) ? d.val : 0;  }));
 
 // reshape data
 const treeData = d3.stratify()
-  .id(d => d.region)
+  .id(d => d.cause)
   .parentId(d => d.parent)
   (data);
 
-treeData.sum(d => d.staff_number)
+treeData.sum(d => d.val)
 
 d3.treemap()
   .size([width, height])
@@ -91,7 +93,9 @@ const mouseover = function(d) {
 const mousemove = function(event,d) {
   f = d3.format(",")
   tooltip
-  .html("Number of staff: " + `${f(d.data.staff_number)}`)
+  
+  .html("Percentage: " + (d.data.val/10).toFixed(2)+ "%")
+
     .style("top", event.pageY - 10 + "px")
     .style("left", event.pageX + 10 + "px")
 };
@@ -126,8 +130,9 @@ svg
     .attr("class", "tree-label")
     .attr("x", d => d.x0+5)
     .attr("y", d => d.y0+15)
-    .text(d => Math.round(1000 * d.data.staff_number / total) / 10 + "%")
-    .attr("font-size", "10px")
+    //.text(d => Math.round(1000 * d.data.val / total) / 10 + "%")
+    .text(d => d.data.cause)
+    .attr("font-size", "5px")
     .attr("fill", "#ffffff");
 svg
   .selectAll("text-region")
@@ -168,4 +173,3 @@ svg
   .text("©UNHCR, The UN Refugee Agency")
 })
 </script>
-```
