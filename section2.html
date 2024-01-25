@@ -127,7 +127,7 @@
                             <script src="https://unpkg.com/d3-simple-slider"></script>
                       
 <!-- Create a container to host the chart -->
-<div id="viz_container"></div>
+<div id="container"></div>
 <div id="slider-range"></div>
 <style>
 
@@ -183,7 +183,7 @@ const width = 450 - margin.left - margin.right;
 const height = 350 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-const svg = d3.select("#viz_container")
+const svg = d3.select("#container")
   .append("svg")
     .attr("width", "100%")
     .attr("height", "100%")
@@ -269,7 +269,7 @@ svg
     .ticks(5));
 
 // create a tooltip
-const tooltip = d3.select("#viz_container")
+const tooltip = d3.select("#container")
   .append("div")
     .attr("class", "tooltip")
 
@@ -559,7 +559,7 @@ filteredData = data.filter(function (d) {
                   <h5 class="card-title">Chart 2</h5>
 
 <!-- Create a container to host the chart -->
-<div id="viz_container_2"></div>
+<div id="container_2"></div>
 <div id="slider-range_2"></div>
 <script>
 // set the dimensions and margins of the graph
@@ -568,7 +568,7 @@ const width2 = 450 - margin2.left - margin2.right;
 const height2 = 350 - margin2.top - margin2.bottom;
 
 // append the svg object to the body of the page
-const svg2 = d3.select("#viz_container_2")
+const svg2 = d3.select("#container_2")
   .append("svg")
     .attr("width", "100%")
     .attr("height", "100%")
@@ -651,7 +651,7 @@ svg2
     .ticks(5));
 
 // create a tooltip
-const tooltip = d3.select("#viz_container")
+const tooltip = d3.select("#container_2")
   .append("div")
     .attr("class", "tooltip")
 
@@ -935,6 +935,7 @@ filteredData = data.filter(function (d) {
                           <div class="card-body">
                             <h5 class="card-title">Chart 3</h5>
                       <div id="container_3"></div>
+                      <div id="slider-range_3"></div>
 
                       <script>
 // set the dimensions and margins of the graph
@@ -1031,7 +1032,7 @@ svg3
     .ticks(5));
 
 // create a tooltip
-const tooltip = d3.select("#viz_container")
+const tooltip = d3.select("#container_3")
   .append("div")
     .attr("class", "tooltip")
 
@@ -1218,7 +1219,7 @@ svg3
       updateChart(year)
     })
         const gRange= d3.
-        select('#slider-range')
+        select('#slider-range_3')
         .append("svg")
         .attr("width", 700 + margin.left + margin.right)
         .attr("height", 200 + margin.top + margin.bottom)
@@ -1314,6 +1315,7 @@ filteredData = data.filter(function (d) {
                           <div class="card-body">
                             <h5 class="card-title">Chart 4</h5>
                       <div id="container_4"></div>
+                      <div id="slider-range"></div>
 
                       <script>
 
@@ -1323,7 +1325,7 @@ const width4 = 450 - margin4.left - margin4.right;
 const height4 = 350 - margin4.top - margin4.bottom;
 
 // append the svg object to the body of the page
-const svg4 = d3.select("#viz_container")
+const svg4 = d3.select("#container_4")
   .append("svg")
     .attr("width", "100%")
     .attr("height", "100%")
@@ -1411,7 +1413,7 @@ svg4
     .ticks(5));
 
 // create a tooltip
-const tooltip = d3.select("#viz_container")
+const tooltip = d3.select("#container_4")
   .append("div")
     .attr("class", "tooltip")
 
@@ -1598,7 +1600,7 @@ svg4
       updateChart(year)
     })
         const gRange= d3.
-        select('#slider-range')
+        select('#slider-range_4')
         .append("svg")
         .attr("width", 700 + margin.left + margin.right)
         .attr("height", 200 + margin.top + margin.bottom)
