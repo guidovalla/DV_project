@@ -9,6 +9,9 @@
 <script src="https://unpkg.com/d3-simple-slider"></script>
 
 <div id="slider-range"></div>
+    <!-- Initialize a Dropdown -->
+    <select id="CountryButton"></select>
+
 
 
 <style>
@@ -65,6 +68,14 @@ d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/2_3.cs
 
 .then(function(data){
 
+  d3.select("#CountryButton")
+                    .selectAll('myOptions')
+                    .data(d3.map(data, function(d){return d.location;}))
+                    .enter()
+                    .append('option')
+                    .text((d) => d) // text showed in the menu
+                    .attr("value", (d) => d) // corresponding value returned by the button
+
   fdata  = data.filter(function (d) {
     return d.year == Year;
   });
@@ -88,7 +99,11 @@ const treeData = d3.stratify()
   .parentId(d => d.parent)
   (fdata);
 
+
 treeData.sum(d => d.val)
+
+//sort treedata on value
+treeData.sort(function(a, b) { return b.height - a.height || b.value - a.value; });
 
 d3.treemap()
   .size([width, height])
@@ -125,6 +140,8 @@ const mouseleave = function(d) {
 };
 
 // create rectangle
+console.log("data", treeData.leaves())
+
 svg
   .selectAll("rect")
   .data(treeData.leaves())
@@ -241,6 +258,10 @@ const treeData = d3.stratify()
   (fdata);
 
 treeData.sum(d => d.val)
+console.log("data", treeData)
+
+//sort treedata on value
+treeData.sort(function(a, b) { return b.height - a.height || b.value - a.value; });
 
 d3.treemap()
   .size([width, height])
