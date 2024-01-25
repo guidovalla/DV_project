@@ -60,24 +60,44 @@ const svg = d3.select("#viz_container")
   .append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-    var Year=1990
+    var Year=2019
+    var Country="Afghanistan"
     
 // parse the Data
 //d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/part_to_a_whole/treemap_d3.csv")
 d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/2_3.csv")
 
 .then(function(data){
-
-  d3.select("#CountryButton")
-                    .selectAll('myOptions')
-                    .data(d3.map(data, function(d){return d.location;}))
-                    .enter()
-                    .append('option')
-                    .text((d) => d) // text showed in the menu
-                    .attr("value", (d) => d) // corresponding value returned by the button
-
   fdata  = data.filter(function (d) {
     return d.year == Year;
+  });
+//list of unique locations
+var map = new Map();
+var countries = [];
+for (const item of data) {
+    if(!map.has(item.location)){
+        map.set(item.location, true);    // set any value to Map
+        countries.push({
+            Country: item.location
+        });
+    }
+}
+countries=countries.map(d=>d.Country)
+countries=countries.filter(d=>d!="")
+countries=countries.sort()
+
+
+  // Initialize a Dropdown
+  d3.select("#CountryButton")
+                    .selectAll('myOptions')
+                    .data(countries)
+                    .enter()
+                    .append('option')
+                    .attr("value", d =>d) // corresponding value returned by the button
+                    .text(d=>d)
+                    
+                    fdata  = fdata.filter(function (d) {
+    return d.location == Country;
   });
 
   //append a row to fdata
@@ -140,8 +160,6 @@ const mouseleave = function(d) {
 };
 
 // create rectangle
-console.log("data", treeData.leaves())
-
 svg
   .selectAll("rect")
   .data(treeData.leaves())
@@ -186,41 +204,27 @@ svg
     .attr("x", 0)
     .attr("y", -(margin.top)/1.5)
     .attr("text-anchor", "start")
-  .text("UNHCR global workforce by region | 2021");
-
-// set source
-svg
-  .append("text")
-    .attr("class", "chart-source")
-    .attr("x", 0)
-    .attr("y", height + margin.bottom*0.4)
-    .attr("text-anchor", "start")
-  .text("Source: UNHCR")
-
-// set copyright
-svg
-  .append("text")
-    .attr("class", "copyright")
-    .attr("x", 0)
-    .attr("y", height + margin.bottom*0.7)
-    .attr("text-anchor", "start")
-  .text("©UNHCR, The UN Refugee Agency")
+  .text("Death Causes per country, in %");
 
 //add slider 
         
 const sliderRange= d3
 .sliderBottom()
 .min(1990)
-.max(2021)
+.max(2019)
 .width(300)
 .step(1)
 .tickFormat(d3.format('Y'))
 .ticks(5)
-.default(2021)
+.default(2019)
 .on('onchange', val => {
-    year = val
-      updateChart(year)
+    Year = val
+      updateChart(Year, Country)
     })
+d3.select("#CountryButton").on("change", function () {
+                    Country = d3.select(this).property("value");
+                    updateChart(Year, Country);
+                });
         const gRange= d3.
         select('#slider-range')
         .append("svg")
@@ -230,12 +234,15 @@ const sliderRange= d3
         .attr("transform","translate(" + margin.left + "," + margin.top + ")")
         .call(sliderRange);
 
-function updateChart(Year){
-//remove all the bubbles
+function updateChart(Year, Country){
 d3.selectAll("rect").remove()
 //filter the data
 fdata  = data.filter(function (d) {
     return d.year == Year;
+  });
+
+  fdata  = fdata.filter(function (d) {
+    return d.location == Country;
   });
 
 //append a row to fdata
@@ -258,7 +265,6 @@ const treeData = d3.stratify()
   (fdata);
 
 treeData.sum(d => d.val)
-console.log("data", treeData)
 
 //sort treedata on value
 treeData.sort(function(a, b) { return b.height - a.height || b.value - a.value; });
@@ -304,34 +310,6 @@ svg
     .text(d => d.data.cause)
     .attr("font-size", "4px")
     .attr("fill", "#ffffff");
-
-// set title
-svg
-  .append("text")
-    .attr("class", "chart-title")
-    .attr("x", 0)
-    .attr("y", -(margin.top)/1.5)
-    .attr("text-anchor", "start")
-  .text("UNHCR global workforce by region | 2021");
-
-// set source
-svg
-  .append("text")
-    .attr("class", "chart-source")
-    .attr("x", 0)
-    .attr("y", height + margin.bottom*0.4)
-    .attr("text-anchor", "start")
-  .text("Source: UNHCR")
-
-// set copyright
-svg
-  .append("text")
-    .attr("class", "copyright")
-    .attr("x", 0)
-    .attr("y", height + margin.bottom*0.7)
-    .attr("text-anchor", "start")
-  .text("©UNHCR, The UN Refugee Agency")
-
 }
   })
 
