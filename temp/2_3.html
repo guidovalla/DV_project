@@ -65,27 +65,28 @@ d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/2_3.cs
 
 .then(function(data){
 
-
-  filteredData = data.filter(function (d) {
+  fdata  = data.filter(function (d) {
     return d.year == Year;
   });
-  console.log(filteredData)
+
+  //append a row to fdata
+  fdata.push({parent: "", cause: "root", val: ""})
 
 
 
-data.forEach(function(filteredData) {
-    filteredData.val = +filteredData.val;
-    filteredData.enabled = true;
+fdata.forEach(function(d) {
+    d.val = +d.val;
+    d.enabled = true;
   });
 
-const total = d3.sum(data.map(function(d) {
+const total = d3.sum(fdata.map(function(d) {
   return (d.enabled) ? d.val : 0;  }));
 
-// reshape data
+// reshape fdata
 const treeData = d3.stratify()
   .id(d => d.cause)
   .parentId(d => d.parent)
-  (data);
+  (fdata);
 
 treeData.sum(d => d.val)
 
@@ -147,7 +148,7 @@ svg
     .attr("x", d => d.x0+5)
     .attr("y", d => d.y0+15)
     //.text(d => Math.round(1000 * d.data.val / total) / 10 + "%")
-    .text(d => d.data.cause)
+    .text(d => (d.data.val/10).toFixed(2)+ "%")
     .attr("font-size", "5px")
     .attr("fill", "#ffffff");
 svg
@@ -157,8 +158,8 @@ svg
     .attr("class", "tree-label")
     .attr("x", d => d.x0+5)
     .attr("y", d => d.y0+30)
-    .text(d => d.data.region)
-    .attr("font-size", "10px")
+    .text(d => d.data.cause)
+    .attr("font-size", "4px")
     .attr("fill", "#ffffff");
 
 // set title
@@ -188,33 +189,129 @@ svg
     .attr("text-anchor", "start")
   .text("©UNHCR, The UN Refugee Agency")
 
+//add slider 
+        
+const sliderRange= d3
+.sliderBottom()
+.min(1990)
+.max(2021)
+.width(300)
+.step(1)
+.tickFormat(d3.format('Y'))
+.ticks(5)
+.default(2021)
+.on('onchange', val => {
+    year = val
+      updateChart(year)
+    })
+        const gRange= d3.
+        select('#slider-range')
+        .append("svg")
+        .attr("width", 700 + margin.left + margin.right)
+        .attr("height", 200 + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+        .call(sliderRange);
 
-// function updateChart(year){
-// //remove all the bubbles
-// d3.selectAll(".bubbles").remove()
-// //filter the data
-// filteredData = data.filter(function (d) {
-//     return d.Year == year;
-//   });
-//   filteredData =filteredData.filter(function (d) {
-//     return d.GDPpercapita != "";
-//   });
-//  svg.append('g')
-//     .selectAll("dot")
-//     .data(filteredData)
-//     .enter()
-//     .append("circle")
-//       .attr("class", function(d) { return "bubbles " + d.Continent })
-//       .attr("cx", function (d) { return x(d.GDPpercapita); } )
-//       .attr("cy", function (d) { return y(d.Lifeexpectancy); } )
-//       .attr("r", function (d) { return z(d.Population); } )
-//       .style("fill", function (d) { return myColor(d.Continent); } )
-//       // -3- Trigger the functions for hover
-//     .on("mouseover", showTooltip )
-//     .on("mousemove", moveTooltip )
-//     .on("mouseleave", hideTooltip )
+function updateChart(Year){
+//remove all the bubbles
+d3.selectAll("rect").remove()
+//filter the data
+fdata  = data.filter(function (d) {
+    return d.year == Year;
+  });
 
-// }
+//append a row to fdata
+fdata.push({parent: "", cause: "root", val: ""})
+
+
+
+fdata.forEach(function(d) {
+    d.val = +d.val;
+    d.enabled = true;
+  });
+
+const total = d3.sum(fdata.map(function(d) {
+  return (d.enabled) ? d.val : 0;  }));
+
+// reshape fdata
+const treeData = d3.stratify()
+  .id(d => d.cause)
+  .parentId(d => d.parent)
+  (fdata);
+
+treeData.sum(d => d.val)
+
+d3.treemap()
+  .size([width, height])
+  .padding(2)
+  (treeData);
+
+
+svg
+  .selectAll("rect")
+  .data(treeData.leaves())
+  .join("rect")
+    .attr('x', d => d.x0)
+    .attr('y', d => d.y0)
+    .attr('width', d => d.x1 - d.x0)
+    .attr('height', d=> d.y1 - d.y0)
+    .style("stroke", "none")
+    .style("fill", "#0072BC")
+  .on("mouseover", mouseover)
+  .on("mousemove", mousemove)
+  .on("mouseleave", mouseleave);
+
+  svg
+  .selectAll("text-number")
+  .data(treeData.leaves())
+  .join("text")
+    .attr("class", "tree-label")
+    .attr("x", d => d.x0+5)
+    .attr("y", d => d.y0+15)
+    //.text(d => Math.round(1000 * d.data.val / total) / 10 + "%")
+    .text(d => (d.data.val/10).toFixed(2)+ "%")
+    .attr("font-size", "5px")
+    .attr("fill", "#ffffff");
+svg
+  .selectAll("text-region")
+  .data(treeData.leaves())
+  .join("text")
+    .attr("class", "tree-label")
+    .attr("x", d => d.x0+5)
+    .attr("y", d => d.y0+30)
+    .text(d => d.data.cause)
+    .attr("font-size", "4px")
+    .attr("fill", "#ffffff");
+
+// set title
+svg
+  .append("text")
+    .attr("class", "chart-title")
+    .attr("x", 0)
+    .attr("y", -(margin.top)/1.5)
+    .attr("text-anchor", "start")
+  .text("UNHCR global workforce by region | 2021");
+
+// set source
+svg
+  .append("text")
+    .attr("class", "chart-source")
+    .attr("x", 0)
+    .attr("y", height + margin.bottom*0.4)
+    .attr("text-anchor", "start")
+  .text("Source: UNHCR")
+
+// set copyright
+svg
+  .append("text")
+    .attr("class", "copyright")
+    .attr("x", 0)
+    .attr("y", height + margin.bottom*0.7)
+    .attr("text-anchor", "start")
+  .text("©UNHCR, The UN Refugee Agency")
+
+}
   })
 
 </script>
