@@ -1,10 +1,216 @@
-cause,parent,val
-root,,
-Digestive diseases,root,47.29154002786016
-Neurological disorders,root,101.80575068090796
-Respiratory infections and tuberculosis,root,21.28194528957439
-Diabetes and kidney diseases,root,63.18218268095797
-Cardiovascular diseases,root,392.1318390427778
-Chronic respiratory diseases,root,51.97095454452346
-Unintentional injuries,root,25.489145365558656
-Neoplasms,root,318.42499466815525
+cause,parent,val,year
+root,,,
+Digestive diseases,root,51.97022981953,1990
+Neurological disorders,root,37.57144504903182,1990
+Diabetes and kidney diseases,root,46.27252338523001,1990
+Cardiovascular diseases,root,398.798412383637,1990
+Chronic respiratory diseases,root,42.71725850740652,1990
+Unintentional injuries,root,21.9185429677647,1990
+Neoplasms,root,264.91697613799965,1990
+Cardiovascular diseases,root,403.4911643792044,1991
+Chronic respiratory diseases,root,43.177054425106896,1991
+Transport injuries,root,20.238717180813843,1991
+Neoplasms,root,270.83505360831003,1991
+Unintentional injuries,root,22.347959260264496,1991
+Digestive diseases,root,52.01036655891349,1991
+Neurological disorders,root,39.49850635973005,1991
+Digestive diseases,root,51.27224790618823,1992
+Neurological disorders,root,41.14814000136631,1992
+Diabetes and kidney diseases,root,46.40359330446461,1992
+Cardiovascular diseases,root,399.5399612530709,1992
+Digestive diseases,root,50.46551875040725,1995
+Chronic respiratory diseases,root,42.81973013021957,1992
+Neurological disorders,root,46.89944811005191,1995
+Diabetes and kidney diseases,root,46.76024953584864,1995
+Diabetes and kidney diseases,root,46.800191628466514,1991
+Unintentional injuries,root,22.14453261304677,1992
+Chronic respiratory diseases,root,43.222168484895846,1995
+Unintentional injuries,root,22.62031376266887,1995
+Neoplasms,root,277.1057750666519,1993
+Cardiovascular diseases,root,399.44032787455694,1993
+Chronic respiratory diseases,root,42.74455712393208,1993
+Unintentional injuries,root,22.198277088389435,1993
+Cardiovascular diseases,root,400.4838618956279,1996
+Chronic respiratory diseases,root,43.38938884163034,1996
+Neoplasms,root,287.3294824894655,1996
+Unintentional injuries,root,22.950073384013635,1996
+Cardiovascular diseases,root,400.4400288661676,1994
+Chronic respiratory diseases,root,43.03894792530148,1994
+Unintentional injuries,root,22.453205154459148,1994
+Diabetes and kidney diseases,root,46.14149147408385,1993
+Neoplasms,root,273.33473006286755,1992
+Digestive diseases,root,50.05926041783657,1997
+Diabetes and kidney diseases,root,47.48874232772876,1996
+Neurological disorders,root,50.57942972943227,1997
+Neoplasms,root,281.3275452007301,1994
+Diabetes and kidney diseases,root,47.90054089356104,1997
+Neoplasms,root,290.33973592242967,1997
+Digestive diseases,root,50.9565499170473,1994
+Neurological disorders,root,44.857922523657045,1994
+Digestive diseases,root,51.05675854155832,1993
+Neurological disorders,root,42.94635665100471,1993
+Cardiovascular diseases,root,399.7664196985428,1995
+Neoplasms,root,295.4725234018562,1998
+Cardiovascular diseases,root,405.3897047305056,1998
+Chronic respiratory diseases,root,44.623681719846864,1998
+Unintentional injuries,root,23.663501375873977,1998
+Digestive diseases,root,50.40467346011451,1998
+Neurological disorders,root,52.32246954263204,1998
+Diabetes and kidney diseases,root,48.6838371761129,1999
+Digestive diseases,root,49.62111245190195,1999
+Neurological disorders,root,53.73673512664406,1999
+Cardiovascular diseases,root,398.9906580815656,1999
+Chronic respiratory diseases,root,44.72904184936961,1999
+Cardiovascular diseases,root,385.3529627647303,2002
+Unintentional injuries,root,23.06173444617394,1999
+Chronic respiratory diseases,root,44.67671724034735,2002
+Unintentional injuries,root,23.004947130690145,2002
+Neoplasms,root,299.03576527366704,2002
+Digestive diseases,root,47.62354394894364,2002
+Neurological disorders,root,62.102266385920345,2002
+Cardiovascular diseases,root,391.3469976031707,2000
+Chronic respiratory diseases,root,44.19913510494143,2000
+Unintentional injuries,root,22.980615436667065,2000
+Neoplasms,root,296.69336853374955,2000
+Neoplasms,root,284.04502440125,1995
+Digestive diseases,root,47.16427816354408,2003
+Neurological disorders,root,66.33457744072291,2003
+Diabetes and kidney diseases,root,48.65295291894784,2000
+Diabetes and kidney diseases,root,50.59117035975581,2003
+Digestive diseases,root,48.090910913269546,2001
+Neurological disorders,root,58.23866155752332,2001
+Cardiovascular diseases,root,385.2495690883136,2003
+Chronic respiratory diseases,root,46.08494037413358,2003
+Unintentional injuries,root,22.7368570259224,2003
+Diabetes and kidney diseases,root,48.90617453257375,2001
+Neoplasms,root,295.03583169803755,2004
+Neoplasms,root,298.2679943634639,2001
+Cardiovascular diseases,root,364.4991615123787,2004
+Chronic respiratory diseases,root,44.55705514792942,2004
+Unintentional injuries,root,21.77503169563961,2004
+Diabetes and kidney diseases,root,49.42245833038215,2004
+Digestive diseases,root,44.63555390261628,2005
+Neurological disorders,root,71.76561831550518,2005
+Diabetes and kidney diseases,root,49.96377337029226,2005
+Neoplasms,root,293.5123021215364,2006
+Digestive diseases,root,50.13405128122822,1996
+Neurological disorders,root,48.9032696882774,1996
+Cardiovascular diseases,root,357.53988031335183,2006
+Chronic respiratory diseases,root,44.7364018157132,2006
+Neoplasms,root,296.74981575079715,1999
+Unintentional injuries,root,21.837409301968645,2006
+Neoplasms,root,293.6152112265153,2005
+Digestive diseases,root,44.31523332949144,2007
+Neurological disorders,root,76.41133635937499,2007
+Diabetes and kidney diseases,root,48.789130297293504,1998
+Diabetes and kidney diseases,root,53.73618545630041,2009
+Diabetes and kidney diseases,root,51.74641689262422,2007
+Diabetes and kidney diseases,root,49.53975211146668,2002
+Cardiovascular diseases,root,356.38712534314254,2008
+Chronic respiratory diseases,root,45.47194184877625,2008
+Cardiovascular diseases,root,386.34870686011055,2001
+Chronic respiratory diseases,root,43.97172384092769,2001
+Unintentional injuries,root,22.975956270653704,2001
+Unintentional injuries,root,22.280701213051795,2008
+Diabetes and kidney diseases,root,46.30903363791585,1994
+Digestive diseases,root,44.28210933404386,2006
+Neoplasms,root,301.088216328806,2003
+Digestive diseases,root,44.52754987854296,2009
+Neurological disorders,root,74.20296052220303,2006
+Neurological disorders,root,79.81398432727693,2009
+Digestive diseases,root,48.69655185803355,2000
+Neurological disorders,root,55.3533641206346,2000
+Neoplasms,root,297.6550030026047,2010
+Cardiovascular diseases,root,401.405546312366,1997
+Chronic respiratory diseases,root,43.93710473388016,1997
+Unintentional injuries,root,23.09983573056643,1997
+Digestive diseases,root,45.15722549326993,2004
+Neurological disorders,root,68.96394150563138,2004
+Neoplasms,root,297.3084687601214,2008
+Digestive diseases,root,44.33396970616951,2011
+Neurological disorders,root,84.12712726695612,2011
+Cardiovascular diseases,root,348.3273891167678,2010
+Chronic respiratory diseases,root,45.29425487137449,2010
+Unintentional injuries,root,22.408447248661837,2010
+Cardiovascular diseases,root,357.0417516807421,2007
+Neoplasms,root,298.6762398476008,2009
+Chronic respiratory diseases,root,45.13351035705524,2007
+Unintentional injuries,root,22.01416185383612,2007
+Diabetes and kidney diseases,root,50.61632880954025,2006
+Diabetes and kidney diseases,root,52.86334647707601,2008
+Diabetes and kidney diseases,root,55.473469252499385,2011
+Cardiovascular diseases,root,353.7434052031922,2012
+Chronic respiratory diseases,root,46.34985514376072,2012
+Unintentional injuries,root,22.97232292495066,2012
+Diabetes and kidney diseases,root,56.7352784209089,2013
+Digestive diseases,root,44.09908932317197,2010
+Neurological disorders,root,81.348523906851,2010
+Cardiovascular diseases,root,360.7258147151693,2005
+Chronic respiratory diseases,root,44.91819222621795,2005
+Unintentional injuries,root,21.71820819852645,2005
+Neoplasms,root,301.78035931505894,2012
+Digestive diseases,root,44.12808870682974,2013
+Neurological disorders,root,87.66502560287731,2013
+Neoplasms,root,301.08704587831204,2014
+Cardiovascular diseases,root,351.7232126681162,2011
+Neoplasms,root,295.13737413220133,2007
+Chronic respiratory diseases,root,45.7828149207768,2011
+Unintentional injuries,root,22.66033153744089,2011
+Cardiovascular diseases,root,361.72641810373904,2016
+Cardiovascular diseases,root,354.06942573203827,2009
+Chronic respiratory diseases,root,45.68973569161159,2009
+Unintentional injuries,root,23.002278140557557,2009
+Chronic respiratory diseases,root,48.640221668342285,2016
+Unintentional injuries,root,24.45497294117044,2016
+Digestive diseases,root,45.34520756048339,2015
+Neurological disorders,root,92.50310076303636,2015
+Digestive diseases,root,44.48698233021909,2008
+Neurological disorders,root,78.25178912613104,2008
+Respiratory infections and tuberculosis,root,20.23450436079849,2017
+Diabetes and kidney diseases,root,59.93997794563168,2017
+Diabetes and kidney diseases,root,53.91733543627197,2010
+Cardiovascular diseases,root,349.7594727165984,2014
+Diabetes and kidney diseases,root,56.79702368588323,2012
+Chronic respiratory diseases,root,46.31889875934941,2014
+Unintentional injuries,root,22.936573392613703,2014
+Neoplasms,root,305.0420116789584,2016
+Diabetes and kidney diseases,root,59.87511309105867,2015
+Neoplasms,root,300.3846798158977,2013
+Neoplasms,root,313.55102237992617,2018
+Neoplasms,root,299.6339613659313,2011
+Digestive diseases,root,45.26169044910838,2017
+Neurological disorders,root,96.65425998354522,2017
+Digestive diseases,root,47.29154002786016,2019
+Neurological disorders,root,101.80575068090796,2019
+Cardiovascular diseases,root,382.6402414966965,2018
+Chronic respiratory diseases,root,50.81129168980666,2018
+Unintentional injuries,root,25.0374187014672,2018
+Digestive diseases,root,44.041123325352,2014
+Neurological disorders,root,89.39930921221087,2014
+Diabetes and kidney diseases,root,59.24709314184164,2016
+Digestive diseases,root,44.61433081703644,2012
+Neurological disorders,root,86.39513429511592,2012
+Cardiovascular diseases,root,349.63330234699345,2013
+Chronic respiratory diseases,root,46.01701285060591,2013
+Unintentional injuries,root,22.888000710006445,2013
+Cardiovascular diseases,root,364.3935203363244,2015
+Chronic respiratory diseases,root,48.37370874699543,2015
+Unintentional injuries,root,23.86999126770703,2015
+Neoplasms,root,307.66004009441,2017
+Respiratory infections and tuberculosis,root,21.28194528957439,2019
+Diabetes and kidney diseases,root,63.18218268095797,2019
+Diabetes and kidney diseases,root,57.16052202190678,2014
+Digestive diseases,root,46.42450042629545,2018
+Neurological disorders,root,99.3564318337093,2018
+Digestive diseases,root,44.70384155661991,2016
+Neurological disorders,root,94.57256099899514,2016
+Neoplasms,root,307.63156391435103,2015
+Cardiovascular diseases,root,369.9289136072249,2017
+Chronic respiratory diseases,root,49.38333967907134,2017
+Unintentional injuries,root,24.281585328884475,2017
+Cardiovascular diseases,root,392.1318390427778,2019
+Chronic respiratory diseases,root,51.97095454452346,2019
+Unintentional injuries,root,25.489145365558656,2019
+Respiratory infections and tuberculosis,root,20.80605446665935,2018
+Diabetes and kidney diseases,root,61.806075600311445,2018
+Neoplasms,root,318.42499466815525,2019
