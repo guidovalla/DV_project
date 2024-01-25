@@ -39,11 +39,10 @@
     
     
       // Get the different categories and count them
-      const categories = ["Africa","Asia","Europe","Latin America and the Caribbean","Northern America","Oceania"]
+      const categories = ["Africa","Asia","Europe","South America","North America","Oceania"]
       
       const n = categories.length
 
-      console.log(categories)
     
       // Compute the mean of each group
       allMeans = []
@@ -52,8 +51,6 @@
         mean = d3.mean(data, function(d) { return +d[currentGroup] })
         allMeans.push(mean)
       }
-
-      console.log(allMeans)
     
       // Create a color scale using these means.
       const myColor = d3.scaleSequential()
@@ -62,12 +59,12 @@
     
       // Add X axis
       const x = d3.scaleLinear()
-        .domain([0, 623321831])
+        .domain([0,100])
         .range([ 0, width ]);
       svg.append("g")
         .attr("class", "xAxis")
         .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x).tickValues([0, 500000, 1000000, 6000000]).tickSize(-height) )
+        .call(d3.axisBottom(x).tickValues([0,25, 50, 100]).tickSize(-height) )
         .select(".domain").remove()
     
       // Add X axis label:
@@ -79,7 +76,7 @@
     
       // Create a Y scale for densities
       const y = d3.scaleLinear()
-        .domain([0, 0.25])
+        .domain([0, 0.5])
         .range([ height, 0]);
     
       // Create the Y axis for names
