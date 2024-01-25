@@ -5,6 +5,12 @@
 <!-- Create a container to host the chart -->
 <div id="viz_container"></div>
 
+<!-- Load slider -->
+<script src="https://unpkg.com/d3-simple-slider"></script>
+
+<div id="slider-range"></div>
+
+
 <style>
 svg {
     width: 100%;
@@ -51,15 +57,25 @@ const svg = d3.select("#viz_container")
   .append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
+    var Year=1990
+    
 // parse the Data
 //d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/part_to_a_whole/treemap_d3.csv")
 d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/2_3.csv")
 
 .then(function(data){
 
-data.forEach(function(d) {
-    d.val = +d.val;
-    d.enabled = true;
+
+  filteredData = data.filter(function (d) {
+    return d.year == Year;
+  });
+  console.log(filteredData)
+
+
+
+data.forEach(function(filteredData) {
+    filteredData.val = +filteredData.val;
+    filteredData.enabled = true;
   });
 
 const total = d3.sum(data.map(function(d) {
@@ -171,5 +187,34 @@ svg
     .attr("y", height + margin.bottom*0.7)
     .attr("text-anchor", "start")
   .text("©UNHCR, The UN Refugee Agency")
-})
+
+
+// function updateChart(year){
+// //remove all the bubbles
+// d3.selectAll(".bubbles").remove()
+// //filter the data
+// filteredData = data.filter(function (d) {
+//     return d.Year == year;
+//   });
+//   filteredData =filteredData.filter(function (d) {
+//     return d.GDPpercapita != "";
+//   });
+//  svg.append('g')
+//     .selectAll("dot")
+//     .data(filteredData)
+//     .enter()
+//     .append("circle")
+//       .attr("class", function(d) { return "bubbles " + d.Continent })
+//       .attr("cx", function (d) { return x(d.GDPpercapita); } )
+//       .attr("cy", function (d) { return y(d.Lifeexpectancy); } )
+//       .attr("r", function (d) { return z(d.Population); } )
+//       .style("fill", function (d) { return myColor(d.Continent); } )
+//       // -3- Trigger the functions for hover
+//     .on("mouseover", showTooltip )
+//     .on("mousemove", moveTooltip )
+//     .on("mouseleave", hideTooltip )
+
+// }
+  })
+
 </script>
