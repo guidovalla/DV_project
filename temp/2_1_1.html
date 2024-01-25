@@ -59,7 +59,7 @@ text.copyright {
 
 <script>
 // set the dimensions and margins of the graph
-const margin = {top: 60, right: 60, bottom: 50, left: 50};
+const margin = {top: 60, right: 120, bottom: 50, left: 30};
 const width = 450 - margin.left - margin.right;
 const height = 350 - margin.top - margin.bottom;
 
@@ -75,7 +75,7 @@ const svg = d3.select("#viz_container")
 
     var year=2019
 // parse the Data
-d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/2_1_1.csv")
+d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/2_1_1_new.csv")
 .then(function(data){
 
   filteredData = data.filter(function (d) {
@@ -97,7 +97,7 @@ d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/2_1_1.
 
 // list of value keys
 const typeKeys = data.columns.slice(1);
-
+var allgroups = ["Africa", "Asia", "Europe", "North-America", "Oceania", "South-America"]
 // X scale and Axis
 const f =  d3.format("~s")
 const xScale = d3.scaleLog()
@@ -125,7 +125,7 @@ var zScale = d3.scaleSqrt()
 
 // color palette
 const color = d3.scaleOrdinal()
-  .domain(typeKeys)
+  .domain(allgroups)
   .range(["#EF4A60", "#8EBE0F", "#00B398", "#E1CC0D", "#589BE5", "#18375F", "#0072BC"])
 
 // set horizontal grid line
@@ -179,11 +179,13 @@ const mouseleave = function(d) {
         .style("opacity", 0.5)
 };
 
+
 // create graph
 svg.append("g")
   .selectAll("g")
   .data(filteredData)
   .join("circle")
+  .attr("class", d => d.Continent )
       .attr("cx", d => xScale(+d.GDPpercapita))
       .attr("cy", d => yScale(+d.Lifeexpectancy))
       .attr("r", d =>zScale(+d.Population))
@@ -211,7 +213,7 @@ svg
     .attr("x", -(margin.left)*0.5)
     .attr("y", -(margin.top)/1.5)
     .attr("text-anchor", "start")
-  .text("Life expectancs vs GDP per capita")
+  .text("Life expectancy vs GDP per capita")
 
 // set X axis label
 svg
@@ -232,16 +234,16 @@ svg
   .text("Life Expectancy at birth (years)")
 
    // Add legend: circles
-   var valuesToShow = [10000000, 100000000, 1000000000]
-    var xCircle = 390
-    var xLabel = 440
+   var valuesToShow = [10000000, 100000000, 500000000]
+    var xCircle = 355
+    var xLabel = 395
     svg
       .selectAll("legend")
       .data(valuesToShow)
       .enter()
       .append("circle")
         .attr("cx", xCircle)
-        .attr("cy", function(d){ return height - 100 - zScale(d) } )
+        .attr("cy", function(d){ return height -20 - zScale(d) } )
         .attr("r", function(d){ return zScale(d) })
         .style("fill", "none")
         .attr("stroke", "black")
@@ -254,8 +256,8 @@ svg
       .append("line")
         .attr('x1', function(d){ return xCircle + zScale(d) } )
         .attr('x2', xLabel)
-        .attr('y1', function(d){ return height - 100 - zScale(d) } )
-        .attr('y2', function(d){ return height - 100 - zScale(d) } )
+        .attr('y1', function(d){ return height -20 - zScale(d) } )
+        .attr('y2', function(d){ return height -20  - zScale(d) } )
         .attr('stroke', 'black')
         .style('stroke-dasharray', ('2,2'))
 
@@ -266,7 +268,7 @@ svg
       .enter()
       .append("text")
         .attr('x', xLabel)
-        .attr('y', function(d){ return height - 100 - zScale(d) } )
+        .attr('y', function(d){ return height -20 - zScale(d) } )
         .text( function(d){ return d/1000000 } )
         .style("font-size", 10)
         .attr('alignment-baseline', 'middle')
@@ -274,37 +276,50 @@ svg
     // Legend title
     svg.append("text")
       .attr('x', xCircle)
-      .attr("y", height - 100 +30)
+      .attr("y", height -20 +10)
       .text("Population (M)")
       .attr("text-anchor", "middle")
 
     // Add one dot in the legend for each name.
-    var size = 20
-    var allgroups = ["Asia", "Europe", "North America", "South America", "Africa", "Oceania"]
+
+      // What to do when one group is hovered
+  const highlight = function(event, d){
+    // reduce opacity of all groups
+    d3.selectAll("circle").style("opacity", .05)
+    // except the one that is hovered
+    d3.selectAll("."+d).style("opacity", 1)
+  }
+
+  // And when it is not hovered anymore
+  const noHighlight = function(event, d){
+    d3.selectAll("circle").style("opacity", 0.6)
+  }
+//list of all the continents from the data
+   var size = 20
     svg.selectAll("myrect")
       .data(allgroups)
       .enter()
       .append("circle")
-        .attr("cx", 390)
+        .attr("cx", 320)
         .attr("cy", function(d,i){ return 10 + i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
         .attr("r", 7)
         .style("fill", function(d){ return color(d)})
-        //.on("mouseover", highlight)
-       // .on("mouseleave", noHighlight)
+        .on("mouseover", highlight)
+        .on("mouseleave", noHighlight)
 
     // Add labels beside legend dots
     svg.selectAll("mylabels")
       .data(allgroups)
       .enter()
       .append("text")
-        .attr("x", 390 + size*.8)
+        .attr("x", 315 + size*.8)
         .attr("y", function(d,i){ return i * (size + 5) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
         .style("fill", function(d){ return color(d)})
         .text(function(d){ return d})
         .attr("text-anchor", "left")
         .style("alignment-baseline", "middle")
-        //.on("mouseover", highlight)
-        //.on("mouseleave", noHighlight)
+        .on("mouseover", highlight)
+        .on("mouseleave", noHighlight)
 
         //add slider 
         
@@ -334,6 +349,9 @@ svg
 function updateChart(year){
 //remove all the bubbles
 d3.selectAll("circle").remove()
+d3.selectAll("mylabels").remove()
+d3.selectAll("legend").remove()
+d3.selectAll("rect").remove()
 //filter the data
 filteredData = data.filter(function (d) {
     return d.Year == year;
@@ -355,6 +373,7 @@ filteredData = data.filter(function (d) {
   .selectAll("g")
   .data(filteredData)
   .join("circle")
+  .attr("class", function(d) { return "circle" + d.Continent })
       .attr("cx", d => xScale(+d.GDPpercapita))
       .attr("cy", d => yScale(+d.Lifeexpectancy))
       .attr("r", d =>zScale(+d.Population))
@@ -363,6 +382,48 @@ filteredData = data.filter(function (d) {
   .on("mouseover", mouseover)
   .on("mousemove", mousemove)
   .on("mouseleave", mouseleave)
+
+  svg
+      .selectAll("legend")
+      .data(valuesToShow)
+      .enter()
+      .append("circle")
+        .attr("cx", xCircle)
+        .attr("cy", function(d){ return height -20 - zScale(d) } )
+        .attr("r", function(d){ return zScale(d) })
+        .style("fill", "none")
+        .attr("stroke", "black")
+
+    // Add legend: segments
+    svg
+      .selectAll("legend")
+      .data(valuesToShow)
+      .enter()
+      .append("line")
+        .attr('x1', function(d){ return xCircle + zScale(d) } )
+        .attr('x2', xLabel)
+        .attr('y1', function(d){ return height -20 - zScale(d) } )
+        .attr('y2', function(d){ return height -20  - zScale(d) } )
+        .attr('stroke', 'black')
+        .style('stroke-dasharray', ('2,2'))
+
+
+    // Add one dot in the legend for each name.
+//list of all the continents from the data
+    svg.selectAll("myrect")
+      .data(allgroups)
+      .enter()
+      .append("circle")
+        .attr("cx", 320)
+        .attr("cy", function(d,i){ return 10 + i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
+        .attr("r", 7)
+        .style("fill", function(d){ return color(d)})
+        .on("mouseover", highlight)
+        .on("mouseleave", noHighlight)
+ 
 }
+
+
+
       })
 </script>
