@@ -377,6 +377,9 @@
 <div id="viz_container_2"></div>
 <div id="slider-range_2"></div>
 
+                            <!-- Load slider -->
+                            <script src="https://unpkg.com/d3-simple-slider"></script>
+
 <style>
     svg {
   width: 300;
@@ -443,32 +446,34 @@ const svg2 = d3.select("#viz_container_2")
     .attr("viewBox", "0 0 450 350")
     .attr("preserveAspectRatio", "xMinYMin")
   .append("g")
-    .attr("transform", `translate(${margin.left}, ${margin.top})`);
+    .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
     
     var Year=2025
 
 // parse the Data
 //d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/part_to_a_whole/treemap_d3.csv")
-d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/try_treemap.csv")
+d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/4_2.csv")
 .then(function(data){
 
+  console.log("data", data)
+
   fdata  = data.filter(function (d) {
-                      return d.year == Year;
+                      return d.Time == Year;
                     });
   
   fdata.push({parent: "", cause: "root", val: ""})
-
+console.log("fdata", fdata)
 fdata.forEach(function(d) {
-    d.population = +d.population;
+    d.Pop = +d.Pop;
     d.enabled = true;
   });
 
 const total = d3.sum(fdata.map(function(d) {
-  return (d.enabled) ? d.population : 0;  }));
+  return (d.enabled) ? d.Pop : 0;  }));
 
 // reshape data
 const treeData = d3.stratify()
-  .id(d => d.ages)
+  .id(d => d.Location)
   .parentId(d => d.parent)
   (fdata);
 
@@ -573,6 +578,19 @@ svg2
     .attr("y", height + margin.bottom*0.7)
     .attr("text-anchor", "start")
   .text("©UNHCR, The UN Refugee Agency")
+  const sliderRange= d3
+.sliderBottom()
+.min(2023)
+.max(2100)
+.width(300)
+.step(1)
+.tickFormat(d3.format('Y'))
+.ticks(5)
+.default(2019)
+.on('onchange', val => {
+    year = val
+      updateChart(year)
+    })
 
   const gRange= d3.
                           select('#slider-range_2')
@@ -589,7 +607,7 @@ svg2
                   d3.selectAll("text").remove()
                   //filter the data
                   fdata  = data.filter(function (d) {
-                      return d.year == Year;
+                      return d.Time == Year;
                     });
                   
                   
