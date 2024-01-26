@@ -127,8 +127,60 @@
                             <script src="https://unpkg.com/d3-simple-slider"></script>
                       
 <!-- Create a container to host the chart -->
+                  <!-- Include d3 library -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-geo@"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-geo-projection@4"></script>
+<script src="https://unpkg.com/topojson@3"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+
+<!-- Load slider -->
+<script src="https://unpkg.com/d3-simple-slider"></script>
+ <!-- Initialize a Dropdown -->
+<select id="typebutton"></select>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+
+<!-- Create a container to host the chart -->
 <div id="viz_container"></div>
 <style>
+svg {
+	width: 100%;
+	height: 100%;
+}
+text {
+	font-family: lato;
+	font-size: 8px;
+	fill: #666666;
+}
+.solid{
+	stroke:white;
+	stroke-width:0.2;
+}
+.dashed{
+	stroke:white;
+	stroke-width:0.2;
+	stroke-dasharray:1, 0.5
+}
+.dotted{
+	stroke:white;
+	stroke-width:0.2;
+	stroke-dasharray:0.2, 0.5
+}
+.dashed-dot{
+	stroke:white;
+	stroke-width:0.2;
+	stroke-dasharray:1, 0.5, 0.2, 0.5
+}
+.tooltip {
+    background-color: #ffffff;
+    font-family: lato;
+    font-size: 12px;
+    padding: 4px;
+    color: #666666;
+    border: none;
+    box-shadow: 0px 0px 3px 0px #E6E6E6;
+  }
 
     </style>
                 <script>
@@ -160,7 +212,440 @@
 </style>
 
 <script>
+//set svg parameters
+const margin = {top: 30, right: 20, bottom: 30, left: 20};
+const width = 450,
+      height = 350;
+const svg = d3.select("#viz_container")
+   .append("svg")
+     .attr("width", "100%")
+     .attr("height", "100%")
+     .attr("viewBox","0 0  450 350")
+     .attr("preserveAspectRatio","xMinYMin");
 
+// set map scale, location on screen and its projection
+const projection = d3.geoRobinson()
+        .scale(85)
+        .center([0, 0])
+        .translate([width/2.2, height/2]);
+
+// path generator
+const path = d3.geoPath()
+        .projection(projection);
+
+// set color scale
+const color1 = d3.scaleThreshold()
+        .domain([45,55,65,75,80])
+        .range(["#DCE9FF", "#8EBEFF", "#589BE5", "#0072BC","#0f43a3", "#FF0000"])
+        .unknown("#E6E6E6");
+        const color2 = d3.scaleThreshold()
+        .domain([1.2,1.4,1.6,2,3])
+        .range(["#DCE9FF", "#8EBEFF", "#589BE5", "#0072BC","#0f43a3", "#FF0000"])
+        .unknown("#E6E6E6");
+        const color3 = d3.scaleThreshold()
+        .domain([15,20,25,35,40])
+        .range(["#DCE9FF", "#8EBEFF", "#589BE5", "#0072BC","#0f43a3", "#FF0000"])
+        .unknown("#E6E6E6");
+
+//declare polygon and polyline
+const poly = svg.append("g");
+const line = svg.append("g");
+var type= "LE";
+// declare URL
+//const dataURL = "https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/geospatial/choropleth_map.csv";
+const dataURL = "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/1_1.csv";
+const polygonsURL = "https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/geospatial/world_polygons_simplified.json";
+const polylinesURL = "https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/geospatial/world_lines_simplified.json";
+
+
+//list of unique locations
+var typelist= ["LE","Fertility","MedianAge"];
+
+
+  // Initialize a Dropdown
+  d3.select("#typebutton")
+                    .selectAll('myOptions')
+                    .data(typelist)
+                    .enter()
+                    .append('option')
+                    .attr("value", d =>d) // corresponding value returned by the button
+                    .text(d=>d)
+
+// load data
+const promises = [
+  d3.json(polygonsURL),
+  d3.csv(dataURL)
+]; 
+
+//apply filter to promises
+Promise.all(promises).then(function(data) {
+  var topology = data[0];
+  var population = data[1];
+  population =  population.filter(function (d) {
+    return d.type == type;
+  });
+  ready([topology, population]);
+});
+function ready([topology, population]) {
+
+  // prepare pop data to join shapefile
+  var data = {};
+  population2023 =  population.filter(function (d) {
+    return d.Year == 2023;
+  });
+  population2023.forEach(function(d){
+    data[d.Iso3] = +d.Value;
+  });
+
+
+
+
+  // load and draw polygons
+
+  if (type=="LE"){
+
+// define the tooltip 
+var tooltip = d3.select("#viz_container")
+  .append("div")
+    .attr("class", "tooltip")
+
+
+  poly
+    .selectAll("path")
+    .data(topojson.feature(topology, topology.objects.world_polygons_simplified).features)
+    .join("path")
+      .attr("fill", function(d) { return color1(d.Value = data[d.properties.color_code])})
+      .attr("d", path)
+      .attr("class", function(d){ return "countries" })
+    .on("mouseover",  function(d) {
+      tooltip
+      .style("opacity", 1)
+    })
+    .on("mousemove", function(event, d) {
+      tooltip
+      .html("<b>Region:</b> " +d.properties.gis_name+"<div id=tipDiv></div>" )
+    .style("left", (d3.pointer(event)[0])*3 +100 + "px")
+      .style("top", (d3.pointer(event)[1])*3 +100 + "px")
+      .style("position", "absolute")
+// define and store the mouse position. this is used to define tooltip offset, seen above.			
+
+// define current state
+ var current_state = d
+// filter data to match current state
+  var current_data = population.filter(function(d) {
+    return d.Iso3 == current_state.properties.color_code;
+  });
+  const width1 = 200,
+      height1 = 100;
+var tipSVG = d3.select("#tipDiv")
+     .append("svg")
+     .attr("width", width1)
+     .attr("height", height1);
+
+     // X scale and Axis
+const xScale = d3.scaleLinear()
+  .domain([1950,2023])
+  .range([5, 175]);
+tipSVG
+  .append('g')
+  .attr("transform", `translate(10, ${height1-20})`)
+  .call(d3.axisBottom(xScale).tickSize(0).tickPadding(8));
+
+// Y scale and Axis
+const yScale = d3.scaleLinear()
+.domain([0,110])
+.range([80, 5]);
+tipSVG
+  .append('g')
+  .attr("transform", `translate(20, ${0})`)
+  .call(d3.axisLeft(yScale).ticks(6).tickSize(0).tickPadding(6))
+  .call(d => d.select(".domain").remove());
+  const lines = tipSVG
+    .selectAll("lines")
+    .data(current_data)
+    .join("path")
+      .attr("fill", "none")
+      .attr("stroke", "gray")
+      .attr("stroke-width", 2)
+      .attr("d", function(d){
+        return d3.line()
+          .curve(d3.curveCardinal)
+          .x(d => xScale(d.Year))
+          .y((d => yScale(d.Value)))
+          (current_data)
+      })
+
+
+})
+.on("mouseleave",  function(d) {
+      tooltip
+      .style("opacity", 0)
+    })
+    .append("title")
+      .text(function(d) { return `${d.properties.gis_name} \n Life Expectancy at brith: ${d3.format(".1f")(d.Value)}`
+  }
+)};
+if (type=="Fertility"){
+
+// define the tooltip 
+var tooltip = d3.select("#viz_container")
+  .append("div")
+    .attr("class", "tooltip")
+
+
+
+  poly
+    .selectAll("path")
+    .data(topojson.feature(topology, topology.objects.world_polygons_simplified).features)
+    .join("path")
+      .attr("fill", function(d) { return color2(d.Value = data[d.properties.color_code])})
+      .attr("d", path)
+      .attr("class", function(d){ return "countries" })
+    .on("mouseover",  function(d) {
+      tooltip
+      .style("opacity", 1)
+    })
+    .on("mousemove", function(event, d) {
+      tooltip
+      .html("<b>Region:</b> " +d.properties.gis_name+"<div id=tipDiv></div>" )
+    .style("left", (d3.pointer(event,this)[0])*3 +100+ "px")
+      .style("top", (d3.pointer(event,this)[1])*3 +100 + "px")
+      .style("position", "absolute")
+// define and store the mouse position. this is used to define tooltip offset, seen above.			
+
+// define current state
+ var current_state = d
+// filter data to match current state
+  var current_data = population.filter(function(d) {
+    return d.Iso3 == current_state.properties.color_code;
+  });
+  const width1 = 200,
+      height1 = 100;
+var tipSVG = d3.select("#tipDiv")
+     .append("svg")
+     .attr("width", width1)
+     .attr("height", height1);
+
+     // X scale and Axis
+const xScale = d3.scaleLinear()
+  .domain([1950,2023])
+  .range([5, 175]);
+tipSVG
+  .append('g')
+  .attr("transform", `translate(10, ${height1-20})`)
+  .call(d3.axisBottom(xScale).tickSize(0).tickPadding(8));
+
+// Y scale and Axis
+const yScale = d3.scaleLinear()
+.domain([0,9])
+.range([80, 5]);
+tipSVG
+  .append('g')
+  .attr("transform", `translate(20, ${0})`)
+  .call(d3.axisLeft(yScale).ticks(6).tickSize(0).tickPadding(6))
+  .call(d => d.select(".domain").remove());
+  const lines = tipSVG
+    .selectAll("lines")
+    .data(current_data)
+    .join("path")
+      .attr("fill", "none")
+      .attr("stroke", "gray")
+      .attr("stroke-width", 2)
+      .attr("d", function(d){
+        return d3.line()
+          .curve(d3.curveCardinal)
+          .x(d => xScale(d.Year))
+          .y((d => yScale(d.Value)))
+          (current_data)
+      })
+
+
+})
+.on("mouseleave",  function(d) {
+      tooltip
+      .style("opacity", 0)
+    })
+    .append("title")
+      .text(function(d) { return `${d.properties.gis_name} \n Average Number of births per woman: ${d3.format(".1f")(d.Value)}`
+  }
+)
+      .text(function(d) { return `${d.properties.gis_name} \n Average number of births per woman: ${d3.format(".1f")(d.Value)}`
+  }
+)};
+if (type=="MedianAge"){
+
+  // define the tooltip 
+var tooltip = d3.select("#viz_container")
+  .append("div")
+    .attr("class", "tooltip")
+
+
+
+
+  poly
+    .selectAll("path")
+    .data(topojson.feature(topology, topology.objects.world_polygons_simplified).features)
+    .join("path")
+      .attr("fill", function(d) { return color3(d.Value = data[d.properties.color_code])})
+      .attr("d", path)
+      .attr("class", function(d){ return "countries" })
+    .on("mouseover",  function(d) {
+      tooltip
+      .style("opacity", 1)
+    })
+    .on("mousemove", function(event, d) {
+      tooltip
+      .html("<b>Region:</b> " +d.properties.gis_name+"<div id=tipDiv></div>" )
+    .style("left", (d3.pointer(event)[0])*3 +100+ "px")
+      .style("top", (d3.pointer(event)[1])*3 +100 + "px")
+      .style("position", "absolute")
+// define and store the mouse position. this is used to define tooltip offset, seen above.			
+
+// define current state
+ var current_state = d
+// filter data to match current state
+  var current_data = population.filter(function(d) {
+    return d.Iso3 == current_state.properties.color_code;
+  });
+  console.log(current_data)
+  const width1 = 200,
+      height1 = 100;
+var tipSVG = d3.select("#tipDiv")
+     .append("svg")
+     .attr("width", width1)
+     .attr("height", height1);
+
+     // X scale and Axis
+const xScale = d3.scaleLinear()
+  .domain([1950,2023])
+  .range([5, 175]);
+tipSVG
+  .append('g')
+  .attr("transform", `translate(10, ${height1-20})`)
+  .call(d3.axisBottom(xScale).tickSize(0).tickPadding(8));
+
+// Y scale and Axis
+const yScale = d3.scaleLinear()
+.domain([0,70])
+.range([80, 5]);
+tipSVG
+  .append('g')
+  .attr("transform", `translate(20, ${0})`)
+  .call(d3.axisLeft(yScale).ticks(6).tickSize(0).tickPadding(6))
+  .call(d => d.select(".domain").remove());
+  const lines = tipSVG
+    .selectAll("lines")
+    .data(current_data)
+    .join("path")
+      .attr("fill", "none")
+      .attr("stroke", "gray")
+      .attr("stroke-width", 2)
+      .attr("d", function(d){
+        return d3.line()
+          .curve(d3.curveCardinal)
+          .x(d => xScale(d.Year))
+          .y((d => yScale(d.Value)))
+          (current_data)
+      })
+
+
+})
+.on("mouseleave",  function(d) {
+      tooltip
+      .style("opacity", 0)
+    })
+    .append("title")
+      .text(function(d) { return `${d.properties.gis_name} \n Median Age: ${d3.format(".1f")(d.Value)}`
+  }
+)
+    .append("title")
+      .text(function(d) { return `${d.properties.gis_name} \n Median Age: ${d3.format(".1f")(d.Value)}`
+  }
+)};
+// set legend
+svg.append("g")
+  .attr("class", "legendThreshold")
+  .attr("transform", "translate(5,255)");
+var legend = d3.legendColor()
+.labelFormat(d3.format(".1f"))
+.labels(d3.legendHelpers.thresholdLabels)
+.labelOffset(3)
+.shapePadding(0)
+.scale(color1);
+
+
+if (type=="MedianAge"){
+   legend = d3.legendColor()
+.labelFormat(d3.format(".1f"))
+.labels(d3.legendHelpers.thresholdLabels)
+.labelOffset(3)
+.shapePadding(0)
+.scale(color3);
+}
+
+if (type=="Fertility"){
+  legend = d3.legendColor()
+.labelFormat(d3.format(".1f"))
+.labels(d3.legendHelpers.thresholdLabels)
+.labelOffset(3)
+.shapePadding(0)
+.scale(color2);
+}
+
+svg.select(".legendThreshold")
+    .call(legend);
+
+
+//load and draw lines
+d3.json(polylinesURL).then(function(topology) {
+line
+  .selectAll("path")
+     .data(topojson.feature(topology, topology.objects.world_lines_simplified).features)
+     .enter()
+     .append("path")
+     .attr("d", path)
+     .style("fill","none")
+     .attr("class", function(d) {return d.properties.type;})
+});
+};
+//zoom function
+const zoom = true
+if (zoom){
+	var zoomFunction = d3.zoom()
+		  .scaleExtent([1, 8])
+		  .on('zoom', function(event) {
+			  poly.selectAll('path')
+			   .attr('transform', event.transform);
+			  line.selectAll('path')
+			   .attr('transform', event.transform);
+	});
+	svg.call(zoomFunction);
+};
+
+
+   
+
+
+        d3.select("#typebutton").on("change", function () {
+                    type = d3.select(this).property("value");
+                    updateChart(type);
+                });
+function updateChart(type){
+  //destroy previous chart
+  d3.selectAll("path").remove();
+  d3.selectAll("title").remove();
+  d3.selectAll("#tipDiv").remove();
+
+//apply filter to promises
+Promise.all(promises).then(function(data) {
+  var topology = data[0];
+  var population = data[1];
+  population =  population.filter(function (d) {
+    return d.type == type;
+  });
+  ready([topology, population]);
+});
+}
 </script>
                 </div>
 
