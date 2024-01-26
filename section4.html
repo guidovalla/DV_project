@@ -450,12 +450,15 @@ const svg2 = d3.select("#viz_container_2")
     
     var Year=2025
 
+    
+
 // parse the Data
 //d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/part_to_a_whole/treemap_d3.csv")
 d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/4_2.csv")
 .then(function(data){
 
   console.log("data", data)
+
 
   fdata  = data.filter(function (d) {
                       return d.Time == Year;
@@ -515,7 +518,18 @@ const mouseleave = function(d) {
     .style("stroke", "none")
     .style("opacity", 1)
 };
+// const colorScale = d3.scaleSequential(d3.interpolateBlues)
+//   .domain([0, d3.max(treeData.leaves(), d => d.data.LE)]);
+// const colorScale = d3.scaleSequential(d3.interpolateBlues)
+//   .domain([1, d3.max(treeData.leaves(), d => d.data.LE)])
+//   .interpolator(d3.interpolateTurbo); // Use a different color interpolation for better visibility
+// Define your custom array of colors
+const myColors = ["#89CFF0", "#0096FF", "#005eab", "#00008B", "#060c36"];
 
+// Create a d3.scaleSequential based on the custom colors
+const colorScale = d3.scaleSequential()
+  .domain([60, d3.max(treeData.leaves(), d => d.data.LE)])
+  .interpolator(d3.scaleSequential(d3.interpolateRgbBasis(myColors)));
 // create rectangle
 svg2
   .selectAll("rect")
@@ -526,7 +540,8 @@ svg2
     .attr('width', d => d.x1 - d.x0)
     .attr('height', d=> d.y1 - d.y0)
     .style("stroke", "none")
-    .style("fill", "#0072BC")
+    .style("fill", d => colorScale(d.data.LE))
+    //.style("fill", d => colorScale(Math.max(1, d.data.LE))) // Use Math.max to handle values <= 0
   .on("mouseover", mouseover)
   .on("mousemove", mousemove)
   .on("mouseleave", mouseleave);
@@ -611,28 +626,28 @@ svg2
                   fdata  = data.filter(function (d) {
                       return d.Time == Year;
                     });
-                  
-                  
-                  //append a row to fdata
-                  fdata.push({parent: "", cause: "root", val: ""})
-                  
-                  
-                  
-                  fdata.forEach(function(d) {
-                      d.val = +d.val;
-                      d.enabled = true;
+                    fdata  = data.filter(function (d) {
+                      return d.Time == Year;
                     });
-                  
-                  const total = d3.sum(fdata.map(function(d) {
-                    return (d.enabled) ? d.val : 0;  }));
-                  
+  
+  
+
+                      fdata.forEach(function(d) {
+                          d.Pop = +d.Pop;
+                          d.enabled = true;
+                        });
+                        fdata.push({Location: "root", LE: "", Pop: "", parent: "",})
+                        console.log("fdata", fdata)
+
+                      const total = d3.sum(fdata.map(function(d) {
+                        return (d.enabled) ? d.Pop : 0;  }));
                   // reshape fdata
                   const treeData = d3.stratify()
-                    .id(d => d.cause)
+                    .id(d => d.Location)
                     .parentId(d => d.parent)
                     (fdata);
                   
-                  treeData.sum(d => d.val)
+                  treeData.sum(d => d.Pop)
                   
                   //sort treedata on value
                   treeData.sort(function(a, b) { return b.height - a.height || b.value - a.value; });
@@ -641,7 +656,13 @@ svg2
                     .size([width, height])
                     .padding(2)
                     (treeData);
-                  
+                    const myColors = ["#89CFF0", "#0096FF", "#005eab", "#00008B", "#060c36"];
+
+                    // Create a d3.scaleSequential based on the custom colors
+                    const colorScale = d3.scaleSequential()
+                      .domain([60, d3.max(treeData.leaves(), d => d.data.LE)])
+                      .interpolator(d3.scaleSequential(d3.interpolateRgbBasis(myColors)));
+                    // create rectangle
                   
                   svg2
                     .selectAll("rect")
@@ -652,7 +673,8 @@ svg2
                       .attr('width', d => d.x1 - d.x0)
                       .attr('height', d=> d.y1 - d.y0)
                       .style("stroke", "none")
-                      .style("fill", "#0072BC")
+                      .style("fill", d => colorScale(d.data.LE))
+                      //.style("fill", "#0072BC")
                     .on("mouseover", mouseover)
                     .on("mousemove", mousemove)
                     .on("mouseleave", mouseleave);
@@ -665,7 +687,7 @@ svg2
                       .attr("x", d => d.x0+5)
                       .attr("y", d => d.y0+15)
                       //.text(d => Math.round(1000 * d.data.val / total) / 10 + "%")
-                      .text(d => (d.data.val/10).toFixed(2)+ "%")
+                      .text(d => "Life expectancy: " + (d.data.LE/1).toFixed(0) )
                       .attr("font-size", "5px")
                       .attr("fill", "#ffffff");
                   svg2
@@ -675,7 +697,7 @@ svg2
                       .attr("class", "tree-label")
                       .attr("x", d => d.x0+5)
                       .attr("y", d => d.y0+30)
-                      .text(d => d.data.cause)
+                      .text(d => d.data.Location)
                       .attr("font-size", "4px")
                       .attr("fill", "#ffffff");
                   }
