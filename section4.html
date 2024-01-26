@@ -183,7 +183,7 @@
 
 
 	<script>
-    var lineColors = ['#cacaca', '#e88467', '#423189']; // Add more colors as needed
+    var lineColors = ['#cacaca','#423189', '#e88467']; // Add more colors as needed
 
 
 		//define chart margins
@@ -219,7 +219,7 @@
 			});
 
 		//load data
-		data = d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/4_1_3lines.csv", type, function(error, data) {
+		data = d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/4_1.csv", type, function(error, data) {
 			if (error) throw error;
 
 
@@ -342,6 +342,34 @@
          })
         //.style("stroke", function(d) { return z(d.id).color; })
 				.attr("opacity", 1);
+
+
+        // Create a legend
+var legend = g.append("g")
+    .attr("class", "legend")
+    .attr("transform", "translate(" + (width + 10) + "," + 0 + ")"); // Adjust the translate values as needed
+
+// Append rectangles and text for each line in the legend
+legend.selectAll("rect")
+    .data(countries)
+    .enter()
+    .append("rect")
+    .attr("x", 0)
+    .attr("y", function(d, i) { return i * 20; }) // Adjust the spacing between legend items
+    .attr("width", 18)
+    .attr("height", 18)
+    .style("fill", function(d, i) { return lineColors[i % lineColors.length]; }) 
+
+legend.selectAll("text")
+    .data(countries)
+    .enter()
+    .append("text")
+    .attr("x", 25)
+    .attr("y", function(d, i) { return i * 20 + 9; }) // Adjust the spacing and alignment
+    .attr("dy", "0.35em")
+    .style("font", "11px sans-serif")
+    .text(function(d) { return d.id; });
+
 
 
 
