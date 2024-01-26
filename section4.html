@@ -183,6 +183,8 @@
 
 
 	<script>
+    var lineColors = ['#cacaca', '#e88467', '#423189']; // Add more colors as needed
+
 
 		//define chart margins
 		let svg = d3.select("svg"),
@@ -276,9 +278,13 @@
 			console.log("y domain", y.domain());
 
 			//define color scale
-			z.domain(countries.map(function(c) {
-				return c.id;
-			}));
+// z.domain(countries.map(function(c, i) {
+//     return {
+//         id: c.id,
+//         color: lineColors[i % lineColors.length] // Assign color from the array
+//     };
+// }));
+
 
 			console.log("z domain", z.domain());
 
@@ -328,7 +334,13 @@
 				.attr("class", "line")
 				.attr('id', function(d){ return 'line-' + d.id })
 			  .attr("d", function(d) {return line(d.values); })
-			  .style("stroke", function(d) {return z(d.id);})
+        .style("stroke", function(d, i) { return lineColors[i % lineColors.length]; }) // Assign color directly
+        .style("stroke-width", 3) // Set the desired stroke width
+        .style("stroke-dasharray", function(d, i) {
+        // Set the dash array for the line you want to be dotted
+        return i === 0 ? "5,5" : "none";
+         })
+        //.style("stroke", function(d) { return z(d.id).color; })
 				.attr("opacity", 1);
 
 
