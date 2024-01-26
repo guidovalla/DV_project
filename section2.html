@@ -1846,7 +1846,7 @@ filteredData = data.filter(function (d) {
                   svg5
                     .selectAll("text-region")
                     .data(treeData.leaves())
-                    .join("text")
+                    .join("text").style("font-size", "4px")
                       .attr("class", "tree-label")
                       .attr("x", d => d.x0+5)
                       .attr("y", d => d.y0+30)
@@ -1856,7 +1856,7 @@ filteredData = data.filter(function (d) {
                   
                   // set title
                   svg5
-                    .append("text")
+                    .append("text").style("font-size", "4px")
                       .attr("class", "chart-title")
                       .attr("x", 0)
                       .attr("y", -(margin.top)/1.5)
