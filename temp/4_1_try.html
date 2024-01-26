@@ -103,7 +103,7 @@
 		let line = d3.line()
 			.curve(d3.curveBasis)
 			.x(function(d) {
-				return x(d.date);
+				return x(d.Year);
 			})
 			.y(function(d) {
 					return y(d.expenditure);
@@ -128,7 +128,7 @@
 					id: id,
 					values: data.map(function(d) {
 						return {
-							Year: d.date,
+							Year: d.Year,
 							expenditure: d[id]
 
 						};
@@ -230,7 +230,7 @@
 			// append country labels to svg
 			country.append("text")
 				.datum(function(d) { return {id: d.id, value: d.values[d.values.length - 1]}; })
-				.attr("transform", function(d) { return "translate(" + x(d.value.date) + "," + y(d.value.countries) + ")"; })
+				.attr("transform", function(d) { return "translate(" + x(d.value.Year) + "," + y(d.value.countries) + ")"; })
 				.attr("x", 3)
 				.attr('id', function(d){ return 'text-' + d.id })
 				.attr("dy", "0.35em")
@@ -288,7 +288,7 @@
 
 		//bind with multiseries data
 		function type(d, _, columns) {
-			d.Year = parseTime(d.date);
+			d.Year = parseTime(d.Year);
 			//iterate through each column
 			for (var i = 1, n = columns.length, c; i < n; ++i) d[c = columns[i]] = +d[c];
 
