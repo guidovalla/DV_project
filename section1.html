@@ -172,12 +172,201 @@
                         <div class="card">
                           <div class="card-body">
                             <h5 class="card-title">Chart 3</h5>
-                      <div id="container_3"></div>
+                      <div id="container"></div>
+           
+       <!-- Create a container to host the chart -->
+<div id="viz_container3"></div>
 
-                      <script>
 
-                      </script>
-                          </div>
+<style>
+
+svg {
+    width: 100%;
+    height: 100%;
+  }
+  text {
+    font-family: lato;
+    font-size: 11px;
+    fill: #666666;
+  }
+  .grid path {
+    stroke-width: 0;
+    stroke: #333333;
+  }
+  .grid .tick line {
+    stroke: #333333;
+    stroke-width: 0.3px;
+    stroke-opacity: 0.3;
+  }
+  text.chart-title {
+    font-size: 15px;
+    font-weight: 600;
+    fill:#222222
+  }
+  text.chart-label {
+    font-size: 11px;
+    font-weight: 400;
+    fill: #999999;
+  }
+  text.chart-source {
+    font-size: 9px;
+    fill: #999999;
+  }
+  text.copyright {
+    font-size: 9px;
+    fill: #999999;
+  }
+  .tooltip {
+    background-color: #ffffff;
+    font-family: lato;
+    font-size: 11px;
+    padding: 4px;
+    color: #666666;
+    border: none;
+    box-shadow: 0px 0px 3px 0px #E6E6E6;
+  }
+</style>
+<script>
+ // set the dimensions and margins of the graph
+const margin3 = {top: 80, right: 20, bottom: 50, left: 40};
+const width3 = 450 - margin3.left - margin3.right;
+const height3 = 350 - margin3.top - margin3.bottom;
+
+// append the svg object to the body of the page
+const svg3 = d3.select("#viz_container3")
+  .append("svg")
+    .attr("width", "100%")
+    .attr("height", "100%")
+    .attr("viewBox", "0 0 450 350")
+    .attr("preserveAspectRatio", "xMinYMin")
+  .append("g")
+    .attr("transform", `translate(${margin3.left}, ${margin3.top})`);
+
+// parse the data
+d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/1_3.csv").then(function(data) {
+
+//pivot the data
+const dataGrouped = d3.group(data, d => d.Location)
+// create a tooltip
+const tooltip = d3.select("#viz_container3")
+  .append("div")
+    .attr("class", "tooltip")
+
+// tooltip events
+const mouseover = function(d) {
+    tooltip
+        .style("opacity", 1)
+    d3.select(this)
+        .style("stroke", "#051269")
+        .style("opacity", 1)
+};
+const mousemove = function(event,d) {
+    const f = d3.format(",");
+    console.log(d)
+    tooltip
+    .html("<div><b>Region:</b> " +d[0]+"</div>" )
+    .style("left", (d3.pointer(event)[0])*2+150 + "px")
+      .style("top", (d3.pointer(event)[1])*2+150 + "px")
+      .style("position", "absolute")
+};
+
+const mouseleave = function(d) {
+    tooltip
+        .style("opacity", 0)
+    d3.select(this)
+        .style("stroke",  d => color(d[0]))
+        .style("opacity", 1)
+};
+// list of value keys
+const typeKeys = ["World", "Africa", "Asia", "Europe", "Latin America and the Caribbean", "Northern America", "Oceania"];
+
+// X scale and Axis
+const xScale = d3.scaleLinear()
+  .domain(d3.extent(data, d => d.AgeStart)).nice()
+  .range([0, width3]);
+svg3
+  .append('g')
+  .attr("transform", `translate(0, ${height3})`)
+  .call(d3.axisBottom(xScale).tickSize(0).tickPadding(8));
+
+// Y scale and Axis
+const yScale = d3.scaleLinear()
+.domain([0,110])
+.range([height3, 0]);
+svg3
+  .append('g')
+  .call(d3.axisLeft(yScale).ticks(6).tickSize(0).tickPadding(6))
+  .call(d => d.select(".domain").remove());
+
+// set horizontal grid line
+const GridLine = () => d3.axisLeft().scale(yScale);
+svg3
+  .append("g")
+    .attr("class", "grid")
+  .call(GridLine()
+    .tickSize(-width3,0,0)
+    .tickFormat("")
+    .ticks(6)
+);
+
+// color palette
+const color = d3.scaleOrdinal()
+  .range(["#2aa308","#808504","#18d9cc","#c218d9","#d9184e","#MSw3SM","#AQ9NCA"])
+
+// create line
+const lines = svg3
+    .selectAll("lines")
+    .data(dataGrouped)
+    .join("path")
+      .attr("fill", "none")
+      .attr("stroke", d => color(d[0]))
+      .attr("stroke-width", 2)
+      .attr("d", function(d){
+        return d3.line()
+          .curve(d3.curveCardinal)
+          .x(d => xScale(d.AgeStart))
+          .y((d => yScale(d.Value) -2*(d.AgeStart)))
+          (d[1])
+  
+      })
+      .on("mouseover", mouseover)
+  .on("mousemove", mousemove)
+  .on("mouseleave", mouseleave);
+
+// set title
+svg3
+  .append("text")
+    .attr("class", "chart-title")
+    .attr("x", -(margin3.left)*0.7)
+    .attr("y", -(margin3.top)/1.5)
+    .attr("text-anchor", "start")
+  .text("Real Life Expetancy at all ages by Region")
+
+// set Y axis label
+svg3
+  .append("text")
+    .attr("class", "chart-label")
+    .attr("x", -(margin3.left)*0.7)
+    .attr("y", -(margin3.top/9))
+    .attr("text-anchor", "start")
+  .text("Life expectancy(years)")
+
+  //set x axis label    
+svg3
+    .append("text")
+        .attr("class", "chart-label")
+        .attr("x", width3/2)
+        .attr("y", height3 + margin3.bottom/1.5)
+        .attr("text-anchor", "middle")
+    .text("Age")
+
+
+})
+
+
+
+</script>
+
 
                         </div>
                 </div>
