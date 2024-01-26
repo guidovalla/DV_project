@@ -121,97 +121,96 @@
                       <!-- Create a container to host the charts -->
 
                       <!-- first chart -->
-                      <div id="container"></div>
-                      <!-- Initialize a Dropdown -->
-                      <select id="YearsButton"></select>
+               <!-- Create a container to host the chart -->
+    <div id="container"></div>
+    <!-- Initialize a Dropdown -->
+    <select id="YearsButton"></select>
 
-                      <script>
-                          // Declare the chart dimensions and margins.
-                          const margin = { top: 10, right: 60, bottom: 60, left: 60 }
-                          const width = 700 - margin.left - margin.right;
-                          const height = 300 - margin.top - margin.bottom;
+    <script>
+        // Declare the chart dimensions and margins.
+        const margin = { top: 10, right: 60, bottom: 60, left: 60 }
+        const width = 700 - margin.left - margin.right;
+        const height = 300 - margin.top - margin.bottom;
 
-                          // Create the SVG container.
-                          const svg = d3.select("#container")
-                              .append("svg")
-                              .attr("width","100%")
-                              .attr("height", "100%")
-                              .attr("viewBox", "0 0 700 300")
-                              .attr("preserveAspectRatio", "xMinYMin meet")
-                              .append("g")
-                              .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        // Create the SVG container.
+        const svg = d3.select("#container")
+            .append("svg")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+            .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-                          // Load CSV data
-                          d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_1.csv")
-                              .then((data) => {
-                                  // Extract unique years and age categories
-                                  let years = [...new Set(data.map(d => d.Year))];
-                                  const ages = data.columns.slice(1); // Exclude 'Year' column
+        // Load CSV data
+        d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_1.csv")
+            .then((data) => {
+                // Extract unique years and age categories
+                let years = [...new Set(data.map(d => d.Year))];
+                const ages = data.columns.slice(1); // Exclude 'Year' column
 
-                                  // Declare years Dropdown
-                                  d3.select("#YearsButton")
-                                      .selectAll('myOptions')
-                                      .data(years)
-                                      .enter()
-                                      .append('option')
-                                      .text((d) => d) // text showed in the menu
-                                      .attr("value", (d) => d) // corresponding value returned by the button
+                // Declare years Dropdown
+                d3.select("#YearsButton")
+                    .selectAll('myOptions')
+                    .data(years)
+                    .enter()
+                    .append('option')
+                    .text((d) => d) // text showed in the menu
+                    .attr("value", (d) => d) // corresponding value returned by the button
 
-                                  // Declare the x (horizontal position) scale.
-                                  const x = d3.scaleBand()
-                                      .domain(ages)
-                                      .range([0, width])
-                                      .padding(0.2);
+                // Declare the x (horizontal position) scale.
+                const x = d3.scaleBand()
+                    .domain(ages)
+                    .range([0, width])
+                    .padding(0.2);
 
-                                  // Declare the y (vertical position) scale.
-                                  const y = d3.scaleLinear()
-                                      .domain([0, d3.max(data, d => d3.max(ages.map(age => +d[age])))])
-                                      .range([height, 0]);
+                // Declare the y (vertical position) scale.
+                const y = d3.scaleLinear()
+                    .domain([0, d3.max(data, d => d3.max(ages.map(age => +d[age])))])
+                    .range([height, 0]);
 
-                                  // Initial bars
-                                  updateBars(data[0].Year);
+                // Initial bars
+                updateBars(data[0].Year);
 
-                                  // Update bars when year changes
-                                  function updateBars(selectedYear) {
-                                      svg.selectAll(".bar").remove();
+                // Update bars when year changes
+                function updateBars(selectedYear) {
+                    svg.selectAll("*").remove();
 
-                                      const dataFilter = data.find(d => d.Year == selectedYear);
+                    const dataFilter = data.find(d => d.Year == selectedYear);
 
-                                      svg.selectAll(".bar")
-                                          .data(ages)
-                                          .enter()
-                                          .append("rect")
-                                          .attr("class", "bar")
-                                          .attr("x", (age) => x(age))
-                                          .attr("y", (age) => y(dataFilter[age]))
-                                          .attr("width", x.bandwidth())
-                                          .attr("height", (age) => height - y(dataFilter[age]))
-                                          .attr("fill", "#69b3a2");
+                    svg.selectAll(".bar")
+                        .data(ages)
+                        .enter()
+                        .append("rect")
+                        .attr("class", "bar")
+                        .attr("x", (age) => x(age))
+                        .attr("y", (age) => y(dataFilter[age]))
+                        .attr("width", x.bandwidth())
+                        .attr("height", (age) => height - y(dataFilter[age]))
+                        .attr("fill", "#69b3a2");
 
-                                      // X-axis
-                                      svg.append("g")
-                                          .attr("transform", "translate(0," + height + ")")
-                                          .call(d3.axisBottom(x))
-                                          .selectAll("text")
-                                          .attr("transform", "translate(-10,0)rotate(-45)")
-                                          .style("text-anchor", "end");
+                    // X-axis
+                    svg.append("g")
+                        .attr("transform", "translate(0," + height + ")")
+                        .call(d3.axisBottom(x))
+                        .selectAll("text")
+                        .attr("transform", "translate(-10,0)rotate(-45)")
+                        .style("text-anchor", "end");
 
-                                      // Y-axis
-                                      svg.append("g")
-                                          .call(d3.axisLeft(y));
-                                  }
+                    // Y-axis
+                    svg.append("g")
+                        .call(d3.axisLeft(y));
+                }
 
-                                  // Handle year change event
-                                  d3.select("#YearsButton").on("change", function () {
-                                      const selectedYear = d3.select(this).property("value");
-                                      updateBars(selectedYear);
-                                  });
+                // Handle year change event
+                d3.select("#YearsButton").on("change", function () {
+                    const selectedYear = d3.select(this).property("value");
+                    updateBars(selectedYear);
+                });
 
-                              })
-                              .catch((err) => {
-                                  console.log({ err });
-                              });
-                      </script>
+            })
+            .catch((err) => {
+                console.log({ err });
+            });
+    </script>
                 </div>
 
               </div>
@@ -279,7 +278,7 @@ const svg2 = d3.select("#viz_container")
 const projection = d3.geoRobinson()
         .scale(85)
         .center([0, 0])
-        .translate([width/2.2, height/2]);
+        .translate([width2/2.2, height2/2]);
 
 // path generator
 const path = d3.geoPath()
@@ -400,16 +399,16 @@ svg2.select(".legendThreshold")
 svg2
   .append('text')
       .attr('class', 'note')
-      .attr('x', width*0.01)
-      .attr('y', height*0.96)
+      .attr('x', width2*0.01)
+      .attr('y', height2*0.96)
       .attr('text-anchor', 'start')
       .style('font-size', 7)
   .text('Source: UNHCR Refugee Data Finder');
 svg2
   .append('text')
       .attr('class', 'note')
-      .attr('x', width*0.01)
-      .attr('y', height*0.99)
+      .attr('x', width2*0.01)
+      .attr('y', height2*0.99)
       .attr('text-anchor', 'start')
       .style('font-size', 7)
   .text('The boundaries and names shown and the designations used on this map do not imply official endorsement or acceptance by the United Nations.');
@@ -492,12 +491,12 @@ svg2
                                           .attr("x", (e) => x(e.Dim3))
                                           .attr("y", (e) => y(+e.Value))
                                           .attr("width", x.bandwidth())
-                                          .attr("height", (e) => height - y(+e.Value))
+                                          .attr("height", (e) => height3 - y(+e.Value))
                                           .attr("fill", "blue");
 
                                       // X-axis
                                       svg3.append("g")
-                                          .attr("transform", "translate(0," + height + ")")
+                                          .attr("transform", "translate(0," + height3 + ")")
                                           .call(d3.axisBottom(x))
                                           .selectAll("text")
                                           .attr("transform", "translate(-10,0)rotate(-45)")
@@ -538,442 +537,441 @@ svg2
 
 <style>
 
-svg {
-  width: 100%;
-  height: 100%;
-}
-text {
-  font-family: lato;
-  font-size: 10px;
-  fill: #333333;
-}
-.grid path {
-  stroke-width: 0;
-}
-.grid .tick line {
-  stroke: #333333;
-  stroke-width: 0.3px;
-  stroke-opacity: 0.3;
-}
-text.chart-title {
-  font-size: 14px;
-  font-weight: bold;
-  fill:#222222
-}
-text.chart-label {
-  font-size: 10px;
-  font-weight: 400;
-  fill: #999999;
-}
-text.chart-source {
-  font-size: 8px;
-  fill: #999999;
-}
-text.copyright {
-  font-size: 8px;
-  fill: #999999;
-}
-.tooltip {
-  background-color: #ffffff;
-  font-family: lato;
-  font-size: 11px;
-  padding: 6px;
-  color: #333333;
-  border: none;
-  box-shadow: 0px 0px 3px 0px #E6E6E6;
-}
-</style>
- 
-<script>
-// set the dimensions and margins of the graph
-const margin4 = {top: 60, right: 120, bottom: 50, left: 30};
-const width4 = 450 - margin4.left - margin4.right;
-const height4 = 350 - margin4.top - margin4.bottom;
-
-// append the svg object to the body of the page
-const svg4 = d3.select("#viz_container2")
-  .append("svg")
-    .attr("width", "100%")
-    .attr("height", "100%")
-    .attr("viewBox", "0 0 450 350")
-    .attr("preserveAspectRatio", "xMinYMin")
-  .append("g")
-    .attr("transform", `translate(${margin.left}, ${margin.top})`);
-
-    var year=2019
-// parse the Data
-d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_4.csv")
-.then(function(data){
-
-  filteredData = data.filter(function (d) {
-    return d.Year == year;
-  });
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+  text {
+    font-family: lato;
+    font-size: 10px;
+    fill: #333333;
+  }
+  .grid path {
+    stroke-width: 0;
+  }
+  .grid .tick line {
+    stroke: #333333;
+    stroke-width: 0.3px;
+    stroke-opacity: 0.3;
+  }
+  text.chart-title {
+    font-size: 14px;
+    font-weight: bold;
+    fill:#222222
+  }
+  text.chart-label {
+    font-size: 10px;
+    font-weight: 400;
+    fill: #999999;
+  }
+  text.chart-source {
+    font-size: 8px;
+    fill: #999999;
+  }
+  text.copyright {
+    font-size: 8px;
+    fill: #999999;
+  }
+  .tooltip {
+    background-color: #ffffff;
+    font-family: lato;
+    font-size: 11px;
+    padding: 6px;
+    color: #333333;
+    border: none;
+    box-shadow: 0px 0px 3px 0px #E6E6E6;
+  }
+  </style>
   
-  filteredData =filteredData.filter(function (d) {
-    return d.HepatitisVax != "";
-  });
-  filteredData =filteredData.filter(function (d) {
-    return d.PolioVax != "";
-  });
-  filteredData =filteredData.filter(function (d) {
-    return d.TetanusVax != "";
-  });
-  filteredData =filteredData.filter(function (d) {
-    return d.Population != "";
-  });
-  filteredData =filteredData.filter(function (d) {
-    return d.Lifeexpectancy != "";
-  });
-  filteredData =filteredData.filter(function (d) {
-    return d.Continent!= "";
-  });
-
-// list of value keys
-const typeKeys = data.columns.slice(1);
-var allgroups = ["Africa", "Asia", "Europe", "North-America", "Oceania", "South-America"]
-// X scale and Axis
-const f =  d3.format("~s")
-const xScale = d3.scaleLinear()
-  .domain(d3.extent(filteredData, d => +d.HepatitisVax)).nice()
-  .domain(d3.extent(filteredData, d => +d.PolioVax)).nice()
-  .domain(d3.extent(filteredData, d => +d.TetanusVax)).nice()
-  .range([0, width])
-svg4
-  .append('g')
-  .attr("transform", `translate(0, ${height})`)
-  .call(d3.axisBottom(xScale).tickSize(0).ticks(4).tickPadding(8).tickFormat(f))
-  .call(d => d.select(".domain").remove());
-
-// Y scale and Axis
-const yScale = d3.scaleLinear()
-    .domain([40,90])
-    .range([height, 0]);
-svg4
-  .append('g')
-  .call(d3.axisLeft(yScale).tickSize(0).ticks(6).tickPadding(4).tickFormat(f))
-  .call(d => d.select(".domain").remove());
-
-// bubble size scale
-var zScale = d3.scaleSqrt()
-  .domain([200000, 1510000000])
-  .range([2, 15])
-
-// color palette
-const color = d3.scaleOrdinal()
-  .domain(allgroups)
-  .range(["#EF4A60", "#8EBE0F", "#00B398", "#E1CC0D", "#589BE5", "#18375F", "#0072BC"])
-
-// set horizontal grid line
-const GridLineH = () => d3.axisLeft().scale(yScale);
-svg4
-  .append("g")
-    .attr("class", "grid")
-  .call(GridLineH()
-    .tickSize(-width,0,0)
-    .tickFormat("")
-    .ticks(6)
-);
-
-// set vertical grid line
-const GridLineV = () => d3.axisBottom().scale(xScale);
-svg4
-  .append("g")
-    .attr("class", "grid")
-  .call(GridLineV()
-    .tickSize(height,0,0)
-    .tickFormat("")
-    .ticks(5));
-
-// create a tooltip
-const tooltip = d3.select("#viz_container2")
-  .append("div")
-    .attr("class", "tooltip")
-
-// tooltip events
-const mouseover = function(d) {
-    tooltip
-        .style("opacity", 1)
-    d3.select(this)
-        .style("stroke", "#EF4A60")
-        .style("opacity", 1)
-};
-const mousemove = function(event,d) {
-    const f = d3.format(",");
-    tooltip
-    .html("<div><b>Country:</b> "+ d.Country+ "<div><b>Total Population:</b> " +f(d.Population)+ "</div><div><b>Vacine coverage  in children:</b> " +f(d.HepatitisVax)+ +f(d.PolioVax)+f(d.TetanusVax)+"</div><div><b>Life Expectancy at birth:</b> "+ f(d.Lifeexpectancy) +"</div>")
-    .style("left", (d3.pointer(event)[0])*2+150 + "px")
-      .style("top", (d3.pointer(event)[1])*2+150 + "px")
-      .style("position", "absolute")
-};
-
-const mouseleave = function(d) {
-    tooltip
-        .style("opacity", 0)
-    d3.select(this)
-        .style("stroke", "none")
-        .style("opacity", 0.5)
-};
-
-
-// create graph
-svg4.append("g")
-  .selectAll("g")
-  .data(filteredData)
-  .join("circle")
-  .attr("class", d => d.Continent )
-      .attr("cx", d => xScale(+d.HepatitisVax))
-      .attr("cx", d => xScale(+d.PolioVax))
-      .attr("cx", d => xScale(+d.TetanusVax))
-      .attr("cy", d => yScale(+d.Lifeexpectancy))
-      .attr("r", d =>zScale(+d.Population))
-      .style("fill", d => color(d.Continent))
-      .style("opacity", 0.6)
-  .on("mouseover", mouseover)
-  .on("mousemove", mousemove)
-  .on("mouseleave", mouseleave)
-
-// set data labels
-svg4
-  .append("g")
-  .attr("font-size", 10)
-  .selectAll("text")
-  .data(filteredData)
-  .join("text")
-    .attr("dy", "0.35em")
-    .attr("x", d => xScale(+d.HepatitisVax))
-    .attr("x", d => xScale(+d.PolioVax))
-    .attr("x", d => xScale(+d.TetanusVax))
-    .attr("y", d => yScale(+d.Lifeexpectancy));
-
-// set title
-svg4
-  .append("text")
-    .attr("class", "chart-title")
-    .attr("x", -(margin.left)*0.5)
-    .attr("y", -(margin.top)/50)
-    .attr("text-anchor", "start")
-  .text("Life expectancy vs Vaccine coverage in children")
-
-// set X axis label
-svg4
-  .append("text")
-    .attr("class", "chart-label")
-    .attr("x", width/1.7)
-    .attr("y", height+margin.bottom*0.6)
-    .attr("text-anchor", "middle")
-  .text("Vaccine coverage in children (%)");
-
-// set Y axis label
-svg4
-  .append("text")
-    .attr("class", "chart-label")
-    .attr("x", -(margin.left)*0.5)
-    .attr("y", -(margin.top/8))
-    .attr("text-anchor", "start")
-  .text("Life Expectancy at birth (years)")
-
-   // Add legend: circles
-   var valuesToShow = [10000000, 100000000, 500000000]
-    var xCircle = 355
-    var xLabel = 395
-    svg4
-      .selectAll("legend")
-      .data(valuesToShow)
-      .enter()
-      .append("circle")
-        .attr("cx", xCircle)
-        .attr("cy", function(d){ return height -20 - zScale(d) } )
-        .attr("r", function(d){ return zScale(d) })
-        .style("fill", "none")
-        .attr("stroke", "black")
-
-    // Add legend: segments
-    svg4
-      .selectAll("legend")
-      .data(valuesToShow)
-      .enter()
-      .append("line")
-        .attr('x1', function(d){ return xCircle + zScale(d) } )
-        .attr('x2', xLabel)
-        .attr('y1', function(d){ return height -20 - zScale(d) } )
-        .attr('y2', function(d){ return height -20  - zScale(d) } )
-        .attr('stroke', 'black')
-        .style('stroke-dasharray', ('2,2'))
-
-    // Add legend: labels
-    svg4
-      .selectAll("legend")
-      .data(valuesToShow)
-      .enter()
-      .append("text")
-        .attr('x', xLabel)
-        .attr('y', function(d){ return height -20 - zScale(d) } )
-        .text( function(d){ return d/1000000 } )
-        .style("font-size", 10)
-        .attr('alignment-baseline', 'middle')
-
-    // Legend title
-    svg4.append("text")
-      .attr('x', xCircle)
-      .attr("y", height -20 +10)
-      .text("Population (M)")
-      .attr("text-anchor", "middle")
-
-    // Add one dot in the legend for each name.
-
-      // What to do when one group is hovered
-  const highlight = function(event, d){
-    // reduce opacity of all groups
-    d3.selectAll("circle").style("opacity", .05)
-    // except the one that is hovered
-    d3.selectAll("."+d).style("opacity", 1)
-  }
-
-  // And when it is not hovered anymore
-  const noHighlight = function(event, d){
-    d3.selectAll("circle").style("opacity", 0.6)
-  }
-//list of all the continents from the data
-   var size = 20
-    svg4.selectAll("myrect")
-      .data(allgroups)
-      .enter()
-      .append("circle")
-        .attr("cx", 320)
-        .attr("cy", function(d,i){ return 10 + i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
-        .attr("r", 7)
-        .style("fill", function(d){ return color(d)})
-        .on("mouseover", highlight)
-        .on("mouseleave", noHighlight)
-
-    // Add labels beside legend dots
-    svg4.selectAll("mylabels")
-      .data(allgroups)
-      .enter()
-      .append("text")
-        .attr("x", 315 + size*.8)
-        .attr("y", function(d,i){ return i * (size + 5) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
-        .style("fill", function(d){ return color(d)})
-        .text(function(d){ return d})
-        .attr("text-anchor", "left")
-        .style("alignment-baseline", "middle")
-        .on("mouseover", highlight)
-        .on("mouseleave", noHighlight)
-
-        //add slider 
-        
-        const sliderRange= d3
-.sliderBottom()
-.min(1990)
-.max(2019)
-.width(300)
-.step(1)
-.tickFormat(d3.format('Y'))
-.ticks(5)
-.default(2019)
-.on('onchange', val => {
-    year = val
-      updateChart(year)
-    })
-        const gRange= d3.
-        select('#slider-range')
-        .append("svg")
-        .attr("width", 700 + margin.left + margin.right)
-        .attr("height", 200 + margin.top + margin.bottom)
-        .append("g")
-        .attr("transform","translate(" + margin.left + "," + margin.top + ")")
-        .call(sliderRange);
-
-
-function updateChart(year){
-//remove all the bubbles
-d3.selectAll("circle").remove()
-d3.selectAll("mylabels").remove()
-d3.selectAll("legend").remove()
-d3.selectAll("rect").remove()
-//filter the data
-filteredData = data.filter(function (d) {
-    return d.Year == year;
-  });
-  filteredData =filteredData.filter(function (d) {
-    return d.HepatitisVax != "";
-  });
-  filteredData =filteredData.filter(function (d) {
-    return d.PolioVax != "";
-  });
-  filteredData =filteredData.filter(function (d) {
-    return d.TetanusVax != "";
-  });
-  filteredData =filteredData.filter(function (d) {
-    return d.Population != "";
-  });
-  filteredData =filteredData.filter(function (d) {
-    return d.Lifeexpectancy != "";
-  });
-  filteredData =filteredData.filter(function (d) {
-    return d.Continent!= "";
-  });
-
-  svg4.append("g")
-  .selectAll("g")
-  .data(filteredData)
-  .join("circle")
-  .attr("class", function(d) { return "circle" + d.Continent })
-      .attr("cx", d => xScale(+d.HepatitisVax))
-      .attr("cx", d => xScale(+d.PolioVax))
-      .attr("cx", d => xScale(+d.TetanusVax))
-      .attr("cy", d => yScale(+d.Lifeexpectancy))
-      .attr("r", d =>zScale(+d.Population))
-      .style("fill", d => color(d.Continent))
-      .style("opacity", 0.6)
-  .on("mouseover", mouseover)
-  .on("mousemove", mousemove)
-  .on("mouseleave", mouseleave)
-
+  <script>
+  // set the dimensions and margins of the graph
+  const margin4 = {top: 60, right: 120, bottom: 50, left: 30};
+  const width4 = 450 - margin4.left - margin4.right;
+  const height4 = 350 - margin4.top - margin4.bottom;
+  
+  // append the svg object to the body of the page
+  const svg4 = d3.select("#viz_container2")
+    .append("svg")
+      .attr("width", "100%")
+      .attr("height", "100%")
+      .attr("viewBox", "0 0 450 350")
+      .attr("preserveAspectRatio", "xMinYMin")
+    .append("g")
+      .attr("transform", `translate(${margin4.left}, ${margin4.top})`);
+  
+      var year=2019
+  // parse the Data
+  d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_4.csv")
+  .then(function(data){
+  
+    filteredData = data.filter(function (d) {
+      return d.Year == year;
+    });
+    
+    filteredData =filteredData.filter(function (d) {
+      return d.HepatitisVax != "";
+    });
+    filteredData =filteredData.filter(function (d) {
+      return d.PolioVax != "";
+    });
+    filteredData =filteredData.filter(function (d) {
+      return d.TetanusVax != "";
+    });
+    filteredData =filteredData.filter(function (d) {
+      return d.Population != "";
+    });
+    filteredData =filteredData.filter(function (d) {
+      return d.Lifeexpectancy != "";
+    });
+    filteredData =filteredData.filter(function (d) {
+      return d.Continent!= "";
+    });
+  
+  // list of value keys
+  const typeKeys = data.columns.slice(1);
+  var allgroups = ["Africa", "Asia", "Europe", "North-America", "Oceania", "South-America"]
+  // X scale and Axis
+  const f =  d3.format("~s")
+  const xScale = d3.scaleLinear()
+    .domain(d3.extent(filteredData, d => +d.HepatitisVax)).nice()
+    .domain(d3.extent(filteredData, d => +d.PolioVax)).nice()
+    .domain(d3.extent(filteredData, d => +d.TetanusVax)).nice()
+    .range([0, width4])
   svg4
-      .selectAll("legend")
-      .data(valuesToShow)
-      .enter()
-      .append("circle")
-        .attr("cx", xCircle)
-        .attr("cy", function(d){ return height -20 - zScale(d) } )
-        .attr("r", function(d){ return zScale(d) })
-        .style("fill", "none")
-        .attr("stroke", "black")
-
-    // Add legend: segments
-    svg4
-      .selectAll("legend")
-      .data(valuesToShow)
-      .enter()
-      .append("line")
-        .attr('x1', function(d){ return xCircle + zScale(d) } )
-        .attr('x2', xLabel)
-        .attr('y1', function(d){ return height -20 - zScale(d) } )
-        .attr('y2', function(d){ return height -20  - zScale(d) } )
-        .attr('stroke', 'black')
-        .style('stroke-dasharray', ('2,2'))
-
-
-    // Add one dot in the legend for each name.
-//list of all the continents from the data
-    svg4.selectAll("myrect")
-      .data(allgroups)
-      .enter()
-      .append("circle")
-        .attr("cx", 320)
-        .attr("cy", function(d,i){ return 10 + i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
-        .attr("r", 7)
-        .style("fill", function(d){ return color(d)})
-        .on("mouseover", highlight)
-        .on("mouseleave", noHighlight)
- 
-}
-
-
-
+    .append('g')
+    .attr("transform", `translate(0, ${height4})`)
+    .call(d3.axisBottom(xScale).tickSize(0).ticks(4).tickPadding(8).tickFormat(f))
+    .call(d => d.select(".domain").remove());
+  
+  // Y scale and Axis
+  const yScale = d3.scaleLinear()
+      .domain([40,90])
+      .range([height4, 0]);
+  svg4
+    .append('g')
+    .call(d3.axisLeft(yScale).tickSize(0).ticks(6).tickPadding(4).tickFormat(f))
+    .call(d => d.select(".domain").remove());
+  
+  // bubble size scale
+  var zScale = d3.scaleSqrt()
+    .domain([200000, 1510000000])
+    .range([2, 15])
+  
+  // color palette
+  const color = d3.scaleOrdinal()
+    .domain(allgroups)
+    .range(["#EF4A60", "#8EBE0F", "#00B398", "#E1CC0D", "#589BE5", "#18375F", "#0072BC"])
+  
+  // set horizontal grid line
+  const GridLineH = () => d3.axisLeft().scale(yScale);
+  svg4
+    .append("g")
+      .attr("class", "grid")
+    .call(GridLineH()
+      .tickSize(-width,0,0)
+      .tickFormat("")
+      .ticks(6)
+  );
+  
+  // set vertical grid line
+  const GridLineV = () => d3.axisBottom().scale(xScale);
+  svg4
+    .append("g")
+      .attr("class", "grid")
+    .call(GridLineV()
+      .tickSize(height,0,0)
+      .tickFormat("")
+      .ticks(5));
+  
+  // create a tooltip
+  const tooltip = d3.select("#viz_container")
+    .append("div")
+      .attr("class", "tooltip")
+  
+  // tooltip events
+  const mouseover = function(d) {
+      tooltip
+          .style("opacity", 1)
+      d3.select(this)
+          .style("stroke", "#EF4A60")
+          .style("opacity", 1)
+  };
+  const mousemove = function(event,d) {
+      const f = d3.format(",");
+      tooltip
+      .html("<div><b>Country:</b> "+ d.Country+ "<div><b>Total Population:</b> " +f(d.Population)+ "</div><div><b>Vacine coverage  in children:</b> " +f(d.HepatitisVax)+ +f(d.PolioVax)+f(d.TetanusVax)+"</div><div><b>Life Expectancy at birth:</b> "+ f(d.Lifeexpectancy) +"</div>")
+      .style("left", (d3.pointer(event)[0])*2+150 + "px")
+        .style("top", (d3.pointer(event)[1])*2+150 + "px")
+        .style("position", "absolute")
+  };
+  
+  const mouseleave = function(d) {
+      tooltip
+          .style("opacity", 0)
+      d3.select(this)
+          .style("stroke", "none")
+          .style("opacity", 0.5)
+  };
+  
+  
+  // create graph
+  svg4.append("g")
+    .selectAll("g")
+    .data(filteredData)
+    .join("circle")
+    .attr("class", d => d.Continent )
+        .attr("cx", d => xScale(+d.HepatitisVax))
+        .attr("cx", d => xScale(+d.PolioVax))
+        .attr("cx", d => xScale(+d.TetanusVax))
+        .attr("cy", d => yScale(+d.Lifeexpectancy))
+        .attr("r", d =>zScale(+d.Population))
+        .style("fill", d => color(d.Continent))
+        .style("opacity", 0.6)
+    .on("mouseover", mouseover)
+    .on("mousemove", mousemove)
+    .on("mouseleave", mouseleave)
+  
+  // set data labels
+  svg4
+    .append("g")
+    .attr("font-size", 10)
+    .selectAll("text")
+    .data(filteredData)
+    .join("text")
+      .attr("dy", "0.35em")
+      .attr("x", d => xScale(+d.HepatitisVax))
+      .attr("x", d => xScale(+d.PolioVax))
+      .attr("x", d => xScale(+d.TetanusVax))
+      .attr("y", d => yScale(+d.Lifeexpectancy));
+  
+  // set title
+  svg4
+    .append("text")
+      .attr("class", "chart-title")
+      .attr("x", -(margin4.left)*0.15)
+      .attr("y", -(margin4.top)/1.5)
+    .text("Life expectancy vs Vaccine coverage in children")
+  
+  // set X axis label
+  svg4
+    .append("text")
+      .attr("class", "chart-label")
+      .attr("x", width4/1.7)
+      .attr("y", height4+margin4.bottom*0.6)
+      .attr("text-anchor", "middle")
+    .text("Vaccine coverage in children (%)");
+  
+  // set Y axis label
+  svg4
+    .append("text")
+      .attr("class", "chart-label")
+      .attr("x", -(margin4.left)*0.5)
+      .attr("y", -(margin4.top/8))
+      .attr("text-anchor", "start")
+    .text("Life Expectancy at birth (years)")
+  
+     // Add legend: circles
+     var valuesToShow = [10000000, 100000000, 500000000]
+      var xCircle = 355
+      var xLabel = 395
+      svg4
+        .selectAll("legend")
+        .data(valuesToShow)
+        .enter()
+        .append("circle")
+          .attr("cx", xCircle)
+          .attr("cy", function(d){ return height -20 - zScale(d) } )
+          .attr("r", function(d){ return zScale(d) })
+          .style("fill", "none")
+          .attr("stroke", "black")
+  
+      // Add legend: segments
+      svg4
+        .selectAll("legend")
+        .data(valuesToShow)
+        .enter()
+        .append("line")
+          .attr('x1', function(d){ return xCircle + zScale(d) } )
+          .attr('x2', xLabel)
+          .attr('y1', function(d){ return height4 -20 - zScale(d) } )
+          .attr('y2', function(d){ return height4 -20  - zScale(d) } )
+          .attr('stroke', 'black')
+          .style('stroke-dasharray', ('2,2'))
+  
+      // Add legend: labels
+      svg4
+        .selectAll("legend")
+        .data(valuesToShow)
+        .enter()
+        .append("text")
+          .attr('x', xLabel)
+          .attr('y', function(d){ return height4 -20 - zScale(d) } )
+          .text( function(d){ return d/1000000 } )
+          .style("font-size", 10)
+          .attr('alignment-baseline', 'middle')
+  
+      // Legend title
+      svg4.append("text")
+        .attr('x', xCircle)
+        .attr("y", height4 -20 +10)
+        .text("Population (M)")
+        .attr("text-anchor", "middle")
+  
+      // Add one dot in the legend for each name.
+  
+        // What to do when one group is hovered
+    const highlight = function(event, d){
+      // reduce opacity of all groups
+      d3.selectAll("circle").style("opacity", .05)
+      // except the one that is hovered
+      d3.selectAll("."+d).style("opacity", 1)
+    }
+  
+    // And when it is not hovered anymore
+    const noHighlight = function(event, d){
+      d3.selectAll("circle").style("opacity", 0.6)
+    }
+  //list of all the continents from the data
+     var size = 20
+      svg4.selectAll("myrect")
+        .data(allgroups)
+        .enter()
+        .append("circle")
+          .attr("cx", 320)
+          .attr("cy", function(d,i){ return 10 + i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
+          .attr("r", 7)
+          .style("fill", function(d){ return color(d)})
+          .on("mouseover", highlight)
+          .on("mouseleave", noHighlight)
+  
+      // Add labels beside legend dots
+      svg4.selectAll("mylabels")
+        .data(allgroups)
+        .enter()
+        .append("text")
+          .attr("x", 315 + size*.8)
+          .attr("y", function(d,i){ return i * (size + 5) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
+          .style("fill", function(d){ return color(d)})
+          .text(function(d){ return d})
+          .attr("text-anchor", "left")
+          .style("alignment-baseline", "middle")
+          .on("mouseover", highlight)
+          .on("mouseleave", noHighlight)
+  
+          //add slider 
+          
+          const sliderRange= d3
+  .sliderBottom()
+  .min(1990)
+  .max(2019)
+  .width(300)
+  .step(1)
+  .tickFormat(d3.format('Y'))
+  .ticks(5)
+  .default(2019)
+  .on('onchange', val => {
+      year = val
+        updateChart(year)
       })
-</script>
+          const gRange= d3.
+          select('#slider-range')
+          .append("svg")
+          .attr("width", 700 + margin4.left + margin4.right)
+          .attr("height", 200 + margin4.top + margin4.bottom)
+          .append("g")
+          .attr("transform","translate(" + margin4.left + "," + margin4.top + ")")
+          .call(sliderRange);
+  
+  
+  function updateChart(year){
+  //remove all the bubbles
+  d3.selectAll("circle").remove()
+  d3.selectAll("mylabels").remove()
+  d3.selectAll("legend").remove()
+  d3.selectAll("myrect").remove()
+  //filter the data
+  filteredData = data.filter(function (d) {
+      return d.Year == year;
+    });
+    filteredData =filteredData.filter(function (d) {
+      return d.HepatitisVax != "";
+    });
+    filteredData =filteredData.filter(function (d) {
+      return d.PolioVax != "";
+    });
+    filteredData =filteredData.filter(function (d) {
+      return d.TetanusVax != "";
+    });
+    filteredData =filteredData.filter(function (d) {
+      return d.Population != "";
+    });
+    filteredData =filteredData.filter(function (d) {
+      return d.Lifeexpectancy != "";
+    });
+    filteredData =filteredData.filter(function (d) {
+      return d.Continent!= "";
+    });
+  
+    svg4.append("g")
+    .selectAll("g")
+    .data(filteredData)
+    .join("circle")
+    .attr("class", function(d) { return "circle" + d.Continent })
+        .attr("cx", d => xScale(+d.HepatitisVax))
+        .attr("cx", d => xScale(+d.PolioVax))
+        .attr("cx", d => xScale(+d.TetanusVax))
+        .attr("cy", d => yScale(+d.Lifeexpectancy))
+        .attr("r", d =>zScale(+d.Population))
+        .style("fill", d => color(d.Continent))
+        .style("opacity", 0.6)
+    .on("mouseover", mouseover)
+    .on("mousemove", mousemove)
+    .on("mouseleave", mouseleave)
+  
+    svg4
+        .selectAll("legend")
+        .data(valuesToShow)
+        .enter()
+        .append("circle")
+          .attr("cx", xCircle)
+          .attr("cy", function(d){ return height -20 - zScale(d) } )
+          .attr("r", function(d){ return zScale(d) })
+          .style("fill", "none")
+          .attr("stroke", "black")
+  
+      // Add legend: segments
+      svg4
+        .selectAll("legend")
+        .data(valuesToShow)
+        .enter()
+        .append("line")
+          .attr('x1', function(d){ return xCircle + zScale(d) } )
+          .attr('x2', xLabel)
+          .attr('y1', function(d){ return height -20 - zScale(d) } )
+          .attr('y2', function(d){ return height -20  - zScale(d) } )
+          .attr('stroke', 'black')
+          .style('stroke-dasharray', ('2,2'))
+  
+  
+      // Add one dot in the legend for each name.
+  //list of all the continents from the data
+      svg4.selectAll("myrect")
+        .data(allgroups)
+        .enter()
+        .append("circle")
+          .attr("cx", 320)
+          .attr("cy", function(d,i){ return 10 + i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
+          .attr("r", 7)
+          .style("fill", function(d){ return color(d)})
+          .on("mouseover", highlight)
+          .on("mouseleave", noHighlight)
+   
+  }
+  
+  
+  
+        })
+  </script>
 </div>
 
                   </div>
