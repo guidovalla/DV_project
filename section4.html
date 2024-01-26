@@ -461,12 +461,14 @@ d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/4_2.cs
                       return d.Time == Year;
                     });
   
-  fdata.push({parent: "", cause: "root", val: ""})
-console.log("fdata", fdata)
+  
+
 fdata.forEach(function(d) {
     d.Pop = +d.Pop;
     d.enabled = true;
   });
+  fdata.push({Location: "root", LE: "", Pop: "", parent: "",})
+  console.log("fdata", fdata)
 
 const total = d3.sum(fdata.map(function(d) {
   return (d.enabled) ? d.Pop : 0;  }));
@@ -477,7 +479,7 @@ const treeData = d3.stratify()
   .parentId(d => d.parent)
   (fdata);
 
-treeData.sum(d => d.population)
+treeData.sum(d => d.Pop)
 
 treeData.sort(function(a, b) { return b.height - a.height || b.value - a.value; });
                   
@@ -502,7 +504,7 @@ const mouseover = function(d) {
 const mousemove = function(event,d) {
   f = d3.format(",")
   tooltip
-  .html("Number of staff: " + `${f(d.data.population)}`)
+  .html("Number of staff: " + `${f(d.data.Pop)}`)
     .style("top", event.pageY - 10 + "px")
     .style("left", event.pageX + 10 + "px")
 };
@@ -538,7 +540,7 @@ svg2
     .attr("x", d => d.x0+5)
     .attr("y", d => d.y0+15)
     //.text(d => Math.round(1000 * d.data.population / total) / 10 + "%")
-    .text(d => (d.data.val/10).toFixed(2)+ "%")
+    .text(d => "Life expectancy: " + (d.data.LE/1).toFixed(0) )
     .attr("font-size", "10px")
     .attr("fill", "#ffffff");
 svg2
@@ -548,7 +550,7 @@ svg2
     .attr("class", "tree-label")
     .attr("x", d => d.x0+5)
     .attr("y", d => d.y0+30)
-    .text(d => d.data.ages)
+    .text(d => d.data.Location)
     .attr("font-size", "10px")
     .attr("fill", "#ffffff");
 
@@ -586,7 +588,7 @@ svg2
 .step(1)
 .tickFormat(d3.format('Y'))
 .ticks(5)
-.default(2019)
+.default(2025)
 .on('onchange', val => {
     year = val
       updateChart(year)
@@ -595,10 +597,10 @@ svg2
   const gRange= d3.
                           select('#slider-range_2')
                           .append("svg")
-                          .attr("width", 700 + margin.left + margin.right)
-                          .attr("height", 200 + margin.top + margin.bottom)
+                          .attr("width", 700 + margin2.left + margin2.right)
+                          .attr("height", 200 + margin2.top + margin2.bottom)
                           .append("g")
-                          .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+                          .attr("transform","translate(" + margin2.left + "," + margin2.top + ")")
                           .call(sliderRange);
 
 
