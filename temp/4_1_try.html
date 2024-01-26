@@ -59,7 +59,7 @@
 <body>
 
 	<div id="container">
-		<p>Click on one of the following countries to see how much money they spent on military budget (in million USD).</p>
+	
 
 
 	<div id="menu"></div>
@@ -72,11 +72,6 @@
 
 
 	<script>
-		// here is the code explained: https://gist.github.com/sjengle/478b85594bb048574826be43f7eeac9b
-
-
-
-
 		//define chart margins
 		let svg = d3.select("svg"),
 			margin = {
@@ -151,7 +146,7 @@
 			console.log("x domain", x.domain());
 
 
-			
+
 			//define y axis
 			y.domain([
 				d3.min(countries, function(c) {
@@ -239,7 +234,7 @@
 				.attr("dy", "0.35em")
 				.style("font", "11px sans-serif")
 				.attr("opacity", 0)
-				.text(function(d) { return d.id; });
+				//.text(function(d) { return d.id; });
 
 			for (let i = 0; i < countries.length; i++) {
 				var tick = document.createElement('input');

@@ -119,253 +119,307 @@
                 <div class="card-body">
                   <h5 class="card-title">Chart 1</h5>
 
-                  <div>
-                    <input type="checkbox" name="myCheckBox" checked>
-                    <label for="myCheckBox">Births</label>
-                    <br>
-                    <input type="checkbox" name="myCheckBox2" checked>
-                    <label for="myCheckBox2">Deaths</label>
-                    <input type="checkbox" name="myCheckBox3" checked>
-                    <label for="myCheckBox2">Annual Change</label>
-                  </div>
                       <!-- Create a container to host the charts -->
 
                       <!-- first chart -->
-                      <div id="viz_container"></div>
-
+                      <div id="container"></div>
+                      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.6.0/d3.js"></script>
+                      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+                    
                       <style>
-                        svg {
+                    
+                        *{
+                          font-family: Lato;
+                        }
+                    
+                        .axis-x path {
+                          stroke: #000;
+                        }
+                    
+                        .line {
+                          fill: none;
+                          stroke-width: 1.5px;
+                          stroke-linejoin: "round";
+                          stroke-linecap: "round";
+                        }
+                    
+                        .line:hover {
+                          stroke-width: 2px;
+                        }
+                    
+                        #headline{
+                          min-width:100%;
+                        }
+                    
+                        #menu{
+                          display: inline;
                           width: 100%;
-                          height: 100%;
+                          /* border:1px solid black; */
+                          /* padding: 1%; */
                         }
-                        text {
-                          font-family: lato;
-                          font-size: 11px;
-                          fill: #666666;
+                    
+                        #nation{
+                          display: inline;
+                          padding-left: 1%;
                         }
-                        grid path {
-                          stroke-width: 0;
-                          stroke: #333333;
+                    
+                        span{
+                          color:rgb(25, 159, 139)
                         }
-                        grid .tick line {
-                          stroke: #333333;
-                          stroke-width: 0.3px;
-                          stroke-opacity: 0.3;
-                        }
-                        text.chart-title {
-                          font-size: 15px;
-                          font-weight: 600;
-                          fill: #222222;
-                        }
-                        text.chart-label {
-                          font-size: 11px;
-                          font-weight: 400;
-                          fill: #999999;
-                        }
-                        text.chart-source {
-                          font-size: 9px;
-                          fill: #999999;
-                        }
-                        text.copyright {
-                          font-size: 9px;
-                          fill: #999999;
-                        }
-                        .tooltip {
-                          background-color: #ffffff;
-                          font-family: lato;
-                          font-size: 11px;
-                          padding: 4px;
-                          color: #666666;
-                          border: none;
-                          box-shadow: 0px 0px 3px 0px #E6E6E6;
-                          display: none; /* Initially hide the tooltip */
-                          position: absolute;
-                          pointer-events: none;
-                        }
+                    
+                    
+                    
                       </style>
+	
 
 
-<script>
-    // set the dimensions and margins of the graph
-    const margin = {top: 80, right: 20, bottom: 50, left: 40};
-    const width = 450 - margin.left - margin.right;
-    const height = 350 - margin.top - margin.bottom;
+	<div id="menu"></div>
+
+	<div class="graph">
+		<svg width="600" height="500"></svg>
+	</div>
+
+	</div>
+
+
+	<script>
+
+		//define chart margins
+		let svg = d3.select("svg"),
+			margin = {
+				top: 30,
+				right: 80,
+				bottom: 40,
+				left: 50
+			},
+			width = svg.attr("width") - margin.left - margin.right,
+			height = svg.attr("height") - margin.top - margin.bottom,
+			g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+		//define time format
+		var parseTime = d3.timeParse("%Y");
+
+
+		//define scales
+		let x = d3.scaleTime().range([0, width]),
+			y = d3.scaleLinear().range([height, 0]),
+			//color scale
+			z = d3.scaleOrdinal(d3.schemeCategory20);
+
+		//define line generator
+		let line = d3.line()
+			.curve(d3.curveBasis)
+			.x(function(d) {
+				return x(d.Year);
+			})
+			.y(function(d) {
+					return y(d.expenditure);
+			});
+
+		//load data
+		data = d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/4_1_3lines.csv", type, function(error, data) {
+			if (error) throw error;
+
+
+
+			// format the data
+			// data.forEach( function(d) {
+			//   console.log(d.Year);
+			// d.Year = parseTime(d.Year);
+			// console.log(d.Year)
+			// });
+
+			//parse data
+			var countries = data.columns.slice(1).map(function(id) {
+				return {
+					id: id,
+					values: data.map(function(d) {
+						return {
+							Year: d.Year,
+							expenditure: d[id]
+
+						};
+
+
+					})
+				};
+			});
+
+			console.log(countries);
+
+			//
+
+			//define x axis
+			x.domain(d3.extent(data, function(d) {
+				return d.Year;
+			}));
+			
+
+			console.log("x domain", x.domain());
+
+
+
+			//define y axis
+			y.domain([
+				d3.min(countries, function(c) {
+					return d3.min(c.values, function(d) {
+						return d.expenditure;
+					});
+				}),
+				d3.max(countries, function(c) {
+					return d3.max(c.values, function(d) {
+						return d.expenditure;
+					});
+				})
+			]);
+
+			console.log("y domain", y.domain());
+
+			//define color scale
+			z.domain(countries.map(function(c) {
+				return c.id;
+			}));
+
+			console.log("z domain", z.domain());
+
+			//append x axis
+			g.append("g")
+				.attr("class", "axis axis-x")
+				.attr("transform", "translate(0," + height + ")")
+				.call(d3.axisBottom(x))
+				.append("text")
+				// .attr("transform", "rotate(-90)")
+				.attr("y", 20)
+				.attr("x", 310)
+				.attr("dy", "0.9em")
+				.attr("fill", "#000")
+				.text("Year")
+				.append("text")
+				// .attr("transform", "rotate(-90)")
+				.attr("y", 20)
+				.attr("x", 310)
+				.attr("dy", "0.9em")
+				.attr("fill", "#000")
+				.text("Source:Sipri");
+
+			//append y axis
+			g.append("g")
+				.attr("class", "axis axis-y")
+				.call(d3.axisLeft(y))
+				.append("text")
+				.attr("transform", "rotate(-90)")
+				.attr("y", -50)
+				.attr("x", -125)
+				.attr("dy", "0.9em")
+				.attr("fill", "#000")
+				.text("Milions of people");
+
+			//append country data to svg
+			let country = g.selectAll(".country")
+				.data(countries)
+				.enter()
+				.append("g")
+				.attr("class", "country")
+			// 	d3.selectAll(".myCheckbox").on("change",update);
+      // update();
+
+			// append country path to svg
+			country.append("path")
+				.attr("class", "line")
+				.attr('id', function(d){ return 'line-' + d.id })
+			  .attr("d", function(d) {return line(d.values); })
+			  .style("stroke", function(d) {return z(d.id);})
+				.attr("opacity", 1);
+
+
+
+			var longY = function (d) {return d.value.Year.length};
+			console.log(longY);
+			var longE = function (d) {return d.value.Year.length};
+			console.log(longE);
+			// append country labels to svg
+			country.append("text")
+				.datum(function(d) { return {id: d.id, value: d.values[d.values.length - 1]}; })
+				.attr("transform", function(d) { return "translate(" + x(d.value.Year) + "," + y(d.value.countries) + ")"; })
+				.attr("x", 3)
+				.attr('id', function(d){ return 'text-' + d.id })
+				.attr("dy", "0.35em")
+				.style("font", "11px sans-serif")
+				.attr("opacity", 1)
+				//.text(function(d) { return d.id; });
+
+			for (let i = 0; i < countries.length; i++) {
+				var tick = document.createElement('input');
+				tick.type = 'checkbox';
+				tick.id = 'myCheckbox'+i;
+				tick.name = countries[i].id;
+				tick.value = countries[i].id;
+
+        tick.checked = true;
+
+				var label = document.createElement('label');
+				label.for = countries[i].id
+				label.appendChild(document.createTextNode(countries[i].id));
+				var divcheck = document.createElement('div');
+				divcheck.id="nation";
+				// tick.appendChild(document.createTextNode(countries[i].id));
+				divcheck.appendChild(tick);
+				divcheck.appendChild(label);
+				document.getElementById("menu").appendChild(divcheck);
+        console.log("tick", tick)
+
+       
+
+				tick.addEventListener("click", function() {
+
+					var lineSelected = this.value;
+					var svgline = d3.select('#line-' + lineSelected);
+					var textline = d3.select('#text-' + lineSelected);
+					console.log(svgline);
+					console.log(textline);
+
+					if(svgline.attr('opacity') === '1') {
+						// console.log('making it visible');
+						svgline.attr('opacity', 0);
+					} else {
+						svgline.attr('opacity', 1);
+					}
+
+					if(textline.attr('opacity') === '1') {
+						// console.log('making it visible');
+						textline.attr('opacity', 0);
+					} else {
+						textline.attr('opacity', 1);
+					}
+					this.style.background = '#555';
+					this.style.color = 'white';
+          
+				});
+        
+
+        
+			}
+
+
+
+		});
+
+		//bind with multiseries data
+		function type(d, _, columns) {
+			d.Year = parseTime(d.Year);
+			//iterate through each column
+			for (var i = 1, n = columns.length, c; i < n; ++i) d[c = columns[i]] = +d[c];
+
+			//bind column data to year
+			return d;
+		}
+
+
+
+
     
-    // append the svg object to the body of the page
-    const svg = d3.select("#viz_container")
-      .append("svg")
-        .attr("width", "100%")
-        .attr("height", "100%")
-        .attr("viewBox", "0 0 450 350")
-        .attr("preserveAspectRatio", "xMinYMin")
-      .append("g")
-        .attr("transform", `translate(${margin.left}, ${margin.top})`);
-    
-    // parse the data
-    //d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/change_over_time/line.csv", function(d) {
-    d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/4_1.csv",function(d) {
-    const parseTime = d3.timeParse("%Y")
-      return {
-        year: parseTime(d.date),
-        //popType: d.population_type,
-        popNumber: +d.Value
-      };
-    }).then(function(data){
-    
-    //pivot the data
-    const dataGrouped = d3.group(data, d => d.popType)
-    
-    // list of value keys
-    const typeKeys = ["Refugees", "IDPs"];
-    
-    // X scale and Axis
-    const xScale = d3.scaleTime()
-      .domain(d3.extent(data, d => d.year)).nice()
-      .range([0, width]);
-    svg
-      .append('g')
-      .attr("transform", `translate(0, ${height})`)
-      .call(d3.axisBottom(xScale).tickSize(0).tickPadding(8));
-    
-    // Y scale and Axis
-    const formatter =  d3.format("~s")
-    const yScale = d3.scaleLinear()
-    .domain([d3.min(data, d => d.popNumber), d3.max(data, d => d.popNumber)])
-    .range([height, 0]);
-    svg
-      .append('g')
-      .call(d3.axisLeft(yScale).ticks(6).tickSize(0).tickPadding(6).tickFormat(formatter))
-      .call(d => d.select(".domain").remove());
-    
-    // set horizontal grid line
-    const GridLine = () => d3.axisLeft().scale(yScale);
-    svg
-      .append("g")
-        .attr("class", "grid")
-      .call(GridLine()
-        .tickSize(-width,0,0)
-        .tickFormat("")
-        .ticks(6)
-    );
-    
-    // color palette
-    const color = d3.scaleOrdinal()
-      .range(["#0072BC","#00B398"])
-    
-      
-      // Add Tooltip
-      const tooltip = d3.select("#viz_container")
-        .append("div")
-        .attr("class", "tooltip");
-    
-      // What happens when the mouse moves over the line
-      function mouseover(event, d) {
-        tooltip.style("display", "block");
-      }
-    
-      function mousemove(event, d) {
-        var x0 = xScale.invert(d3.pointer(event));
-        console.log(x0)
-        tooltip
-          .html("Year: " + d.date + "<br>Population: " + data.popNumber)
-          .style("left", (event.pageX + 10) + "px")
-          .style("top", (event.pageY - 10) + "px");
-      }
-    
-      function mouseout() {
-        tooltip.style("display", "none");
-      }
-    
-    
-      // Create line with tooltip events
-      const lines = svg
-        .selectAll("lines")
-        .data(dataGrouped)
-        .join("path")
-        .attr("fill", "none")
-        .attr("stroke", d => color(d[0]))
-        .attr("stroke-width", 2)
-        .attr("d", function (d) {
-          return d3.line()
-            .curve(d3.curveCardinal)
-            .x(d => xScale(d.year))
-            .y(d => yScale(d.popNumber))
-            (d[1])
-        })
-        .on("mouseover", mouseover)
-        .on("mousemove", mousemove)
-        .on("mouseout", mouseout);
-    
-    
-    
-    
-    // set title
-    svg
-      .append("text")
-        .attr("class", "chart-title")
-        .attr("x", -(margin.left)*0.7)
-        .attr("y", -(margin.top)/1.5)
-        .attr("text-anchor", "start")
-      .text("Number of refugee and IDPs of concern to UNHCR | 1991-2021")
-    
-    // set Y axis label
-    svg
-      .append("text")
-        .attr("class", "chart-label")
-        .attr("x", -(margin.left)*0.7)
-        .attr("y", -(margin.top/9))
-        .attr("text-anchor", "start")
-      .text("Displaced population (millions)")
-    
-    // set source
-    svg
-      .append("text")
-        .attr("class", "chart-source")
-        .attr("x", -(margin.left)*0.7)
-        .attr("y", height + margin.bottom*0.7)
-        .attr("text-anchor", "start")
-      .text("Source: UNHCR Refugee Data Finder")
-    
-    // set copyright
-    svg
-      .append("text")
-        .attr("class", "copyright")
-        .attr("x", -(margin.left)*0.7)
-        .attr("y", height + margin.bottom*0.9)
-        .attr("text-anchor", "start")
-      .text("©UNHCR, The UN Refugee Agency")
-    
-    // set legend manually
-    svg
-        .append("circle")
-            .attr("cx", -(margin.left)*0.6)
-            .attr("cy", -(margin.top/2.5))
-            .attr("r", 5)
-            .style("fill", "#0072BC");
-    svg
-        .append("text")
-            .attr("class", "legend")
-            .attr("x", -(margin.left)*0.6+10)
-            .attr("y", -(margin.top/2.5))
-            .attr("alignment-baseline","middle")
-        .text("Refugees")
-    svg
-        .append("circle")
-            .attr("cx", 60)
-            .attr("cy", -(margin.top/2.5))
-            .attr("r", 5)
-            .style("fill", "#00B398")
-    svg
-        .append("text")
-            .attr("class", "legend")
-            .attr("x", 70)
-            .attr("y", -(margin.top/2.5))
-            .attr("alignment-baseline","middle")
-        .text("IDPs")
-    
-    })
-    
-    </script>
+
+	</script>
                 </div>
 
               </div>
@@ -729,23 +783,23 @@ svg2
                             <script src="https://unpkg.com/d3-simple-slider"></script>
                       
                             <div id="container_3"></div>
-                      <div id="slider-range"></div>
+                      <div id="slider-range_3"></div>
 
                       <script>
                           // set the dimensions and margins of the graph
-const margin3 = {top: 60, right: 20, bottom: 50, left: 60};
+const margin3 = {top: 60, right: 20, bottom: 20, left: 100};
   const width3 = 450 - margin3.left - margin3.right;
   const height3 = 350 - margin3.top - margin3.bottom;
 
   // append the svg object to the body of the page
   const svg3 = d3.select("#container_3")
     .append("svg")
-      .attr("width", "600")
-      .attr("height", "400")
+      .attr("width", "100%")
+      .attr("height", "100%")
       .attr("viewBox", "0 0 450 350")
       .attr("preserveAspectRatio", "xMinYMin")
     .append("g")
-      .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
+      .attr("transform", `translate(${margin3.left}, ${margin3.top})`);
 
   // parse the Data
   d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/4_3_new.csv")
@@ -762,7 +816,7 @@ const margin3 = {top: 60, right: 20, bottom: 50, left: 60};
   // X scale and Axis
   const xScaleMale = d3.scaleLinear()
     .domain([0, 1.2*d3.max(data, d => +d.male)])
-    .range([width2/2, 0]);
+    .range([width3/2, 0]);
   svg3
     .append("g")
         .attr("transform", `translate(0, ${height2})`)
@@ -771,7 +825,7 @@ const margin3 = {top: 60, right: 20, bottom: 50, left: 60};
 
   const xScaleFemale = d3.scaleLinear()
     .domain([0, 1.2* d3.max(data, d => +d.female)])
-    .range([width2/2, width2]);
+    .range([width3/2, width3]);
   svg3
     .append("g")
         .attr("transform", `translate(0, ${height2})`)
@@ -854,7 +908,7 @@ const margin3 = {top: 60, right: 20, bottom: 50, left: 60};
       .attr("class", "barMale")
       .attr("x", d => xScaleMale(d.male))
       .attr("y", d => yScale(d.ages))
-      .attr("width", d => width2/2 - xScaleMale(d.male))
+      .attr("width", d => width3/2 - xScaleMale(d.male))
       .attr("height", yScale.bandwidth())
       .style("fill", "#18375F")
     .on("mouseover", mouseover)
@@ -880,28 +934,28 @@ const margin3 = {top: 60, right: 20, bottom: 50, left: 60};
   svg3
       .append("text")
           .attr("class", "chart-label")
-          .attr("x", width2/3.5)
-          .attr("y", height2 + margin2.bottom/1.5)
+          .attr("x", width3/3.5)
+          .attr("y", height2 + margin3.bottom/1.5)
       .text("Population (billions)")
 
   //set legend
   svg3
       .append("rect")
-          .attr("x", -(margin2.left)*0.7)
-          .attr("y", -(margin2.top/3))
+          .attr("x", -(margin3.left)*0.7)
+          .attr("y", -(margin3.top/3))
           .attr("width", 13)
           .attr("height", 13)
           .style("fill", "#18375F")
   svg3
       .append("text")
           .attr("class", "legend")
-          .attr("x", -(margin2.left)*0.6+15)
-          .attr("y", -(margin2.top/5.5))
+          .attr("x", -(margin3.left)*0.6+15)
+          .attr("y", -(margin3.top/5.5))
       .text("Male")
   svg3
       .append("rect")
           .attr("x", 40)
-          .attr("y", -(margin2.top/3))
+          .attr("y", -(margin3.top/3))
           .attr("width", 13)
           .attr("height", 13)
           .style("fill", "#0072BC")
@@ -909,7 +963,7 @@ const margin3 = {top: 60, right: 20, bottom: 50, left: 60};
       .append("text")
           .attr("class", "legend")
           .attr("x", 60)
-          .attr("y", -(margin2.top/5.5))
+          .attr("y", -(margin3.top/5.5))
       .text("Female")
 
          //add slider 
@@ -928,12 +982,12 @@ const margin3 = {top: 60, right: 20, bottom: 50, left: 60};
       update(Pippo)
     })
         const gRange= d3.
-        select('#slider-range')
+        select('#slider-range_3')
         .append("svg")
-        .attr("width", 200+ margin2.left + margin2.right)
-        .attr("height", 40+ margin2.bottom)
+        .attr("width", 100+ margin3.left + margin3.right)
+        .attr("height", 50+ margin3.bottom)
         .append("g")
-        .attr("transform","translate(" + margin2.right+ "," + margin2.bottom + ")")
+        .attr("transform","translate(" + margin3.right+ "," + margin3.bottom + ")")
         .call(sliderRange);
 
 
@@ -958,7 +1012,7 @@ const margin3 = {top: 60, right: 20, bottom: 50, left: 60};
     .attr("class", "barMale")
     .attr("x", (d) => xScaleMale(d.male))
     .attr("y", (d) => yScale(d.ages))
-    .attr("width", (d) => width2 / 2 - xScaleMale(d.male))
+    .attr("width", (d) => width3 / 2 - xScaleMale(d.male))
     .attr("height", yScale.bandwidth())
     .style("fill", "#18375F")
     .on("mouseover", mouseover)
