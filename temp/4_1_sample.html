@@ -103,14 +103,14 @@
 		let line = d3.line()
 			.curve(d3.curveBasis)
 			.x(function(d) {
-				return x(d.date);
+				return x(d.Year);
 			})
 			.y(function(d) {
 					return y(d.expenditure);
 			});
 
 		//load data
-		data = d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/4_1_3lines.csv", type, function(error, data) {
+		data = d3.csv("https://gist.githubusercontent.com/miguelrofer/c0ff94e3bdb3d3bf59c883bac39cb8e2/raw/55f9c9e24b72f9390034a5498a771c3e9bbdb232/newdataone.csv", type, function(error, data) {
 			if (error) throw error;
 
 
@@ -128,7 +128,7 @@
 					id: id,
 					values: data.map(function(d) {
 						return {
-							Year: d.date,
+							Year: d.Year,
 							expenditure: d[id]
 
 						};
@@ -138,17 +138,12 @@
 				};
 			});
 
-			console.log(countries);
-
 			//
 
 			//define x axis
 			x.domain(d3.extent(data, function(d) {
 				return d.Year;
 			}));
-			
-
-			console.log("x domain", x.domain());
 			//define y axis
 			y.domain([
 				d3.min(countries, function(c) {
@@ -163,14 +158,10 @@
 				})
 			]);
 
-			console.log("y domain", y.domain());
-
 			//define color scale
 			z.domain(countries.map(function(c) {
 				return c.id;
 			}));
-
-			console.log("z domain", z.domain());
 
 			//append x axis
 			g.append("g")
@@ -202,7 +193,7 @@
 				.attr("x", -125)
 				.attr("dy", "0.9em")
 				.attr("fill", "#000")
-				.text("Milions of people");
+				.text("Military expenditure (million $)");
 
 			//append country data to svg
 			let country = g.selectAll(".country")
@@ -224,13 +215,11 @@
 
 
 			var longY = function (d) {return d.value.Year.length};
-			console.log(longY);
 			var longE = function (d) {return d.value.Year.length};
-			console.log(longE);
 			// append country labels to svg
 			country.append("text")
 				.datum(function(d) { return {id: d.id, value: d.values[d.values.length - 1]}; })
-				.attr("transform", function(d) { return "translate(" + x(d.value.date) + "," + y(d.value.countries) + ")"; })
+				.attr("transform", function(d) { return "translate(" + x(d.value.Year) + "," + y(d.value.expenditure) + ")"; })
 				.attr("x", 3)
 				.attr('id', function(d){ return 'text-' + d.id })
 				.attr("dy", "0.35em")
@@ -288,7 +277,7 @@
 
 		//bind with multiseries data
 		function type(d, _, columns) {
-			d.Year = parseTime(d.date);
+			d.Year = parseTime(d.Year);
 			//iterate through each column
 			for (var i = 1, n = columns.length, c; i < n; ++i) d[c = columns[i]] = +d[c];
 
