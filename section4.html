@@ -375,6 +375,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
 <!-- Create a container to host the chart -->
 <div id="viz_container_2"></div>
+<div id="slider-range_2"></div>
 
 <style>
     svg {
@@ -443,27 +444,38 @@ const svg2 = d3.select("#viz_container_2")
     .attr("preserveAspectRatio", "xMinYMin")
   .append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
+    
+    var Year=2025
 
 // parse the Data
 //d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/part_to_a_whole/treemap_d3.csv")
 d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/try_treemap.csv")
 .then(function(data){
 
-data.forEach(function(d) {
+  fdata  = data.filter(function (d) {
+                      return d.year == Year;
+                    });
+  
+  fdata.push({parent: "", cause: "root", val: ""})
+
+fdata.forEach(function(d) {
     d.population = +d.population;
     d.enabled = true;
   });
 
-const total = d3.sum(data.map(function(d) {
+const total = d3.sum(fdata.map(function(d) {
   return (d.enabled) ? d.population : 0;  }));
 
 // reshape data
 const treeData = d3.stratify()
   .id(d => d.ages)
   .parentId(d => d.parent)
-  (data);
+  (fdata);
 
 treeData.sum(d => d.population)
+
+treeData.sort(function(a, b) { return b.height - a.height || b.value - a.value; });
+                  
 
 d3.treemap()
   .size([width, height])
@@ -520,7 +532,8 @@ svg2
     .attr("class", "tree-label")
     .attr("x", d => d.x0+5)
     .attr("y", d => d.y0+15)
-    .text(d => Math.round(1000 * d.data.population / total) / 10 + "%")
+    //.text(d => Math.round(1000 * d.data.population / total) / 10 + "%")
+    .text(d => (d.data.val/10).toFixed(2)+ "%")
     .attr("font-size", "10px")
     .attr("fill", "#ffffff");
 svg2
@@ -560,6 +573,92 @@ svg2
     .attr("y", height + margin.bottom*0.7)
     .attr("text-anchor", "start")
   .text("©UNHCR, The UN Refugee Agency")
+
+  const gRange= d3.
+                          select('#slider-range_2')
+                          .append("svg")
+                          .attr("width", 700 + margin.left + margin.right)
+                          .attr("height", 200 + margin.top + margin.bottom)
+                          .append("g")
+                          .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+                          .call(sliderRange);
+
+
+                          function updateChart(Year){
+                  d3.selectAll("rect").remove()
+                  d3.selectAll("text").remove()
+                  //filter the data
+                  fdata  = data.filter(function (d) {
+                      return d.year == Year;
+                    });
+                  
+                  
+                  //append a row to fdata
+                  fdata.push({parent: "", cause: "root", val: ""})
+                  
+                  
+                  
+                  fdata.forEach(function(d) {
+                      d.val = +d.val;
+                      d.enabled = true;
+                    });
+                  
+                  const total = d3.sum(fdata.map(function(d) {
+                    return (d.enabled) ? d.val : 0;  }));
+                  
+                  // reshape fdata
+                  const treeData = d3.stratify()
+                    .id(d => d.cause)
+                    .parentId(d => d.parent)
+                    (fdata);
+                  
+                  treeData.sum(d => d.val)
+                  
+                  //sort treedata on value
+                  treeData.sort(function(a, b) { return b.height - a.height || b.value - a.value; });
+                  
+                  d3.treemap()
+                    .size([width, height])
+                    .padding(2)
+                    (treeData);
+                  
+                  
+                  svg2
+                    .selectAll("rect")
+                    .data(treeData.leaves())
+                    .join("rect")
+                      .attr('x', d => d.x0)
+                      .attr('y', d => d.y0)
+                      .attr('width', d => d.x1 - d.x0)
+                      .attr('height', d=> d.y1 - d.y0)
+                      .style("stroke", "none")
+                      .style("fill", "#0072BC")
+                    .on("mouseover", mouseover)
+                    .on("mousemove", mousemove)
+                    .on("mouseleave", mouseleave);
+                  
+                    svg2
+                    .selectAll("text-number")
+                    .data(treeData.leaves())
+                    .join("text")
+                      .attr("class", "tree-label")
+                      .attr("x", d => d.x0+5)
+                      .attr("y", d => d.y0+15)
+                      //.text(d => Math.round(1000 * d.data.val / total) / 10 + "%")
+                      .text(d => (d.data.val/10).toFixed(2)+ "%")
+                      .attr("font-size", "5px")
+                      .attr("fill", "#ffffff");
+                  svg2
+                    .selectAll("text-region")
+                    .data(treeData.leaves())
+                    .join("text")
+                      .attr("class", "tree-label")
+                      .attr("x", d => d.x0+5)
+                      .attr("y", d => d.y0+30)
+                      .text(d => d.data.cause)
+                      .attr("font-size", "4px")
+                      .attr("fill", "#ffffff");
+                  }
 })
 </script>
                 </div>
