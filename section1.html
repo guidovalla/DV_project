@@ -950,7 +950,7 @@ d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/1_4_2_
     .select(".domain").remove()
 
   // Compute kernel density estimation for each column:
-  const kde = kernelDensityEstimator(kernelEpanechnikov(3), x.ticks(20)) // increase this 40 for more accurate density.
+  const kde = kernelDensityEstimator(kernelEpanechnikov(20), x.ticks(20)) // increase this 40 for more accurate density.
   const allDensity = []
   for (i = 0; i < n; i++) {
       key = categories[i]
