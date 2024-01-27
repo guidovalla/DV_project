@@ -563,6 +563,7 @@ d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/4_2.cs
 
 fdata.forEach(function(d) {
     d.Pop = +d.Pop;
+    d.LE = +d.LE;
     d.enabled = true;
   });
   fdata.push({Location: "root", LE: "", Pop: "", parent: "",})
@@ -588,9 +589,10 @@ d3.treemap()
   (treeData);
 
 // create a tooltip
-const tooltip = d3.select("body")
+const tooltip = d3.select("#viz_container_2")
   .append("div")
-    .attr("class", "tooltip");
+    .attr("class", "tooltip")
+   
 
 // tooltip events
 const mouseover = function(d) {
@@ -600,12 +602,15 @@ const mouseover = function(d) {
       .style("opacity", .5)
 };
 const mousemove = function(event,d) {
-  f = d3.format(",")
+  //f = d3.format(",")
   tooltip
-  .html("Number of staff: " + `${f(d.data.Pop)}`)
-    .style("top", event.pageY - 10 + "px")
-    .style("left", event.pageX + 10 + "px")
-    console.log("d", event.pageX)
+  .style("top", d3.pointer(event)[1]+50 + "px")
+    .style("left", d3.pointer(event)[0]+50 + "px")
+    //data pop round to 2 decimal 
+    .html("Population: " + `${d.data.Pop.toFixed(2)}`+ " milions" + "<br>" + "Life expectancy: " + `${d.data.LE.toFixed(2)}` + " years")
+    .style("position", "absolute");
+    
+  
 };
 const mouseleave = function(d) {
   tooltip
