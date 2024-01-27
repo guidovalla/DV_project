@@ -240,7 +240,7 @@
 				};
 			});
 
-			console.log(countries);
+			//console.log(countries);
 
 			//
 
@@ -250,7 +250,7 @@
 			}));
 			
 
-			console.log("x domain", x.domain());
+			//console.log("x domain", x.domain());
 
 
 
@@ -268,7 +268,7 @@
 				})
 			]);
 
-			console.log("y domain", y.domain());
+			//console.log("y domain", y.domain());
 
 			//define color scale
 // z.domain(countries.map(function(c, i) {
@@ -279,7 +279,7 @@
 // }));
 
 
-			console.log("z domain", z.domain());
+			//console.log("z domain", z.domain());
 
 			//append x axis
 			g.append("g")
@@ -367,9 +367,9 @@ legend.selectAll("text")
 
 
 			var longY = function (d) {return d.value.Year.length};
-			console.log(longY);
+			//console.log(longY);
 			var longE = function (d) {return d.value.Year.length};
-			console.log(longE);
+			//console.log(longE);
 			// append country labels to svg
 			country.append("text")
 				.datum(function(d) { return {id: d.id, value: d.values[d.values.length - 1]}; })
@@ -399,7 +399,7 @@ legend.selectAll("text")
 				divcheck.appendChild(tick);
 				divcheck.appendChild(label);
 				document.getElementById("menu").appendChild(divcheck);
-        console.log("tick", tick)
+        ///console.log("tick", tick)
 
        
 
@@ -408,8 +408,8 @@ legend.selectAll("text")
 					var lineSelected = this.value;
 					var svgline = d3.select('#line-' + lineSelected);
 					var textline = d3.select('#text-' + lineSelected);
-					console.log(svgline);
-					console.log(textline);
+					//console.log(svgline);
+					//console.log(textline);
 
 					if(svgline.attr('opacity') === '1') {
 						// console.log('making it visible');
@@ -543,7 +543,7 @@ const svg2 = d3.select("#viz_container_2")
   .append("g")
     .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
     
-    var Year=2023
+    var Year= "2023"
 
     
 
@@ -552,7 +552,7 @@ const svg2 = d3.select("#viz_container_2")
 d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/4_2.csv")
 .then(function(data){
 
-  console.log("data", data)
+  //console.log("data", data)
 
 
   fdata  = data.filter(function (d) {
@@ -567,7 +567,7 @@ fdata.forEach(function(d) {
     d.enabled = true;
   });
   fdata.push({Location: "root", LE: "", Pop: "", parent: "",})
-  console.log("fdata", fdata)
+  //console.log("fdata", fdata)
 
 const total = d3.sum(fdata.map(function(d) {
   return (d.enabled) ? d.Pop : 0;  }));
@@ -702,110 +702,127 @@ svg2
 //     .attr("y", height + margin.bottom*0.7)
 //     .attr("text-anchor", "start")
 //   .text("©")
-const sliderRange = d3
-  .sliderBottom()
-  .min(2023)
-  .max(2100)
-  .width(300)
-  .step(1)
-  .tickFormat(d3.format('Y'))
-  .ticks(5)
-  .default(2023)
-  .on('onchange', val => {
-      Year = val;
-      updateChart(Year);
-  });
-
-  const gRange = d3
-  .select('#slider-range_2')  // Check that this ID corresponds to the correct container
-  .append("svg")
-  .attr("width", 500 + margin2.left + margin2.right)
-  .attr("height", 100 + margin2.top + margin2.bottom)
-  .append("g")
-  .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")")
-  .call(sliderRange);
 
 
-                          function updateChart(Year){
-                  d3.selectAll("rect").remove()
-                  d3.selectAll("text").remove()
-                  //filter the data
-                  fdata  = data.filter(function (d) {
-                      return d.Time == Year;
-                    });
+
+
+//
+// COMMENTO COMINCIA QUI
+//
+//////////////////////////////////////
+
+
+
+
+
+
+
+
+// const sliderRange = d3
+//   .sliderBottom()
+//   .min(2023)
+//   .max(2100)
+//   .width(300)
+//   .step(1)
+//   .tickFormat(d3.format('Y'))
+//   .ticks(5)
+//   .default(2023)
+//   .on('onchange', val => {
+//       Year = val;
+//       updateChart(Year);
+//   });
+
+//   const gRange = d3
+//   .select('#slider-range_2')  // Check that this ID corresponds to the correct container
+//   .append("svg")
+//   .attr("width", 500 + margin2.left + margin2.right)
+//   .attr("height", 100 + margin2.top + margin2.bottom)
+//   .append("g")
+//   .attr("transform", "translate(" + margin2.left + "," + margin2.top + ")")
+//   .call(sliderRange);
+
+
+//                           function updateChart(Year){
+            
+//                   d3.selectAll("rect").remove()
+//                   d3.selectAll("text").remove()
+//                   //filter the data
+//                   fdata  = data.filter(function (d) {
+//                       return d.Time == Year;
+//                     });
   
   
 
-                      fdata.forEach(function(d) {
-                          d.Pop = +d.Pop;
-                          d.LE = +d.LE;
-                          d.enabled = true;
-                        });
-                        fdata.push({Location: "root", LE: "", Pop: "", parent: "",})
-                        console.log("fdata", fdata)
+//                       fdata.forEach(function(d) {
+//                           d.Pop = +d.Pop;
+//                           d.LE = +d.LE;
+//                           d.enabled = true;
+//                         });
+//                         fdata.push({Location: "root", LE: "", Pop: "", parent: "",})
+//                         //console.log("fdata", fdata)
 
-                      const total = d3.sum(fdata.map(function(d) {
-                        return (d.enabled) ? d.Pop : 0;  }));
-                  // reshape fdata
-                  const treeData = d3.stratify()
-                    .id(d => d.Location)
-                    .parentId(d => d.parent)
-                    (fdata);
+//                       const total = d3.sum(fdata.map(function(d) {
+//                         return (d.enabled) ? d.Pop : 0;  }));
+//                   // reshape fdata
+//                   const treeData = d3.stratify()
+//                     .id(d => d.Location)
+//                     .parentId(d => d.parent)
+//                     (fdata);
                   
-                  treeData.sum(d => d.Pop)
+//                   treeData.sum(d => d.Pop)
                   
-                  //sort treedata on value
-                  treeData.sort(function(a, b) { return b.height - a.height || b.value - a.value; });
+//                   //sort treedata on value
+//                   treeData.sort(function(a, b) { return b.height - a.height || b.value - a.value; });
                   
-                  d3.treemap()
-                    .size([width, height])
-                    .padding(2)
-                    (treeData);
-                    const myColors = ["#89CFF0", "#0096FF", "#005eab", "#00008B", "#060c36"];
+//                   d3.treemap()
+//                     .size([width, height])
+//                     .padding(2)
+//                     (treeData);
+//                     const myColors = ["#89CFF0", "#0096FF", "#005eab", "#00008B", "#060c36"];
 
-                    // Create a d3.scaleSequential based on the custom colors
-                    const colorScale = d3.scaleSequential()
-                      .domain([60, d3.max(treeData.leaves(), d => d.data.LE)])
-                      .interpolator(d3.scaleSequential(d3.interpolateRgbBasis(myColors)));
-                    // create rectangle
+//                     // Create a d3.scaleSequential based on the custom colors
+//                     const colorScale = d3.scaleSequential()
+//                       .domain([60, d3.max(treeData.leaves(), d => d.data.LE)])
+//                       .interpolator(d3.scaleSequential(d3.interpolateRgbBasis(myColors)));
+//                     // create rectangle
                   
-                  svg2
-                    .selectAll("rect")
-                    .data(treeData.leaves())
-                    .join("rect")
-                      .attr('x', d => d.x0)
-                      .attr('y', d => d.y0)
-                      .attr('width', d => d.x1 - d.x0)
-                      .attr('height', d=> d.y1 - d.y0)
-                      .style("stroke", "none")
-                      .style("fill", d => colorScale(d.data.LE))
-                      //.style("fill", "#0072BC")
-                    .on("mouseover", mouseover)
-                    .on("mousemove", mousemove)
-                    .on("mouseleave", mouseleave);
+//                   svg2
+//                     .selectAll("rect")
+//                     .data(treeData.leaves())
+//                     .join("rect")
+//                       .attr('x', d => d.x0)
+//                       .attr('y', d => d.y0)
+//                       .attr('width', d => d.x1 - d.x0)
+//                       .attr('height', d=> d.y1 - d.y0)
+//                       .style("stroke", "none")
+//                       .style("fill", d => colorScale(d.data.LE))
+//                       //.style("fill", "#0072BC")
+//                     .on("mouseover", mouseover)
+//                     .on("mousemove", mousemove)
+//                     .on("mouseleave", mouseleave);
                   
-                    svg2
-                    .selectAll("text-number")
-                    .data(treeData.leaves())
-                    .join("text")
-                      .attr("class", "tree-label")
-                      .attr("x", d => d.x0+5)
-                      .attr("y", d => d.y0+15)
-                      //.text(d => Math.round(1000 * d.data.val / total) / 10 + "%")
-                      .text(d => "Life expectancy: " + (d.data.LE/1).toFixed(0) )
-                      .attr("font-size", "5px")
-                      .attr("fill", "#ffffff");
-                  svg2
-                    .selectAll("text-region")
-                    .data(treeData.leaves())
-                    .join("text")
-                      .attr("class", "tree-label")
-                      .attr("x", d => d.x0+5)
-                      .attr("y", d => d.y0+30)
-                      .text(d => d.data.Location)
-                      .attr("font-size", "4px")
-                      .attr("fill", "#ffffff");
-                  }
+//                     svg2
+//                     .selectAll("text-number")
+//                     .data(treeData.leaves())
+//                     .join("text")
+//                       .attr("class", "tree-label")
+//                       .attr("x", d => d.x0+5)
+//                       .attr("y", d => d.y0+15)
+//                       //.text(d => Math.round(1000 * d.data.val / total) / 10 + "%")
+//                       .text(d => "Life expectancy: " + (d.data.LE/1).toFixed(0) )
+//                       .attr("font-size", "5px")
+//                       .attr("fill", "#ffffff");
+//                   svg2
+//                     .selectAll("text-region")
+//                     .data(treeData.leaves())
+//                     .join("text")
+//                       .attr("class", "tree-label")
+//                       .attr("x", d => d.x0+5)
+//                       .attr("y", d => d.y0+30)
+//                       .text(d => d.data.Location)
+//                       .attr("font-size", "4px")
+//                       .attr("fill", "#ffffff");
+//                   }
 })
 </script>
                 </div>
@@ -819,7 +836,7 @@ const sliderRange = d3
                         <div class="card">
                           <div class="card-body">
                             <h5 class="card-title">Chart 3</h5>
-                             
+                            <script src="https://d3js.org/d3.v7.min.js"></script>
                             <!-- Load slider -->
                             <script src="https://unpkg.com/d3-simple-slider"></script>
                       
@@ -848,7 +865,15 @@ const margin3 = {top: 60, right: 20, bottom: 20, left: 100};
 
     var uniqueYearsSet = new Set(data.map(d => d.Year));
     var allYears = Array.from(uniqueYearsSet);
-    console.log("years", allYears)
+    //console.log("years", allYears)
+
+    // d3.select("#YearsButton")
+    //       .selectAll('myOptions')
+    //          .data(allYears)
+    //         .enter()
+    //         .append('option')
+    //       .text(function (d) { return d; }) // text showed in the menu
+    //       .attr("value", function (d) { return d; }) // corresponding value returned by the button
 
 
     
@@ -917,17 +942,19 @@ const margin3 = {top: 60, right: 20, bottom: 20, left: 100};
         .style("opacity", .5)
   };
   const mousemove1 = function(event,d) {
-
       tooltip
-      .html( `${d3.format(".2f")(d.male)}  Billions`)
-        .style("top", event.pageY - 10 + "px")
-        .style("left", event.pageX + 10 + "px");
+        .style("top", d3.pointer(event)[1]+1300 + "px")
+        .style("left", d3.pointer(event)[0] +150+ "px")
+        .html( `${d3.format(".2f")(d.male)}`+ " milions")
+        .style("position", "absolute");
+        console.log(d3.pointer(event)[0])
   };
   const mousemove2 = function(event,d) {
     tooltip
-    .html(`${d3.format(".2f")(d.female)}  Billions`)
-      .style("top", event.pageY - 10 + "px")
-      .style("left", event.pageX + 10 + "px")
+    .style("top", d3.pointer(event)[1]+1300 + "px")
+    .style("left", d3.pointer(event)[0] +300+ "px")
+        .html(`${d3.format(".2f")(d.female)}`+ " milions")
+        .style("position", "absolute");
 };
   const mouseleave = function(d) {
       tooltip
@@ -937,7 +964,7 @@ const margin3 = {top: 60, right: 20, bottom: 20, left: 100};
         .style("opacity", 1)
   };
 
-  var Pippo = "2023"
+  var Pippo = 2023
 
   var dataFilter = data.filter(function(d){return d.Year==Pippo})
 
@@ -1009,23 +1036,24 @@ const margin3 = {top: 60, right: 20, bottom: 20, left: 100};
 
          //add slider 
         
-         const sliderRange= d3
-.sliderBottom()
-.min(2023)
-.max(2100)
-.width(200)
-.step(1)
-.tickFormat(d3.format('Y'))
-.ticks(5)
-.default(2023)
-.on('onchange', val => {
-    Pippo = val
-      update(Pippo)
-    })
+         const sliderRange = d3
+    .sliderBottom()
+    .min(2023)
+    .max(2100)
+    .width(200)
+    .tickFormat(d3.format('Y'))
+    .step(1)
+    .default(2023)
+    .on('onchange', val => {
+        Pippo = val;
+        update(Pippo);
+    });
+
+
         const gRange= d3.
         select('#slider-range_3')
         .append("svg")
-        .attr("width", 100+ margin3.left + margin3.right)
+        .attr("width", 200+ margin3.left + margin3.right)
         .attr("height", 50+ margin3.bottom)
         .append("g")
         .attr("transform","translate(" + margin3.right+ "," + margin3.bottom + ")")
