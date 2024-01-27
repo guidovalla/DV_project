@@ -485,7 +485,7 @@ legend.selectAll("text")
 text {
   font-family: lato;
   font-size: 10px;
-  fill: #333333;
+  fill: #8c7e7e;
 }
 .grid path {
   stroke-width: 0;
@@ -651,20 +651,21 @@ svg2
     .attr("class", "tree-label")
     .attr("x", d => d.x0+5)
     .attr("y", d => d.y0+15)
-    //.text(d => Math.round(1000 * d.data.population / total) / 10 + "%")
-    .text(d => "Life expectancy: " + (d.data.LE/1).toFixed(0) )
-    .attr("font-size", "10px")
-    .attr("fill", "#ffffff");
-svg2
-  .selectAll("text-region")
-  .data(treeData.leaves())
-  .join("text")
-    .attr("class", "tree-label")
-    .attr("x", d => d.x0+5)
-    .attr("y", d => d.y0+30)
     .text(d => d.data.Location)
+    //.text(d => Math.round(1000 * d.data.population / total) / 10 + "%")
+    //.text(d => "Life expectancy: " + (d.data.LE/1).toFixed(0) )
     .attr("font-size", "10px")
-    .attr("fill", "#ffffff");
+    .attr("fill", "#94C973");
+// svg2
+//   .selectAll("text-region")
+//   .data(treeData.leaves())
+//   .join("text")
+//     .attr("class", "tree-label")
+//     .attr("x", d => d.x0+5)
+//     .attr("y", d => d.y0+30)
+//     .text(d => d.data.Location)
+//     .attr("font-size", "10px")
+//     .attr("fill", "#ffffff");
 
 // set title
 svg2
@@ -673,7 +674,7 @@ svg2
     .attr("x", 0)
     .attr("y", -(margin.top)/1.5)
     .attr("text-anchor", "start")
-  .text("UNHCR global workforce by region | 2021");
+  .text("Global population divided in percentages");
 
 // set source
 svg2
@@ -682,16 +683,16 @@ svg2
     .attr("x", 0)
     .attr("y", height + margin.bottom*0.4)
     .attr("text-anchor", "start")
-  .text("Source: UNHCR")
+  .text("Source: UN")
 
 // set copyright
-svg2
-  .append("text")
-    .attr("class", "copyright")
-    .attr("x", 0)
-    .attr("y", height + margin.bottom*0.7)
-    .attr("text-anchor", "start")
-  .text("©UNHCR, The UN Refugee Agency")
+// svg2
+//   .append("text")
+//     .attr("class", "copyright")
+//     .attr("x", 0)
+//     .attr("y", height + margin.bottom*0.7)
+//     .attr("text-anchor", "start")
+//   .text("©")
   const sliderRange= d3
 .sliderBottom()
 .min(2023)
