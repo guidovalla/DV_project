@@ -466,8 +466,6 @@ legend.selectAll("text")
 
 <!-- Include d3 library -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/d3-geo@"></script>
-<script src="https://cdn.jsdelivr.net/npm/d3-geo-projection@4"></script>
 <script src="https://unpkg.com/topojson@3"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
 <!-- Create a container to host the chart -->
@@ -607,6 +605,7 @@ const mousemove = function(event,d) {
   .html("Number of staff: " + `${f(d.data.Pop)}`)
     .style("top", event.pageY - 10 + "px")
     .style("left", event.pageX + 10 + "px")
+    console.log("d", event.pageX)
 };
 const mouseleave = function(d) {
   tooltip
@@ -649,12 +648,17 @@ svg2
   .data(treeData.leaves())
   .join("text")
     .attr("class", "tree-label")
-    .attr("x", d => d.x0+5)
+    .attr("x", d => d.x0+8)
     .attr("y", d => d.y0+15)
     .text(d => d.data.Location)
     //.text(d => Math.round(1000 * d.data.population / total) / 10 + "%")
     //.text(d => "Life expectancy: " + (d.data.LE/1).toFixed(0) )
-    .attr("font-size", "10px")
+    .attr("font-size", "20px")
+    //bold the text
+    .attr("font-weight", "bold")
+    //rotate the text
+    
+
     .attr("fill", "#94C973");
 // svg2
 //   .selectAll("text-region")
