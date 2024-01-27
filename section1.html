@@ -179,35 +179,7 @@ text {
 
     </style>
                 <script>
-                    
-                    </script>
-
-                </div>
-
-              </div>
-            </div>
-
-            <!-- Second chart -->
-            <div class="col-12">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Chart 2</h5>
-
-<!-- Include d3 library -->
-<script src="https://d3js.org/d3.v7.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/d3-geo@"></script>
-<script src="https://cdn.jsdelivr.net/npm/d3-geo-projection@4"></script>
-<script src="https://unpkg.com/topojson@3"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
-<!-- Create a container to host the chart -->
-<div id="viz_container_2"></div>
-
-<style>
-
-</style>
-
-<script>
-//set svg parameters
+                    //set svg parameters
 const margin = {top: 30, right: 20, bottom: 30, left: 20};
 const width = 450,
       height = 350;
@@ -215,7 +187,7 @@ const svg = d3.select("#viz_container")
    .append("svg")
      .attr("width", "100%")
      .attr("height", "100%")
-     .attr("viewBox","0 0  450 350")
+     .attr("viewBox","0 0  550 450")
      .attr("preserveAspectRatio","xMinYMin");
 
 // set map scale, location on screen and its projection
@@ -319,8 +291,8 @@ var tooltip = d3.select("#viz_container")
     .on("mousemove", function(event, d) {
       tooltip
       .html("<b>Region:</b> " +d.properties.gis_name+"<div id=tipDiv></div>" )
-    .style("left", (d3.pointer(event)[0])*3 +100 + "px")
-      .style("top", (d3.pointer(event)[1])*3 +100 + "px")
+    .style("left", (d3.pointer(event)[0])*1.2 +100 + "px")
+      .style("top", (d3.pointer(event)[1])*1.2 +100 + "px")
       .style("position", "absolute")
 // define and store the mouse position. this is used to define tooltip offset, seen above.			
 
@@ -330,7 +302,7 @@ var tooltip = d3.select("#viz_container")
   var current_data = population.filter(function(d) {
     return d.Iso3 == current_state.properties.color_code;
   });
-  const width1 = 200,
+  const width1 = 175,
       height1 = 100;
 var tipSVG = d3.select("#tipDiv")
      .append("svg")
@@ -340,11 +312,11 @@ var tipSVG = d3.select("#tipDiv")
      // X scale and Axis
 const xScale = d3.scaleLinear()
   .domain([1950,2023])
-  .range([5, 175]);
+  .range([5, 160]);
 tipSVG
   .append('g')
   .attr("transform", `translate(10, ${height1-20})`)
-  .call(d3.axisBottom(xScale).tickSize(0).tickPadding(8));
+  .call(d3.axisBottom(xScale).ticks(3).tickSize(0).tickPadding(8));
 
 // Y scale and Axis
 const yScale = d3.scaleLinear()
@@ -403,8 +375,8 @@ var tooltip = d3.select("#viz_container")
     .on("mousemove", function(event, d) {
       tooltip
       .html("<b>Region:</b> " +d.properties.gis_name+"<div id=tipDiv></div>" )
-    .style("left", (d3.pointer(event,this)[0])*3 +100+ "px")
-      .style("top", (d3.pointer(event,this)[1])*3 +100 + "px")
+    .style("left", (d3.pointer(event,this)[0])*1.2 +100+ "px")
+      .style("top", (d3.pointer(event,this)[1])*1.2 +100 + "px")
       .style("position", "absolute")
 // define and store the mouse position. this is used to define tooltip offset, seen above.			
 
@@ -414,7 +386,7 @@ var tooltip = d3.select("#viz_container")
   var current_data = population.filter(function(d) {
     return d.Iso3 == current_state.properties.color_code;
   });
-  const width1 = 200,
+  const width1 = 175,
       height1 = 100;
 var tipSVG = d3.select("#tipDiv")
      .append("svg")
@@ -424,11 +396,11 @@ var tipSVG = d3.select("#tipDiv")
      // X scale and Axis
 const xScale = d3.scaleLinear()
   .domain([1950,2023])
-  .range([5, 175]);
+  .range([5, 160]);
 tipSVG
   .append('g')
   .attr("transform", `translate(10, ${height1-20})`)
-  .call(d3.axisBottom(xScale).tickSize(0).tickPadding(8));
+  .call(d3.axisBottom(xScale).ticks(3).tickSize(0).tickPadding(8));
 
 // Y scale and Axis
 const yScale = d3.scaleLinear()
@@ -491,8 +463,8 @@ var tooltip = d3.select("#viz_container")
     .on("mousemove", function(event, d) {
       tooltip
       .html("<b>Region:</b> " +d.properties.gis_name+"<div id=tipDiv></div>" )
-    .style("left", (d3.pointer(event)[0])*3 +100+ "px")
-      .style("top", (d3.pointer(event)[1])*3 +100 + "px")
+    .style("left", (d3.pointer(event)[0])*1.2 +100+ "px")
+      .style("top", (d3.pointer(event)[1])*1.2 +100 + "px")
       .style("position", "absolute")
 // define and store the mouse position. this is used to define tooltip offset, seen above.			
 
@@ -503,7 +475,7 @@ var tooltip = d3.select("#viz_container")
     return d.Iso3 == current_state.properties.color_code;
   });
   console.log(current_data)
-  const width1 = 200,
+  const width1 = 175,
       height1 = 100;
 var tipSVG = d3.select("#tipDiv")
      .append("svg")
@@ -513,11 +485,11 @@ var tipSVG = d3.select("#tipDiv")
      // X scale and Axis
 const xScale = d3.scaleLinear()
   .domain([1950,2023])
-  .range([5, 175]);
+  .range([5, 160]);
 tipSVG
   .append('g')
   .attr("transform", `translate(10, ${height1-20})`)
-  .call(d3.axisBottom(xScale).tickSize(0).tickPadding(8));
+  .call(d3.axisBottom(xScale).ticks(3).tickSize(0).tickPadding(8));
 
 // Y scale and Axis
 const yScale = d3.scaleLinear()
@@ -627,9 +599,9 @@ if (zoom){
                 });
 function updateChart(type){
   //destroy previous chart
-  d3.selectAll("path").remove();
-  d3.selectAll("title").remove();
-  d3.selectAll("#tipDiv").remove();
+  d3.select("path").remove();
+  d3.select("title").remove();
+  d3.select("#tipDiv").remove();
 
 //apply filter to promises
 Promise.all(promises).then(function(data) {
@@ -641,12 +613,13 @@ Promise.all(promises).then(function(data) {
   ready([topology, population]);
 });
 }
-</script>
+                    </script>
+
                 </div>
 
               </div>
-
             </div>
+
                       <!-- third chart -->
                       <div class="col-12">
                         <div class="card">
