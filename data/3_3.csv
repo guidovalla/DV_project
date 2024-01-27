@@ -7,7 +7,6 @@ Period,Dim3,Value
 2021,Sepsis and other infectious conditions of the newborn,171991.5
 2021,Acute lower respiratory infections,188006.2
 2021,Congenital anomalies,239560.6
-2021,Other Group 1 and Other noncommunicable (neonatal and under-5 only),250102.8
 2021,Diarrhoeal diseases,30737.2
 2021,Birth asphyxia and birth trauma,557732.8
 2021,Tetanus,7718.6
@@ -21,7 +20,6 @@ Period,Dim3,Value
 2020,Sepsis and other infectious conditions of the newborn,175581.1
 2020,Acute lower respiratory infections,192774.2
 2020,Congenital anomalies,245292.4
-2020,Other Group 1 and Other noncommunicable (neonatal and under-5 only),258359.6
 2020,Diarrhoeal diseases,31640.5
 2020,Birth asphyxia and birth trauma,572310.9
 2020,Tetanus,8020.2
@@ -35,7 +33,6 @@ Period,Dim3,Value
 2019,Sepsis and other infectious conditions of the newborn,180987.2
 2019,Acute lower respiratory infections,199054.3
 2019,Congenital anomalies,253377.7
-2019,Other Group 1 and Other noncommunicable (neonatal and under-5 only),268296.5
 2019,Diarrhoeal diseases,32753.2
 2019,Birth asphyxia and birth trauma,590071.7
 2019,Tetanus,8205.1
@@ -49,7 +46,6 @@ Period,Dim3,Value
 2018,Sepsis and other infectious conditions of the newborn,186597.7
 2018,Acute lower respiratory infections,207095.1
 2018,Congenital anomalies,258035.5
-2018,Other Group 1 and Other noncommunicable (neonatal and under-5 only),276213.6
 2018,Diarrhoeal diseases,34251.8
 2018,Birth asphyxia and birth trauma,610626.1
 2018,Tetanus,8697.6
@@ -63,7 +59,6 @@ Period,Dim3,Value
 2017,Sepsis and other infectious conditions of the newborn,191220.2
 2017,Acute lower respiratory infections,214788.9
 2017,Congenital anomalies,263024.0
-2017,Other Group 1 and Other noncommunicable (neonatal and under-5 only),287279.9
 2017,Diarrhoeal diseases,35698.0
 2017,Birth asphyxia and birth trauma,629041.8
 2017,Tetanus,9067.4
@@ -78,7 +73,6 @@ Period,Dim3,Value
 2016,Sepsis and other infectious conditions of the newborn,197046.2
 2016,Acute lower respiratory infections,223388.5
 2016,Congenital anomalies,267207.4
-2016,Other Group 1 and Other noncommunicable (neonatal and under-5 only),297561.2
 2016,Diarrhoeal diseases,37696.8
 2016,Birth asphyxia and birth trauma,649167.4
 2016,Tetanus,9925.3
@@ -94,7 +88,6 @@ Period,Dim3,Value
 2015,Meningitis/encephalitis,20259.2
 2015,Acute lower respiratory infections,230172.6
 2015,Congenital anomalies,267258.4
-2015,Other Group 1 and Other noncommunicable (neonatal and under-5 only),304732.2
 2015,Diarrhoeal diseases,39372.1
 2015,Birth asphyxia and birth trauma,664143.0
 2014,Tuberculosis,0.0
@@ -108,7 +101,6 @@ Period,Dim3,Value
 2014,Meningitis/encephalitis,21166.8
 2014,Acute lower respiratory infections,238606.0
 2014,Congenital anomalies,270667.1
-2014,Other Group 1 and Other noncommunicable (neonatal and under-5 only),314437.3
 2014,Diarrhoeal diseases,41467.7
 2014,Birth asphyxia and birth trauma,684036.4
 2013,Tuberculosis,0.0
@@ -122,7 +114,6 @@ Period,Dim3,Value
 2013,Meningitis/encephalitis,22105.6
 2013,Acute lower respiratory infections,250174.8
 2013,Congenital anomalies,273597.0
-2013,Other Group 1 and Other noncommunicable (neonatal and under-5 only),324943.3
 2013,Diarrhoeal diseases,43824.9
 2013,Birth asphyxia and birth trauma,705812.2
 2012,Tuberculosis,0.0
@@ -136,7 +127,6 @@ Period,Dim3,Value
 2012,Meningitis/encephalitis,23013.1
 2012,Acute lower respiratory infections,261791.1
 2012,Congenital anomalies,276346.0
-2012,Other Group 1 and Other noncommunicable (neonatal and under-5 only),335056.8
 2012,Diarrhoeal diseases,46046.2
 2012,Birth asphyxia and birth trauma,728076.4
 2011,Tuberculosis,0.0
@@ -150,7 +140,6 @@ Period,Dim3,Value
 2011,Meningitis/encephalitis,24077.2
 2011,Acute lower respiratory infections,273442.9
 2011,Congenital anomalies,273688.4
-2011,Other Group 1 and Other noncommunicable (neonatal and under-5 only),342982.6
 2011,Diarrhoeal diseases,48426.9
 2011,Birth asphyxia and birth trauma,747246.2
 2010,Tuberculosis,0.0
@@ -164,7 +153,6 @@ Period,Dim3,Value
 2010,Meningitis/encephalitis,25120.8
 2010,Congenital anomalies,271536.0
 2010,Acute lower respiratory infections,285910.7
-2010,Other Group 1 and Other noncommunicable (neonatal and under-5 only),354343.0
 2010,Diarrhoeal diseases,50846.9
 2010,Birth asphyxia and birth trauma,766630.0
 2009,Tuberculosis,0.0
@@ -178,7 +166,6 @@ Period,Dim3,Value
 2009,Meningitis/encephalitis,26243.1
 2009,Congenital anomalies,270396.5
 2009,Acute lower respiratory infections,298837.2
-2009,Other Group 1 and Other noncommunicable (neonatal and under-5 only),362105.8
 2009,Diarrhoeal diseases,53123.3
 2009,Birth asphyxia and birth trauma,788057.2
 2008,Tuberculosis,0.0
@@ -192,7 +179,6 @@ Period,Dim3,Value
 2008,Meningitis/encephalitis,26955.1
 2008,Congenital anomalies,270062.4
 2008,Acute lower respiratory infections,311130.6
-2008,Other Group 1 and Other noncommunicable (neonatal and under-5 only),367320.5
 2008,Diarrhoeal diseases,55663.8
 2008,Birth asphyxia and birth trauma,806907.4
 2007,Tuberculosis,0.0
@@ -206,7 +192,6 @@ Period,Dim3,Value
 2007,Congenital anomalies,268510.2
 2007,Meningitis/encephalitis,27893.8
 2007,Acute lower respiratory infections,324676.2
-2007,Other Group 1 and Other noncommunicable (neonatal and under-5 only),377822.7
 2007,Diarrhoeal diseases,57928.1
 2007,Birth asphyxia and birth trauma,822824.9
 2006,Tuberculosis,0.0
@@ -219,7 +204,6 @@ Period,Dim3,Value
 2006,HIV/AIDS,2778.6
 2006,Meningitis/encephalitis,28633.5
 2006,Acute lower respiratory infections,337953.0
-2006,Other Group 1 and Other noncommunicable (neonatal and under-5 only),384186.0
 2006,Malaria,6.9
 2006,Diarrhoeal diseases,60256.0
 2006,Birth asphyxia and birth trauma,841057.0
@@ -234,7 +218,6 @@ Period,Dim3,Value
 2005,Meningitis/encephalitis,29346.2
 2005,HIV/AIDS,2950.7
 2005,Acute lower respiratory infections,353831.6
-2005,Other Group 1 and Other noncommunicable (neonatal and under-5 only),395193.4
 2005,Diarrhoeal diseases,63510.0
 2005,Birth asphyxia and birth trauma,863489.6
 2004,Tuberculosis,0.0
@@ -247,7 +230,6 @@ Period,Dim3,Value
 2004,Meningitis/encephalitis,30777.0
 2004,HIV/AIDS,3106.4
 2004,Acute lower respiratory infections,369863.7
-2004,Other Group 1 and Other noncommunicable (neonatal and under-5 only),405843.1
 2004,Malaria,5.0
 2004,Diarrhoeal diseases,66405.4
 2004,Birth asphyxia and birth trauma,892433.5
@@ -261,7 +243,6 @@ Period,Dim3,Value
 2003,HIV/AIDS,3242.7
 2003,Tetanus,34193.5
 2003,Acute lower respiratory infections,384469.3
-2003,Other Group 1 and Other noncommunicable (neonatal and under-5 only),418753.2
 2003,Malaria,6.6
 2003,Diarrhoeal diseases,69099.8
 2003,Birth asphyxia and birth trauma,919004.8
@@ -276,7 +257,6 @@ Period,Dim3,Value
 2002,Injuries,34703.2
 2002,Tetanus,37989.6
 2002,Acute lower respiratory infections,400335.3
-2002,Other Group 1 and Other noncommunicable (neonatal and under-5 only),429696.9
 2002,Diarrhoeal diseases,72190.2
 2002,Birth asphyxia and birth trauma,949184.3
 2001,Tuberculosis,0.0
@@ -290,7 +270,6 @@ Period,Dim3,Value
 2001,Injuries,38069.8
 2001,Acute lower respiratory infections,416880.0
 2001,Tetanus,42312.7
-2001,Other Group 1 and Other noncommunicable (neonatal and under-5 only),440657.7
 2001,Diarrhoeal diseases,74917.1
 2001,Birth asphyxia and birth trauma,976280.8
 2000,Tuberculosis,0.0
@@ -304,6 +283,5 @@ Period,Dim3,Value
 2000,HIV/AIDS,3526.5
 2000,Acute lower respiratory infections,434064.3
 2000,Injuries,43415.5
-2000,Other Group 1 and Other noncommunicable (neonatal and under-5 only),449037.2
 2000,Tetanus,46898.4
 2000,Diarrhoeal diseases,78143.0
