@@ -1,228 +1,77 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<!-- Include d3 library -->
-<script src="https://d3js.org/d3.v7.min.js"></script>
-
-<!-- Load slider -->
-<script src="https://unpkg.com/d3-simple-slider"></script>
-
-
-<!-- Create a container to host the chart -->
-<div id="treemap_container"></div>
-<div id="viz_container"></div>
+<h5 class="card-title">Chart 3</h5>
+                            <script src="https://d3js.org/d3.v7.min.js"></script>
+                            <!-- Load slider -->
+                            <script src="https://unpkg.com/d3-simple-slider"></script>
+                      
+                            <div id="container_3"></div>
+                      <div id="slider-range_3"></div>
 
 
 
+                      <style>
+                        svg {
+                      width: 300;
+                      height: 300;
+                    }
+                    text {
+                      font-family: lato;
+                      font-size: 10px;
+                      fill: #8c7e7e;
+                    }
+                    .grid path {
+                      stroke-width: 0;
+                      stroke: #333333;
+                    }
+                    .grid .tick line {
+                      stroke: #333333;
+                      stroke-width: 0.3px;
+                      stroke-opacity: 0.3;
+                    }
+                    text.chart-label {
+                      font-size: 10px;
+                      font-weight: 400;
+                      fill: #999999;
+                    }
+                    
+                    text.chart-title {
+                      font-size: 14px;
+                      font-weight: bold;
+                      fill:#222222
+                    }
+                    text.chart-source {
+                      font-size: 8px;
+                      fill: #999999;
+                    }
+                    text.copyright {
+                      font-size: 8px;
+                      fill: #999999;
+                    }
+                    
+                    .tooltip {
+                      background-color: #ffffff;
+                      font-family: lato;
+                      font-size: 11px;
+                      padding: 4px;
+                      color: #666666;
+                      border: none;
+                      box-shadow: 0px 0px 3px 0px #E6E6E6;
+                    }
+                    .legend{
+                      font-size: 10px;
+                    }
+                    </style>
 
-<style>
-    svg {
-  width: 300;
-  height: 300;
-}
-text {
-  font-family: lato;
-  font-size: 10px;
-  fill: #333333;
-}
-.grid path {
-  stroke-width: 0;
-  stroke: #333333;
-}
-.grid .tick line {
-  stroke: #333333;
-  stroke-width: 0.3px;
-  stroke-opacity: 0.3;
-}
-text.chart-label {
-  font-size: 10px;
-  font-weight: 400;
-  fill: #999999;
-}
-
-text.chart-title {
-  font-size: 14px;
-  font-weight: bold;
-  fill:#222222
-}
-text.chart-source {
-  font-size: 8px;
-  fill: #999999;
-}
-text.copyright {
-  font-size: 8px;
-  fill: #999999;
-}
-
-.tooltip {
-  background-color: #ffffff;
-  font-family: lato;
-  font-size: 11px;
-  padding: 4px;
-  color: #666666;
-  border: none;
-  box-shadow: 0px 0px 3px 0px #E6E6E6;
-}
-.legend{
-  font-size: 10px;
-}
-</style>
-
-<div>
-<script>
-// set the dimensions and margins of the graph
-const margin = {top: 30, right: 20, bottom: 30, left: 20};
-const width = 450 - margin.left - margin.right;
-const height = 350 - margin.top - margin.bottom;
-
-// append the svg object to the body of the page
-const svg = d3.select("#viz_container")
-  .append("svg")
-    .attr("width", "600")
-    .attr("height", "400")
-    .attr("viewBox", "0 0 450 350")
-    .attr("preserveAspectRatio", "xMinYMin")
-  .append("g")
-    .attr("transform", `translate(${margin.left}, ${margin.top})`);
-
-// parse the Data
-//d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/part_to_a_whole/treemap_d3.csv")
-d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/try_treemap.csv")
-.then(function(data){
-
-data.forEach(function(d) {
-    d.population = +d.population;
-    d.enabled = true;
-  });
-
-const total = d3.sum(data.map(function(d) {
-  return (d.enabled) ? d.population : 0;  }));
-
-// reshape data
-const treeData = d3.stratify()
-  .id(d => d.ages)
-  .parentId(d => d.parent)
-  (data);
-
-treeData.sum(d => d.population)
-
-d3.treemap()
-  .size([width, height])
-  .padding(2)
-  (treeData);
-
-// create a tooltip
-const tooltip = d3.select("body")
-  .append("div")
-    .attr("class", "tooltip");
-
-// tooltip events
-const mouseover = function(d) {
-  tooltip
-      .style("opacity", 1)
-  d3.select(this)
-      .style("opacity", .5)
-};
-const mousemove = function(event,d) {
-  f = d3.format(",")
-  tooltip
-  .html("Number of staff: " + `${f(d.data.population)}`)
-    .style("top", event.pageY - 10 + "px")
-    .style("left", event.pageX + 10 + "px")
-};
-const mouseleave = function(d) {
-  tooltip
-    .style("opacity", 0)
-  d3.select(this)
-    .style("stroke", "none")
-    .style("opacity", 1)
-};
-
-// create rectangle
-svg
-  .selectAll("rect")
-  .data(treeData.leaves())
-  .join("rect")
-    .attr('x', d => d.x0)
-    .attr('y', d => d.y0)
-    .attr('width', d => d.x1 - d.x0)
-    .attr('height', d=> d.y1 - d.y0)
-    .style("stroke", "none")
-    .style("fill", "#0072BC")
-  .on("mouseover", mouseover)
-  .on("mousemove", mousemove)
-  .on("mouseleave", mouseleave);
-
-// add labels to the graph
-svg
-  .selectAll("text-number")
-  .data(treeData.leaves())
-  .join("text")
-    .attr("class", "tree-label")
-    .attr("x", d => d.x0+5)
-    .attr("y", d => d.y0+15)
-    .text(d => Math.round(1000 * d.data.population / total) / 10 + "%")
-    .attr("font-size", "10px")
-    .attr("fill", "#ffffff");
-svg
-  .selectAll("text-region")
-  .data(treeData.leaves())
-  .join("text")
-    .attr("class", "tree-label")
-    .attr("x", d => d.x0+5)
-    .attr("y", d => d.y0+30)
-    .text(d => d.data.ages)
-    .attr("font-size", "10px")
-    .attr("fill", "#ffffff");
-
-// set title
-svg
-  .append("text")
-    .attr("class", "chart-title")
-    .attr("x", 0)
-    .attr("y", -(margin.top)/1.5)
-    .attr("text-anchor", "start")
-  .text("UNHCR global workforce by region | 2021");
-
-// set source
-svg
-  .append("text")
-    .attr("class", "chart-source")
-    .attr("x", 0)
-    .attr("y", height + margin.bottom*0.4)
-    .attr("text-anchor", "start")
-  .text("Source: UNHCR")
-
-// set copyright
-svg
-  .append("text")
-    .attr("class", "copyright")
-    .attr("x", 0)
-    .attr("y", height + margin.bottom*0.7)
-    .attr("text-anchor", "start")
-  .text("©UNHCR, The UN Refugee Agency")
-})
-</script>
-</div>
-
-<div id="viz_container_2"></div>
-<div id="slider-range"></div>
-
-<script>
-
-
-
-
-
-// set the dimensions and margins of the graph
-const margin3 = {top: 60, right: 30, bottom: 50, left: 60};
+                      <script>
+                          // set the dimensions and margins of the graph
+const margin3 = {top: 60, right: 20, bottom: 20, left: 100};
   const width3 = 450 - margin3.left - margin3.right;
   const height3 = 350 - margin3.top - margin3.bottom;
 
   // append the svg object to the body of the page
-  const svg3 = d3.select("#viz_container_2")
+  const svg3 = d3.select("#container_3")
     .append("svg")
-      .attr("width", "600")
-      .attr("height", "400")
+      .attr("width", "100%")
+      .attr("height", "100%")
       .attr("viewBox", "0 0 450 350")
       .attr("preserveAspectRatio", "xMinYMin")
     .append("g")
@@ -234,18 +83,18 @@ const margin3 = {top: 60, right: 30, bottom: 50, left: 60};
 
     var uniqueYearsSet = new Set(data.map(d => d.Year));
     var allYears = Array.from(uniqueYearsSet);
-    console.log("years", allYears)
+    //console.log("years", allYears)
+
+    // d3.select("#YearsButton")
+    //       .selectAll('myOptions')
+    //          .data(allYears)
+    //         .enter()
+    //         .append('option')
+    //       .text(function (d) { return d; }) // text showed in the menu
+    //       .attr("value", function (d) { return d; }) // corresponding value returned by the button
 
 
     
-
-d3.select("#YearsButton")
-          .selectAll('myOptions')
-             .data(allYears)
-            .enter()
-            .append('option')
-          .text(function (d) { return d; }) // text showed in the menu
-          .attr("value", function (d) { return d; }) // corresponding value returned by the button
 
 
   // X scale and Axis
@@ -311,17 +160,19 @@ d3.select("#YearsButton")
         .style("opacity", .5)
   };
   const mousemove1 = function(event,d) {
-
       tooltip
-      .html( `${d3.format(".2f")(d.male)}  Billions`)
-        .style("top", event.pageY - 10 + "px")
-        .style("left", event.pageX + 10 + "px");
+        .style("top", d3.pointer(event)[1]+1300 + "px")
+        .style("left", d3.pointer(event)[0] +150+ "px")
+        .html( `${d3.format(".2f")(d.male)}`+ " milions")
+        .style("position", "absolute");
+        console.log(d3.pointer(event)[0])
   };
   const mousemove2 = function(event,d) {
     tooltip
-    .html(`${d3.format(".2f")(d.female)}  Billions`)
-      .style("top", event.pageY - 10 + "px")
-      .style("left", event.pageX + 10 + "px")
+    .style("top", d3.pointer(event)[1]+1300 + "px")
+    .style("left", d3.pointer(event)[0] +300+ "px")
+        .html(`${d3.format(".2f")(d.female)}`+ " milions")
+        .style("position", "absolute");
 };
   const mouseleave = function(d) {
       tooltip
@@ -331,7 +182,7 @@ d3.select("#YearsButton")
         .style("opacity", 1)
   };
 
-  var Pippo = "2023"
+  var Pippo = 2023
 
   var dataFilter = data.filter(function(d){return d.Year==Pippo})
 
@@ -403,24 +254,25 @@ d3.select("#YearsButton")
 
          //add slider 
         
-         const sliderRange= d3
-.sliderBottom()
-.min(2023)
-.max(2100)
-.width(200)
-.step(1)
-.tickFormat(d3.format('Y'))
-.ticks(5)
-.default(2023)
-.on('onchange', val => {
-    Pippo = val
-      update(Pippo)
-    })
+         const sliderRange = d3
+    .sliderBottom()
+    .min(2023)
+    .max(2100)
+    .width(200)
+    .tickFormat(d3.format('Y'))
+    .step(1)
+    .default(2023)
+    .on('onchange', val => {
+        Pippo = val;
+        update(Pippo);
+    });
+
+
         const gRange= d3.
-        select('#slider-range')
+        select('#slider-range_3')
         .append("svg")
         .attr("width", 200+ margin3.left + margin3.right)
-        .attr("height", 40+ margin3.bottom)
+        .attr("height", 50+ margin3.bottom)
         .append("g")
         .attr("transform","translate(" + margin3.right+ "," + margin3.bottom + ")")
         .call(sliderRange);
@@ -479,10 +331,4 @@ d3.select("#YearsButton")
   })
 
   })
-
-
-
-  
-
-</script>
-</div>
+                      </script>

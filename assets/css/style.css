@@ -216,6 +216,16 @@ h6 {
   border-color: #d3d3d4;
 }
 
+
+/* BOX OBJECT STYLES */
+.box {
+  width: 100vh;
+  height: 100vh;
+  border: none;
+  background-color: #fff;
+  overflow: auto;
+}
+
 /* Card */
 .card {
   margin-bottom: 30px;

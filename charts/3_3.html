@@ -1,0 +1,100 @@
+<h5 class="card-title">Chart 3</h5>
+
+<!-- Include d3 library -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<!-- Create a container to host the chart -->
+<div id="container3"></div>
+<!-- Initialize a Dropdown -->
+<select id="year_btn"></select>
+
+<script>
+    // Declare the chart dimensions and margins.
+    const margin3 = { top: 70, right: 60, bottom: 200, left: 60 }
+    const width3 = 700 - margin3.left - margin3.right;
+    const height3 = 500 - margin3.top - margin3.bottom;
+
+
+    // Create the SVG container.
+    const svg3 = d3.select("#container3")
+        .append("svg")
+        .attr("width", width3 + margin3.left + margin3.right)
+        .attr("height", height3 + margin3.top + margin3.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin3.left + "," + margin3.top + ")");
+
+    // Load CSV data
+    d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_3.csv")
+        .then((data) => {
+            // Extract unique years and age categories
+            const years = [...new Set(data.map(d => d.Period))];
+            // Declare years Dropdown
+            d3.select("#year_btn")
+                .selectAll('myOptions')
+                .data(years)
+                .enter()
+                .append('option')
+                .text((d) => d) // text showed in the menu
+                .attr("value", (d) => d) // corresponding value returned by the button
+
+            // Declare the x (horizontal position) scale.
+            const x = d3.scaleBand()
+                .domain(data.map(e => e.Dim3))
+                .range([0, width3])
+                .padding(0.2);
+            // Declare the y (vertical position) scale.
+            const y = d3.scaleLinear()
+                .domain([0, Math.max(...data.map(e => e.Value)) + 50])
+                .range([height3, 0]);
+
+            // Initial bars
+            updateBars(data[0].Period);
+
+            // Update bars when year changes
+            function updateBars(selectedYear) {
+                svg3.selectAll(".bar").remove(); // Remove previous bars
+                const dataFilter = data.filter(d => {
+                    if (d.Period == selectedYear) {
+                        return {
+                            Dim3: d.Dim3,
+                            Value: d.Value
+                        }
+                    }
+                });
+
+                // Bars
+                svg3.selectAll(".bar")
+                    .data(dataFilter)  // Start from the third entry to avoid "Period" and "Dim3"
+                    .enter()
+                    .append("rect")
+                    .attr("class", "bar")
+                    .attr("x", (e) => x(e.Dim3))
+                    .attr("y", (e) => y(+e.Value))
+                    .attr("width", x.bandwidth())
+                    .attr("height", (e) => height3 - y(+e.Value))
+                    .attr("fill", "blue");
+
+                // X-axis
+                svg3.append("g")
+                    .attr("transform", "translate(0," + height3 + ")")
+                    .call(d3.axisBottom(x))
+                    .selectAll("text")
+                    .attr("transform", "translate(-10,0)rotate(-45)")
+                    .style("text-anchor", "end");
+
+                // Y-axis
+                svg3.append("g")
+                    .call(d3.axisLeft(y));
+            }
+
+            // Handle year change event
+            d3.select("#year_btn").on("change", function () {
+                const selectedYear = d3.select(this).property("value");
+                updateBars(selectedYear);
+            });
+
+        })
+        .catch((err) => {
+            console.log({ err });
+        });
+</script>
