@@ -25,10 +25,7 @@
 <!-- Create a container to host the chart -->
 <div id="viz_container"></div>
 <style>
-svg {
-width: 100%;
-height: 100%;
-}
+
 text {
 font-family: lato;
 font-size: 8px;
@@ -72,7 +69,7 @@ height = 350;
 const svg = d3.select("#viz_container")
 .append("svg")
 .attr("width", "100%")
-.attr("height", "60%")
+.attr("height", "80%")
 .attr("viewBox","0 0  550 450")
 .attr("preserveAspectRatio","xMinYMin");
 
