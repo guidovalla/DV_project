@@ -78,18 +78,19 @@ d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/1_4_1_
 
 // X scale and Axis
 const xScale = d3.scaleBand()
-  .domain(data.map(d => d.year))
+  .domain(data.map(d => d.Age))
   .range([0, width])
-  .padding(.05);
+  .padding(.1);
 svg
   .append('g')
   .attr("transform", `translate(0, ${height})`)
-  .call(d3.axisBottom(xScale).tickSize(0).tickPadding(8));
+  .call(d3.axisBottom(xScale).tickSize(0).ticks(5));
 
 // Y scale and Axis
 const formater =  d3.format("~s")
 const yScale = d3.scaleLinear()
-    .domain([0, d3.max(data, d => d.displaced_number)]).nice()
+    .domain([0, 10000000]).nice() 
+    //.domain([0, d3.max(data, d => d.Value)]).nice()
     .range([height, 0]);
 svg
   .append('g')
@@ -122,7 +123,7 @@ const mouseover = function(d) {
 const mousemove = function(event, d) {
   const formater =  d3.format(",")
     tooltip
-      .html(formater(d.displaced_number))
+      .html(formater(d.Value))
       .style("top", event.pageY - 10 + "px")
       .style("left", event.pageX + 10 + "px");
 }
@@ -143,10 +144,10 @@ barGroup
   .append("rect")
     .attr("class", "bar")
     .attr("fill", "#0072BC")
-    .attr("x", d => xScale(d.year))
-    .attr("y", d => yScale(d.displaced_number))
+    .attr("x", d => xScale(d.Age))
+    .attr("y", d => yScale(d.Value))
     .attr("width", xScale.bandwidth())
-    .attr("height", d => height - yScale(d.displaced_number))
+    .attr("height", d => height - yScale(d.Value))
   .on("mouseover", mouseover)
   .on("mousemove", mousemove)
   .on("mouseleave", mouseleave);
