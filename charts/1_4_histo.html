@@ -73,7 +73,8 @@ const svg = d3.select("#viz_container")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // parse the Data
-d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/distribution/histogram.csv")
+//d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/distribution/histogram.csv")
+d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/1_4_1_histo.csv")
 .then(function(data){
 
 // X scale and Axis
