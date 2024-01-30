@@ -1,6 +1,8 @@
+<div class="card-body">
 <h5 class="card-title">Chart 5</h5>
 <div id="container_5"></div>
-<div id="slider-range_5"></div>
+<!-- <div id="slider-range_5"></div> -->
+
 <select id="CountryButton"></select>
 
                                             <!-- Include d3 library -->
@@ -192,10 +194,10 @@
                       updateChart(Year, Country);
                   });
           const gRange= d3.
-          select('#slider-range_5')
+          select('#container_5')
           .append("svg")
           .attr("width", 700 + margin5.left + margin5.right)
-          .attr("height", 200 + margin5.top + margin5.bottom)
+          .attr("height", 120 + margin5.top + margin5.bottom)
           .append("g")
           .attr("transform","translate(" + margin5.left + "," + margin5.top + ")")
           .call(sliderRange);
@@ -281,3 +283,5 @@
     })
   
   </script> 
+
+</div>
