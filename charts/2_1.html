@@ -1,8 +1,6 @@
 <div class="card-body">
 <h5 class="card-title">Chart 1</h5>
-                      <!-- Create a container to host the charts -->
-
-                      <!-- first chart -->
+                
                       <!-- Include d3 library -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
                             <!-- Load slider -->
@@ -374,7 +372,7 @@ filteredData = data.filter(function (d) {
   .selectAll("g")
   .data(filteredData)
   .join("circle")
-  .attr("class", function(d) { return "circle" + d.Continent })
+  .attr("class", function(d) { return d.Continent })
       .attr("cx", d => xScale(+d.GDPpercapita))
       .attr("cy", d => yScale(+d.Lifeexpectancy))
       .attr("r", d =>zScale(+d.Population))
