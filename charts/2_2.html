@@ -74,7 +74,7 @@ const svg2 = d3.select("#container_2")
   .append("g")
     .attr("transform", `translate(${margin2.left}, ${margin2.top})`);
 
-    var year=2000
+    var year=2019
 // parse the Data
 d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/2_1_2.csv")
 .then(function(data){
@@ -165,7 +165,7 @@ const mousemove = function(event,d) {
     tooltip
     .html("<div><b>Country:</b> "+ d.Location+ "<div><b>Total Population:</b> " +f(d.Population)+ "</div><div><b> Percentage of GDP spent for Medical Expenditure:</b> " +f(d.Value)+ "</div><div><b>Life Expectancy at birth:</b> "+ f(d.Lifeexpectancy) +"</div>")
     .style("left", (d3.pointer(event)[0])*2+150 + "px")
-      .style("top", (d3.pointer(event)[1])*2+150 + "px")
+      .style("top", (d3.pointer(event)[1])*2*150 + "px")
       .style("position", "absolute")
 };
 
@@ -183,7 +183,7 @@ svg2.append("g")
   .selectAll("g")
   .data(filteredData)
   .join("circle")
-  .attr("class", d=> d3.format("c")(d.Continent ))
+  .attr("class", d=> d.Continent )
       .attr("cx", d => xScale(+d.Value))
       .attr("cy", d => yScale(+d.Lifeexpectancy))
       .attr("r", d =>zScale(+d.Population))
@@ -323,7 +323,7 @@ svg2
         
         const sliderRange= d3
 .sliderBottom()
-.min(1990)
+.min(2000)
 .max(2019)
 .width(300)
 .step(1)
