@@ -174,16 +174,5 @@ section {
   text-decoration: none;
   border-radius: 10px;
 }
-@media (min-width: 360px) {
-  .btn-group{
-    display: flex;
-    flex-direction: column;
-  }
-  .btn {
-    width: 50%;
-    text-align: center;
-    padding: 8px 15px; /* Adjust padding for smaller size */
-    font-size: 14px; /* Adjust font size for smaller size */
- }
-}
+
 
