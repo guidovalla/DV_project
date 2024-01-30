@@ -1,18 +1,15 @@
+<div class="card-body">
 <h5 class="card-title">Chart 3</h5>
                             <script src="https://d3js.org/d3.v7.min.js"></script>
                             <!-- Load slider -->
                             <script src="https://unpkg.com/d3-simple-slider"></script>
                       
                             <div id="container_3"></div>
-                      <div id="slider-range_3"></div>
+                      <!-- <div id="slider-range_3"></div> -->
 
 
 
                       <style>
-                        svg {
-                      width: 300;
-                      height: 300;
-                    }
                     text {
                       font-family: lato;
                       font-size: 10px;
@@ -71,7 +68,7 @@ const margin3 = {top: 60, right: 20, bottom: 20, left: 100};
   const svg3 = d3.select("#container_3")
     .append("svg")
       .attr("width", "100%")
-      .attr("height", "100%")
+      .attr("height", "80%")
       .attr("viewBox", "0 0 450 350")
       .attr("preserveAspectRatio", "xMinYMin")
     .append("g")
@@ -269,10 +266,10 @@ const margin3 = {top: 60, right: 20, bottom: 20, left: 100};
 
 
         const gRange= d3.
-        select('#slider-range_3')
+        select('#container_3')
         .append("svg")
-        .attr("width", 200+ margin3.left + margin3.right)
-        .attr("height", 50+ margin3.bottom)
+        .attr("width", "100%")
+        .attr("height", "10%")
         .append("g")
         .attr("transform","translate(" + margin3.right+ "," + margin3.bottom + ")")
         .call(sliderRange);
@@ -332,3 +329,4 @@ const margin3 = {top: 60, right: 20, bottom: 20, left: 100};
 
   })
                       </script>
+                      </div>
