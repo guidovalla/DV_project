@@ -167,7 +167,7 @@
   
   // set title
   svg5
-    .append("text").style("font-size", "4px")
+    .append("text").style("font-size", "12px")
       .attr("class", "chart-title")
       .attr("x", 0)
       .attr("y", -(margin5.top)/1.5)
@@ -204,7 +204,6 @@
   
   function updateChart(Year, Country){
   d3.selectAll("rect").remove()
-  d3.selectAll("text").remove()
   //filter the data
   fdata  = data.filter(function (d) {
       return d.year == Year;
