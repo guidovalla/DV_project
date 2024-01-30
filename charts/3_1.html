@@ -4,11 +4,14 @@
 <!-- Include d3 library -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
 
+<!-- Load slider -->
+<script src="https://unpkg.com/d3-simple-slider"></script>
+
+
 <!-- first chart -->
 <!-- Create a container to host the chart -->
 <div id="container"></div>
-<!-- Initialize a Dropdown -->
-<select id="YearsButton"></select>
+
 
 <script>
 // Declare the chart dimensions and margins.
@@ -71,6 +74,15 @@ svg.selectAll(".bar")
   .attr("height", (age) => height - y(dataFilter[age]))
   .attr("fill", "#69b3a2");
 
+  svg
+  .append("text")
+    .attr("class", "chart-title")
+    .attr("x", -(margin.left)*0.00000001)
+    .attr("y", -(margin.top)/900)
+    .attr("text-anchor", "start")
+  .text("Deaths by age group")
+
+
 // X-axis
 svg.append("g")
   .attr("transform", "translate(0," + height + ")")
@@ -79,16 +91,43 @@ svg.append("g")
   .attr("transform", "translate(-10,0)rotate(-45)")
   .style("text-anchor", "end");
 
+  svg
+  .append("text")
+    .attr("class", "chart-label")
+    .attr("x", width/1.7)
+    .attr("y", height+margin.bottom*0.6)
+    .attr("text-anchor", "middle")
+  .text("Age group");
+
+
 // Y-axis
 svg.append("g")
   .call(d3.axisLeft(y));
 }
+var year=data[0].Year
+const sliderRange= d3
+.sliderBottom()
+.min(1950)
+.max(2021)
+.width(300)
+.step(1)
+.tickFormat(d3.format('Y'))
+.ticks(5)
+.default(year)
+.on('onchange', val => {
+    year = val
+      updateBars(year)
+    })
+        const gRange= d3.
+        select('#container')
+        .append("svg")
+        .attr("width", 400 + margin.left + margin.right)
+        .attr("height", 10 + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+        .call(sliderRange);
 
-// Handle year change event
-d3.select("#YearsButton").on("change", function () {
-const selectedYear = d3.select(this).property("value");
-updateBars(selectedYear);
-});
+
 
 })
 .catch((err) => {

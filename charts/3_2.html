@@ -11,11 +11,11 @@
 <!-- Create a container to host the chart -->
 <div id="viz_container"></div>
 
+<!-- Load slider -->
+<script src="https://unpkg.com/d3-simple-slider"></script>
+
+
 <style>
-svg {
-	width: 100%;
-	height: 100%;
-}
 text {
 	font-family: lato;
 	font-size: 8px;
@@ -45,12 +45,13 @@ text {
 <script>
 
 //set svg parameters
+const margin = { top: 10, right: 60, bottom: 60, left: 60 }
 const width2 = 450,
       height2 = 350;
 const svg2 = d3.select("#viz_container")
    .append("svg")
      .attr("width", "100%")
-     .attr("height", "100%")
+     .attr("height", "60%")
      .attr("viewBox","0 0  450 350")
      .attr("preserveAspectRatio","xMinYMin");
 
@@ -67,16 +68,18 @@ const path = d3.geoPath()
 // set color scale
 const color = d3.scaleThreshold()
         .domain([0.005,0.05,0.01,0.1,0.2])
-        .range(["#DCE9FF", "#8EBEFF", "#589BE5", "#0072BC", "#FF0000"])
-        .unknown("#E6E6E6");
+        .range(["#DCE9FF", "#8EBEFF", "#589BE5", "#0072BC","#0f43a3", "#160457"])
+.unknown("#E6E6E6");
 
 //declare polygon and polyline
 const poly = svg2.append("g");
 const line = svg2.append("g");
 
+var year= 1950
+
 // declare URL
 //const dataURL = "https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/geospatial/choropleth_map.csv";
-const dataURL = "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2_v7.csv";
+const dataURL = "https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_2.csv";
 const polygonsURL = "https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/geospatial/world_polygons_simplified.json";
 const polylinesURL = "https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/geospatial/world_lines_simplified.json";
 
@@ -85,8 +88,17 @@ const promises = [
   d3.json(polygonsURL),
   d3.csv(dataURL)
 ];
+Promise.all(promises).then(function(data) {
+var topology = data[0];
+var population = data[1];
+population =  population.filter(function (d) {
+return d.year == year;
+});
+ready([topology, population]);
+});
 
-Promise.all(promises).then(ready)
+
+
 function ready([topology, population]) {
 
   // prepare pop data to join shapefile
@@ -94,8 +106,6 @@ function ready([topology, population]) {
   population.forEach(function(d){
     data[d.Iso3] = +d.perc
   });
-
-  console.log("data", data) 
 
   // set mouse events
   const mouseover = function(d) {
@@ -130,9 +140,23 @@ function ready([topology, population]) {
     .on("mouseover", mouseover)
     .on("mouseleave", mouseleave)
     .append("title")
-      .text(function(d) { return `${d.properties.gis_name} \nRefugee Population: ${d3.format(",")(d.perc)}`
+      .text(function(d) { return `${d.properties.gis_name} \nChildren not surviving until age 1: ${d3.format(".1%")(d.perc)}`
   }
-)};
+)
+// set legend
+svg2.append("g")
+.attr("class", "legendThreshold")
+.attr("transform", "translate(5,255)");
+var legend = d3.legendColor()
+.labelFormat(d3.format(".0%"))
+.labels(d3.legendHelpers.thresholdLabels)
+.labelOffset(3)
+.shapePadding(0)
+.scale(color);
+
+svg2.select(".legendThreshold")
+.call(legend);
+
 
 //load and draw lines
 d3.json(polylinesURL).then(function(topology) {
@@ -160,36 +184,57 @@ if (zoom){
 	svg2.call(zoomFunction);
 };
 
-// set legend
-svg2.append("g")
-  .attr("class", "legendThreshold")
-  .attr("transform", "translate(5,255)");
+};
 
-const legend = d3.legendColor()
-.labelFormat(d3.format(",.0f"))
-.labels(d3.legendHelpers.thresholdLabels)
-.labelOffset(3)
-.shapePadding(0)
-.scale(color);
 
-svg2.select(".legendThreshold")
-    .call(legend);
 
-// set note
-svg2
-  .append('text')
-      .attr('class', 'note')
-      .attr('x', width2*0.01)
-      .attr('y', height2*0.96)
-      .attr('text-anchor', 'start')
-      .style('font-size', 7)
-  .text('Source: UNHCR Refugee Data Finder');
-svg2
-  .append('text')
-      .attr('class', 'note')
-      .attr('x', width2*0.01)
-      .attr('y', height2*0.99)
-      .attr('text-anchor', 'start')
-      .style('font-size', 7)
-  .text('The boundaries and names shown and the designations used on this map do not imply official endorsement or acceptance by the United Nations.');
+const sliderRange= d3
+.sliderBottom()
+.min(1950)
+.max(2021)
+.width(300)
+.step(1)
+.tickFormat(d3.format('Y'))
+.ticks(5)
+.default(year)
+.on('onchange', val => {
+    year = val
+      updateChart(year)
+    })
+
+const gRange= d3.
+        select('#viz_container')
+        .append("svg")
+        .attr("width", 400 + margin.left + margin.right)
+        .attr("height", 10 + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform","translate(" + margin.left + "," + margin.top + ")")
+        .call(sliderRange);
+
+
+
+
+
+function updateChart(type){
+//destroy previous chart
+d3.selectAll("path").remove();
+d3.selectAll("title").remove();
+d3.selectAll("countries").remove();
+
+//apply filter to promises
+Promise.all(promises).then(function(data) {
+var topology = data[0];
+var population = data[1];
+population =  population.filter(function (d) {
+return d.year == year;
+});
+ready([topology, population]);
+});
+}
+
+
+
+
+
+
 </script>
