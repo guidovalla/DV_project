@@ -11,10 +11,6 @@
 <div id="slider-range"></div>
 <style>
 
-    svg {
-      width: 100%;
-      height: 100%;
-    }
     text {
       font-family: lato;
       font-size: 10px;
@@ -66,7 +62,7 @@ const height = 350 - margin.top - margin.bottom;
 const svg = d3.select("#container")
   .append("svg")
     .attr("width", "100%")
-    .attr("height", "100%")
+    .attr("height", "65%")
     .attr("viewBox", "0 0 450 350")
     .attr("preserveAspectRatio", "xMinYMin")
   .append("g")
@@ -336,10 +332,10 @@ svg
       updateChart(year)
     })
         const gRange= d3.
-        select('#slider-range')
+        select('#container')
         .append("svg")
-        .attr("width", 700 + margin.left + margin.right)
-        .attr("height", 200 + margin.top + margin.bottom)
+        .attr("width", 400 + margin.left + margin.right)
+        .attr("height", 10 + margin.top + margin.bottom)
         .append("g")
         .attr("transform","translate(" + margin.left + "," + margin.top + ")")
         .call(sliderRange);

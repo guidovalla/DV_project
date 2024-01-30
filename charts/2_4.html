@@ -1,22 +1,26 @@
 <div class="card-body">
 
 <h5 class="card-title">Chart 4</h5>
-                      <div id="container_4"></div>
-                      <div id="slider-range_4"></div>
 
 
-                                            <!-- Include d3 library -->
+                         <!-- Include d3 library -->
                                             <script src="https://d3js.org/d3.v7.min.js"></script>
                                             <!-- Load slider -->
                                             <script src="https://unpkg.com/d3-simple-slider"></script>
 
 
+
+
+
+                      <div id="container_4"></div>
+                     <!-- <div id="slider-range_4"></div> -->
+
+
+
+
                       <style>
 
-                        svg {
-                          width: 100%;
-                          height: 100%;
-                        }
+                       
                         text {
                           font-family: lato;
                           font-size: 10px;
@@ -70,7 +74,7 @@ const height4 = 350 - margin4.top - margin4.bottom;
 const svg4 = d3.select("#container_4")
   .append("svg")
     .attr("width", "100%")
-    .attr("height", "100%")
+    .attr("height", "65%")
     .attr("viewBox", "0 0 450 350")
     .attr("preserveAspectRatio", "xMinYMin")
   .append("g")
@@ -342,10 +346,10 @@ svg4
       updateChart(year)
     })
         const gRange= d3.
-        select('#slider-range_4')
+        select('#container_4')
         .append("svg")
-        .attr("width", 700 + margin4.left + margin4.right)
-        .attr("height", 200 + margin4.top + margin4.bottom)
+        .attr("width", 400 + margin4.left + margin4.right)
+        .attr("height", 10 + margin4.top + margin4.bottom)
         .append("g")
         .attr("transform","translate(" + margin4.left + "," + margin4.top + ")")
         .call(sliderRange);
