@@ -1,0 +1,290 @@
+<div class="card-body">
+<h5 class="card-title">Chart 5</h5>
+<div id="container_5"></div>
+<!-- <div id="slider-range_5"></div> -->
+
+<select id="CountryButton"></select>
+
+                                            <!-- Include d3 library -->
+                                            <script src="https://d3js.org/d3.v7.min.js"></script>
+                      <!-- Load slider -->
+                      <script src="https://unpkg.com/d3-simple-slider"></script>
+
+
+<script>
+
+  // set the dimensions and margins of the graph
+  const margin5 = {top: 30, right: 20, bottom: 30, left: 20};
+  const width5 = 450 - margin5.left - margin5.right;
+  const height5 = 350 - margin5.top - margin5.bottom;
+  
+  // append the svg object to the body of the page
+  const svg5 = d3.select("#container_5")
+    .append("svg")
+      .attr("width", "100%")
+      .attr("height", "65%")
+      .attr("viewBox", "0 0 450 350")
+      .attr("preserveAspectRatio", "xMinYMin")
+    .append("g")
+      .attr("transform", `translate(${margin5.left}, ${margin5.top})`);
+  
+      var Year=2019
+      var Country="Afghanistan"
+      
+  // parse the Data
+  //d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/part_to_a_whole/treemap_d3.csv")
+  d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/2_3.csv")
+  
+  .then(function(data){
+    fdata  = data.filter(function (d) {
+      return d.year == Year;
+    });
+  //list of unique locations
+  var map = new Map();
+  var countries = [];
+  for (const item of data) {
+      if(!map.has(item.location)){
+          map.set(item.location, true);    // set any value to Map
+          countries.push({
+              Country: item.location
+          });
+      }
+  }
+  countries=countries.map(d=>d.Country)
+  countries=countries.filter(d=>d!="")
+  countries=countries.sort()
+  
+  
+    // Initialize a Dropdown
+    d3.select("#CountryButton")
+                      .selectAll('myOptions')
+                      .data(countries)
+                      .enter()
+                      .append('option')
+                      .attr("value", d =>d) // corresponding value returned by the button
+                      .text(d=>d)
+                      
+                      fdata  = fdata.filter(function (d) {
+      return d.location == Country;
+    });
+  
+    //append a row to fdata
+    fdata.push({parent: "", cause: "root", val: ""})
+  
+  
+  
+  fdata.forEach(function(d) {
+      d.val = +d.val;
+      d.enabled = true;
+    });
+  
+  const total = d3.sum(fdata.map(function(d) {
+    return (d.enabled) ? d.val : 0;  }));
+  
+  // reshape fdata
+  const treeData = d3.stratify()
+    .id(d => d.cause)
+    .parentId(d => d.parent)
+    (fdata);
+  
+  
+  treeData.sum(d => d.val)
+  
+  //sort treedata on value
+  treeData.sort(function(a, b) { return b.height5 - a.height5 || b.value - a.value; });
+  
+  d3.treemap()
+    .size([width5, height5])
+    .padding(2)
+    (treeData);
+  
+  // create a tooltip
+  const tooltip = d3.select("body")
+    .append("div")
+      .attr("class", "tooltip");
+  
+  // tooltip events
+  const mouseover = function(d) {
+    tooltip
+        .style("opacity", 1)
+    d3.select(this)
+        .style("opacity", .5)
+  };
+  const mousemove = function(event,d) {
+    f = d3.format(",")
+    tooltip
+    
+    .html("Percentage: " + (d.data.val/10).toFixed(2)+ "%")
+  
+      .style("top", event.pageY - 10 + "px")
+      .style("left", event.pageX + 10 + "px")
+  };
+  const mouseleave = function(d) {
+    tooltip
+      .style("opacity", 0)
+    d3.select(this)
+      .style("stroke", "none")
+      .style("opacity", 1)
+  };
+  
+  // create rectangle
+  svg5
+    .selectAll("rect")
+    .data(treeData.leaves())
+    .join("rect")
+      .attr('x', d => d.x0)
+      .attr('y', d => d.y0)
+      .attr('width', d => d.x1 - d.x0)
+      .attr('height', d=> d.y1 - d.y0)
+      .style("stroke", "none")
+      .style("fill", "#0072BC")
+    .on("mouseover", mouseover)
+    .on("mousemove", mousemove)
+    .on("mouseleave", mouseleave);
+  
+
+  // add labels to the graph
+  svg5
+    .selectAll("text-number")
+    .data(treeData.leaves())
+    .join("text")
+      .attr("class", "tree-label")
+      .attr("x", d => d.x0+5)
+      .attr("y", d => d.y0+15)
+      //.text(d => Math.round(1000 * d.data.val / total) / 10 + "%")
+      .text(d => (d.data.val/10).toFixed(2)+ "%")
+      .attr("font-size", "5px")
+      .attr("fill", "#ffffff");
+      
+  
+      svg5
+    .selectAll("text-region")
+    .data(treeData.leaves())
+    .join("text").style("font-size", "8px")
+      .attr("class", "tree-label")
+      .attr('opacity', d => (d.x1-d.x0)<100 ? 0:1)
+      .attr("x", d => d.x0+5)
+      .attr("y", d => d.y0+30)
+      .text(d => d.data.cause)
+      .attr("font-size", "4px")
+      .attr("fill", "#ffffff");
+  
+  // set title
+  svg5
+    .append("text").style("font-size", "12px")
+      .attr("class", "chart-title")
+      .attr("x", 0)
+      .attr("y", -(margin5.top)/1.5)
+      .attr("text-anchor", "start")
+    .text("Death Causes per country, in %");
+  
+  //add slider 
+          
+  const sliderRange= d3
+  .sliderBottom()
+  .min(1990)
+  .max(2019)
+  .width(300)
+  .step(1)
+  .tickFormat(d3.format('Y'))
+  .ticks(5)
+  .default(2019)
+  .on('onchange', val => {
+      Year = val
+        updateChart(Year, Country)
+      })
+  d3.select("#CountryButton").on("change", function () {
+                      Country = d3.select(this).property("value");
+                      updateChart(Year, Country);
+                  });
+          const gRange= d3.
+          select('#container_5')
+          .append("svg")
+          .attr("width", 500 + margin5.left + margin5.right)
+          .attr("height", 50 + margin5.top + margin5.bottom)
+          .append("g")
+          .attr("transform","translate(" + margin5.left + "," + margin5.top + ")")
+          .call(sliderRange);
+  
+  function updateChart(Year, Country){
+  d3.selectAll("rect").remove()
+  //filter the data
+  fdata  = data.filter(function (d) {
+      return d.year == Year;
+    });
+  
+    fdata  = fdata.filter(function (d) {
+      return d.location == Country;
+    });
+  
+  //append a row to fdata
+  fdata.push({parent: "", cause: "root", val: ""})
+  
+  
+  
+  fdata.forEach(function(d) {
+      d.val = +d.val;
+      d.enabled = true;
+    });
+  
+  const total = d3.sum(fdata.map(function(d) {
+    return (d.enabled) ? d.val : 0;  }));
+  
+  // reshape fdata
+  const treeData = d3.stratify()
+    .id(d => d.cause)
+    .parentId(d => d.parent)
+    (fdata);
+  
+  treeData.sum(d => d.val)
+  
+  //sort treedata on value
+  treeData.sort(function(a, b) { return b.height5 - a.height5 || b.value - a.value; });
+  
+  d3.treemap()
+    .size([width5, height5])
+    .padding(2)
+    (treeData);
+  
+  
+  svg5
+    .selectAll("rect")
+    .data(treeData.leaves())
+    .join("rect")
+      .attr('x', d => d.x0)
+      .attr('y', d => d.y0)
+      .attr('width', d => d.x1 - d.x0)
+      .attr('height', d=> d.y1 - d.y0)
+      .style("stroke", "none")
+      .style("fill", "#0072BC")
+    .on("mouseover", mouseover)
+    .on("mousemove", mousemove)
+    .on("mouseleave", mouseleave);
+  
+    svg5
+    .selectAll("text-number")
+    .data(treeData.leaves())
+    .join("text")
+      .attr("class", "tree-label")
+      .attr("x", d => d.x0+5)
+      .attr("y", d => d.y0+15)
+      //.text(d => Math.round(1000 * d.data.val / total) / 10 + "%")
+      .text(d => (d.data.val/10).toFixed(2)+ "%")
+      .attr("font-size", "5px")
+      .attr("fill", "#ffffff");
+  svg5
+    .selectAll("text-region")
+    .data(treeData.leaves())
+    .join("text")
+      .attr("class", "tree-label")
+      .attr("x", d => d.x0+5)
+      .attr("y", d => d.y0+30)
+      .text(d => d.data.cause)
+      .attr("font-size", "4px")
+      .attr("fill", "#ffffff");
+  }
+    })
+  
+  </script> 
+
+</div>
