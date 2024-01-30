@@ -27,13 +27,13 @@ section p {
 .quote {
   background-color: #eddea4;
 }
-.quote__container {
+/* .quote__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   max-width: 500px;
-}
+} */
 
 .blockquote {
   color: #0c53cc;
@@ -48,13 +48,6 @@ section p {
   color: #00a7e1;
 }
 
-.attribution {
-  margin-top: 2rem;
-  align-self: flex-end;
-  font-family: sans-serif;
-  font-weight: 700;
-  color: #777;
-}
 @import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
 
 * {
@@ -173,6 +166,66 @@ section {
   color: #fff !important;
   text-decoration: none;
   border-radius: 10px;
+}
+
+  
+
+@media screen and (max-width: 600px) {
+
+* { 
+  margin: 0;
+  width: 100%;
+}
+ .content h2{
+  font-size: 30px;
+  left: 50px;
+  color: #0c53cc;
+}
+
+  .btn-group {
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+  }
+  .btn {
+    width: 50%;
+  }
+
+  @keyframes animate {
+    0%,
+    100% {
+      clip-path: polygon(
+        0% 45%,
+        16% 44%,
+        33% 50%,
+        54% 60%,
+        70% 61%,
+        84% 59%,
+        100% 52%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  
+    50% {
+      clip-path: polygon(
+        0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 46%,
+        100% 100%,
+        0% 100%
+      );
+    }
+  }
+p{
+  font-size: 10px;
+  text-align: center;
+}
+
 }
 
 
