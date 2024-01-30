@@ -15,7 +15,7 @@
 
 <script>
 // Declare the chart dimensions and margins.
-const margin = { top: 10, right: 60, bottom: 60, left: 60 }
+const margin = { top: 20, right: 60, bottom: 60, left: 60 }
 const width = 700 - margin.left - margin.right;
 const height = 300 - margin.top - margin.bottom;
 
@@ -34,14 +34,6 @@ d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_1.cs
 let years = [...new Set(data.map(d => d.Year))];
 const ages = data.columns.slice(1); // Exclude 'Year' column
 
-// Declare years Dropdown
-d3.select("#YearsButton")
-.selectAll('myOptions')
-.data(years)
-.enter()
-.append('option')
-.text((d) => d) // text showed in the menu
-.attr("value", (d) => d) // corresponding value returned by the button
 
 // Declare the x (horizontal position) scale.
 const x = d3.scaleBand()
@@ -74,15 +66,6 @@ svg.selectAll(".bar")
   .attr("height", (age) => height - y(dataFilter[age]))
   .attr("fill", "#69b3a2");
 
-  svg
-  .append("text")
-    .attr("class", "chart-title")
-    .attr("x", -(margin.left)*0.00000001)
-    .attr("y", -(margin.top)/900)
-    .attr("text-anchor", "start")
-  .text("Deaths by age group")
-
-
 // X-axis
 svg.append("g")
   .attr("transform", "translate(0," + height + ")")
@@ -91,13 +74,16 @@ svg.append("g")
   .attr("transform", "translate(-10,0)rotate(-45)")
   .style("text-anchor", "end");
 
+ 
+
+
   svg
-  .append("text")
-    .attr("class", "chart-label")
-    .attr("x", width/1.7)
-    .attr("y", height+margin.bottom*0.6)
-    .attr("text-anchor", "middle")
-  .text("Age group");
+.append("text")
+.attr("class", "chart-label")
+.attr("x", -(margin.left)*0.7)
+.attr("y", -(margin.top/9))
+.attr("text-anchor", "start")
+.text("Number of deaths")
 
 
 // Y-axis

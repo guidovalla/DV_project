@@ -3,10 +3,12 @@
 <!-- Include d3 library -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
 
+<!-- Load slider -->
+<script src="https://unpkg.com/d3-simple-slider"></script>
+
 <!-- Create a container to host the chart -->
 <div id="container3"></div>
-<!-- Initialize a Dropdown -->
-<select id="year_btn"></select>
+
 
 <script>
     // Declare the chart dimensions and margins.
@@ -28,15 +30,6 @@
         .then((data) => {
             // Extract unique years and age categories
             const years = [...new Set(data.map(d => d.Period))];
-            // Declare years Dropdown
-            d3.select("#year_btn")
-                .selectAll('myOptions')
-                .data(years)
-                .enter()
-                .append('option')
-                .text((d) => d) // text showed in the menu
-                .attr("value", (d) => d) // corresponding value returned by the button
-
             // Declare the x (horizontal position) scale.
             const x = d3.scaleBand()
                 .domain(data.map(e => e.Dim3))
@@ -46,6 +39,27 @@
             const y = d3.scaleLinear()
                 .domain([0, Math.max(...data.map(e => e.Value)) + 50])
                 .range([height3, 0]);
+
+
+                // X-axis
+                svg3.append("g")
+                    .attr("transform", "translate(0," + height3 + ")")
+                    .call(d3.axisBottom(x))
+                    .selectAll("text")
+                    .attr("transform", "translate(-10,0)rotate(-45)")
+                    .style("text-anchor", "end");
+
+                // Y-axis
+                svg3.append("g")
+                    .call(d3.axisLeft(y));
+                
+  svg3
+.append("text")
+.attr("class", "chart-label")
+.attr("x", -(margin3.left)*0.7)
+.attr("y", -(margin3.top/9))
+.attr("text-anchor", "start")
+.text("Children deaths")
 
             // Initial bars
             updateBars(data[0].Period);
@@ -73,25 +87,30 @@
                     .attr("width", x.bandwidth())
                     .attr("height", (e) => height3 - y(+e.Value))
                     .attr("fill", "blue");
-
-                // X-axis
-                svg3.append("g")
-                    .attr("transform", "translate(0," + height3 + ")")
-                    .call(d3.axisBottom(x))
-                    .selectAll("text")
-                    .attr("transform", "translate(-10,0)rotate(-45)")
-                    .style("text-anchor", "end");
-
-                // Y-axis
-                svg3.append("g")
-                    .call(d3.axisLeft(y));
             }
 
-            // Handle year change event
-            d3.select("#year_btn").on("change", function () {
-                const selectedYear = d3.select(this).property("value");
-                updateBars(selectedYear);
-            });
+var year = 2019
+const sliderRange= d3
+.sliderBottom()
+.min(2000)
+.max(2021)
+.width(300)
+.step(1)
+.tickFormat(d3.format('Y'))
+.ticks(5)
+.default(year)
+.on('onchange', val => {
+    year = val
+      updateBars(year)
+    })
+        const gRange= d3.
+        select('#container3')
+        .append("svg")
+        .attr("width", 400 + margin3.left + margin3.right)
+        .attr("height", 10 + margin3.top + margin3.bottom)
+        .append("g")
+        .attr("transform","translate(" + margin3.left + "," + margin3.top + ")")
+        .call(sliderRange);
 
         })
         .catch((err) => {
