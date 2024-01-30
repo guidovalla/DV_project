@@ -58,7 +58,9 @@ const svg = d3.select("#viz_container")
   const radius = Math.min(width, height) / 2 - margin
 
 // parse the Data
-d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/part_to_a_whole/pie.csv")
+//d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/part_to_a_whole/pie.csv")
+d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/2_3_pie.csv")
+
 .then(function(data){
 
 // color palette
@@ -67,7 +69,7 @@ const color = d3.scaleOrdinal()
   .range(["#0072BC","#8EBEFF"])
 
 const pie = d3.pie()
-  .value(d => +d.funding_value)
+  .value(d => +d.val)
   .sort(null)
 
 const dataPrepared = pie(data)
@@ -77,12 +79,12 @@ arc = d3.arc()
   .outerRadius(radius)
 
 data.forEach(function(d) {
-  d.funding_value = +d.funding_value;
+  d.val = +d.val;
   d.enabled = true;
 });
 
 const total = d3.sum(data.map(function(d) {
-  return (d.enabled) ? d.funding_value : 0;
+  return (d.enabled) ? d.val : 0;
   }));
 
 // create a tooltip
@@ -98,10 +100,10 @@ const mouseover = function(d) {
       .style("opacity", .5)
 };
 const mousemove = function(event,d) {
-  const percent = Math.round(1000 * d.data.funding_value / total) / 10;
+  const percent = Math.round(1000 * d.data.val/ total) / 10;
   const f = d3.format(",.0f");
   tooltip
-  .html(`<b>${d.data.funding_type}</b>: `+ percent + '%')
+  .html(`<b>${d.data.cause}</b>: `+ percent + '%')
     .style("top", event.pageY - 10 + "px")
     .style("left", event.pageX + 10 + "px")
 };
@@ -118,7 +120,7 @@ svg
 .data(dataPrepared)
 .join('path')
   .attr('d', arc)
-  .attr('fill', d => color(d.data.funding_type))
+  .attr('fill', d => color(d.data.cause))
   .attr("stroke", "#ffffff")
   .style("stroke-width", "2px")
   .each(function(d) { this._current - d; })
@@ -142,7 +144,7 @@ svg
     .attr("x", 0)
     .attr("y", "0.7em")
     .attr("fill", "#ffffff")
-    .text(d => "$" + d.data.funding_value.toLocaleString()))
+    .text(d => Math.round(1000 * d.data.val/ total) / 10 + '%'))
 
 // set title
 svg

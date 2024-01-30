@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<!-- Include d3 library -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<!-- Create a container to host the chart -->
+<div id="viz_container"></div>
+
+
+<style>
+    svg {
+  width: 100%;
+  height: 100%;
+}
+text {
+  font-family: lato;
+  font-size: 10px;
+  fill: #333333;
+}
+.grid path {
+  stroke-width: 0;
+  stroke: #333333;
+}
+.grid .tick line {
+  stroke: #333333;
+  stroke-width: 0.3px;
+  stroke-opacity: 0.3;
+}
+text.chart-title {
+  font-size: 14px;
+  font-weight: bold;
+  fill:#222222
+}
+text.chart-label {
+  font-size: 10px;
+  font-weight: 400;
+  fill: #999999;
+}
+text.chart-source {
+  font-size: 8px;
+  fill: #999999;
+}
+text.copyright {
+  font-size: 8px;
+  fill: #999999;
+}
+.tooltip {
+  background-color: #ffffff;
+  font-family: lato;
+  font-size: 11px;
+  padding: 4px;
+  color: #666666;
+  border: none;
+  box-shadow: 0px 0px 3px 0px #E6E6E6;
+}
+</style>
+
+
+<script>
+// set the dimensions and margins of the graph
+const margin = {top: 50, right: 20, bottom: 50, left: 40};
+const width = 450 - margin.left - margin.right;
+const height = 350 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+const svg = d3.select("#viz_container")
+  .append("svg")
+    .attr("width", "100%")
+    .attr("height", "100%")
+    .attr("viewBox", "0 0 450 350")
+    .attr("preserveAspectRatio", "xMinYMin")
+  .append("g")
+    .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+// parse the Data
+d3.csv("https://raw.zgithubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/comparison/column.csv")
+.then(function(data){
+
+// X scale and Axis
+const xScale = d3.scaleBand()
+  .domain(data.map(d => d.year))
+  .range([0, width])
+  .padding(.05);
+svg
+  .append('g')
+  .attr("transform", `translate(0, ${height})`)
+  .call(d3.axisBottom(xScale).tickSize(0).tickPadding(8));
+
+// Y scale and Axis
+const formater =  d3.format("~s")
+const yScale = d3.scaleLinear()
+    .domain([0, d3.max(data, d => d.displaced_number)]).nice()
+    .range([height, 0]);
+svg
+  .append('g')
+  .call(d3.axisLeft(yScale).tickSize(0).tickPadding(6).tickFormat(formater))
+  .call(d => d.select(".domain").remove());
+
+// set horizontal grid line
+const GridLine = () => d3.axisLeft().scale(yScale);
+svg
+  .append("g")
+    .attr("class", "grid")
+  .call(GridLine()
+    .tickSize(-width,0,0)
+    .tickFormat("")
+);
+
+// create a tooltip
+const tooltip = d3.select("body")
+  .append("div")
+    .attr("id", "chart")
+    .attr("class", "tooltip");
+
+// tolltip events
+const mouseover = function(d) {
+    tooltip
+      .style("opacity", .8)
+    d3.select(this)
+      .style("opacity", .5)
+}
+const mousemove = function(event, d) {
+  const formater =  d3.format(",")
+    tooltip
+      .html(formater(d.displaced_number))
+      .style("top", event.pageY - 10 + "px")
+      .style("left", event.pageX + 10 + "px");
+}
+const mouseleave = function(d) {
+    tooltip
+      .style("opacity", 0)
+    d3.select(this)
+      .style("opacity", 1)
+}
+
+// Bars
+const barGroup = svg.selectAll("rect")
+  .data(data)
+  .enter()
+  .append("g")
+
+barGroup
+  .append("rect")
+    .attr("class", "bar")
+    .attr("fill", "#0072BC")
+    .attr("x", d => xScale(d.year))
+    .attr("y", d => yScale(d.displaced_number))
+    .attr("width", xScale.bandwidth())
+    .attr("height", d => height - yScale(d.displaced_number))
+  .on("mouseover", mouseover)
+  .on("mousemove", mousemove)
+  .on("mouseleave", mouseleave);
+
+// set title
+svg
+  .append("text")
+    .attr("class", "chart-title")
+    .attr("x", -(margin.left)*0.9)
+    .attr("y", -(margin.top)/1.5)
+    .attr("text-anchor", "start")
+  .text("Trend of global displaced number | 2011 - 2021")
+
+// set Y axis label
+svg
+  .append("text")
+    .attr("class", "chart-label")
+    .attr("x", -(margin.left)*0.9)
+    .attr("y", -(margin.top/4))
+    .attr("text-anchor", "start")
+  .text("Displaced population (millions)")
+
+// set source
+svg
+  .append("text")
+    .attr("class", "chart-source")
+    .attr("x", -(margin.left)*0.9)
+    .attr("y", height + margin.bottom*0.7)
+    .attr("text-anchor", "start")
+  .text("Source: UNHCR Refugee Data Finder")
+
+// set copyright
+svg
+  .append("text")
+    .attr("class", "copyright")
+    .attr("x", -(margin.left)*0.9)
+    .attr("y", height + margin.bottom*0.9)
+    .attr("text-anchor", "start")
+  .text("©UNHCR, The UN Refugee Agency")
+})
+
+</script>
