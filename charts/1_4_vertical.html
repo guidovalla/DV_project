@@ -5,12 +5,11 @@
 <!-- Create a container to host the chart -->
 <div id="viz_container"></div>
 
+<select id="CountryButton"></select>
+
+
 
 <style>
-    svg {
-  width: 100%;
-  height: 100%;
-}
 text {
   font-family: lato;
   font-size: 10px;
@@ -71,14 +70,49 @@ const svg = d3.select("#viz_container")
   .append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
+
+    var Country="Afghanistan"
+
 // parse the Data
 //d3.csv("https://raw.zgithubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/comparison/column.csv")
 d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/1_4_1_histo.csv")
 .then(function(data){
 
+
+  var map = new Map();
+  var countries = [];
+  for (const item of data) {
+      if(!map.has(item.Location)){
+          map.set(item.Location, true);    // set any value to Map
+          countries.push({
+              Country: item.Location
+          });
+      }
+  }
+  countries=countries.map(d=>d.Country)
+  countries=countries.filter(d=>d!="")
+  countries=countries.sort()
+
+
+        // Initialize a Dropdown
+        d3.select("#CountryButton")
+                      .selectAll('myOptions')
+                      .data(countries)
+                      .enter()
+                      .append('option')
+                      .attr("value", d =>d) // corresponding value returned by the button
+                      .text(d=>d)
+                      
+                      fdata  = data.filter(function (d) {
+      return d.Location == Country;
+    });
+
+
+
+
 // X scale and Axis
 const xScale = d3.scaleBand()
-  .domain(data.map(d => d.Age))
+  .domain(fdata.map(d => d.Age))
   .range([0, width])
   .padding(.1);
 svg
@@ -89,23 +123,23 @@ svg
 // Y scale and Axis
 const formater =  d3.format("~s")
 const yScale = d3.scaleLinear()
-    .domain([0, 10000000]).nice() 
-    //.domain([0, d3.max(data, d => d.Value)]).nice()
+    .domain([0, 1.2*d3.max(fdata, d => +d.Value)])
     .range([height, 0]);
+    console.log(fdata)  
 svg
   .append('g')
   .call(d3.axisLeft(yScale).tickSize(0).tickPadding(6).tickFormat(formater))
-  .call(d => d.select(".domain").remove());
+  //.call(d => d.select(".domain").remove());
 
 // set horizontal grid line
-const GridLine = () => d3.axisLeft().scale(yScale);
-svg
-  .append("g")
-    .attr("class", "grid")
-  .call(GridLine()
-    .tickSize(-width,0,0)
-    .tickFormat("")
-);
+// const GridLine = () => d3.axisLeft().scale(yScale);
+// svg
+//   .append("g")
+//     .attr("class", "grid")
+//   .call(GridLine()
+//     .tickSize(-width,0,0)
+//     .tickFormat("")
+// );
 
 // create a tooltip
 const tooltip = d3.select("body")
@@ -136,7 +170,7 @@ const mouseleave = function(d) {
 
 // Bars
 const barGroup = svg.selectAll("rect")
-  .data(data)
+  .data(fdata)
   .enter()
   .append("g")
 
@@ -187,6 +221,128 @@ svg
     .attr("y", height + margin.bottom*0.9)
     .attr("text-anchor", "start")
   .text("©UNHCR, The UN Refugee Agency")
+
+
+
+
+  d3.select("#CountryButton").on("change", function () {
+                      Country = d3.select(this).property("value");
+                      updateChart(Country);
+                  });
+
+
+
+
+
+
+
+                  function updateChart(Country){
+            d3.selectAll("rect").remove()
+            //remove previous axis
+            d3.selectAll("text").remove()
+            d3.selectAll("class", "grid").remove()
+
+            
+
+
+
+            fdata  = data.filter(function (d) {
+      return d.Location == Country;
+    });
+
+const xScale = d3.scaleBand()
+  .domain(fdata.map(d => d.Age))
+  .range([0, width])
+  .padding(.1);
+svg
+  .append('g')
+  .attr("transform", `translate(0, ${height})`)
+  .call(d3.axisBottom(xScale).tickSize(0).ticks(5));
+
+// Y scale and Axis
+const formater =  d3.format("~s")
+const yScale = d3.scaleLinear()
+    .domain([0, 1.2*d3.max(fdata, d => +d.Value)])
+    .range([height, 0]);
+    console.log(fdata)  
+svg
+  .append('g')
+  .call(d3.axisLeft(yScale).tickSize(0).tickPadding(6).tickFormat(formater))
+  .call(d => d.select(".domain").remove());
+
+// // set horizontal grid line
+// const GridLine = () => d3.axisLeft().scale(yScale);
+// svg
+//   .append("g")
+//     .attr("class", "grid")
+//   .call(GridLine()
+//     .tickSize(-width,0,0)
+//     .tickFormat("")
+// );
+
+
+    const barGroup = svg.selectAll("rect")
+  .data(fdata)
+  .enter()
+  .append("g")
+
+barGroup
+  .append("rect")
+    .attr("class", "bar")
+    .attr("fill", "#0072BC")
+    .attr("x", d => xScale(d.Age))
+    .attr("y", d => yScale(d.Value))
+    .attr("width", xScale.bandwidth())
+    .attr("height", d => height - yScale(d.Value))
+  .on("mouseover", mouseover)
+  .on("mousemove", mousemove)
+  .on("mouseleave", mouseleave);
+
+
+
+
+  // set title
+svg
+  .append("text")
+    .attr("class", "chart-title")
+    .attr("x", -(margin.left)*0.9)
+    .attr("y", -(margin.top)/1.5)
+    .attr("text-anchor", "start")
+  .text("Trend of global displaced number | 2011 - 2021")
+
+// set Y axis label
+svg
+  .append("text")
+    .attr("class", "chart-label")
+    .attr("x", -(margin.left)*0.9)
+    .attr("y", -(margin.top/4))
+    .attr("text-anchor", "start")
+  .text("Displaced population (millions)")
+
+// set source
+svg
+  .append("text")
+    .attr("class", "chart-source")
+    .attr("x", -(margin.left)*0.9)
+    .attr("y", height + margin.bottom*0.7)
+    .attr("text-anchor", "start")
+  .text("Source: UNHCR Refugee Data Finder")
+
+// set copyright
+svg
+  .append("text")
+    .attr("class", "copyright")
+    .attr("x", -(margin.left)*0.9)
+    .attr("y", height + margin.bottom*0.9)
+    .attr("text-anchor", "start")
+  .text("©UNHCR, The UN Refugee Agency")
+
+
+                  }
+
+
+
+
 })
 
 </script>

@@ -7,10 +7,6 @@
 
 
 <style>
-    svg {
-  width: 100%;
-  height: 100%;
-}
 text {
   font-family: lato;
   font-size: 10px;
@@ -71,6 +67,8 @@ const svg = d3.select("#viz_container")
     .attr("preserveAspectRatio", "xMinYMin")
   .append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+
 
 // parse the Data
 //d3.csv("https://raw.githubusercontent.com/GDS-ODSSS/unhcr-dataviz-platform/master/data/distribution/histogram.csv")
