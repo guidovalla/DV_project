@@ -107,7 +107,12 @@ d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/2_3_pi
 // color palette
 const color = d3.scaleOrdinal()
   .domain(fdata)
-  .range(["#0072BC","#8EBEFF"])
+  //.range(["#0072BC","#8EBEFF"])
+  .range(["#821210","#762900", "#ac430c","#dc7500","#ffc31f"])
+  
+
+
+
 
 const pie = d3.pie()
   .value(d => +d.val)
@@ -124,7 +129,7 @@ data.forEach(function(d) {
   d.enabled = true;
 });
 
-const total = d3.sum(data.map(function(d) {
+const total = d3.sum(fdata.map(function(d) {
   return (d.enabled) ? d.val : 0;
   }));
 
@@ -181,11 +186,13 @@ svg
     .attr("y", "-0.6em")
     .attr("fill", "#ffffff")
     .text(d => d.data.cause))
-  .call(text => text.filter(d => (d.endAngle - d.startAngle) > 0.25).append("tspan")
+    .call(text => text.filter(d => (d.endAngle - d.startAngle) > 0.1).append("tspan")
     .attr("x", 0)
     .attr("y", "0.7em")
     .attr("fill", "#ffffff")
     .text(d => Math.round(1000 * d.data.val/ total) / 10 + '%'))
+    .attr('opacity', d => (d.endAngle-d.startAngle)<0.75 ? 0:1)
+
 
 // set title
 svg
@@ -300,6 +307,7 @@ svg
     .attr("y", "0.7em")
     .attr("fill", "#ffffff")
     .text(d => Math.round(1000 * d.data.val/ total) / 10 + '%'))
+    .attr('opacity', d => (d.endAngle-d.startAngle)<0.75 ? 0:1)
 
           }
 })
