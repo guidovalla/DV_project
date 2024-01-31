@@ -1,22 +1,4957 @@
-Age,Value
-0,2067997.0
-5,2387973.5
-10,2725314.5
-15,2855285.0
-20,2922427.5
-25,2999976.5
-30,3219577.0
-35,3347461.0
-40,3709751.0
-45,4423040.0
-50,4765070.0
-55,4819357.0
-60,4227564.5
-65,3645702.5
-70,3291490.5
-75,2834019.5
-80,2260111.0
-85,1480949.5
-90,686755.0
-95,179057.0
-100,21883.0
+Location,Age,Value
+Algeria,0,4699072.5
+Algeria,5,4870778.5
+Algeria,10,4316885.5
+Algeria,15,3435363.0
+Algeria,20,2848422.0
+Algeria,25,3148177.0
+Algeria,30,3520865.5
+Algeria,35,3652906.0
+Algeria,40,3381391.5
+Algeria,45,2815291.5
+Algeria,50,2386358.0
+Algeria,55,1979831.0
+Algeria,60,1537235.0
+Algeria,65,1198099.0
+Algeria,70,852050.5
+Algeria,75,480951.0
+Algeria,80,295352.5
+Algeria,85,140444.0
+Algeria,90,40840.5
+Algeria,95,5757.0
+Algeria,100,409.0
+Angola,0,6239216.0
+Angola,5,5476970.0
+Angola,10,4721507.0
+Angola,15,3894730.5
+Angola,20,3146757.0
+Angola,25,2663179.0
+Angola,30,2329881.0
+Angola,35,1976490.5
+Angola,40,1587606.5
+Angola,45,1256265.5
+Angola,50,998228.0
+Angola,55,810975.0
+Angola,60,619619.5
+Angola,65,428082.5
+Angola,70,263248.0
+Angola,75,155406.0
+Angola,80,79108.5
+Angola,85,29256.0
+Angola,90,6603.5
+Angola,95,946.5
+Angola,100,126.0
+Botswana,0,294924.0
+Botswana,5,290278.0
+Botswana,10,276680.0
+Botswana,15,253548.5
+Botswana,20,229497.0
+Botswana,25,221506.5
+Botswana,30,220462.0
+Botswana,35,212543.0
+Botswana,40,185989.0
+Botswana,45,141275.5
+Botswana,50,103593.0
+Botswana,55,82138.0
+Botswana,60,62135.0
+Botswana,65,44404.0
+Botswana,70,27655.0
+Botswana,75,15128.5
+Botswana,80,8414.0
+Botswana,85,3720.5
+Botswana,90,1173.5
+Botswana,95,251.5
+Botswana,100,36.0
+Burundi,0,2084198.0
+Burundi,5,2014346.0
+Burundi,10,1878952.5
+Burundi,15,1484006.5
+Burundi,20,1087853.0
+Burundi,25,881185.0
+Burundi,30,863554.5
+Burundi,35,796079.0
+Burundi,40,652036.0
+Burundi,45,442789.5
+Burundi,50,316199.5
+Burundi,55,228962.5
+Burundi,60,178652.5
+Burundi,65,142505.5
+Burundi,70,97787.0
+Burundi,75,52875.5
+Burundi,80,25807.5
+Burundi,85,8701.5
+Burundi,90,1857.0
+Burundi,95,202.5
+Burundi,100,8.0
+Cameroon,0,4457692.5
+Cameroon,5,4017303.0
+Cameroon,10,3543360.5
+Cameroon,15,3081510.0
+Cameroon,20,2590369.0
+Cameroon,25,2238480.5
+Cameroon,30,1989484.5
+Cameroon,35,1677617.0
+Cameroon,40,1351393.0
+Cameroon,45,1044851.5
+Cameroon,50,819710.0
+Cameroon,55,622739.0
+Cameroon,60,453259.5
+Cameroon,65,313924.0
+Cameroon,70,205358.0
+Cameroon,75,134785.5
+Cameroon,80,69988.0
+Cameroon,85,26941.0
+Cameroon,90,7202.0
+Cameroon,95,1212.5
+Cameroon,100,112.0
+Cabo Verde,0,49092.5
+Cabo Verde,5,51704.5
+Cabo Verde,10,53292.0
+Cabo Verde,15,53091.0
+Cabo Verde,20,53301.5
+Cabo Verde,25,57321.5
+Cabo Verde,30,56724.0
+Cabo Verde,35,49420.5
+Cabo Verde,40,40024.0
+Cabo Verde,45,30685.5
+Cabo Verde,50,25886.0
+Cabo Verde,55,24124.0
+Cabo Verde,60,19689.5
+Cabo Verde,65,13707.5
+Cabo Verde,70,7896.0
+Cabo Verde,75,4628.5
+Cabo Verde,80,4021.5
+Cabo Verde,85,2760.0
+Cabo Verde,90,1064.0
+Cabo Verde,95,225.0
+Cabo Verde,100,23.0
+Central African Republic,0,1045362.0
+Central African Republic,5,879808.0
+Central African Republic,10,821717.0
+Central African Republic,15,705778.5
+Central African Republic,20,573552.0
+Central African Republic,25,419767.0
+Central African Republic,30,294722.5
+Central African Republic,35,222587.0
+Central African Republic,40,173204.5
+Central African Republic,45,135048.0
+Central African Republic,50,125335.0
+Central African Republic,55,109818.5
+Central African Republic,60,90662.5
+Central African Republic,65,67809.0
+Central African Republic,70,43257.5
+Central African Republic,75,20974.0
+Central African Republic,80,9242.5
+Central African Republic,85,3006.0
+Central African Republic,90,622.0
+Central African Republic,95,41.0
+Central African Republic,100,1.0
+Chad,0,3393773.5
+Chad,5,2847489.0
+Chad,10,2414097.5
+Chad,15,1992210.0
+Chad,20,1611984.0
+Chad,25,1325261.0
+Chad,30,1080741.5
+Chad,35,860129.0
+Chad,40,695845.5
+Chad,45,603361.5
+Chad,50,477381.5
+Chad,55,354719.5
+Chad,60,254915.5
+Chad,65,170968.5
+Chad,70,103607.5
+Chad,75,55593.0
+Chad,80,25886.5
+Chad,85,8562.5
+Chad,90,1795.0
+Chad,95,225.0
+Chad,100,20.5
+Comoros,0,114563.0
+Comoros,5,109035.0
+Comoros,10,98160.0
+Comoros,15,82220.0
+Comoros,20,74258.5
+Comoros,25,68371.0
+Comoros,30,60334.0
+Comoros,35,53421.0
+Comoros,40,44488.0
+Comoros,45,35624.5
+Comoros,50,29874.5
+Comoros,55,25352.5
+Comoros,60,19775.0
+Comoros,65,13892.0
+Comoros,70,11270.0
+Comoros,75,6365.0
+Comoros,80,3682.5
+Comoros,85,1069.5
+Comoros,90,290.0
+Comoros,95,28.0
+Comoros,100,1.0
+Mayotte,0,53670.0
+Mayotte,5,51005.0
+Mayotte,10,42285.0
+Mayotte,15,35562.5
+Mayotte,20,23920.0
+Mayotte,25,21112.5
+Mayotte,30,22899.5
+Mayotte,35,19036.0
+Mayotte,40,16512.0
+Mayotte,45,14120.5
+Mayotte,50,11516.0
+Mayotte,55,8370.5
+Mayotte,60,6057.5
+Mayotte,65,4121.5
+Mayotte,70,2869.0
+Mayotte,75,1521.0
+Mayotte,80,834.0
+Mayotte,85,406.0
+Mayotte,90,145.5
+Mayotte,95,29.0
+Mayotte,100,2.0
+Congo,0,856993.5
+Congo,5,828728.5
+Congo,10,794257.0
+Congo,15,644687.0
+Congo,20,520440.5
+Congo,25,438300.0
+Congo,30,394021.0
+Congo,35,366673.5
+Congo,40,319190.0
+Congo,45,272809.5
+Congo,50,215529.5
+Congo,55,166790.5
+Congo,60,118722.0
+Congo,65,77999.0
+Congo,70,46596.5
+Congo,75,25947.0
+Congo,80,12808.5
+Congo,85,4950.0
+Congo,90,1240.0
+Congo,95,178.0
+Congo,100,7.5
+Dem. Rep. of the Congo,0,18700317.5
+Dem. Rep. of the Congo,5,15722447.0
+Dem. Rep. of the Congo,10,13134599.5
+Dem. Rep. of the Congo,15,10679977.5
+Dem. Rep. of the Congo,20,8795420.5
+Dem. Rep. of the Congo,25,7502070.0
+Dem. Rep. of the Congo,30,6113024.5
+Dem. Rep. of the Congo,35,5016864.5
+Dem. Rep. of the Congo,40,3931720.0
+Dem. Rep. of the Congo,45,3162674.5
+Dem. Rep. of the Congo,50,2692076.5
+Dem. Rep. of the Congo,55,2179661.5
+Dem. Rep. of the Congo,60,1676429.0
+Dem. Rep. of the Congo,65,1229016.5
+Dem. Rep. of the Congo,70,833995.0
+Dem. Rep. of the Congo,75,533323.5
+Dem. Rep. of the Congo,80,254811.0
+Dem. Rep. of the Congo,85,84184.5
+Dem. Rep. of the Congo,90,18012.5
+Dem. Rep. of the Congo,95,2090.5
+Dem. Rep. of the Congo,100,92.5
+Benin,0,2205732.5
+Benin,5,1939844.5
+Benin,10,1650939.5
+Benin,15,1438285.0
+Benin,20,1221468.0
+Benin,25,1065618.0
+Benin,30,897921.5
+Benin,35,757192.0
+Benin,40,622607.0
+Benin,45,499988.0
+Benin,50,410901.5
+Benin,55,330796.0
+Benin,60,250926.0
+Benin,65,176977.0
+Benin,70,115064.5
+Benin,75,74614.5
+Benin,80,37587.0
+Benin,85,12873.0
+Benin,90,3044.5
+Benin,95,418.0
+Benin,100,30.0
+Equatorial Guinea,0,233331.0
+Equatorial Guinea,5,218334.5
+Equatorial Guinea,10,202011.0
+Equatorial Guinea,15,161147.5
+Equatorial Guinea,20,123961.0
+Equatorial Guinea,25,132613.0
+Equatorial Guinea,30,141685.0
+Equatorial Guinea,35,130348.5
+Equatorial Guinea,40,97589.0
+Equatorial Guinea,45,76168.5
+Equatorial Guinea,50,59967.5
+Equatorial Guinea,55,47972.5
+Equatorial Guinea,60,36078.0
+Equatorial Guinea,65,23253.0
+Equatorial Guinea,70,15968.0
+Equatorial Guinea,75,7787.5
+Equatorial Guinea,80,4306.0
+Equatorial Guinea,85,1542.5
+Equatorial Guinea,90,486.0
+Equatorial Guinea,95,103.5
+Equatorial Guinea,100,18.0
+Ethiopia,0,18525702.0
+Ethiopia,5,16272900.0
+Ethiopia,10,14921621.5
+Ethiopia,15,13969440.5
+Ethiopia,20,12454527.0
+Ethiopia,25,10759729.5
+Ethiopia,30,9040957.5
+Ethiopia,35,7198157.0
+Ethiopia,40,5676966.0
+Ethiopia,45,4587112.5
+Ethiopia,50,3759400.5
+Ethiopia,55,3037817.0
+Ethiopia,60,2327323.5
+Ethiopia,65,1626261.0
+Ethiopia,70,1143134.5
+Ethiopia,75,725843.0
+Ethiopia,80,348403.0
+Ethiopia,85,120833.0
+Ethiopia,90,27283.5
+Ethiopia,95,3418.5
+Ethiopia,100,229.0
+Eritrea,0,496210.0
+Eritrea,5,474451.0
+Eritrea,10,478491.0
+Eritrea,15,454227.5
+Eritrea,20,373138.5
+Eritrea,25,304752.0
+Eritrea,30,222131.5
+Eritrea,35,187881.5
+Eritrea,40,162539.5
+Eritrea,45,142162.5
+Eritrea,50,122203.5
+Eritrea,55,100681.5
+Eritrea,60,78834.5
+Eritrea,65,57869.0
+Eritrea,70,41143.0
+Eritrea,75,30111.5
+Eritrea,80,15317.0
+Eritrea,85,5452.5
+Eritrea,90,1200.5
+Eritrea,95,102.5
+Eritrea,100,1.0
+Djibouti,0,117411.5
+Djibouti,5,112948.5
+Djibouti,10,111059.0
+Djibouti,15,113207.0
+Djibouti,20,109034.0
+Djibouti,25,96420.5
+Djibouti,30,88422.5
+Djibouti,35,78076.5
+Djibouti,40,71091.5
+Djibouti,45,63681.5
+Djibouti,50,52490.5
+Djibouti,55,40408.5
+Djibouti,60,29999.0
+Djibouti,65,21259.5
+Djibouti,70,14995.5
+Djibouti,75,9521.5
+Djibouti,80,4499.0
+Djibouti,85,1536.5
+Djibouti,90,347.0
+Djibouti,95,43.0
+Djibouti,100,2.0
+Gabon,0,307532.5
+Gabon,5,300013.0
+Gabon,10,271793.0
+Gabon,15,227233.0
+Gabon,20,200304.0
+Gabon,25,190424.0
+Gabon,30,190229.0
+Gabon,35,175632.5
+Gabon,40,148659.0
+Gabon,45,117745.5
+Gabon,50,90899.5
+Gabon,55,69257.0
+Gabon,60,52009.0
+Gabon,65,37600.5
+Gabon,70,26240.0
+Gabon,75,16522.5
+Gabon,80,9027.0
+Gabon,85,3943.0
+Gabon,90,1219.0
+Gabon,95,248.0
+Gabon,100,35.5
+Gambia,0,420440.5
+Gambia,5,395572.0
+Gambia,10,365012.0
+Gambia,15,313297.5
+Gambia,20,256678.5
+Gambia,25,211682.0
+Gambia,30,176742.5
+Gambia,35,147097.0
+Gambia,40,122549.0
+Gambia,45,101957.5
+Gambia,50,83203.5
+Gambia,55,65116.0
+Gambia,60,46217.5
+Gambia,65,28842.0
+Gambia,70,17101.0
+Gambia,75,12296.0
+Gambia,80,6336.0
+Gambia,85,2336.0
+Gambia,90,601.5
+Gambia,95,85.5
+Gambia,100,4.5
+Ghana,0,4352660.5
+Ghana,5,4222269.0
+Ghana,10,3914782.0
+Ghana,15,3482038.5
+Ghana,20,3046813.5
+Ghana,25,2614807.5
+Ghana,30,2471837.5
+Ghana,35,2299813.0
+Ghana,40,2025247.0
+Ghana,45,1565522.0
+Ghana,50,1151524.0
+Ghana,55,931873.0
+Ghana,60,797526.5
+Ghana,65,565976.0
+Ghana,70,340405.5
+Ghana,75,185117.5
+Ghana,80,101489.5
+Ghana,85,40987.5
+Ghana,90,10008.0
+Ghana,95,1226.0
+Ghana,100,61.0
+Guinea,0,2141308.0
+Guinea,5,1953626.5
+Guinea,10,1753221.5
+Guinea,15,1537631.0
+Guinea,20,1359853.5
+Guinea,25,1206400.5
+Guinea,30,997950.0
+Guinea,35,764508.5
+Guinea,40,575350.0
+Guinea,45,455862.5
+Guinea,50,388127.5
+Guinea,55,327219.0
+Guinea,60,259960.0
+Guinea,65,191458.5
+Guinea,70,129131.0
+Guinea,75,83668.0
+Guinea,80,44309.0
+Guinea,85,16510.0
+Guinea,90,3975.0
+Guinea,95,515.0
+Guinea,100,27.0
+Côte d'Ivoire,0,4325136.5
+Côte d'Ivoire,5,3929644.0
+Côte d'Ivoire,10,3618557.5
+Côte d'Ivoire,15,3222949.0
+Côte d'Ivoire,20,2796416.0
+Côte d'Ivoire,25,2280911.0
+Côte d'Ivoire,30,1901441.5
+Côte d'Ivoire,35,1562156.0
+Côte d'Ivoire,40,1447495.0
+Côte d'Ivoire,45,1176053.5
+Côte d'Ivoire,50,871548.0
+Côte d'Ivoire,55,623596.0
+Côte d'Ivoire,60,422955.0
+Côte d'Ivoire,65,297196.0
+Côte d'Ivoire,70,190388.0
+Côte d'Ivoire,75,111460.0
+Côte d'Ivoire,80,59922.5
+Côte d'Ivoire,85,25763.5
+Côte d'Ivoire,90,7791.0
+Côte d'Ivoire,95,1490.5
+Côte d'Ivoire,100,163.0
+Kenya,0,7035351.0
+Kenya,5,6729935.0
+Kenya,10,6743392.0
+Kenya,15,6331646.0
+Kenya,20,5378664.0
+Kenya,25,4509485.0
+Kenya,30,4022551.0
+Kenya,35,3538514.0
+Kenya,40,2858969.0
+Kenya,45,2250439.0
+Kenya,50,1775754.0
+Kenya,55,1355946.5
+Kenya,60,968044.0
+Kenya,65,641987.0
+Kenya,70,412442.5
+Kenya,75,270472.5
+Kenya,80,153299.5
+Kenya,85,79188.0
+Kenya,90,31841.5
+Kenya,95,9725.5
+Kenya,100,2939.5
+Lesotho,0,274753.5
+Lesotho,5,265811.5
+Lesotho,10,247922.0
+Lesotho,15,231237.0
+Lesotho,20,218257.5
+Lesotho,25,207534.5
+Lesotho,30,195906.0
+Lesotho,35,169569.5
+Lesotho,40,130645.0
+Lesotho,45,96727.0
+Lesotho,50,74310.0
+Lesotho,55,64495.5
+Lesotho,60,54818.0
+Lesotho,65,40608.5
+Lesotho,70,26452.0
+Lesotho,75,15872.5
+Lesotho,80,9077.0
+Lesotho,85,4482.5
+Lesotho,90,1487.0
+Lesotho,95,312.0
+Lesotho,100,39.0
+Liberia,0,758635.0
+Liberia,5,717929.0
+Liberia,10,691150.0
+Liberia,15,620816.0
+Liberia,20,510163.5
+Liberia,25,402272.5
+Liberia,30,332273.0
+Liberia,35,300079.0
+Liberia,40,273509.5
+Liberia,45,227865.5
+Liberia,50,175520.5
+Liberia,55,132292.0
+Liberia,60,97442.5
+Liberia,65,72208.5
+Liberia,70,49680.5
+Liberia,75,33277.0
+Liberia,80,16707.5
+Liberia,85,5393.0
+Liberia,90,1064.0
+Liberia,95,96.5
+Liberia,100,1.5
+Libya,0,596944.0
+Libya,5,639542.0
+Libya,10,672141.0
+Libya,15,654203.5
+Libya,20,584326.0
+Libya,25,518876.5
+Libya,30,470658.5
+Libya,35,479394.5
+Libya,40,516157.0
+Libya,45,489437.0
+Libya,50,414958.0
+Libya,55,299265.0
+Libya,60,210134.5
+Libya,65,123722.0
+Libya,70,95410.0
+Libya,75,63036.0
+Libya,80,38089.5
+Libya,85,16490.0
+Libya,90,4742.5
+Libya,95,795.5
+Libya,100,65.0
+Madagascar,0,4274389.5
+Madagascar,5,3876204.5
+Madagascar,10,3595159.5
+Madagascar,15,3242577.0
+Madagascar,20,2863518.0
+Madagascar,25,2541833.5
+Madagascar,30,2091334.5
+Madagascar,35,1693063.5
+Madagascar,40,1440515.5
+Madagascar,45,1252353.5
+Madagascar,50,1029289.0
+Madagascar,55,782680.0
+Madagascar,60,610294.0
+Madagascar,65,455935.0
+Madagascar,70,308480.5
+Madagascar,75,151401.5
+Madagascar,80,77204.5
+Madagascar,85,30699.5
+Madagascar,90,7731.0
+Madagascar,95,1005.5
+Madagascar,100,62.5
+Malawi,0,3140839.5
+Malawi,5,2891470.0
+Malawi,10,2768696.0
+Malawi,15,2515980.0
+Malawi,20,2041544.0
+Malawi,25,1646516.5
+Malawi,30,1371740.5
+Malawi,35,1195170.5
+Malawi,40,1025160.0
+Malawi,45,712288.5
+Malawi,50,475602.5
+Malawi,55,353669.0
+Malawi,60,261293.5
+Malawi,65,178605.0
+Malawi,70,132512.5
+Malawi,75,108359.5
+Malawi,80,65219.5
+Malawi,85,31346.5
+Malawi,90,11814.5
+Malawi,95,3242.5
+Malawi,100,680.5
+Mali,0,4197163.0
+Mali,5,3610768.0
+Mali,10,3133652.5
+Mali,15,2619160.5
+Mali,20,2069029.0
+Mali,25,1612771.0
+Mali,30,1347161.5
+Mali,35,1165238.0
+Mali,40,977228.0
+Mali,45,757920.5
+Mali,50,556286.5
+Mali,55,401747.0
+Mali,60,301423.5
+Mali,65,229548.0
+Mali,70,163860.5
+Mali,75,96510.0
+Mali,80,42487.5
+Mali,85,10257.0
+Mali,90,1424.5
+Mali,95,62.0
+Mali,100,0.0
+Mauritania,0,721138.5
+Mauritania,5,648466.0
+Mauritania,10,631726.0
+Mauritania,15,542147.0
+Mauritania,20,446251.0
+Mauritania,25,376897.5
+Mauritania,30,316677.5
+Mauritania,35,266561.0
+Mauritania,40,217989.5
+Mauritania,45,179647.5
+Mauritania,50,148794.0
+Mauritania,55,118522.0
+Mauritania,60,92149.0
+Mauritania,65,66847.0
+Mauritania,70,43753.0
+Mauritania,75,25895.0
+Mauritania,80,12964.0
+Mauritania,85,4852.5
+Mauritania,90,1398.0
+Mauritania,95,286.5
+Mauritania,100,26.0
+Mauritius,0,65784.0
+Mauritius,5,66968.5
+Mauritius,10,75484.0
+Mauritius,15,89774.0
+Mauritius,20,95642.0
+Mauritius,25,97104.0
+Mauritius,30,98894.5
+Mauritius,35,88194.5
+Mauritius,40,99726.5
+Mauritius,45,93507.5
+Mauritius,50,82615.5
+Mauritius,55,90800.0
+Mauritius,60,83011.0
+Mauritius,65,66687.5
+Mauritius,70,49993.0
+Mauritius,75,28579.5
+Mauritius,80,15446.0
+Mauritius,85,8332.5
+Mauritius,90,3111.0
+Mauritius,95,799.0
+Mauritius,100,102.5
+Morocco,0,3213524.5
+Morocco,5,3376259.0
+Morocco,10,3356145.0
+Morocco,15,3073387.5
+Morocco,20,2904245.5
+Morocco,25,2836549.5
+Morocco,30,2863409.0
+Morocco,35,2796832.0
+Morocco,40,2600105.0
+Morocco,45,2332027.0
+Morocco,50,2050503.5
+Morocco,55,1811587.5
+Morocco,60,1587494.5
+Morocco,65,1279806.5
+Morocco,70,868319.0
+Morocco,75,497955.5
+Morocco,80,258956.0
+Morocco,85,101652.0
+Morocco,90,27326.5
+Morocco,95,3743.0
+Morocco,100,216.0
+Mozambique,0,5468526.5
+Mozambique,5,4848905.0
+Mozambique,10,4357090.5
+Mozambique,15,3680378.0
+Mozambique,20,3185810.5
+Mozambique,25,2663864.0
+Mozambique,30,2212568.0
+Mozambique,35,1795101.5
+Mozambique,40,1426843.5
+Mozambique,45,1202675.0
+Mozambique,50,955689.5
+Mozambique,55,692230.0
+Mozambique,60,536006.5
+Mozambique,65,396865.5
+Mozambique,70,255837.0
+Mozambique,75,136078.5
+Mozambique,80,60232.5
+Mozambique,85,18184.0
+Mozambique,90,3914.0
+Mozambique,95,517.5
+Mozambique,100,36.5
+Namibia,0,333627.5
+Namibia,5,320626.0
+Namibia,10,289029.5
+Namibia,15,245671.5
+Namibia,20,232832.0
+Namibia,25,226250.0
+Namibia,30,216490.5
+Namibia,35,162131.5
+Namibia,40,131198.0
+Namibia,45,114372.0
+Namibia,50,95428.5
+Namibia,55,77079.0
+Namibia,60,57009.0
+Namibia,65,41551.0
+Namibia,70,28656.5
+Namibia,75,17579.0
+Namibia,80,9126.0
+Namibia,85,3768.5
+Namibia,90,1332.5
+Namibia,95,354.0
+Namibia,100,59.5
+Niger,0,5318234.0
+Niger,5,4345861.0
+Niger,10,3599332.5
+Niger,15,2956144.0
+Niger,20,2371570.0
+Niger,25,1876041.0
+Niger,30,1469159.5
+Niger,35,1206600.0
+Niger,40,1009598.0
+Niger,45,802435.0
+Niger,50,647591.5
+Niger,55,532620.0
+Niger,60,415316.5
+Niger,65,299360.0
+Niger,70,187719.0
+Niger,75,107432.0
+Niger,80,45107.0
+Niger,85,11169.5
+Niger,90,1474.5
+Niger,95,78.0
+Niger,100,0.0
+Nigeria,0,35907491.0
+Nigeria,5,31551901.5
+Nigeria,10,28244978.0
+Nigeria,15,24325616.5
+Nigeria,20,20173207.0
+Nigeria,25,16577275.5
+Nigeria,30,13850839.0
+Nigeria,35,11939484.5
+Nigeria,40,10423660.0
+Nigeria,45,8477992.0
+Nigeria,50,6531541.0
+Nigeria,55,5129593.5
+Nigeria,60,3988873.5
+Nigeria,65,2910752.0
+Nigeria,70,1903898.0
+Nigeria,75,1145519.0
+Nigeria,80,522469.5
+Nigeria,85,164500.5
+Nigeria,90,31559.0
+Nigeria,95,3300.0
+Nigeria,100,181.0
+Guinea-Bissau,0,299240.5
+Guinea-Bissau,5,285966.5
+Guinea-Bissau,10,267358.0
+Guinea-Bissau,15,238536.5
+Guinea-Bissau,20,203264.0
+Guinea-Bissau,25,172844.0
+Guinea-Bissau,30,147350.5
+Guinea-Bissau,35,133009.5
+Guinea-Bissau,40,111782.0
+Guinea-Bissau,45,87320.5
+Guinea-Bissau,50,63404.0
+Guinea-Bissau,55,44451.5
+Guinea-Bissau,60,35317.0
+Guinea-Bissau,65,27408.0
+Guinea-Bissau,70,17875.0
+Guinea-Bissau,75,9307.5
+Guinea-Bissau,80,4287.5
+Guinea-Bissau,85,1612.0
+Guinea-Bissau,90,431.0
+Guinea-Bissau,95,70.5
+Guinea-Bissau,100,6.0
+Réunion,0,70263.0
+Réunion,5,74671.0
+Réunion,10,75755.5
+Réunion,15,76268.0
+Réunion,20,74240.5
+Réunion,25,61383.5
+Réunion,30,56319.0
+Réunion,35,54987.0
+Réunion,40,56235.5
+Réunion,45,59605.0
+Réunion,50,64210.0
+Réunion,55,66660.5
+Réunion,60,56289.0
+Réunion,65,45731.5
+Réunion,70,34773.5
+Réunion,75,23324.0
+Réunion,80,15951.5
+Réunion,85,9608.0
+Réunion,90,4017.5
+Réunion,95,1210.0
+Réunion,100,292.5
+Rwanda,0,1935500.0
+Rwanda,5,1781999.5
+Rwanda,10,1647846.5
+Rwanda,15,1567487.0
+Rwanda,20,1331800.0
+Rwanda,25,1132559.5
+Rwanda,30,1027836.0
+Rwanda,35,949683.0
+Rwanda,40,756672.0
+Rwanda,45,510029.0
+Rwanda,50,392199.0
+Rwanda,55,316828.0
+Rwanda,60,283288.0
+Rwanda,65,206307.0
+Rwanda,70,128110.5
+Rwanda,75,67050.5
+Rwanda,80,37260.5
+Rwanda,85,15892.0
+Rwanda,90,5246.0
+Rwanda,95,943.5
+Rwanda,100,145.5
+Saint Helena,0,201.0
+Saint Helena,5,275.0
+Saint Helena,10,268.0
+Saint Helena,15,212.5
+Saint Helena,20,116.5
+Saint Helena,25,200.5
+Saint Helena,30,271.0
+Saint Helena,35,237.5
+Saint Helena,40,270.5
+Saint Helena,45,301.0
+Saint Helena,50,435.5
+Saint Helena,55,464.0
+Saint Helena,60,522.0
+Saint Helena,65,418.5
+Saint Helena,70,431.0
+Saint Helena,75,362.5
+Saint Helena,80,184.0
+Saint Helena,85,92.5
+Saint Helena,90,38.0
+Saint Helena,95,10.5
+Saint Helena,100,1.5
+Sao Tome and Principe,0,30786.0
+Sao Tome and Principe,5,30465.5
+Sao Tome and Principe,10,29010.5
+Sao Tome and Principe,15,26898.0
+Sao Tome and Principe,20,21060.0
+Sao Tome and Principe,25,15881.0
+Sao Tome and Principe,30,13526.5
+Sao Tome and Principe,35,13280.0
+Sao Tome and Principe,40,12771.0
+Sao Tome and Principe,45,10289.0
+Sao Tome and Principe,50,7932.0
+Sao Tome and Principe,55,6191.0
+Sao Tome and Principe,60,5007.5
+Sao Tome and Principe,65,3402.5
+Sao Tome and Principe,70,2263.5
+Sao Tome and Principe,75,1435.5
+Sao Tome and Principe,80,1047.5
+Sao Tome and Principe,85,468.5
+Sao Tome and Principe,90,123.5
+Sao Tome and Principe,95,16.0
+Sao Tome and Principe,100,0.5
+Senegal,0,2650866.5
+Senegal,5,2434770.5
+Senegal,10,2221623.5
+Senegal,15,1919919.5
+Senegal,20,1622807.5
+Senegal,25,1363963.5
+Senegal,30,1190497.5
+Senegal,35,1029313.5
+Senegal,40,853903.0
+Senegal,45,682128.5
+Senegal,50,523427.0
+Senegal,55,403939.5
+Senegal,60,309018.0
+Senegal,65,230621.0
+Senegal,70,159954.0
+Senegal,75,100517.5
+Senegal,80,48460.5
+Senegal,85,14971.0
+Senegal,90,2326.5
+Senegal,95,133.5
+Senegal,100,1.0
+Seychelles,0,8202.5
+Seychelles,5,8428.0
+Seychelles,10,8117.5
+Seychelles,15,7290.0
+Seychelles,20,6818.5
+Seychelles,25,8145.0
+Seychelles,30,8299.5
+Seychelles,35,8208.0
+Seychelles,40,8282.5
+Seychelles,45,8083.0
+Seychelles,50,6848.0
+Seychelles,55,6277.0
+Seychelles,60,5516.5
+Seychelles,65,3805.5
+Seychelles,70,2288.5
+Seychelles,75,1444.0
+Seychelles,80,865.0
+Seychelles,85,480.5
+Seychelles,90,203.5
+Seychelles,95,50.0
+Seychelles,100,7.0
+Sierra Leone,0,1208037.0
+Sierra Leone,5,1118706.0
+Sierra Leone,10,1061351.0
+Sierra Leone,15,958004.5
+Sierra Leone,20,854551.0
+Sierra Leone,25,725413.5
+Sierra Leone,30,610057.5
+Sierra Leone,35,516142.0
+Sierra Leone,40,426827.0
+Sierra Leone,45,351275.0
+Sierra Leone,50,284278.5
+Sierra Leone,55,227219.0
+Sierra Leone,60,171999.5
+Sierra Leone,65,121133.0
+Sierra Leone,70,77419.5
+Sierra Leone,75,48557.5
+Sierra Leone,80,21682.0
+Sierra Leone,85,6835.5
+Sierra Leone,90,1415.0
+Sierra Leone,95,177.0
+Sierra Leone,100,11.0
+Somalia,0,3356724.0
+Somalia,5,2826283.5
+Somalia,10,2354132.0
+Somalia,15,1966148.5
+Somalia,20,1640913.0
+Somalia,25,1348683.0
+Somalia,30,984993.0
+Somalia,35,874967.0
+Somalia,40,707180.5
+Somalia,45,551034.0
+Somalia,50,440811.0
+Somalia,55,352090.0
+Somalia,60,276178.5
+Somalia,65,206205.5
+Somalia,70,138636.0
+Somalia,75,71598.5
+Somalia,80,32936.0
+Somalia,85,11194.5
+Somalia,90,2332.5
+Somalia,95,316.5
+Somalia,100,21.0
+South Africa,0,5772365.5
+South Africa,5,5696978.5
+South Africa,10,5627595.0
+South Africa,15,5087593.0
+South Africa,20,4495674.0
+South Africa,25,5052772.5
+South Africa,30,5571423.0
+South Africa,35,5300605.5
+South Africa,40,4123267.0
+South Africa,45,2751203.5
+South Africa,50,2964669.0
+South Africa,55,2660944.0
+South Africa,60,1774156.5
+South Africa,65,1258895.5
+South Africa,70,1005327.5
+South Africa,75,650258.0
+South Africa,80,356904.5
+South Africa,85,165497.0
+South Africa,90,72382.0
+South Africa,95,22246.0
+South Africa,100,3737.0
+Zimbabwe,0,2329265.5
+Zimbabwe,5,2241115.0
+Zimbabwe,10,2142170.0
+Zimbabwe,15,1820760.5
+Zimbabwe,20,1674264.0
+Zimbabwe,25,1299046.5
+Zimbabwe,30,1056548.0
+Zimbabwe,35,1045954.5
+Zimbabwe,40,903091.0
+Zimbabwe,45,641761.0
+Zimbabwe,50,435369.0
+Zimbabwe,55,293117.0
+Zimbabwe,60,233701.5
+Zimbabwe,65,215978.0
+Zimbabwe,70,167507.0
+Zimbabwe,75,92072.5
+Zimbabwe,80,46729.5
+Zimbabwe,85,18142.0
+Zimbabwe,90,6845.5
+Zimbabwe,95,1739.0
+Zimbabwe,100,231.5
+South Sudan,0,1438228.5
+South Sudan,5,1659202.0
+South Sudan,10,1666694.0
+South Sudan,15,1379764.0
+South Sudan,20,1058673.0
+South Sudan,25,618368.0
+South Sudan,30,521582.5
+South Sudan,35,495001.0
+South Sudan,40,527914.0
+South Sudan,45,490592.0
+South Sudan,50,397457.5
+South Sudan,55,293762.0
+South Sudan,60,215361.0
+South Sudan,65,148108.0
+South Sudan,70,90836.5
+South Sudan,75,55285.0
+South Sudan,80,23941.0
+South Sudan,85,6965.5
+South Sudan,90,1031.5
+South Sudan,95,28.5
+South Sudan,100,0.5
+Sudan,0,7289083.0
+Sudan,5,6540731.5
+Sudan,10,5753519.0
+Sudan,15,4866651.0
+Sudan,20,4326277.5
+Sudan,25,3814823.5
+Sudan,30,3378501.5
+Sudan,35,2956453.5
+Sudan,40,2388728.5
+Sudan,45,1722896.5
+Sudan,50,1325959.0
+Sudan,55,1085568.0
+Sudan,60,941640.0
+Sudan,65,779459.0
+Sudan,70,516223.0
+Sudan,75,265865.5
+Sudan,80,107274.5
+Sudan,85,36948.5
+Sudan,90,10498.5
+Sudan,95,1780.0
+Sudan,100,124.5
+Western Sahara,0,46683.0
+Western Sahara,5,47091.0
+Western Sahara,10,46861.5
+Western Sahara,15,42911.5
+Western Sahara,20,41709.5
+Western Sahara,25,43398.5
+Western Sahara,30,50503.5
+Western Sahara,35,56038.5
+Western Sahara,40,52716.0
+Western Sahara,45,41687.5
+Western Sahara,50,34314.5
+Western Sahara,55,26812.5
+Western Sahara,60,20958.0
+Western Sahara,65,16167.5
+Western Sahara,70,10460.5
+Western Sahara,75,5513.5
+Western Sahara,80,2404.5
+Western Sahara,85,799.0
+Western Sahara,90,185.5
+Western Sahara,95,34.5
+Western Sahara,100,8.0
+Eswatini,0,137482.5
+Eswatini,5,139972.5
+Eswatini,10,138598.5
+Eswatini,15,127104.0
+Eswatini,20,111099.5
+Eswatini,25,102386.5
+Eswatini,30,102894.5
+Eswatini,35,88396.5
+Eswatini,40,68262.0
+Eswatini,45,48747.5
+Eswatini,50,38326.5
+Eswatini,55,32446.0
+Eswatini,60,26463.5
+Eswatini,65,20447.0
+Eswatini,70,14392.0
+Eswatini,75,8134.5
+Eswatini,80,3852.0
+Eswatini,85,1373.0
+Eswatini,90,362.5
+Eswatini,95,74.0
+Eswatini,100,6.5
+Togo,0,1301005.0
+Togo,5,1192239.5
+Togo,10,1096079.0
+Togo,15,953336.0
+Togo,20,818651.0
+Togo,25,696553.0
+Togo,30,611479.5
+Togo,35,532068.5
+Togo,40,456882.5
+Togo,45,382695.0
+Togo,50,306116.5
+Togo,55,239051.5
+Togo,60,180258.0
+Togo,65,130327.5
+Togo,70,86306.5
+Togo,75,46819.5
+Togo,80,18386.5
+Togo,85,4841.5
+Togo,90,663.0
+Togo,95,39.5
+Togo,100,0.0
+Tunisia,0,986222.0
+Tunisia,5,1082649.0
+Tunisia,10,1005313.5
+Tunisia,15,876408.0
+Tunisia,20,791507.0
+Tunisia,25,858704.0
+Tunisia,30,945635.0
+Tunisia,35,986839.0
+Tunisia,40,901474.5
+Tunisia,45,838665.0
+Tunisia,50,734495.5
+Tunisia,55,692838.0
+Tunisia,60,596095.5
+Tunisia,65,452948.5
+Tunisia,70,304399.5
+Tunisia,75,203863.0
+Tunisia,80,122800.5
+Tunisia,85,56186.5
+Tunisia,90,17859.5
+Tunisia,95,3045.5
+Tunisia,100,274.0
+Uganda,0,8023641.0
+Uganda,5,7103823.5
+Uganda,10,6456320.5
+Uganda,15,5723233.5
+Uganda,20,4936263.0
+Uganda,25,4138859.0
+Uganda,30,3265877.0
+Uganda,35,2402368.5
+Uganda,40,1754584.5
+Uganda,45,1392656.0
+Uganda,50,1126273.5
+Uganda,55,835975.5
+Uganda,60,587175.5
+Uganda,65,406681.5
+Uganda,70,256310.5
+Uganda,75,112040.0
+Uganda,80,42284.5
+Uganda,85,14050.5
+Uganda,90,3297.0
+Uganda,95,534.0
+Uganda,100,85.0
+Egypt,0,12161100.5
+Egypt,5,12906668.0
+Egypt,10,11702283.5
+Egypt,15,10011901.0
+Egypt,20,9212329.5
+Egypt,25,8688739.0
+Egypt,30,8614732.5
+Egypt,35,8301010.0
+Egypt,40,7193584.5
+Egypt,45,5949598.5
+Egypt,50,4956862.0
+Egypt,55,4180808.5
+Egypt,60,3301068.5
+Egypt,65,2401801.5
+Egypt,70,1566605.5
+Egypt,75,954623.0
+Egypt,80,394520.0
+Egypt,85,169172.0
+Egypt,90,43361.0
+Egypt,95,5484.5
+Egypt,100,345.0
+United Republic of Tanzania,0,10976140.5
+United Republic of Tanzania,5,9715975.5
+United Republic of Tanzania,10,8387194.0
+United Republic of Tanzania,15,7442049.0
+United Republic of Tanzania,20,6148764.5
+United Republic of Tanzania,25,4923936.0
+United Republic of Tanzania,30,4153258.0
+United Republic of Tanzania,35,3685799.0
+United Republic of Tanzania,40,3155960.0
+United Republic of Tanzania,45,2478205.0
+United Republic of Tanzania,50,1844945.5
+United Republic of Tanzania,55,1378371.5
+United Republic of Tanzania,60,1061166.5
+United Republic of Tanzania,65,831360.0
+United Republic of Tanzania,70,592571.0
+United Republic of Tanzania,75,386542.0
+United Republic of Tanzania,80,181016.5
+United Republic of Tanzania,85,68932.0
+United Republic of Tanzania,90,20729.5
+United Republic of Tanzania,95,4576.5
+United Republic of Tanzania,100,613.5
+Burkina Faso,0,3656272.5
+Burkina Faso,5,3362661.5
+Burkina Faso,10,3054997.0
+Burkina Faso,15,2587602.5
+Burkina Faso,20,2118035.0
+Burkina Faso,25,1763740.0
+Burkina Faso,30,1488024.5
+Burkina Faso,35,1282995.0
+Burkina Faso,40,1055808.5
+Burkina Faso,45,812669.5
+Burkina Faso,50,617497.0
+Burkina Faso,55,488540.0
+Burkina Faso,60,373998.5
+Burkina Faso,65,264149.5
+Burkina Faso,70,164589.5
+Burkina Faso,75,103762.5
+Burkina Faso,80,43423.5
+Burkina Faso,85,11118.5
+Burkina Faso,90,1517.0
+Burkina Faso,95,82.0
+Burkina Faso,100,1.0
+Zambia,0,3179349.0
+Zambia,5,2891693.0
+Zambia,10,2660576.5
+Zambia,15,2311193.5
+Zambia,20,1930310.0
+Zambia,25,1649437.5
+Zambia,30,1414301.0
+Zambia,35,1213276.5
+Zambia,40,985306.0
+Zambia,45,764250.5
+Zambia,50,552113.0
+Zambia,55,386815.0
+Zambia,60,267308.0
+Zambia,65,170064.5
+Zambia,70,100158.5
+Zambia,75,55587.5
+Zambia,80,25895.0
+Zambia,85,9190.5
+Zambia,90,2427.0
+Zambia,95,437.5
+Zambia,100,47.5
+Afghanistan,0,6726169.0
+Afghanistan,5,6065636.5
+Afghanistan,10,5305909.5
+Afghanistan,15,4870702.0
+Afghanistan,20,4250071.5
+Afghanistan,25,3535094.5
+Afghanistan,30,2759610.5
+Afghanistan,35,2090358.5
+Afghanistan,40,1677308.5
+Afghanistan,45,1391538.0
+Afghanistan,50,1103551.0
+Afghanistan,55,837350.5
+Afghanistan,60,614850.5
+Afghanistan,65,435002.0
+Afghanistan,70,286198.5
+Afghanistan,75,179662.0
+Afghanistan,80,79947.5
+Afghanistan,85,25390.0
+Afghanistan,90,4991.5
+Afghanistan,95,495.5
+Afghanistan,100,16.5
+Azerbaijan,0,649514.5
+Azerbaijan,5,840879.5
+Azerbaijan,10,896372.0
+Azerbaijan,15,750332.5
+Azerbaijan,20,651331.5
+Azerbaijan,25,784450.5
+Azerbaijan,30,926828.0
+Azerbaijan,35,908040.5
+Azerbaijan,40,769078.5
+Azerbaijan,45,634051.5
+Azerbaijan,50,616597.5
+Azerbaijan,55,620107.0
+Azerbaijan,60,572111.0
+Azerbaijan,65,379839.0
+Azerbaijan,70,212946.5
+Azerbaijan,75,89654.0
+Azerbaijan,80,63567.5
+Azerbaijan,85,36891.0
+Azerbaijan,90,8859.5
+Azerbaijan,95,1134.0
+Azerbaijan,100,65.5
+Bahrain,0,90147.5
+Bahrain,5,105260.0
+Bahrain,10,99952.5
+Bahrain,15,87276.0
+Bahrain,20,77435.0
+Bahrain,25,121375.5
+Bahrain,30,176837.5
+Bahrain,35,192098.0
+Bahrain,40,155693.5
+Bahrain,45,117108.0
+Bahrain,50,87916.0
+Bahrain,55,66252.5
+Bahrain,60,48323.0
+Bahrain,65,29091.5
+Bahrain,70,15685.5
+Bahrain,75,7659.0
+Bahrain,80,4434.5
+Bahrain,85,2217.5
+Bahrain,90,626.5
+Bahrain,95,110.5
+Bahrain,100,9.5
+Bangladesh,0,14679981.0
+Bangladesh,5,14528853.0
+Bangladesh,10,14943842.0
+Bangladesh,15,16347927.5
+Bangladesh,20,16501304.5
+Bangladesh,25,15238003.5
+Bangladesh,30,14154794.5
+Bangladesh,35,12939184.0
+Bangladesh,40,11580955.0
+Bangladesh,45,9986809.0
+Bangladesh,50,8659808.0
+Bangladesh,55,6911696.5
+Bangladesh,60,5643914.5
+Bangladesh,65,4481062.0
+Bangladesh,70,2940173.5
+Bangladesh,75,1818868.0
+Bangladesh,80,1015389.5
+Bangladesh,85,438583.0
+Bangladesh,90,123352.5
+Bangladesh,95,18741.5
+Bangladesh,100,1076.0
+Armenia,0,170060.5
+Armenia,5,202186.5
+Armenia,10,194210.5
+Armenia,15,164183.5
+Armenia,20,154276.5
+Armenia,25,186089.5
+Armenia,30,259210.0
+Armenia,35,240486.5
+Armenia,40,183990.0
+Armenia,45,146090.5
+Armenia,50,142435.0
+Armenia,55,157789.5
+Armenia,60,196403.5
+Armenia,65,154595.5
+Armenia,70,101048.5
+Armenia,75,46660.0
+Armenia,80,39906.0
+Armenia,85,27159.5
+Armenia,90,9090.0
+Armenia,95,1976.5
+Armenia,100,122.5
+Bhutan,0,47948.0
+Bhutan,5,56982.5
+Bhutan,10,64643.0
+Bhutan,15,69204.5
+Bhutan,20,72470.5
+Bhutan,25,76545.0
+Bhutan,30,82822.0
+Bhutan,35,71324.5
+Bhutan,40,58996.0
+Bhutan,45,45485.0
+Bhutan,50,36301.0
+Bhutan,55,30499.5
+Bhutan,60,23985.0
+Bhutan,65,19684.0
+Bhutan,70,13466.5
+Bhutan,75,8771.0
+Bhutan,80,5111.0
+Bhutan,85,2311.0
+Bhutan,90,736.0
+Bhutan,95,126.5
+Bhutan,100,12.0
+Brunei Darussalam,0,30760.0
+Brunei Darussalam,5,33831.0
+Brunei Darussalam,10,33869.0
+Brunei Darussalam,15,32841.0
+Brunei Darussalam,20,34489.5
+Brunei Darussalam,25,33993.5
+Brunei Darussalam,30,35931.5
+Brunei Darussalam,35,39195.5
+Brunei Darussalam,40,37782.5
+Brunei Darussalam,45,34121.0
+Brunei Darussalam,50,30901.5
+Brunei Darussalam,55,25148.5
+Brunei Darussalam,60,20000.5
+Brunei Darussalam,65,13850.5
+Brunei Darussalam,70,8240.0
+Brunei Darussalam,75,4029.5
+Brunei Darussalam,80,2252.5
+Brunei Darussalam,85,948.0
+Brunei Darussalam,90,287.0
+Brunei Darussalam,95,47.0
+Brunei Darussalam,100,4.0
+Myanmar,0,4441952.5
+Myanmar,5,4451498.5
+Myanmar,10,4422250.0
+Myanmar,15,4519364.5
+Myanmar,20,4527782.0
+Myanmar,25,4404457.5
+Myanmar,30,4282529.5
+Myanmar,35,4183940.0
+Myanmar,40,3912087.5
+Myanmar,45,3523779.0
+Myanmar,50,3160491.5
+Myanmar,55,2717363.0
+Myanmar,60,2191736.0
+Myanmar,65,1673775.0
+Myanmar,70,1120478.5
+Myanmar,75,600320.5
+Myanmar,80,298933.0
+Myanmar,85,115571.0
+Myanmar,90,26712.0
+Myanmar,95,2872.0
+Myanmar,100,103.5
+Cambodia,0,1577120.0
+Cambodia,5,1643772.5
+Cambodia,10,1618166.0
+Cambodia,15,1517488.0
+Cambodia,20,1354218.5
+Cambodia,25,1288689.0
+Cambodia,30,1407754.5
+Cambodia,35,1389915.0
+Cambodia,40,1081096.0
+Cambodia,45,673210.5
+Cambodia,50,889673.0
+Cambodia,55,802697.0
+Cambodia,60,664538.5
+Cambodia,65,479024.0
+Cambodia,70,282142.0
+Cambodia,75,152444.5
+Cambodia,80,80723.5
+Cambodia,85,32169.0
+Cambodia,90,8644.0
+Cambodia,95,1256.0
+Cambodia,100,84.5
+Sri Lanka,0,1514936.0
+Sri Lanka,5,1637350.0
+Sri Lanka,10,1755068.5
+Sri Lanka,15,1776540.0
+Sri Lanka,20,1616918.0
+Sri Lanka,25,1493898.0
+Sri Lanka,30,1433303.0
+Sri Lanka,35,1421533.0
+Sri Lanka,40,1583820.5
+Sri Lanka,45,1379410.5
+Sri Lanka,50,1297674.5
+Sri Lanka,55,1222101.5
+Sri Lanka,60,1152032.0
+Sri Lanka,65,948686.5
+Sri Lanka,70,761846.0
+Sri Lanka,75,486602.0
+Sri Lanka,80,253241.5
+Sri Lanka,85,115385.0
+Sri Lanka,90,36261.0
+Sri Lanka,95,6370.5
+Sri Lanka,100,601.0
+China,0,61144621.5
+China,5,88717075.5
+China,10,89479243.5
+China,15,81860704.0
+China,20,79435633.5
+China,25,86235322.5
+China,30,112524733.5
+China,35,113828284.0
+China,40,99678651.0
+China,45,98369827.5
+China,50,122376393.0
+China,55,113952089.5
+China,60,74673779.5
+China,65,76066750.0
+China,70,58532805.5
+China,75,33572745.5
+China,80,20061489.5
+China,85,10746178.0
+China,90,3696114.5
+China,95,666433.5
+China,100,52477.0
+"China, Taiwan Province of China",0,939135.0
+"China, Taiwan Province of China",5,1056690.5
+"China, Taiwan Province of China",10,1009453.5
+"China, Taiwan Province of China",15,1050062.5
+"China, Taiwan Province of China",20,1360107.5
+"China, Taiwan Province of China",25,1639992.0
+"China, Taiwan Province of China",30,1665468.0
+"China, Taiwan Province of China",35,1815115.5
+"China, Taiwan Province of China",40,2066283.0
+"China, Taiwan Province of China",45,1907286.5
+"China, Taiwan Province of China",50,1745550.0
+"China, Taiwan Province of China",55,1799259.0
+"China, Taiwan Province of China",60,1693619.0
+"China, Taiwan Province of China",65,1516499.5
+"China, Taiwan Province of China",70,1090923.0
+"China, Taiwan Province of China",75,679012.5
+"China, Taiwan Province of China",80,472692.5
+"China, Taiwan Province of China",85,260538.0
+"China, Taiwan Province of China",90,114161.0
+"China, Taiwan Province of China",95,34325.5
+"China, Taiwan Province of China",100,7102.5
+Cyprus,0,65044.0
+Cyprus,5,67858.5
+Cyprus,10,66739.5
+Cyprus,15,63431.5
+Cyprus,20,68105.5
+Cyprus,25,82642.5
+Cyprus,30,108346.5
+Cyprus,35,118364.0
+Cyprus,40,107278.0
+Cyprus,45,90736.0
+Cyprus,50,82972.0
+Cyprus,55,76513.5
+Cyprus,60,70555.0
+Cyprus,65,59726.5
+Cyprus,70,48733.0
+Cyprus,75,37726.5
+Cyprus,80,25114.5
+Cyprus,85,13602.0
+Cyprus,90,5243.5
+Cyprus,95,1261.5
+Cyprus,100,144.0
+Georgia,0,246771.5
+Georgia,5,281903.0
+Georgia,10,266352.0
+Georgia,15,218751.5
+Georgia,20,205188.5
+Georgia,25,224455.5
+Georgia,30,274369.5
+Georgia,35,276099.0
+Georgia,40,249994.0
+Georgia,45,237540.5
+Georgia,50,227534.5
+Georgia,55,229170.0
+Georgia,60,240512.0
+Georgia,65,195763.5
+Georgia,70,151801.0
+Georgia,75,84460.0
+Georgia,80,67972.5
+Georgia,85,36901.5
+Georgia,90,10601.5
+Georgia,95,2019.5
+Georgia,100,121.0
+State of Palestine,0,713115.0
+State of Palestine,5,704179.0
+State of Palestine,10,643072.0
+State of Palestine,15,561662.5
+State of Palestine,20,494429.0
+State of Palestine,25,452509.0
+State of Palestine,30,406538.5
+State of Palestine,35,323620.5
+State of Palestine,40,255701.5
+State of Palestine,45,205603.5
+State of Palestine,50,168037.0
+State of Palestine,55,139994.5
+State of Palestine,60,109762.0
+State of Palestine,65,78634.0
+State of Palestine,70,53748.5
+State of Palestine,75,33310.5
+State of Palestine,80,18086.5
+State of Palestine,85,7211.0
+State of Palestine,90,1748.5
+State of Palestine,95,249.5
+State of Palestine,100,17.5
+"China, Hong Kong SAR",0,254778.5
+"China, Hong Kong SAR",5,328199.5
+"China, Hong Kong SAR",10,306163.0
+"China, Hong Kong SAR",15,271681.5
+"China, Hong Kong SAR",20,303357.5
+"China, Hong Kong SAR",25,430902.5
+"China, Hong Kong SAR",30,501041.0
+"China, Hong Kong SAR",35,556876.0
+"China, Hong Kong SAR",40,588452.0
+"China, Hong Kong SAR",45,559503.5
+"China, Hong Kong SAR",50,569502.5
+"China, Hong Kong SAR",55,591812.0
+"China, Hong Kong SAR",60,628106.0
+"China, Hong Kong SAR",65,526783.0
+"China, Hong Kong SAR",70,406331.0
+"China, Hong Kong SAR",75,261015.0
+"China, Hong Kong SAR",80,167761.0
+"China, Hong Kong SAR",85,134184.0
+"China, Hong Kong SAR",90,73844.0
+"China, Hong Kong SAR",95,25368.0
+"China, Hong Kong SAR",100,5947.0
+India,0,113049137.5
+India,5,118379987.5
+India,10,124303899.0
+India,15,126491039.0
+India,20,127726577.5
+India,25,122473550.0
+India,30,116212116.5
+India,35,108508180.5
+India,40,96396678.5
+India,45,84935209.0
+India,50,74070980.5
+India,55,62945513.0
+India,60,52100682.5
+India,65,40957994.0
+India,70,28718860.0
+India,75,16309234.0
+India,80,9126166.5
+India,85,4168810.5
+India,90,1394948.5
+India,95,315050.0
+India,100,43048.5
+Indonesia,0,22094345.0
+Indonesia,5,23063180.5
+Indonesia,10,23898663.0
+Indonesia,15,22767689.5
+Indonesia,20,21805401.5
+Indonesia,25,21534161.0
+Indonesia,30,20658349.5
+Indonesia,35,20568597.5
+Indonesia,40,20379195.5
+Indonesia,45,18666051.0
+Indonesia,50,16760442.5
+Indonesia,55,14414669.0
+Indonesia,60,11427635.5
+Indonesia,65,8152392.5
+Indonesia,70,5218429.0
+Indonesia,75,3345812.0
+Indonesia,80,1867062.5
+Indonesia,85,714804.0
+Indonesia,90,171969.5
+Indonesia,95,23662.5
+Indonesia,100,1609.5
+Iran (Islamic Republic of),0,6157763.0
+Iran (Islamic Republic of),5,7691851.5
+Iran (Islamic Republic of),10,6886438.0
+Iran (Islamic Republic of),15,5978266.0
+Iran (Islamic Republic of),20,5482530.0
+Iran (Islamic Republic of),25,6041310.0
+Iran (Islamic Republic of),30,8082318.0
+Iran (Islamic Republic of),35,8981383.5
+Iran (Islamic Republic of),40,7851143.5
+Iran (Islamic Republic of),45,6006762.0
+Iran (Islamic Republic of),50,5120398.5
+Iran (Islamic Republic of),55,4216729.5
+Iran (Islamic Republic of),60,3600885.5
+Iran (Islamic Republic of),65,2872061.5
+Iran (Islamic Republic of),70,2051812.0
+Iran (Islamic Republic of),75,1152040.5
+Iran (Islamic Republic of),80,628353.5
+Iran (Islamic Republic of),85,280309.0
+Iran (Islamic Republic of),90,78125.0
+Iran (Islamic Republic of),95,11560.5
+Iran (Islamic Republic of),100,726.0
+Iraq,0,5795845.5
+Iraq,5,5714068.0
+Iraq,10,5476792.5
+Iraq,15,4685272.0
+Iraq,20,4231518.0
+Iraq,25,3784989.5
+Iraq,30,3264337.5
+Iraq,35,2716976.5
+Iraq,40,2343364.0
+Iraq,45,2046406.5
+Iraq,50,1722757.5
+Iraq,55,1328590.0
+Iraq,60,851473.5
+Iraq,65,616470.5
+Iraq,70,465646.0
+Iraq,75,266713.5
+Iraq,80,134139.0
+Iraq,85,47217.0
+Iraq,90,10628.0
+Iraq,95,1283.0
+Iraq,100,72.0
+Israel,0,883708.0
+Israel,5,881601.5
+Israel,10,798200.0
+Israel,15,718883.0
+Israel,20,671116.5
+Israel,25,616911.0
+Israel,30,593108.5
+Israel,35,584749.0
+Israel,40,558883.0
+Israel,45,535560.0
+Israel,50,465076.5
+Israel,55,386401.0
+Israel,60,363674.0
+Israel,65,331104.5
+Israel,70,300667.0
+Israel,75,214846.5
+Israel,80,124610.0
+Israel,85,87859.5
+Israel,90,41453.0
+Israel,95,13628.0
+Israel,100,2479.0
+Japan,0,4127055.0
+Japan,5,4775448.0
+Japan,10,5238006.5
+Japan,15,5485928.0
+Japan,20,5948911.5
+Japan,25,6120742.0
+Japan,30,6214956.0
+Japan,35,6822404.0
+Japan,40,7534045.5
+Japan,45,9101493.0
+Japan,50,9316888.0
+Japan,55,8126171.0
+Japan,60,7410726.0
+Japan,65,7261236.5
+Japan,70,8878016.0
+Japan,75,7595238.5
+Japan,80,6110855.0
+Japan,85,4155446.0
+Japan,90,2168698.0
+Japan,95,762178.5
+Japan,100,140070.0
+Kazakhstan,0,2025144.5
+Kazakhstan,5,1958409.5
+Kazakhstan,10,1826817.0
+Kazakhstan,15,1481852.5
+Kazakhstan,20,1144201.0
+Kazakhstan,25,1221297.0
+Kazakhstan,30,1490442.0
+Kazakhstan,35,1535949.0
+Kazakhstan,40,1264466.5
+Kazakhstan,45,1144812.5
+Kazakhstan,50,1036489.0
+Kazakhstan,55,947074.0
+Kazakhstan,60,923651.0
+Kazakhstan,65,693837.0
+Kazakhstan,70,458667.0
+Kazakhstan,75,216540.5
+Kazakhstan,80,150858.5
+Kazakhstan,85,67987.0
+Kazakhstan,90,14983.0
+Kazakhstan,95,2965.5
+Kazakhstan,100,189.5
+Jordan,0,1181549.0
+Jordan,5,1178087.5
+Jordan,10,1211892.5
+Jordan,15,1110204.5
+Jordan,20,983812.0
+Jordan,25,989633.5
+Jordan,30,904645.0
+Jordan,35,796738.5
+Jordan,40,692968.0
+Jordan,45,602310.5
+Jordan,50,524701.0
+Jordan,55,416248.5
+Jordan,60,293283.5
+Jordan,65,194952.0
+Jordan,70,120472.0
+Jordan,75,73088.5
+Jordan,80,41156.0
+Jordan,85,16576.5
+Jordan,90,4071.5
+Jordan,95,615.5
+Jordan,100,46.5
+Dem. People's Rep. of Korea,0,1693526.5
+Dem. People's Rep. of Korea,5,1666926.0
+Dem. People's Rep. of Korea,10,1569578.5
+Dem. People's Rep. of Korea,15,1671666.5
+Dem. People's Rep. of Korea,20,1811680.5
+Dem. People's Rep. of Korea,25,1951350.0
+Dem. People's Rep. of Korea,30,1935374.0
+Dem. People's Rep. of Korea,35,1797864.5
+Dem. People's Rep. of Korea,40,1668258.0
+Dem. People's Rep. of Korea,45,1688195.0
+Dem. People's Rep. of Korea,50,2144560.5
+Dem. People's Rep. of Korea,55,1903379.5
+Dem. People's Rep. of Korea,60,1468639.0
+Dem. People's Rep. of Korea,65,1152028.5
+Dem. People's Rep. of Korea,70,702601.5
+Dem. People's Rep. of Korea,75,666563.0
+Dem. People's Rep. of Korea,80,430907.0
+Dem. People's Rep. of Korea,85,184635.0
+Dem. People's Rep. of Korea,90,45207.5
+Dem. People's Rep. of Korea,95,7237.0
+Dem. People's Rep. of Korea,100,643.5
+Republic of Korea,0,1491203.0
+Republic of Korea,5,2031870.0
+Republic of Korea,10,2294899.5
+Republic of Korea,15,2284190.5
+Republic of Korea,20,2902558.5
+Republic of Korea,25,3560141.5
+Republic of Korea,30,3499527.5
+Republic of Korea,35,3380006.5
+Republic of Korea,40,4069786.5
+Republic of Korea,45,3939647.5
+Republic of Korea,50,4477925.0
+Republic of Korea,55,4124807.5
+Republic of Korea,60,4210418.5
+Republic of Korea,65,3283394.5
+Republic of Korea,70,2230097.5
+Republic of Korea,75,1636060.0
+Republic of Korea,80,1302809.0
+Republic of Korea,85,703214.5
+Republic of Korea,90,282590.0
+Republic of Korea,95,69198.0
+Republic of Korea,100,9713.5
+Kuwait,0,230448.5
+Kuwait,5,304101.0
+Kuwait,10,332937.5
+Kuwait,15,258277.0
+Kuwait,20,198037.5
+Kuwait,25,159726.0
+Kuwait,30,191850.5
+Kuwait,35,394038.5
+Kuwait,40,529538.0
+Kuwait,45,528548.0
+Kuwait,50,452142.0
+Kuwait,55,295666.0
+Kuwait,60,200122.5
+Kuwait,65,121819.5
+Kuwait,70,63123.5
+Kuwait,75,26960.5
+Kuwait,80,15714.0
+Kuwait,85,5681.0
+Kuwait,90,1185.0
+Kuwait,95,176.0
+Kuwait,100,15.0
+Kyrgyzstan,0,786218.5
+Kyrgyzstan,5,799731.5
+Kyrgyzstan,10,724343.5
+Kyrgyzstan,15,564273.0
+Kyrgyzstan,20,502395.5
+Kyrgyzstan,25,545073.5
+Kyrgyzstan,30,573547.5
+Kyrgyzstan,35,496739.5
+Kyrgyzstan,40,362279.0
+Kyrgyzstan,45,309983.5
+Kyrgyzstan,50,272932.0
+Kyrgyzstan,55,246686.5
+Kyrgyzstan,60,231521.0
+Kyrgyzstan,65,154474.0
+Kyrgyzstan,70,92583.0
+Kyrgyzstan,75,31467.0
+Kyrgyzstan,80,24087.5
+Kyrgyzstan,85,12872.0
+Kyrgyzstan,90,3520.0
+Kyrgyzstan,95,589.5
+Kyrgyzstan,100,30.0
+Lao People's Dem. Republic,0,784546.5
+Lao People's Dem. Republic,5,776865.5
+Lao People's Dem. Republic,10,748834.5
+Lao People's Dem. Republic,15,732386.0
+Lao People's Dem. Republic,20,717727.0
+Lao People's Dem. Republic,25,682626.0
+Lao People's Dem. Republic,30,639263.5
+Lao People's Dem. Republic,35,564405.5
+Lao People's Dem. Republic,40,463113.0
+Lao People's Dem. Republic,45,379740.0
+Lao People's Dem. Republic,50,315755.5
+Lao People's Dem. Republic,55,266032.0
+Lao People's Dem. Republic,60,213077.5
+Lao People's Dem. Republic,65,151689.0
+Lao People's Dem. Republic,70,97106.0
+Lao People's Dem. Republic,75,56275.0
+Lao People's Dem. Republic,80,28821.0
+Lao People's Dem. Republic,85,11561.5
+Lao People's Dem. Republic,90,3307.0
+Lao People's Dem. Republic,95,569.0
+Lao People's Dem. Republic,100,77.5
+Lebanon,0,395738.0
+Lebanon,5,510588.0
+Lebanon,10,553510.0
+Lebanon,15,482993.0
+Lebanon,20,404722.5
+Lebanon,25,339428.5
+Lebanon,30,302010.0
+Lebanon,35,319809.0
+Lebanon,40,324405.0
+Lebanon,45,304089.5
+Lebanon,50,312256.5
+Lebanon,55,302140.5
+Lebanon,60,251788.5
+Lebanon,65,199284.0
+Lebanon,70,149086.0
+Lebanon,75,101116.5
+Lebanon,80,58822.5
+Lebanon,85,29609.5
+Lebanon,90,10447.5
+Lebanon,95,1950.5
+Lebanon,100,134.0
+"China, Macao SAR",0,38178.0
+"China, Macao SAR",5,38162.0
+"China, Macao SAR",10,29260.5
+"China, Macao SAR",15,25261.0
+"China, Macao SAR",20,38437.5
+"China, Macao SAR",25,54497.5
+"China, Macao SAR",30,67428.5
+"China, Macao SAR",35,66846.5
+"China, Macao SAR",40,55487.5
+"China, Macao SAR",45,49362.5
+"China, Macao SAR",50,46383.0
+"China, Macao SAR",55,50990.0
+"China, Macao SAR",60,47637.0
+"China, Macao SAR",65,37815.0
+"China, Macao SAR",70,25960.5
+"China, Macao SAR",75,13509.0
+"China, Macao SAR",80,8749.0
+"China, Macao SAR",85,6180.0
+"China, Macao SAR",90,2876.5
+"China, Macao SAR",95,952.0
+"China, Macao SAR",100,176.0
+Malaysia,0,2546485.5
+Malaysia,5,2629124.5
+Malaysia,10,2515605.0
+Malaysia,15,2647556.5
+Malaysia,20,2807611.5
+Malaysia,25,2941307.5
+Malaysia,30,3056119.5
+Malaysia,35,2975243.0
+Malaysia,40,2562378.0
+Malaysia,45,2098250.5
+Malaysia,50,1849854.5
+Malaysia,55,1635959.5
+Malaysia,60,1371574.0
+Malaysia,65,1067011.0
+Malaysia,70,742655.5
+Malaysia,75,461434.0
+Malaysia,80,249731.5
+Malaysia,85,108308.0
+Malaysia,90,33336.5
+Malaysia,95,7667.5
+Malaysia,100,1311.5
+Maldives,0,36264.0
+Maldives,5,38815.5
+Maldives,10,37831.5
+Maldives,15,30789.5
+Maldives,20,31976.0
+Maldives,25,46951.5
+Maldives,30,63288.0
+Maldives,35,64113.0
+Maldives,40,47129.0
+Maldives,45,33386.5
+Maldives,50,26537.5
+Maldives,55,20727.5
+Maldives,60,16606.5
+Maldives,65,10811.0
+Maldives,70,6020.5
+Maldives,75,4238.0
+Maldives,80,3174.0
+Maldives,85,1684.0
+Maldives,90,539.0
+Maldives,95,115.0
+Maldives,100,24.0
+Mongolia,0,360339.5
+Mongolia,5,400031.0
+Mongolia,10,351399.0
+Mongolia,15,244982.0
+Mongolia,20,226685.5
+Mongolia,25,235950.5
+Mongolia,30,288476.0
+Mongolia,35,277001.5
+Mongolia,40,232294.0
+Mongolia,45,209298.5
+Mongolia,50,178845.5
+Mongolia,55,152930.5
+Mongolia,60,121826.0
+Mongolia,65,74861.5
+Mongolia,70,41132.0
+Mongolia,75,24346.5
+Mongolia,80,16429.5
+Mongolia,85,7092.5
+Mongolia,90,2736.5
+Mongolia,95,433.0
+Mongolia,100,65.5
+Oman,0,419576.0
+Oman,5,461465.5
+Oman,10,373079.0
+Oman,15,282018.0
+Oman,20,282636.0
+Oman,25,481907.5
+Oman,30,584884.5
+Oman,35,554646.0
+Oman,40,415508.0
+Oman,45,279629.0
+Oman,50,180952.0
+Oman,55,116407.5
+Oman,60,81382.5
+Oman,65,54885.0
+Oman,70,37355.0
+Oman,75,20907.5
+Oman,80,10244.0
+Oman,85,5324.0
+Oman,90,1335.0
+Oman,95,224.0
+Oman,100,18.0
+Nepal,0,2977746.0
+Nepal,5,2935299.0
+Nepal,10,2905957.5
+Nepal,15,3115797.5
+Nepal,20,3257640.0
+Nepal,25,2965943.5
+Nepal,30,2396671.0
+Nepal,35,1967684.0
+Nepal,40,1709147.5
+Nepal,45,1477764.0
+Nepal,50,1279044.5
+Nepal,55,1089299.5
+Nepal,60,911845.0
+Nepal,65,749111.0
+Nepal,70,561966.5
+Nepal,75,348985.0
+Nepal,80,172717.0
+Nepal,85,58479.5
+Nepal,90,13417.5
+Nepal,95,1844.5
+Nepal,100,230.0
+Pakistan,0,30015900.0
+Pakistan,5,28886883.0
+Pakistan,10,28018603.5
+Pakistan,15,25466331.0
+Pakistan,20,23179692.0
+Pakistan,25,19910878.0
+Pakistan,30,17333019.5
+Pakistan,35,14469169.5
+Pakistan,40,11769746.0
+Pakistan,45,9625340.5
+Pakistan,50,8172966.5
+Pakistan,55,7158587.0
+Pakistan,60,6025332.0
+Pakistan,65,4461309.0
+Pakistan,70,2869106.0
+Pakistan,75,1840458.5
+Pakistan,80,910228.0
+Pakistan,85,303984.0
+Pakistan,90,62604.5
+Pakistan,95,5444.5
+Pakistan,100,74.5
+Philippines,0,12081669.0
+Philippines,5,11650428.0
+Philippines,10,11476127.0
+Philippines,15,11036775.5
+Philippines,20,10433923.0
+Philippines,25,9825665.0
+Philippines,30,9019960.5
+Philippines,35,7878156.5
+Philippines,40,7141380.5
+Philippines,45,6293992.5
+Philippines,50,5531535.5
+Philippines,55,4644712.0
+Philippines,60,3746109.0
+Philippines,65,2840156.5
+Philippines,70,1883863.0
+Philippines,75,1042907.0
+Philippines,80,537332.0
+Philippines,85,209363.5
+Philippines,90,53318.5
+Philippines,95,9000.5
+Philippines,100,993.0
+Timor-Leste,0,157930.0
+Timor-Leste,5,155204.5
+Timor-Leste,10,152389.0
+Timor-Leste,15,157643.0
+Timor-Leste,20,145111.0
+Timor-Leste,25,119446.5
+Timor-Leste,30,97299.5
+Timor-Leste,35,80007.5
+Timor-Leste,40,59968.0
+Timor-Leste,45,50579.0
+Timor-Leste,50,47897.5
+Timor-Leste,55,38259.5
+Timor-Leste,60,28740.0
+Timor-Leste,65,23372.0
+Timor-Leste,70,21462.5
+Timor-Leste,75,15417.5
+Timor-Leste,80,6962.5
+Timor-Leste,85,2216.0
+Timor-Leste,90,573.5
+Timor-Leste,95,109.5
+Timor-Leste,100,7.5
+Qatar,0,134426.0
+Qatar,5,150923.0
+Qatar,10,140877.5
+Qatar,15,102395.0
+Qatar,20,102877.5
+Qatar,25,303636.0
+Qatar,30,438786.5
+Qatar,35,437885.0
+Qatar,40,342862.5
+Qatar,45,229321.0
+Qatar,50,150022.0
+Qatar,55,87261.0
+Qatar,60,51347.0
+Qatar,65,23906.5
+Qatar,70,10279.5
+Qatar,75,5183.5
+Qatar,80,2488.5
+Qatar,85,1445.5
+Qatar,90,409.5
+Qatar,95,55.0
+Qatar,100,3.0
+Saudi Arabia,0,3150631.0
+Saudi Arabia,5,3152959.5
+Saudi Arabia,10,3153773.5
+Saudi Arabia,15,2785651.5
+Saudi Arabia,20,2561415.5
+Saudi Arabia,25,2680093.5
+Saudi Arabia,30,3019675.0
+Saudi Arabia,35,3102584.5
+Saudi Arabia,40,3591114.0
+Saudi Arabia,45,3400964.0
+Saudi Arabia,50,2501128.5
+Saudi Arabia,55,1699705.5
+Saudi Arabia,60,1020020.5
+Saudi Arabia,65,557060.5
+Saudi Arabia,70,247826.5
+Saudi Arabia,75,150175.5
+Saudi Arabia,80,101899.5
+Saudi Arabia,85,52991.0
+Saudi Arabia,90,14090.5
+Saudi Arabia,95,2978.5
+Saudi Arabia,100,286.5
+Singapore,0,231353.0
+Singapore,5,240756.0
+Singapore,10,231239.0
+Singapore,15,251527.0
+Singapore,20,332919.5
+Singapore,25,446680.5
+Singapore,30,450746.5
+Singapore,35,459049.5
+Singapore,40,474197.0
+Singapore,45,488716.0
+Singapore,50,486852.5
+Singapore,55,476226.0
+Singapore,60,474524.0
+Singapore,65,413199.0
+Singapore,70,277767.0
+Singapore,75,131348.5
+Singapore,80,73520.5
+Singapore,85,47692.0
+Singapore,90,19659.5
+Singapore,95,5890.5
+Singapore,100,859.5
+Viet Nam,0,7227304.0
+Viet Nam,5,7484012.0
+Viet Nam,10,7232779.5
+Viet Nam,15,6945411.5
+Viet Nam,20,6812368.0
+Viet Nam,25,7437792.0
+Viet Nam,30,8251574.0
+Viet Nam,35,7899915.0
+Viet Nam,40,7543489.0
+Viet Nam,45,6924973.5
+Viet Nam,50,5887654.5
+Viet Nam,55,5077553.5
+Viet Nam,60,4697001.5
+Viet Nam,65,3853001.0
+Viet Nam,70,2600483.0
+Viet Nam,75,1370550.5
+Viet Nam,80,847251.0
+Viet Nam,85,499006.5
+Viet Nam,90,210099.5
+Viet Nam,95,49370.5
+Viet Nam,100,7360.0
+Syrian Arab Republic,0,2132504.0
+Syrian Arab Republic,5,1966277.0
+Syrian Arab Republic,10,2792978.5
+Syrian Arab Republic,15,2921920.5
+Syrian Arab Republic,20,2677188.0
+Syrian Arab Republic,25,1968305.0
+Syrian Arab Republic,30,1384344.5
+Syrian Arab Republic,35,1377823.5
+Syrian Arab Republic,40,1321614.0
+Syrian Arab Republic,45,1188170.5
+Syrian Arab Republic,50,1010474.0
+Syrian Arab Republic,55,791615.0
+Syrian Arab Republic,60,597560.0
+Syrian Arab Republic,65,446803.0
+Syrian Arab Republic,70,309092.5
+Syrian Arab Republic,75,187517.0
+Syrian Arab Republic,80,97470.5
+Syrian Arab Republic,85,41032.5
+Syrian Arab Republic,90,12494.0
+Syrian Arab Republic,95,1724.0
+Syrian Arab Republic,100,105.5
+Tajikistan,0,1267775.5
+Tajikistan,5,1258715.0
+Tajikistan,10,1132457.5
+Tajikistan,15,929472.5
+Tajikistan,20,864626.5
+Tajikistan,25,832729.0
+Tajikistan,30,814103.0
+Tajikistan,35,718449.0
+Tajikistan,40,532634.5
+Tajikistan,45,428184.5
+Tajikistan,50,380455.0
+Tajikistan,55,331450.5
+Tajikistan,60,282897.0
+Tajikistan,65,178799.0
+Tajikistan,70,101621.5
+Tajikistan,75,42917.0
+Tajikistan,80,27711.0
+Tajikistan,85,13810.0
+Tajikistan,90,4054.0
+Tajikistan,95,641.5
+Tajikistan,100,39.5
+Thailand,0,3233701.0
+Thailand,5,3656637.5
+Thailand,10,4041586.0
+Thailand,15,4086198.0
+Thailand,20,4405616.0
+Thailand,25,5063692.5
+Thailand,30,5048312.0
+Thailand,35,5066938.0
+Thailand,40,5213020.5
+Thailand,45,4991459.5
+Thailand,50,5288841.0
+Thailand,55,5300154.0
+Thailand,60,4947034.5
+Thailand,65,4036403.0
+Thailand,70,2941114.5
+Thailand,75,1896460.5
+Thailand,80,1272028.0
+Thailand,85,777036.0
+Thailand,90,372838.0
+Thailand,95,128154.5
+Thailand,100,34054.0
+United Arab Emirates,0,478015.0
+United Arab Emirates,5,487433.5
+United Arab Emirates,10,482676.5
+United Arab Emirates,15,358915.5
+United Arab Emirates,20,506615.5
+United Arab Emirates,25,1121863.0
+United Arab Emirates,30,1467254.5
+United Arab Emirates,35,1466060.0
+United Arab Emirates,40,1176694.0
+United Arab Emirates,45,805465.5
+United Arab Emirates,50,517489.0
+United Arab Emirates,55,306556.5
+United Arab Emirates,60,164289.0
+United Arab Emirates,65,79331.5
+United Arab Emirates,70,40031.0
+United Arab Emirates,75,23210.0
+United Arab Emirates,80,16067.5
+United Arab Emirates,85,14587.5
+United Arab Emirates,90,3503.0
+United Arab Emirates,95,760.5
+United Arab Emirates,100,52.5
+Türkiye,0,6246474.5
+Türkiye,5,6950242.0
+Türkiye,10,6523159.5
+Türkiye,15,6290162.5
+Türkiye,20,6462311.5
+Türkiye,25,6764813.0
+Türkiye,30,6672093.5
+Türkiye,35,6608770.5
+Türkiye,40,6327426.0
+Türkiye,45,5780606.0
+Türkiye,50,5221489.0
+Türkiye,55,4688121.5
+Türkiye,60,3612218.0
+Türkiye,65,2894767.0
+Türkiye,70,2064681.5
+Türkiye,75,1390650.0
+Türkiye,80,819509.0
+Türkiye,85,363454.5
+Türkiye,90,111523.5
+Türkiye,95,21407.0
+Türkiye,100,2319.0
+Turkmenistan,0,663268.0
+Turkmenistan,5,708433.5
+Turkmenistan,10,643976.0
+Turkmenistan,15,520734.5
+Turkmenistan,20,485577.5
+Turkmenistan,25,525811.5
+Turkmenistan,30,556135.5
+Turkmenistan,35,502681.5
+Turkmenistan,40,395907.5
+Turkmenistan,45,339885.0
+Turkmenistan,50,304006.5
+Turkmenistan,55,272397.0
+Turkmenistan,60,244999.0
+Turkmenistan,65,168780.0
+Turkmenistan,70,99949.5
+Turkmenistan,75,42743.5
+Turkmenistan,80,25794.5
+Turkmenistan,85,11780.5
+Turkmenistan,90,2837.0
+Turkmenistan,95,385.5
+Turkmenistan,100,16.5
+Uzbekistan,0,3925433.0
+Uzbekistan,5,3537437.0
+Uzbekistan,10,3155068.0
+Uzbekistan,15,2712088.5
+Uzbekistan,20,2542040.0
+Uzbekistan,25,2913618.5
+Uzbekistan,30,3054382.5
+Uzbekistan,35,2802202.0
+Uzbekistan,40,2288773.0
+Uzbekistan,45,1960582.5
+Uzbekistan,50,1664246.0
+Uzbekistan,55,1481408.5
+Uzbekistan,60,1254829.0
+Uzbekistan,65,871268.0
+Uzbekistan,70,527099.5
+Uzbekistan,75,235248.5
+Uzbekistan,80,148331.0
+Uzbekistan,85,69638.0
+Uzbekistan,90,17781.0
+Uzbekistan,95,2387.0
+Uzbekistan,100,82.0
+Yemen,0,4760444.5
+Yemen,5,4526912.5
+Yemen,10,4172465.5
+Yemen,15,3739985.5
+Yemen,20,3270772.5
+Yemen,25,3024682.0
+Yemen,30,2739169.5
+Yemen,35,2236222.0
+Yemen,40,1695769.5
+Yemen,45,1233450.0
+Yemen,50,929919.5
+Yemen,55,698286.0
+Yemen,60,509046.5
+Yemen,65,363881.5
+Yemen,70,255055.0
+Yemen,75,173259.0
+Yemen,80,84647.5
+Yemen,85,29069.0
+Yemen,90,6168.5
+Yemen,95,609.0
+Yemen,100,10.0
+Albania,0,139357.0
+Albania,5,151744.5
+Albania,10,162428.5
+Albania,15,173389.0
+Albania,20,197920.0
+Albania,25,225519.5
+Albania,30,220056.0
+Albania,35,186853.5
+Albania,40,162655.5
+Albania,45,161968.0
+Albania,50,178331.0
+Albania,55,192230.0
+Albania,60,195228.0
+Albania,65,166083.0
+Albania,70,125923.0
+Albania,75,89273.0
+Albania,80,63301.0
+Albania,85,29225.0
+Albania,90,8836.5
+Albania,95,1913.5
+Albania,100,203.5
+Andorra,0,2437.0
+Andorra,5,3390.5
+Andorra,10,4119.5
+Andorra,15,4152.0
+Andorra,20,4398.0
+Andorra,25,4705.0
+Andorra,30,5359.5
+Andorra,35,5556.0
+Andorra,40,6632.5
+Andorra,45,7351.0
+Andorra,50,7169.0
+Andorra,55,6725.5
+Andorra,60,5640.5
+Andorra,65,4115.5
+Andorra,70,3042.0
+Andorra,75,2340.5
+Andorra,80,1413.5
+Andorra,85,888.5
+Andorra,90,478.0
+Andorra,95,151.0
+Andorra,100,23.0
+Austria,0,423608.5
+Austria,5,440108.5
+Austria,10,423405.5
+Austria,15,431384.5
+Austria,20,464334.0
+Austria,25,561200.5
+Austria,30,620477.5
+Austria,35,611826.5
+Austria,40,600938.5
+Austria,45,572859.0
+Austria,50,653500.0
+Austria,55,706351.0
+Austria,60,638363.5
+Austria,65,508831.5
+Austria,70,413868.5
+Austria,75,341291.0
+Austria,80,316908.5
+Austria,85,143232.5
+Austria,90,67666.5
+Austria,95,16934.5
+Austria,100,1870.0
+Belgium,0,589259.0
+Belgium,5,636692.5
+Belgium,10,683581.0
+Belgium,15,667853.5
+Belgium,20,666349.0
+Belgium,25,713755.5
+Belgium,30,782469.5
+Belgium,35,755052.5
+Belgium,40,768255.5
+Belgium,45,736190.5
+Belgium,50,780033.0
+Belgium,55,795475.5
+Belgium,60,763120.5
+Belgium,65,667366.5
+Belgium,70,567376.5
+Belgium,75,461043.0
+Belgium,80,302134.5
+Belgium,85,217796.0
+Belgium,90,104292.0
+Belgium,95,25196.0
+Belgium,100,2848.0
+Bosnia and Herzegovina,0,143600.5
+Bosnia and Herzegovina,5,160197.0
+Bosnia and Herzegovina,10,169475.0
+Bosnia and Herzegovina,15,166207.0
+Bosnia and Herzegovina,20,174083.0
+Bosnia and Herzegovina,25,203104.0
+Bosnia and Herzegovina,30,208381.0
+Bosnia and Herzegovina,35,230231.0
+Bosnia and Herzegovina,40,230265.5
+Bosnia and Herzegovina,45,228109.5
+Bosnia and Herzegovina,50,222371.5
+Bosnia and Herzegovina,55,236093.0
+Bosnia and Herzegovina,60,239835.0
+Bosnia and Herzegovina,65,216777.0
+Bosnia and Herzegovina,70,166731.5
+Bosnia and Herzegovina,75,94258.5
+Bosnia and Herzegovina,80,66051.5
+Bosnia and Herzegovina,85,40150.5
+Bosnia and Herzegovina,90,12400.0
+Bosnia and Herzegovina,95,2218.5
+Bosnia and Herzegovina,100,307.0
+Bulgaria,0,290729.0
+Bulgaria,5,313590.5
+Bulgaria,10,329958.5
+Bulgaria,15,323581.0
+Bulgaria,20,310444.0
+Bulgaria,25,307540.0
+Bulgaria,30,420582.0
+Bulgaria,35,473275.0
+Bulgaria,40,488353.0
+Bulgaria,45,537827.0
+Bulgaria,50,499064.5
+Bulgaria,55,443471.5
+Bulgaria,60,457665.0
+Bulgaria,65,442546.5
+Bulgaria,70,398706.0
+Bulgaria,75,310327.0
+Bulgaria,80,191194.0
+Bulgaria,85,108970.5
+Bulgaria,90,34915.5
+Bulgaria,95,4672.5
+Bulgaria,100,304.0
+Belarus,0,441649.5
+Belarus,5,564083.0
+Belarus,10,574217.5
+Belarus,15,498283.5
+Belarus,20,462043.0
+Belarus,25,474144.0
+Belarus,30,659840.0
+Belarus,35,801666.0
+Belarus,40,748346.5
+Belarus,45,666274.0
+Belarus,50,633964.5
+Belarus,55,605974.0
+Belarus,60,690735.5
+Belarus,65,616062.0
+Belarus,70,455170.0
+Belarus,75,255833.0
+Belarus,80,174592.5
+Belarus,85,118403.0
+Belarus,90,44450.0
+Belarus,95,11312.5
+Belarus,100,1194.0
+Croatia,0,174900.0
+Croatia,5,184101.0
+Croatia,10,201887.5
+Croatia,15,196190.0
+Croatia,20,209406.5
+Croatia,25,239959.0
+Croatia,30,240867.0
+Croatia,35,265088.0
+Croatia,40,281285.0
+Croatia,45,271601.5
+Croatia,50,262998.5
+Croatia,55,280573.0
+Croatia,60,287822.0
+Croatia,65,280831.5
+Croatia,70,234780.5
+Croatia,75,159898.0
+Croatia,80,126632.5
+Croatia,85,76372.5
+Croatia,90,27682.5
+Croatia,95,5241.5
+Croatia,100,498.5
+Czechia,0,531911.0
+Czechia,5,554467.0
+Czechia,10,571009.5
+Czechia,15,539333.0
+Czechia,20,492815.5
+Czechia,25,539691.5
+Czechia,30,673711.5
+Czechia,35,706367.0
+Czechia,40,785487.5
+Czechia,45,912187.5
+Czechia,50,738392.5
+Czechia,55,674192.5
+Czechia,60,594009.5
+Czechia,65,640313.0
+Czechia,70,601432.5
+Czechia,75,471368.0
+Czechia,80,268988.5
+Czechia,85,132213.0
+Czechia,90,54883.0
+Czechia,95,11461.0
+Czechia,100,1060.5
+Denmark,0,316252.5
+Denmark,5,305593.5
+Denmark,10,320765.0
+Denmark,15,346413.5
+Denmark,20,365334.5
+Denmark,25,405780.0
+Denmark,30,396760.0
+Denmark,35,346839.5
+Denmark,40,338502.0
+Denmark,45,376127.0
+Denmark,50,389293.5
+Denmark,55,417507.5
+Denmark,60,361056.0
+Denmark,65,325344.0
+Denmark,70,298147.5
+Denmark,75,287412.0
+Denmark,80,174792.5
+Denmark,85,91937.0
+Denmark,90,36070.0
+Denmark,95,9673.5
+Denmark,100,1312.0
+Estonia,0,68972.0
+Estonia,5,70979.5
+Estonia,10,75193.0
+Estonia,15,71266.5
+Estonia,20,61914.0
+Estonia,25,67096.5
+Estonia,30,91989.0
+Estonia,35,99872.5
+Estonia,40,92497.5
+Estonia,45,90415.0
+Estonia,50,89776.0
+Estonia,55,81074.0
+Estonia,60,85194.0
+Estonia,65,78897.5
+Estonia,70,68677.5
+Estonia,75,47542.5
+Estonia,80,41080.0
+Estonia,85,25832.0
+Estonia,90,11332.0
+Estonia,95,2871.0
+Estonia,100,293.5
+Faroe Islands,0,3771.5
+Faroe Islands,5,3694.0
+Faroe Islands,10,3569.5
+Faroe Islands,15,3699.5
+Faroe Islands,20,3509.0
+Faroe Islands,25,2757.0
+Faroe Islands,30,3345.5
+Faroe Islands,35,3148.0
+Faroe Islands,40,3151.5
+Faroe Islands,45,3238.0
+Faroe Islands,50,3268.5
+Faroe Islands,55,3485.0
+Faroe Islands,60,3069.0
+Faroe Islands,65,2745.5
+Faroe Islands,70,2517.0
+Faroe Islands,75,1932.0
+Faroe Islands,80,1271.5
+Faroe Islands,85,655.5
+Faroe Islands,90,342.0
+Faroe Islands,95,93.0
+Faroe Islands,100,7.0
+Finland,0,236084.0
+Finland,5,277761.5
+Finland,10,313166.5
+Finland,15,308953.5
+Finland,20,304453.0
+Finland,25,336345.0
+Finland,30,366416.5
+Finland,35,358756.5
+Finland,40,357085.0
+Finland,45,338536.0
+Finland,50,319909.5
+Finland,55,361574.5
+Finland,60,356721.0
+Finland,65,348880.0
+Finland,70,341281.0
+Finland,75,285246.0
+Finland,80,170386.5
+Finland,85,104250.5
+Finland,90,47005.5
+Finland,95,11476.5
+Finland,100,1186.0
+France,0,3324466.0
+France,5,3700359.5
+France,10,4010470.0
+France,15,3926270.0
+France,20,3697572.0
+France,25,3449915.5
+France,30,3762010.0
+France,35,3984836.0
+France,40,4136764.0
+France,45,4019810.0
+France,50,4323863.0
+France,55,4178743.5
+France,60,3995080.0
+France,65,3752359.5
+France,70,3606789.0
+France,75,2794685.0
+France,80,1782814.0
+France,85,1334583.5
+France,90,720964.5
+France,95,220923.5
+France,100,33305.5
+Germany,0,3880124.0
+Germany,5,4014694.5
+Germany,10,3757050.5
+Germany,15,3805475.5
+Germany,20,4339094.5
+Germany,25,4844752.5
+Germany,30,5392514.5
+Germany,35,5434299.0
+Germany,40,5267315.0
+Germany,45,4826166.0
+Germany,50,5701785.5
+Germany,55,6793737.5
+Germany,60,6290657.5
+Germany,65,5127470.5
+Germany,70,4351712.0
+Germany,75,3174579.5
+Germany,80,3335807.0
+Germany,85,1983285.5
+Germany,90,745545.5
+Germany,95,202997.5
+Germany,100,25568.5
+Gibraltar,0,1742.5
+Gibraltar,5,1923.0
+Gibraltar,10,1866.0
+Gibraltar,15,1886.0
+Gibraltar,20,1878.5
+Gibraltar,25,1911.0
+Gibraltar,30,1933.5
+Gibraltar,35,1892.5
+Gibraltar,40,2047.0
+Gibraltar,45,2155.0
+Gibraltar,50,2104.5
+Gibraltar,55,2276.5
+Gibraltar,60,2116.5
+Gibraltar,65,1919.0
+Gibraltar,70,1735.5
+Gibraltar,75,1484.5
+Gibraltar,80,811.5
+Gibraltar,85,589.5
+Gibraltar,90,291.0
+Gibraltar,95,103.5
+Gibraltar,100,21.5
+Greece,0,407416.5
+Greece,5,465856.0
+Greece,10,532979.5
+Greece,15,548132.5
+Greece,20,564062.0
+Greece,25,537153.5
+Greece,30,528486.0
+Greece,35,602991.0
+Greece,40,760651.5
+Greece,45,775472.0
+Greece,50,791996.5
+Greece,55,750109.0
+Greece,60,682058.0
+Greece,65,634359.5
+Greece,70,560514.5
+Greece,75,488304.0
+Greece,80,347753.0
+Greece,85,238661.5
+Greece,90,98934.0
+Greece,95,22825.0
+Greece,100,2561.5
+Hungary,0,497897.0
+Hungary,5,485252.5
+Hungary,10,477349.0
+Hungary,15,545593.5
+Hungary,20,601226.0
+Hungary,25,678958.0
+Hungary,30,710007.5
+Hungary,35,667905.5
+Hungary,40,736201.0
+Hungary,45,866266.5
+Hungary,50,718526.5
+Hungary,55,609633.5
+Hungary,60,555952.5
+Hungary,65,640852.0
+Hungary,70,526917.0
+Hungary,75,379164.0
+Hungary,80,256591.0
+Hungary,85,132509.5
+Hungary,90,55842.0
+Hungary,95,12250.5
+Hungary,100,1344.0
+Iceland,0,22664.0
+Iceland,5,21780.5
+Iceland,10,24266.5
+Iceland,15,23136.0
+Iceland,20,23414.0
+Iceland,25,28224.5
+Iceland,30,30893.5
+Iceland,35,26529.0
+Iceland,40,26037.5
+Iceland,45,23512.0
+Iceland,50,22415.5
+Iceland,55,22113.0
+Iceland,60,21262.5
+Iceland,65,18901.0
+Iceland,70,15282.5
+Iceland,75,11370.0
+Iceland,80,6897.0
+Iceland,85,4052.0
+Iceland,90,2019.5
+Iceland,95,496.0
+Iceland,100,52.0
+Ireland,0,295597.5
+Ireland,5,319300.0
+Ireland,10,355574.0
+Ireland,15,337748.5
+Ireland,20,325393.5
+Ireland,25,301060.0
+Ireland,30,301744.5
+Ireland,35,343267.5
+Ireland,40,402485.0
+Ireland,45,376845.0
+Ireland,50,341063.0
+Ireland,55,301002.0
+Ireland,60,272810.5
+Ireland,65,238167.5
+Ireland,70,197543.5
+Ireland,75,166616.5
+Ireland,80,95572.5
+Ireland,85,56288.0
+Ireland,90,21614.5
+Ireland,95,6205.0
+Ireland,100,1036.0
+Italy,0,2067997.0
+Italy,5,2387973.5
+Italy,10,2725314.5
+Italy,15,2855285.0
+Italy,20,2922427.5
+Italy,25,2999976.5
+Italy,30,3219577.0
+Italy,35,3347461.0
+Italy,40,3709751.0
+Italy,45,4423040.0
+Italy,50,4765070.0
+Italy,55,4819357.0
+Italy,60,4227564.5
+Italy,65,3645702.5
+Italy,70,3291490.5
+Italy,75,2834019.5
+Italy,80,2260111.0
+Italy,85,1480949.5
+Italy,90,686755.0
+Italy,95,179057.0
+Italy,100,21883.0
+Kosovo (under UNSC res. 1244),0,91647.0
+Kosovo (under UNSC res. 1244),5,110592.5
+Kosovo (under UNSC res. 1244),10,140763.5
+Kosovo (under UNSC res. 1244),15,145355.0
+Kosovo (under UNSC res. 1244),20,153291.5
+Kosovo (under UNSC res. 1244),25,128327.0
+Kosovo (under UNSC res. 1244),30,122292.0
+Kosovo (under UNSC res. 1244),35,113241.0
+Kosovo (under UNSC res. 1244),40,108316.0
+Kosovo (under UNSC res. 1244),45,108265.0
+Kosovo (under UNSC res. 1244),50,100468.0
+Kosovo (under UNSC res. 1244),55,89366.0
+Kosovo (under UNSC res. 1244),60,76625.0
+Kosovo (under UNSC res. 1244),65,60714.5
+Kosovo (under UNSC res. 1244),70,45071.0
+Kosovo (under UNSC res. 1244),75,32360.0
+Kosovo (under UNSC res. 1244),80,20824.5
+Kosovo (under UNSC res. 1244),85,10618.5
+Kosovo (under UNSC res. 1244),90,3998.0
+Kosovo (under UNSC res. 1244),95,1276.0
+Kosovo (under UNSC res. 1244),100,182.5
+Latvia,0,84733.0
+Latvia,5,103220.0
+Latvia,10,94536.5
+Latvia,15,95062.0
+Latvia,20,86381.0
+Latvia,25,82061.0
+Latvia,30,118821.5
+Latvia,35,131334.5
+Latvia,40,119536.5
+Latvia,45,121804.0
+Latvia,50,129198.0
+Latvia,55,123721.5
+Latvia,60,132740.5
+Latvia,65,117026.0
+Latvia,70,97843.5
+Latvia,75,71824.5
+Latvia,80,64365.5
+Latvia,85,37295.0
+Latvia,90,14554.0
+Latvia,95,3732.0
+Latvia,100,421.0
+Liechtenstein,0,1840.5
+Liechtenstein,5,1897.5
+Liechtenstein,10,1949.5
+Liechtenstein,15,1960.0
+Liechtenstein,20,2073.5
+Liechtenstein,25,2329.0
+Liechtenstein,30,2457.0
+Liechtenstein,35,2585.5
+Liechtenstein,40,2593.5
+Liechtenstein,45,2698.5
+Liechtenstein,50,3127.0
+Liechtenstein,55,3206.5
+Liechtenstein,60,2938.5
+Liechtenstein,65,2386.5
+Liechtenstein,70,2030.0
+Liechtenstein,75,1646.5
+Liechtenstein,80,1070.0
+Liechtenstein,85,535.5
+Liechtenstein,90,204.0
+Liechtenstein,95,51.0
+Liechtenstein,100,4.5
+Lithuania,0,132695.0
+Lithuania,5,144959.0
+Lithuania,10,141643.5
+Lithuania,15,125065.0
+Lithuania,20,130140.0
+Lithuania,25,152089.5
+Lithuania,30,184372.5
+Lithuania,35,181741.5
+Lithuania,40,165553.0
+Lithuania,45,177508.0
+Lithuania,50,197284.5
+Lithuania,55,198588.5
+Lithuania,60,209883.0
+Lithuania,65,168876.5
+Lithuania,70,135934.0
+Lithuania,75,102030.0
+Lithuania,80,88021.5
+Lithuania,85,53568.0
+Lithuania,90,22382.0
+Lithuania,95,5405.0
+Lithuania,100,611.5
+Luxembourg,0,33726.5
+Luxembourg,5,34504.5
+Luxembourg,10,34500.5
+Luxembourg,15,34380.5
+Luxembourg,20,37661.5
+Luxembourg,25,46111.5
+Luxembourg,30,52310.5
+Luxembourg,35,51365.0
+Luxembourg,40,50185.5
+Luxembourg,45,47276.0
+Luxembourg,50,46853.5
+Luxembourg,55,46192.5
+Luxembourg,60,39169.5
+Luxembourg,65,31071.0
+Luxembourg,70,24445.0
+Luxembourg,75,18289.5
+Luxembourg,80,13136.5
+Luxembourg,85,8388.5
+Luxembourg,90,4073.5
+Luxembourg,95,1003.5
+Luxembourg,100,122.5
+Malta,0,23657.0
+Malta,5,24117.0
+Malta,10,22868.5
+Malta,15,21704.0
+Malta,20,26305.0
+Malta,25,42029.0
+Malta,30,52564.0
+Malta,35,47315.5
+Malta,40,42047.5
+Malta,45,36696.5
+Malta,50,30941.0
+Malta,55,29007.0
+Malta,60,31061.5
+Malta,65,29231.0
+Malta,70,26614.5
+Malta,75,23887.5
+Malta,80,12340.5
+Malta,85,8170.5
+Malta,90,3402.0
+Malta,95,920.5
+Malta,100,184.5
+Monaco,0,1636.0
+Monaco,5,1664.5
+Monaco,10,1514.0
+Monaco,15,1429.0
+Monaco,20,1648.5
+Monaco,25,1640.0
+Monaco,30,1568.0
+Monaco,35,1596.0
+Monaco,40,1653.0
+Monaco,45,1691.5
+Monaco,50,1963.0
+Monaco,55,2511.0
+Monaco,60,2791.5
+Monaco,65,2616.0
+Monaco,70,2312.0
+Monaco,75,2267.0
+Monaco,80,2033.0
+Monaco,85,1663.0
+Monaco,90,1141.0
+Monaco,95,623.5
+Monaco,100,336.0
+Republic of Moldova,0,218192.5
+Republic of Moldova,5,232082.5
+Republic of Moldova,10,204435.0
+Republic of Moldova,15,213106.5
+Republic of Moldova,20,235966.5
+Republic of Moldova,25,269915.5
+Republic of Moldova,30,299855.5
+Republic of Moldova,35,304202.5
+Republic of Moldova,40,243628.5
+Republic of Moldova,45,211141.0
+Republic of Moldova,50,184568.5
+Republic of Moldova,55,178092.0
+Republic of Moldova,60,205896.0
+Republic of Moldova,65,175300.0
+Republic of Moldova,70,139690.0
+Republic of Moldova,75,54241.0
+Republic of Moldova,80,39549.5
+Republic of Moldova,85,18453.0
+Republic of Moldova,90,6079.5
+Republic of Moldova,95,1367.0
+Republic of Moldova,100,168.5
+Montenegro,0,35296.5
+Montenegro,5,38061.0
+Montenegro,10,38961.0
+Montenegro,15,37615.0
+Montenegro,20,39623.0
+Montenegro,25,41123.0
+Montenegro,30,40900.0
+Montenegro,35,44213.0
+Montenegro,40,44907.5
+Montenegro,45,42013.0
+Montenegro,50,39259.5
+Montenegro,55,39218.5
+Montenegro,60,39348.5
+Montenegro,65,36506.5
+Montenegro,70,29331.0
+Montenegro,75,16894.0
+Montenegro,80,12783.5
+Montenegro,85,7231.0
+Montenegro,90,2624.0
+Montenegro,95,510.5
+Montenegro,100,64.5
+Netherlands,0,884249.0
+Netherlands,5,882450.0
+Netherlands,10,935959.0
+Netherlands,15,984763.5
+Netherlands,20,1118072.0
+Netherlands,25,1128748.5
+Netherlands,30,1157453.5
+Netherlands,35,1091989.0
+Netherlands,40,1045048.5
+Netherlands,45,1037788.0
+Netherlands,50,1248277.5
+Netherlands,55,1261314.5
+Netherlands,60,1189250.5
+Netherlands,65,1040444.5
+Netherlands,70,927568.0
+Netherlands,75,792837.5
+Netherlands,80,481840.5
+Netherlands,85,271712.0
+Netherlands,90,110758.5
+Netherlands,95,25094.5
+Netherlands,100,2679.5
+Norway,0,274106.5
+Norway,5,300610.5
+Norway,10,324934.0
+Norway,15,325789.0
+Norway,20,333995.0
+Norway,25,360208.5
+Norway,30,389129.0
+Norway,35,371798.0
+Norway,40,356709.0
+Norway,45,355154.5
+Norway,50,379479.0
+Norway,55,358913.0
+Norway,60,317381.5
+Norway,65,290823.5
+Norway,70,256265.5
+Norway,75,225556.5
+Norway,80,131838.5
+Norway,85,74585.5
+Norway,90,35862.0
+Norway,95,9945.5
+Norway,100,1275.5
+Poland,0,2008702.0
+Poland,5,2014752.5
+Poland,10,2107283.0
+Poland,15,2183989.5
+Poland,20,2389817.0
+Poland,25,2703163.5
+Poland,30,3042561.5
+Poland,35,3341266.0
+Poland,40,3343894.0
+Poland,45,3040519.0
+Poland,50,2507638.5
+Poland,55,2273088.5
+Poland,60,2466882.5
+Poland,65,2580446.0
+Poland,70,2102895.0
+Poland,75,1282549.5
+Poland,80,815223.5
+Poland,85,531758.0
+Poland,90,231486.5
+Poland,95,52787.0
+Poland,100,5364.5
+Portugal,0,417578.0
+Portugal,5,435322.5
+Portugal,10,480875.5
+Portugal,15,521329.5
+Portugal,20,567093.5
+Portugal,25,551687.5
+Portugal,30,565167.0
+Portugal,35,599376.5
+Portugal,40,704017.0
+Portugal,45,807037.0
+Portugal,50,764837.5
+Portugal,55,738312.5
+Portugal,60,706829.0
+Portugal,65,637996.5
+Portugal,70,579531.5
+Portugal,75,472608.0
+Portugal,80,343831.0
+Portugal,85,233372.5
+Portugal,90,96128.0
+Portugal,95,22030.0
+Portugal,100,2644.5
+Romania,0,1039553.5
+Romania,5,1061612.0
+Romania,10,1049644.5
+Romania,15,1122767.5
+Romania,20,1171633.5
+Romania,25,1161676.5
+Romania,30,1303568.0
+Romania,35,1421669.0
+Romania,40,1442713.5
+Romania,45,1559500.5
+Romania,50,1557915.5
+Romania,55,1240069.5
+Romania,60,1088247.0
+Romania,65,1201870.0
+Romania,70,996254.0
+Romania,75,634129.0
+Romania,80,452188.5
+Romania,85,274220.5
+Romania,90,96502.5
+Romania,95,16126.5
+Romania,100,950.5
+Russian Federation,0,7241777.0
+Russian Federation,5,9256640.0
+Russian Federation,10,8884764.5
+Russian Federation,15,7740392.5
+Russian Federation,20,7196326.5
+Russian Federation,25,7667744.0
+Russian Federation,30,10916840.5
+Russian Federation,35,12746160.0
+Russian Federation,40,11409958.5
+Russian Federation,45,10246219.5
+Russian Federation,50,9203849.0
+Russian Federation,55,8628549.0
+Russian Federation,60,9962092.5
+Russian Federation,65,8569350.0
+Russian Federation,70,6513521.5
+Russian Federation,75,3238797.0
+Russian Federation,80,2655633.5
+Russian Federation,85,1618804.5
+Russian Federation,90,580392.5
+Russian Federation,95,152970.5
+Russian Federation,100,13576.0
+San Marino,0,1028.0
+San Marino,5,1390.0
+San Marino,10,1719.0
+San Marino,15,1715.0
+San Marino,20,1780.5
+San Marino,25,1661.5
+San Marino,30,1670.0
+San Marino,35,1834.5
+San Marino,40,2231.0
+San Marino,45,2822.0
+San Marino,50,3038.0
+San Marino,55,3103.0
+San Marino,60,2612.0
+San Marino,65,2046.5
+San Marino,70,1699.0
+San Marino,75,1347.5
+San Marino,80,959.0
+San Marino,85,611.5
+San Marino,90,287.5
+San Marino,95,77.5
+San Marino,100,9.0
+Serbia,0,337214.0
+Serbia,5,351343.0
+Serbia,10,351687.0
+Serbia,15,341698.0
+Serbia,20,373088.5
+Serbia,25,418007.5
+Serbia,30,453506.5
+Serbia,35,510439.5
+Serbia,40,526905.0
+Serbia,45,554125.0
+Serbia,50,507002.5
+Serbia,55,488496.0
+Serbia,60,471693.5
+Serbia,65,447414.5
+Serbia,70,414581.0
+Serbia,75,278364.0
+Serbia,80,183520.5
+Serbia,85,99195.5
+Serbia,90,33509.5
+Serbia,95,6670.0
+Serbia,100,615.5
+Slovakia,0,301411.5
+Slovakia,5,302677.0
+Slovakia,10,301621.5
+Slovakia,15,306423.0
+Slovakia,20,336569.5
+Slovakia,25,379629.0
+Slovakia,30,436619.0
+Slovakia,35,457181.0
+Slovakia,40,465554.5
+Slovakia,45,458546.5
+Slovakia,50,375699.5
+Slovakia,55,349720.0
+Slovakia,60,341718.0
+Slovakia,65,337713.0
+Slovakia,70,276449.0
+Slovakia,75,174693.5
+Slovakia,80,109454.0
+Slovakia,85,54973.0
+Slovakia,90,22961.0
+Slovakia,95,5081.5
+Slovakia,100,504.0
+Slovenia,0,97087.5
+Slovenia,5,105994.5
+Slovenia,10,114060.0
+Slovenia,15,101507.5
+Slovenia,20,100289.5
+Slovenia,25,113303.0
+Slovenia,30,126036.0
+Slovenia,35,144808.5
+Slovenia,40,159694.0
+Slovenia,45,158494.5
+Slovenia,50,147257.0
+Slovenia,55,152979.5
+Slovenia,60,144142.5
+Slovenia,65,138371.5
+Slovenia,70,117965.5
+Slovenia,75,78005.0
+Slovenia,80,62215.0
+Slovenia,85,37055.5
+Slovenia,90,16154.5
+Slovenia,95,3851.0
+Slovenia,100,402.5
+Spain,0,1799044.0
+Spain,5,2157510.5
+Spain,10,2441928.0
+Spain,15,2546358.5
+Spain,20,2457761.5
+Spain,25,2483552.0
+Spain,30,2697876.0
+Spain,35,2946811.0
+Spain,40,3576425.0
+Spain,45,4006307.0
+Spain,50,3789601.5
+Spain,55,3584618.5
+Spain,60,3178268.0
+Spain,65,2670455.5
+Spain,70,2275919.0
+Spain,75,1954343.0
+Spain,80,1327458.0
+Spain,85,980534.5
+Spain,90,498748.0
+Spain,95,129703.0
+Spain,100,16405.0
+Sweden,0,583599.5
+Sweden,5,627254.5
+Sweden,10,637761.5
+Sweden,15,620020.0
+Sweden,20,597802.0
+Sweden,25,654403.0
+Sweden,30,786830.5
+Sweden,35,707529.0
+Sweden,40,653928.0
+Sweden,45,650118.5
+Sweden,50,662425.5
+Sweden,55,682224.5
+Sweden,60,580512.0
+Sweden,65,544211.5
+Sweden,70,521266.0
+Sweden,75,502641.5
+Sweden,80,319693.5
+Sweden,85,176742.0
+Sweden,90,79271.5
+Sweden,95,21177.5
+Sweden,100,2674.0
+Switzerland,0,435291.0
+Switzerland,5,446286.5
+Switzerland,10,438210.5
+Switzerland,15,427436.5
+Switzerland,20,458196.5
+Switzerland,25,528689.0
+Switzerland,30,615114.5
+Switzerland,35,629405.5
+Switzerland,40,620671.5
+Switzerland,45,592088.0
+Switzerland,50,628746.0
+Switzerland,55,663923.0
+Switzerland,60,582726.0
+Switzerland,65,470521.0
+Switzerland,70,401972.5
+Switzerland,75,358125.5
+Switzerland,80,253440.0
+Switzerland,85,154930.5
+Switzerland,90,71261.0
+Switzerland,95,17647.0
+Switzerland,100,1987.0
+Ukraine,0,1301776.0
+Ukraine,5,1972154.0
+Ukraine,10,2376084.5
+Ukraine,15,1658347.0
+Ukraine,20,857661.5
+Ukraine,25,1286213.5
+Ukraine,30,2288849.0
+Ukraine,35,3193279.0
+Ukraine,40,3054517.5
+Ukraine,45,2901139.5
+Ukraine,50,2786329.0
+Ukraine,55,2679600.0
+Ukraine,60,2972151.5
+Ukraine,65,2517734.5
+Ukraine,70,2054995.5
+Ukraine,75,1101674.0
+Ukraine,80,981908.5
+Ukraine,85,538654.0
+Ukraine,90,170892.0
+Ukraine,95,45768.5
+Ukraine,100,4904.5
+North Macedonia,0,100837.0
+North Macedonia,5,113915.5
+North Macedonia,10,117295.5
+North Macedonia,15,115103.0
+North Macedonia,20,133764.0
+North Macedonia,25,147343.5
+North Macedonia,30,155679.5
+North Macedonia,35,163424.5
+North Macedonia,40,161481.5
+North Macedonia,45,149808.5
+North Macedonia,50,140171.0
+North Macedonia,55,138751.5
+North Macedonia,60,132500.5
+North Macedonia,65,117200.5
+North Macedonia,70,91755.5
+North Macedonia,75,56455.5
+North Macedonia,80,32078.5
+North Macedonia,85,13852.0
+North Macedonia,90,3658.0
+North Macedonia,95,565.5
+North Macedonia,100,38.0
+United Kingdom,0,3476509.5
+United Kingdom,5,3988671.0
+United Kingdom,10,4196842.0
+United Kingdom,15,3942084.5
+United Kingdom,20,3873955.0
+United Kingdom,25,4373239.5
+United Kingdom,30,4604477.5
+United Kingdom,35,4477573.5
+United Kingdom,40,4370859.5
+United Kingdom,45,4004631.5
+United Kingdom,50,4465246.0
+United Kingdom,55,4595309.0
+United Kingdom,60,4187002.0
+United Kingdom,65,3526875.5
+United Kingdom,70,3177730.5
+United Kingdom,75,2864542.0
+United Kingdom,80,1796030.0
+United Kingdom,85,1128257.5
+United Kingdom,90,513998.5
+United Kingdom,95,149083.5
+United Kingdom,100,23884.0
+Guernsey,0,3049.5
+Guernsey,5,3192.5
+Guernsey,10,3687.0
+Guernsey,15,3944.0
+Guernsey,20,4295.0
+Guernsey,25,4494.0
+Guernsey,30,4522.0
+Guernsey,35,4198.0
+Guernsey,40,4310.5
+Guernsey,45,4217.0
+Guernsey,50,4764.5
+Guernsey,55,4418.0
+Guernsey,60,3692.0
+Guernsey,65,2846.5
+Guernsey,70,2671.0
+Guernsey,75,2431.5
+Guernsey,80,1400.0
+Guernsey,85,895.5
+Guernsey,90,368.5
+Guernsey,95,116.0
+Guernsey,100,31.0
+Jersey,0,5608.5
+Jersey,5,5198.0
+Jersey,10,5613.5
+Jersey,15,5813.0
+Jersey,20,6642.0
+Jersey,25,8140.5
+Jersey,30,8696.5
+Jersey,35,8267.0
+Jersey,40,8414.5
+Jersey,45,7744.5
+Jersey,50,8080.5
+Jersey,55,8285.5
+Jersey,60,6864.5
+Jersey,65,5513.5
+Jersey,70,4592.0
+Jersey,75,3708.0
+Jersey,80,2316.0
+Jersey,85,1469.5
+Jersey,90,615.5
+Jersey,95,183.5
+Jersey,100,36.0
+Isle of Man,0,3506.5
+Isle of Man,5,3929.0
+Isle of Man,10,4755.5
+Isle of Man,15,4565.0
+Isle of Man,20,4276.5
+Isle of Man,25,4409.5
+Isle of Man,30,4865.5
+Isle of Man,35,5077.0
+Isle of Man,40,5342.0
+Isle of Man,45,5404.0
+Isle of Man,50,6534.0
+Isle of Man,55,6641.0
+Isle of Man,60,6181.5
+Isle of Man,65,5112.5
+Isle of Man,70,4791.0
+Isle of Man,75,4182.0
+Isle of Man,80,2658.5
+Isle of Man,85,1549.0
+Isle of Man,90,657.0
+Isle of Man,95,221.0
+Isle of Man,100,52.0
+American Samoa,0,3779.5
+American Samoa,5,4050.5
+American Samoa,10,4050.5
+American Samoa,15,3642.0
+American Samoa,20,3126.0
+American Samoa,25,3532.5
+American Samoa,30,3543.0
+American Samoa,35,2185.5
+American Samoa,40,2380.0
+American Samoa,45,2637.0
+American Samoa,50,2720.0
+American Samoa,55,2654.0
+American Samoa,60,2237.0
+American Samoa,65,1542.5
+American Samoa,70,991.5
+American Samoa,75,513.0
+American Samoa,80,224.5
+American Samoa,85,85.0
+American Samoa,90,17.5
+American Samoa,95,3.0
+American Samoa,100,0.0
+Antigua and Barbuda,0,5461.5
+Antigua and Barbuda,5,5369.0
+Antigua and Barbuda,10,6318.5
+Antigua and Barbuda,15,6410.0
+Antigua and Barbuda,20,6816.5
+Antigua and Barbuda,25,7387.5
+Antigua and Barbuda,30,7215.5
+Antigua and Barbuda,35,7063.5
+Antigua and Barbuda,40,6572.0
+Antigua and Barbuda,45,6458.0
+Antigua and Barbuda,50,6775.5
+Antigua and Barbuda,55,6598.0
+Antigua and Barbuda,60,5369.0
+Antigua and Barbuda,65,3943.0
+Antigua and Barbuda,70,2817.0
+Antigua and Barbuda,75,1802.5
+Antigua and Barbuda,80,1032.0
+Antigua and Barbuda,85,561.0
+Antigua and Barbuda,90,238.0
+Antigua and Barbuda,95,76.5
+Antigua and Barbuda,100,13.5
+Argentina,0,3173295.5
+Argentina,5,3613495.0
+Argentina,10,3619490.0
+Argentina,15,3500823.0
+Argentina,20,3475406.0
+Argentina,25,3513414.0
+Argentina,30,3431440.0
+Argentina,35,3237103.0
+Argentina,40,3159882.0
+Argentina,45,2931180.5
+Argentina,50,2468825.0
+Argentina,55,2170965.0
+Argentina,60,1958425.0
+Argentina,65,1726677.5
+Argentina,70,1407936.5
+Argentina,75,1056199.5
+Argentina,80,678148.0
+Argentina,85,386524.0
+Argentina,90,186977.0
+Argentina,95,64479.5
+Argentina,100,13198.0
+Australia,0,1525324.0
+Australia,5,1604347.0
+Australia,10,1623993.5
+Australia,15,1565990.5
+Australia,20,1626770.0
+Australia,25,1901395.0
+Australia,30,1998678.0
+Australia,35,1942609.0
+Australia,40,1771395.5
+Australia,45,1622045.5
+Australia,50,1673219.5
+Australia,55,1524047.5
+Australia,60,1502634.5
+Australia,65,1319989.5
+Australia,70,1146441.0
+Australia,75,923303.5
+Australia,80,591873.5
+Australia,85,351368.5
+Australia,90,165143.0
+Australia,95,51285.0
+Australia,100,7258.0
+Bahamas,0,23198.0
+Bahamas,5,24475.5
+Bahamas,10,28617.5
+Bahamas,15,33075.5
+Bahamas,20,33995.0
+Bahamas,25,34902.0
+Bahamas,30,33138.0
+Bahamas,35,29382.5
+Bahamas,40,29180.5
+Bahamas,45,28944.0
+Bahamas,50,28549.0
+Bahamas,55,25315.5
+Bahamas,60,21542.5
+Bahamas,65,14969.0
+Bahamas,70,9581.0
+Bahamas,75,6549.5
+Bahamas,80,4112.0
+Bahamas,85,2053.5
+Bahamas,90,778.5
+Bahamas,95,218.0
+Bahamas,100,46.5
+Barbados,0,15038.5
+Barbados,5,15211.5
+Barbados,10,16626.5
+Barbados,15,18036.0
+Barbados,20,18861.5
+Barbados,25,17831.5
+Barbados,30,18913.5
+Barbados,35,18397.0
+Barbados,40,18568.5
+Barbados,45,18779.0
+Barbados,50,19552.0
+Barbados,55,19478.5
+Barbados,60,19286.0
+Barbados,65,16854.0
+Barbados,70,12690.0
+Barbados,75,9167.5
+Barbados,80,5137.0
+Barbados,85,2553.0
+Barbados,90,839.0
+Barbados,95,159.0
+Barbados,100,16.0
+Bermuda,0,2573.5
+Bermuda,5,3204.0
+Bermuda,10,3419.5
+Bermuda,15,3421.5
+Bermuda,20,3464.0
+Bermuda,25,2974.0
+Bermuda,30,2790.0
+Bermuda,35,3857.5
+Bermuda,40,4656.5
+Bermuda,45,4728.0
+Bermuda,50,5007.5
+Bermuda,55,5072.0
+Bermuda,60,5302.5
+Bermuda,65,4528.0
+Bermuda,70,3482.0
+Bermuda,75,2507.0
+Bermuda,80,1581.0
+Bermuda,85,954.0
+Bermuda,90,432.5
+Bermuda,95,95.5
+Bermuda,100,18.5
+Bolivia (Plurinational State of),0,1277088.5
+Bolivia (Plurinational State of),5,1257810.0
+Bolivia (Plurinational State of),10,1242004.0
+Bolivia (Plurinational State of),15,1196509.5
+Bolivia (Plurinational State of),20,1137846.0
+Bolivia (Plurinational State of),25,1078855.5
+Bolivia (Plurinational State of),30,1011673.0
+Bolivia (Plurinational State of),35,882478.0
+Bolivia (Plurinational State of),40,749687.5
+Bolivia (Plurinational State of),45,639168.5
+Bolivia (Plurinational State of),50,532357.0
+Bolivia (Plurinational State of),55,433810.5
+Bolivia (Plurinational State of),60,344954.0
+Bolivia (Plurinational State of),65,250261.5
+Bolivia (Plurinational State of),70,168786.5
+Bolivia (Plurinational State of),75,108297.5
+Bolivia (Plurinational State of),80,52302.0
+Bolivia (Plurinational State of),85,19079.0
+Bolivia (Plurinational State of),90,4845.5
+Bolivia (Plurinational State of),95,705.5
+Bolivia (Plurinational State of),100,51.5
+Brazil,0,13815080.5
+Brazil,5,14624295.5
+Brazil,10,14851855.5
+Brazil,15,15526776.5
+Brazil,20,16548757.0
+Brazil,25,17092006.0
+Brazil,30,17069026.5
+Brazil,35,17468664.0
+Brazil,40,16753710.0
+Brazil,45,14801821.0
+Brazil,50,13170500.0
+Brazil,55,12068185.5
+Brazil,60,10529917.0
+Brazil,65,8283673.0
+Brazil,70,6143243.5
+Brazil,75,3936283.5
+Brazil,80,2404418.5
+Brazil,85,1028289.5
+Brazil,90,265712.0
+Brazil,95,37799.0
+Brazil,100,2432.0
+Belize,0,36085.5
+Belize,5,38818.5
+Belize,10,37086.0
+Belize,15,38626.0
+Belize,20,39667.5
+Belize,25,38046.5
+Belize,30,35241.5
+Belize,35,30706.5
+Belize,40,26031.5
+Belize,45,22224.0
+Belize,50,19237.0
+Belize,55,15311.5
+Belize,60,12191.5
+Belize,65,8604.0
+Belize,70,5795.5
+Belize,75,3516.0
+Belize,80,2081.0
+Belize,85,1040.5
+Belize,90,412.0
+Belize,95,93.5
+Belize,100,9.0
+Solomon Islands,0,103043.0
+Solomon Islands,5,97705.5
+Solomon Islands,10,87208.5
+Solomon Islands,15,75516.0
+Solomon Islands,20,66230.5
+Solomon Islands,25,57359.0
+Solomon Islands,30,49078.0
+Solomon Islands,35,43374.5
+Solomon Islands,40,38153.5
+Solomon Islands,45,32635.5
+Solomon Islands,50,27893.5
+Solomon Islands,55,21131.5
+Solomon Islands,60,15210.5
+Solomon Islands,65,10296.5
+Solomon Islands,70,7332.0
+Solomon Islands,75,4708.0
+Solomon Islands,80,2345.0
+Solomon Islands,85,905.0
+Solomon Islands,90,256.0
+Solomon Islands,95,40.5
+Solomon Islands,100,2.0
+British Virgin Islands,0,1178.5
+British Virgin Islands,5,1381.0
+British Virgin Islands,10,1751.0
+British Virgin Islands,15,2242.5
+British Virgin Islands,20,2129.0
+British Virgin Islands,25,2204.0
+British Virgin Islands,30,2220.0
+British Virgin Islands,35,2507.0
+British Virgin Islands,40,2922.5
+British Virgin Islands,45,2727.0
+British Virgin Islands,50,2643.0
+British Virgin Islands,55,2313.5
+British Virgin Islands,60,2010.5
+British Virgin Islands,65,1403.5
+British Virgin Islands,70,923.0
+British Virgin Islands,75,592.0
+British Virgin Islands,80,259.0
+British Virgin Islands,85,90.5
+British Virgin Islands,90,33.5
+British Virgin Islands,95,7.0
+British Virgin Islands,100,0.0
+Canada,0,1901996.0
+Canada,5,1993401.5
+Canada,10,2078946.0
+Canada,15,2085161.5
+Canada,20,2367192.5
+Canada,25,2665570.5
+Canada,30,2759595.0
+Canada,35,2695138.5
+Canada,40,2600987.5
+Canada,45,2424041.5
+Canada,50,2412257.0
+Canada,55,2554068.5
+Canada,60,2662841.5
+Canada,65,2361602.0
+Canada,70,1916468.0
+Canada,75,1460280.0
+Canada,80,924049.5
+Canada,85,548951.5
+Canada,90,272372.0
+Canada,95,83005.5
+Canada,100,13365.5
+Cayman Islands,0,3454.0
+Cayman Islands,5,4319.5
+Cayman Islands,10,3813.0
+Cayman Islands,15,3013.5
+Cayman Islands,20,3323.5
+Cayman Islands,25,4792.0
+Cayman Islands,30,6242.5
+Cayman Islands,35,6768.5
+Cayman Islands,40,6699.5
+Cayman Islands,45,6405.0
+Cayman Islands,50,5925.5
+Cayman Islands,55,4996.0
+Cayman Islands,60,3645.0
+Cayman Islands,65,2382.5
+Cayman Islands,70,1632.0
+Cayman Islands,75,1033.5
+Cayman Islands,80,537.0
+Cayman Islands,85,241.0
+Cayman Islands,90,70.5
+Cayman Islands,95,15.0
+Cayman Islands,100,1.0
+Chile,0,1139774.5
+Chile,5,1196335.0
+Chile,10,1232034.0
+Chile,15,1188989.0
+Chile,20,1327008.0
+Chile,25,1544321.5
+Chile,30,1638146.0
+Chile,35,1523710.0
+Chile,40,1392921.5
+Chile,45,1313294.5
+Chile,50,1258767.0
+Chile,55,1181878.5
+Chile,60,1048116.5
+Chile,65,880819.5
+Chile,70,689223.0
+Chile,75,468625.5
+Chile,80,300222.5
+Chile,85,182050.5
+Chile,90,89179.0
+Chile,95,29316.5
+Chile,100,4857.5
+Colombia,0,3615288.0
+Colombia,5,3678582.0
+Colombia,10,3706509.0
+Colombia,15,3918647.0
+Colombia,20,4282994.0
+Colombia,25,4484221.5
+Colombia,30,4386127.0
+Colombia,35,4035158.5
+Colombia,40,3659932.0
+Colombia,45,3211666.5
+Colombia,50,2957130.5
+Colombia,55,2837351.0
+Colombia,60,2431145.0
+Colombia,65,1865183.0
+Colombia,70,1339335.5
+Colombia,75,870117.0
+Colombia,80,501657.0
+Colombia,85,223595.5
+Colombia,90,67055.0
+Colombia,95,12064.5
+Colombia,100,1408.0
+Cook Islands,0,1369.5
+Cook Islands,5,1379.0
+Cook Islands,10,1269.0
+Cook Islands,15,1273.0
+Cook Islands,20,1205.0
+Cook Islands,25,1121.0
+Cook Islands,30,1032.0
+Cook Islands,35,978.0
+Cook Islands,40,956.5
+Cook Islands,45,1027.0
+Cook Islands,50,1144.5
+Cook Islands,55,1200.5
+Cook Islands,60,1022.5
+Cook Islands,65,791.0
+Cook Islands,70,567.5
+Cook Islands,75,351.0
+Cook Islands,80,224.5
+Cook Islands,85,99.0
+Cook Islands,90,28.0
+Cook Islands,95,5.0
+Cook Islands,100,0.0
+Costa Rica,0,311812.5
+Costa Rica,5,350889.5
+Costa Rica,10,368577.0
+Costa Rica,15,368312.5
+Costa Rica,20,387311.5
+Costa Rica,25,410275.0
+Costa Rica,30,425935.5
+Costa Rica,35,422763.5
+Costa Rica,40,380938.0
+Costa Rica,45,332175.0
+Costa Rica,50,304180.0
+Costa Rica,55,297955.0
+Costa Rica,60,267091.0
+Costa Rica,65,207432.0
+Costa Rica,70,154544.0
+Costa Rica,75,109029.5
+Costa Rica,80,66924.0
+Costa Rica,85,33051.0
+Costa Rica,90,10777.0
+Costa Rica,95,2024.5
+Costa Rica,100,175.0
+Cuba,0,520449.0
+Cuba,5,593977.0
+Cuba,10,628486.0
+Cuba,15,593795.0
+Cuba,20,692088.5
+Cuba,25,692923.0
+Cuba,30,795504.0
+Cuba,35,766473.5
+Cuba,40,626371.0
+Cuba,45,766318.0
+Cuba,50,973711.0
+Cuba,55,982014.5
+Cuba,60,759537.5
+Cuba,65,541223.0
+Cuba,70,462564.5
+Cuba,75,359290.0
+Cuba,80,240475.5
+Cuba,85,126549.5
+Cuba,90,54670.0
+Cuba,95,15698.0
+Cuba,100,2330.5
+Dominica,0,4730.0
+Dominica,5,4538.0
+Dominica,10,4894.0
+Dominica,15,5422.5
+Dominica,20,6050.0
+Dominica,25,6545.0
+Dominica,30,6265.5
+Dominica,35,5382.5
+Dominica,40,4684.0
+Dominica,45,4213.0
+Dominica,50,4898.5
+Dominica,55,4543.5
+Dominica,60,3701.0
+Dominica,65,2728.0
+Dominica,70,1854.0
+Dominica,75,1279.0
+Dominica,80,786.5
+Dominica,85,390.5
+Dominica,90,117.0
+Dominica,95,17.5
+Dominica,100,0.0
+Dominican Republic,0,997720.5
+Dominican Republic,5,1022258.5
+Dominican Republic,10,1020477.0
+Dominican Republic,15,967078.0
+Dominican Republic,20,956477.0
+Dominican Republic,25,931952.5
+Dominican Republic,30,885267.0
+Dominican Republic,35,796595.0
+Dominican Republic,40,725155.5
+Dominican Republic,45,646975.5
+Dominican Republic,50,567406.5
+Dominican Republic,55,509950.0
+Dominican Republic,60,435933.0
+Dominican Republic,65,330765.0
+Dominican Republic,70,223841.0
+Dominican Republic,75,141331.0
+Dominican Republic,80,90483.5
+Dominican Republic,85,54144.5
+Dominican Republic,90,21880.0
+Dominican Republic,95,6041.5
+Dominican Republic,100,1240.0
+Ecuador,0,1482638.0
+Ecuador,5,1512650.5
+Ecuador,10,1604510.5
+Ecuador,15,1566546.5
+Ecuador,20,1573209.0
+Ecuador,25,1559927.5
+Ecuador,30,1481453.0
+Ecuador,35,1361015.0
+Ecuador,40,1198128.5
+Ecuador,45,1039699.0
+Ecuador,50,910123.5
+Ecuador,55,784664.5
+Ecuador,60,646896.0
+Ecuador,65,519848.0
+Ecuador,70,397387.0
+Ecuador,75,263537.5
+Ecuador,80,166715.0
+Ecuador,85,82400.5
+Ecuador,90,30893.0
+Ecuador,95,7212.5
+Ecuador,100,1029.0
+El Salvador,0,497720.0
+El Salvador,5,534797.5
+El Salvador,10,560591.0
+El Salvador,15,561006.5
+El Salvador,20,627400.5
+El Salvador,25,627292.5
+El Salvador,30,516322.5
+El Salvador,35,398017.0
+El Salvador,40,369668.0
+El Salvador,45,345451.5
+El Salvador,50,309510.0
+El Salvador,55,266984.5
+El Salvador,60,217944.0
+El Salvador,65,177738.5
+El Salvador,70,140985.0
+El Salvador,75,100403.0
+El Salvador,80,65403.0
+El Salvador,85,31824.5
+El Salvador,90,12388.0
+El Salvador,95,3013.5
+El Salvador,100,481.5
+Falkland Islands (Malvinas),0,209.5
+Falkland Islands (Malvinas),5,226.5
+Falkland Islands (Malvinas),10,230.5
+Falkland Islands (Malvinas),15,221.5
+Falkland Islands (Malvinas),20,190.0
+Falkland Islands (Malvinas),25,212.5
+Falkland Islands (Malvinas),30,255.5
+Falkland Islands (Malvinas),35,270.5
+Falkland Islands (Malvinas),40,310.0
+Falkland Islands (Malvinas),45,326.0
+Falkland Islands (Malvinas),50,342.0
+Falkland Islands (Malvinas),55,305.0
+Falkland Islands (Malvinas),60,262.5
+Falkland Islands (Malvinas),65,147.5
+Falkland Islands (Malvinas),70,93.0
+Falkland Islands (Malvinas),75,77.0
+Falkland Islands (Malvinas),80,63.5
+Falkland Islands (Malvinas),85,38.0
+Falkland Islands (Malvinas),90,9.5
+Falkland Islands (Malvinas),95,0.5
+Falkland Islands (Malvinas),100,0.0
+Fiji,0,87570.5
+Fiji,5,90057.5
+Fiji,10,87311.0
+Fiji,15,82502.5
+Fiji,20,74452.0
+Fiji,25,73360.5
+Fiji,30,72946.5
+Fiji,35,69660.0
+Fiji,40,65940.0
+Fiji,45,52781.5
+Fiji,50,44722.0
+Fiji,55,41853.5
+Fiji,60,36143.5
+Fiji,65,26275.0
+Fiji,70,15313.0
+Fiji,75,8995.0
+Fiji,80,4466.0
+Fiji,85,1608.5
+Fiji,90,360.0
+Fiji,95,52.0
+Fiji,100,5.0
+French Guiana,0,37229.5
+French Guiana,5,33535.5
+French Guiana,10,28842.0
+French Guiana,15,28989.5
+French Guiana,20,27600.5
+French Guiana,25,22914.5
+French Guiana,30,18709.5
+French Guiana,35,18571.0
+French Guiana,40,18479.0
+French Guiana,45,17512.0
+French Guiana,50,16336.5
+French Guiana,55,13364.5
+French Guiana,60,10743.0
+French Guiana,65,8212.5
+French Guiana,70,5534.0
+French Guiana,75,3128.5
+French Guiana,80,1554.0
+French Guiana,85,666.0
+French Guiana,90,195.0
+French Guiana,95,36.0
+French Guiana,100,2.0
+French Polynesia,0,19375.0
+French Polynesia,5,21253.5
+French Polynesia,10,23513.5
+French Polynesia,15,22955.5
+French Polynesia,20,22750.0
+French Polynesia,25,21176.5
+French Polynesia,30,23604.5
+French Polynesia,35,24447.5
+French Polynesia,40,22052.5
+French Polynesia,45,19409.0
+French Polynesia,50,19970.0
+French Polynesia,55,19263.5
+French Polynesia,60,16333.0
+French Polynesia,65,12180.0
+French Polynesia,70,8299.0
+French Polynesia,75,6086.0
+French Polynesia,80,3774.0
+French Polynesia,85,1745.0
+French Polynesia,90,516.0
+French Polynesia,95,141.0
+French Polynesia,100,26.5
+Kiribati,0,16748.0
+Kiribati,5,16153.0
+Kiribati,10,15039.5
+Kiribati,15,11966.0
+Kiribati,20,11094.0
+Kiribati,25,11250.5
+Kiribati,30,10224.0
+Kiribati,35,9210.0
+Kiribati,40,7377.5
+Kiribati,45,5577.5
+Kiribati,50,5143.5
+Kiribati,55,5006.0
+Kiribati,60,3515.5
+Kiribati,65,2222.5
+Kiribati,70,1628.0
+Kiribati,75,844.0
+Kiribati,80,385.5
+Kiribati,85,96.5
+Kiribati,90,30.5
+Kiribati,95,3.0
+Kiribati,100,0.0
+Greenland,0,4064.5
+Greenland,5,3948.5
+Greenland,10,3772.5
+Greenland,15,3618.5
+Greenland,20,3538.0
+Greenland,25,4256.5
+Greenland,30,4664.5
+Greenland,35,4237.0
+Greenland,40,3521.0
+Greenland,45,2815.5
+Greenland,50,3394.0
+Greenland,55,4737.5
+Greenland,60,4047.5
+Greenland,65,2757.5
+Greenland,70,1578.0
+Greenland,75,923.0
+Greenland,80,546.5
+Greenland,85,159.0
+Greenland,90,55.0
+Greenland,95,8.5
+Greenland,100,0.0
+Grenada,0,9838.0
+Grenada,5,10218.0
+Grenada,10,10000.0
+Grenada,15,9032.5
+Grenada,20,8904.5
+Grenada,25,9555.0
+Grenada,30,11057.5
+Grenada,35,11076.5
+Grenada,40,8190.0
+Grenada,45,6522.5
+Grenada,50,6164.5
+Grenada,55,6364.0
+Grenada,60,6215.0
+Grenada,65,4665.5
+Grenada,70,3187.5
+Grenada,75,2134.5
+Grenada,80,1541.5
+Grenada,85,994.0
+Grenada,90,414.5
+Grenada,95,96.5
+Grenada,100,11.5
+Guadeloupe,0,22135.0
+Guadeloupe,5,23650.5
+Guadeloupe,10,25009.5
+Guadeloupe,15,27636.0
+Guadeloupe,20,29225.5
+Guadeloupe,25,26596.5
+Guadeloupe,30,18703.5
+Guadeloupe,35,14628.5
+Guadeloupe,40,16869.0
+Guadeloupe,45,22896.0
+Guadeloupe,50,28457.0
+Guadeloupe,55,30437.5
+Guadeloupe,60,28200.0
+Guadeloupe,65,23410.0
+Guadeloupe,70,20128.0
+Guadeloupe,75,15400.5
+Guadeloupe,80,10429.0
+Guadeloupe,85,6639.0
+Guadeloupe,90,3570.0
+Guadeloupe,95,1411.0
+Guadeloupe,100,407.0
+Guam,0,13776.5
+Guam,5,15129.0
+Guam,10,15714.0
+Guam,15,13835.5
+Guam,20,13223.0
+Guam,25,12330.0
+Guam,30,10551.0
+Guam,35,9136.0
+Guam,40,8541.0
+Guam,45,9327.5
+Guam,50,10515.5
+Guam,55,10446.5
+Guam,60,9199.0
+Guam,65,7192.0
+Guam,70,5741.0
+Guam,75,3966.5
+Guam,80,2120.5
+Guam,85,1362.0
+Guam,90,607.5
+Guam,95,198.0
+Guam,100,40.0
+Guatemala,0,1857850.5
+Guatemala,5,1983693.0
+Guatemala,10,1921956.0
+Guatemala,15,1881887.0
+Guatemala,20,1837247.5
+Guatemala,25,1675464.0
+Guatemala,30,1467360.5
+Guatemala,35,1227547.5
+Guatemala,40,1022704.5
+Guatemala,45,804648.0
+Guatemala,50,621813.5
+Guatemala,55,497601.5
+Guatemala,60,399579.0
+Guatemala,65,327359.0
+Guatemala,70,237173.5
+Guatemala,75,152897.5
+Guatemala,80,92828.5
+Guatemala,85,50392.5
+Guatemala,90,23702.5
+Guatemala,95,7074.0
+Guatemala,100,1246.0
+Guyana,0,78736.5
+Guyana,5,77182.0
+Guyana,10,75671.0
+Guyana,15,72716.0
+Guyana,20,73093.5
+Guyana,25,72906.0
+Guyana,30,62350.0
+Guyana,35,48253.5
+Guyana,40,45823.0
+Guyana,45,45540.5
+Guyana,50,41708.0
+Guyana,55,36841.5
+Guyana,60,30385.0
+Guyana,65,21732.0
+Guyana,70,14190.5
+Guyana,75,8643.0
+Guyana,80,4606.5
+Guyana,85,2304.0
+Guyana,90,789.0
+Guyana,95,295.0
+Guyana,100,67.5
+Haiti,0,1275717.5
+Haiti,5,1242687.5
+Haiti,10,1209155.5
+Haiti,15,1152974.5
+Haiti,20,1092375.5
+Haiti,25,1013296.5
+Haiti,30,948899.5
+Haiti,35,837620.5
+Haiti,40,702000.0
+Haiti,45,562370.0
+Haiti,50,456608.5
+Haiti,55,383034.0
+Haiti,60,307919.5
+Haiti,65,231116.0
+Haiti,70,152728.0
+Haiti,75,91645.5
+Haiti,80,45764.0
+Haiti,85,15535.5
+Haiti,90,3031.5
+Haiti,95,279.5
+Haiti,100,4.5
+Honduras,0,1065033.0
+Honduras,5,1037991.5
+Honduras,10,1040603.5
+Honduras,15,1063632.0
+Honduras,20,1060081.0
+Honduras,25,975348.0
+Honduras,30,868799.0
+Honduras,35,771187.5
+Honduras,40,682187.5
+Honduras,45,558813.0
+Honduras,50,426532.5
+Honduras,55,324416.0
+Honduras,60,255188.5
+Honduras,65,196025.0
+Honduras,70,136262.0
+Honduras,75,75279.5
+Honduras,80,36830.5
+Honduras,85,14919.0
+Honduras,90,4015.0
+Honduras,95,612.0
+Honduras,100,42.0
+Jamaica,0,162706.0
+Jamaica,5,182886.5
+Jamaica,10,203327.0
+Jamaica,15,223316.0
+Jamaica,20,231138.0
+Jamaica,25,263759.0
+Jamaica,30,255131.5
+Jamaica,35,241694.0
+Jamaica,40,210550.5
+Jamaica,45,178351.0
+Jamaica,50,169263.5
+Jamaica,55,155076.0
+Jamaica,60,129314.0
+Jamaica,65,92027.0
+Jamaica,70,56957.0
+Jamaica,75,39208.0
+Jamaica,80,20618.5
+Jamaica,85,7539.0
+Jamaica,90,2308.0
+Jamaica,95,347.5
+Jamaica,100,25.5
+Martinique,0,17420.5
+Martinique,5,19097.0
+Martinique,10,20676.0
+Martinique,15,23400.5
+Martinique,20,23722.0
+Martinique,25,20763.5
+Martinique,30,15769.5
+Martinique,35,15142.5
+Martinique,40,16287.0
+Martinique,45,20847.5
+Martinique,50,27397.0
+Martinique,55,30692.0
+Martinique,60,29604.0
+Martinique,65,24892.5
+Martinique,70,21061.0
+Martinique,75,16001.0
+Martinique,80,11483.0
+Martinique,85,7692.0
+Martinique,90,3620.0
+Martinique,95,1181.0
+Martinique,100,231.0
+Mexico,0,9479920.0
+Mexico,5,10484319.5
+Mexico,10,10890108.5
+Mexico,15,10803503.5
+Mexico,20,10644124.5
+Mexico,25,10284390.0
+Mexico,30,9891155.0
+Mexico,35,9307384.0
+Mexico,40,8763730.5
+Mexico,45,8171912.5
+Mexico,50,7351927.0
+Mexico,55,6257809.5
+Mexico,60,5093487.0
+Mexico,65,3984711.0
+Mexico,70,2888329.5
+Mexico,75,1919669.0
+Mexico,80,1218685.0
+Mexico,85,666270.5
+Mexico,90,275008.0
+Mexico,95,69764.5
+Mexico,100,9357.5
+Montserrat,0,186.5
+Montserrat,5,153.5
+Montserrat,10,207.5
+Montserrat,15,286.0
+Montserrat,20,334.5
+Montserrat,25,328.5
+Montserrat,30,224.5
+Montserrat,35,253.0
+Montserrat,40,237.0
+Montserrat,45,310.5
+Montserrat,50,370.0
+Montserrat,55,390.5
+Montserrat,60,312.5
+Montserrat,65,267.0
+Montserrat,70,250.5
+Montserrat,75,154.0
+Montserrat,80,76.0
+Montserrat,85,37.5
+Montserrat,90,7.0
+Montserrat,95,0.0
+Montserrat,100,0.0
+Nauru,0,1677.5
+Nauru,5,1706.0
+Nauru,10,1569.5
+Nauru,15,1206.0
+Nauru,20,983.5
+Nauru,25,1001.5
+Nauru,30,952.0
+Nauru,35,932.5
+Nauru,40,763.5
+Nauru,45,542.5
+Nauru,50,438.0
+Nauru,55,391.0
+Nauru,60,276.5
+Nauru,65,190.0
+Nauru,70,91.0
+Nauru,75,43.0
+Nauru,80,9.5
+Nauru,85,6.5
+Nauru,90,0.0
+Nauru,95,0.0
+Nauru,100,0.0
+Curaçao,0,10760.0
+Curaçao,5,10308.0
+Curaçao,10,11482.0
+Curaçao,15,13034.5
+Curaçao,20,14155.0
+Curaçao,25,16260.5
+Curaçao,30,14730.0
+Curaçao,35,11923.5
+Curaçao,40,11005.0
+Curaçao,45,11221.0
+Curaçao,50,12083.5
+Curaçao,55,12954.0
+Curaçao,60,12647.0
+Curaçao,65,10423.0
+Curaçao,70,8240.5
+Curaçao,75,5723.0
+Curaçao,80,3222.0
+Curaçao,85,1397.5
+Curaçao,90,425.0
+Curaçao,95,75.0
+Curaçao,100,7.0
+Aruba,0,4304.0
+Aruba,5,5801.0
+Aruba,10,6593.0
+Aruba,15,7003.5
+Aruba,20,6324.5
+Aruba,25,5749.5
+Aruba,30,6616.5
+Aruba,35,6840.5
+Aruba,40,6980.5
+Aruba,45,7343.5
+Aruba,50,7879.5
+Aruba,55,8559.0
+Aruba,60,8368.0
+Aruba,65,7026.5
+Aruba,70,5154.0
+Aruba,75,3143.5
+Aruba,80,1674.5
+Aruba,85,714.0
+Aruba,90,179.5
+Aruba,95,21.0
+Aruba,100,1.0
+Sint Maarten (Dutch part),0,1574.0
+Sint Maarten (Dutch part),5,919.5
+Sint Maarten (Dutch part),10,2109.5
+Sint Maarten (Dutch part),15,3876.5
+Sint Maarten (Dutch part),20,5494.5
+Sint Maarten (Dutch part),25,4040.5
+Sint Maarten (Dutch part),30,649.5
+Sint Maarten (Dutch part),35,80.0
+Sint Maarten (Dutch part),40,867.0
+Sint Maarten (Dutch part),45,3653.0
+Sint Maarten (Dutch part),50,5807.5
+Sint Maarten (Dutch part),55,5671.0
+Sint Maarten (Dutch part),60,4313.5
+Sint Maarten (Dutch part),65,2642.0
+Sint Maarten (Dutch part),70,1477.5
+Sint Maarten (Dutch part),75,762.0
+Sint Maarten (Dutch part),80,234.5
+Sint Maarten (Dutch part),85,46.5
+Sint Maarten (Dutch part),90,2.5
+Sint Maarten (Dutch part),95,1.0
+Sint Maarten (Dutch part),100,0.0
+"Bonaire, Sint Eustatius and Saba",0,1431.5
+"Bonaire, Sint Eustatius and Saba",5,1500.5
+"Bonaire, Sint Eustatius and Saba",10,1593.0
+"Bonaire, Sint Eustatius and Saba",15,1507.0
+"Bonaire, Sint Eustatius and Saba",20,1278.5
+"Bonaire, Sint Eustatius and Saba",25,1583.0
+"Bonaire, Sint Eustatius and Saba",30,2134.5
+"Bonaire, Sint Eustatius and Saba",35,2175.0
+"Bonaire, Sint Eustatius and Saba",40,2015.5
+"Bonaire, Sint Eustatius and Saba",45,1872.5
+"Bonaire, Sint Eustatius and Saba",50,1968.5
+"Bonaire, Sint Eustatius and Saba",55,2160.5
+"Bonaire, Sint Eustatius and Saba",60,2049.5
+"Bonaire, Sint Eustatius and Saba",65,1433.0
+"Bonaire, Sint Eustatius and Saba",70,1071.0
+"Bonaire, Sint Eustatius and Saba",75,706.5
+"Bonaire, Sint Eustatius and Saba",80,397.0
+"Bonaire, Sint Eustatius and Saba",85,190.5
+"Bonaire, Sint Eustatius and Saba",90,64.5
+"Bonaire, Sint Eustatius and Saba",95,15.5
+"Bonaire, Sint Eustatius and Saba",100,0.5
+New Caledonia,0,20654.5
+New Caledonia,5,21672.0
+New Caledonia,10,21949.0
+New Caledonia,15,21361.0
+New Caledonia,20,21063.5
+New Caledonia,25,19008.5
+New Caledonia,30,21139.5
+New Caledonia,35,21341.5
+New Caledonia,40,20379.5
+New Caledonia,45,19580.5
+New Caledonia,50,19937.5
+New Caledonia,55,17190.0
+New Caledonia,60,14327.5
+New Caledonia,65,10921.0
+New Caledonia,70,8346.5
+New Caledonia,75,6432.0
+New Caledonia,80,4157.0
+New Caledonia,85,2310.5
+New Caledonia,90,935.0
+New Caledonia,95,241.5
+New Caledonia,100,43.0
+Vanuatu,0,45856.5
+Vanuatu,5,44214.0
+Vanuatu,10,40655.5
+Vanuatu,15,32928.5
+Vanuatu,20,27572.0
+Vanuatu,25,26082.0
+Vanuatu,30,24967.5
+Vanuatu,35,21054.5
+Vanuatu,40,16817.0
+Vanuatu,45,13822.0
+Vanuatu,50,11512.0
+Vanuatu,55,9382.5
+Vanuatu,60,7073.5
+Vanuatu,65,5176.5
+Vanuatu,70,3347.0
+Vanuatu,75,1937.5
+Vanuatu,80,1169.0
+Vanuatu,85,654.5
+Vanuatu,90,237.0
+Vanuatu,95,44.0
+Vanuatu,100,3.0
+New Zealand,0,316212.5
+New Zealand,5,315727.5
+New Zealand,10,336009.5
+New Zealand,15,326106.5
+New Zealand,20,338115.0
+New Zealand,25,366837.0
+New Zealand,30,398216.5
+New Zealand,35,358308.0
+New Zealand,40,324285.5
+New Zealand,45,310685.0
+New Zealand,50,334498.0
+New Zealand,55,318534.5
+New Zealand,60,309998.5
+New Zealand,65,263926.0
+New Zealand,70,223459.5
+New Zealand,75,172234.5
+New Zealand,80,113298.0
+New Zealand,85,61885.5
+New Zealand,90,29586.0
+New Zealand,95,8708.0
+New Zealand,100,1468.0
+Nicaragua,0,691656.5
+Nicaragua,5,696798.0
+Nicaragua,10,679705.5
+Nicaragua,15,652259.5
+Nicaragua,20,642742.0
+Nicaragua,25,634944.0
+Nicaragua,30,589536.5
+Nicaragua,35,509179.0
+Nicaragua,40,440521.0
+Nicaragua,45,378825.5
+Nicaragua,50,311157.5
+Nicaragua,55,244332.5
+Nicaragua,60,191269.0
+Nicaragua,65,146562.0
+Nicaragua,70,107788.5
+Nicaragua,75,65992.5
+Nicaragua,80,41689.5
+Nicaragua,85,17152.5
+Nicaragua,90,3714.0
+Nicaragua,95,458.5
+Nicaragua,100,26.5
+Niue,0,136.5
+Niue,5,164.5
+Niue,10,195.0
+Niue,15,158.0
+Niue,20,81.5
+Niue,25,83.0
+Niue,30,109.0
+Niue,35,118.0
+Niue,40,119.0
+Niue,45,141.0
+Niue,50,128.0
+Niue,55,99.5
+Niue,60,104.5
+Niue,65,110.0
+Niue,70,76.5
+Niue,75,44.5
+Niue,80,44.5
+Niue,85,21.0
+Niue,90,1.0
+Niue,95,0.0
+Niue,100,0.0
+Northern Mariana Islands,0,3009.5
+Northern Mariana Islands,5,3179.5
+Northern Mariana Islands,10,4099.0
+Northern Mariana Islands,15,3349.0
+Northern Mariana Islands,20,2947.5
+Northern Mariana Islands,25,3902.0
+Northern Mariana Islands,30,3074.0
+Northern Mariana Islands,35,1536.5
+Northern Mariana Islands,40,1941.5
+Northern Mariana Islands,45,3160.0
+Northern Mariana Islands,50,4679.0
+Northern Mariana Islands,55,4969.0
+Northern Mariana Islands,60,4075.5
+Northern Mariana Islands,65,2985.0
+Northern Mariana Islands,70,1646.0
+Northern Mariana Islands,75,789.5
+Northern Mariana Islands,80,290.5
+Northern Mariana Islands,85,129.5
+Northern Mariana Islands,90,29.5
+Northern Mariana Islands,95,4.0
+Northern Mariana Islands,100,0.0
+Micronesia (Fed. States of),0,11413.0
+Micronesia (Fed. States of),5,11278.5
+Micronesia (Fed. States of),10,11787.5
+Micronesia (Fed. States of),15,11773.5
+Micronesia (Fed. States of),20,11313.5
+Micronesia (Fed. States of),25,10484.0
+Micronesia (Fed. States of),30,8572.0
+Micronesia (Fed. States of),35,6488.5
+Micronesia (Fed. States of),40,5700.5
+Micronesia (Fed. States of),45,5277.0
+Micronesia (Fed. States of),50,4932.0
+Micronesia (Fed. States of),55,4649.0
+Micronesia (Fed. States of),60,4187.0
+Micronesia (Fed. States of),65,3424.5
+Micronesia (Fed. States of),70,2188.5
+Micronesia (Fed. States of),75,1038.0
+Micronesia (Fed. States of),80,475.5
+Micronesia (Fed. States of),85,188.0
+Micronesia (Fed. States of),90,47.0
+Micronesia (Fed. States of),95,6.5
+Micronesia (Fed. States of),100,0.0
+Marshall Islands,0,4046.5
+Marshall Islands,5,4580.5
+Marshall Islands,10,4793.0
+Marshall Islands,15,3746.5
+Marshall Islands,20,2987.0
+Marshall Islands,25,2510.5
+Marshall Islands,30,2783.0
+Marshall Islands,35,3393.0
+Marshall Islands,40,3223.0
+Marshall Islands,45,2605.0
+Marshall Islands,50,2198.5
+Marshall Islands,55,1813.5
+Marshall Islands,60,1321.0
+Marshall Islands,65,1041.0
+Marshall Islands,70,610.5
+Marshall Islands,75,234.5
+Marshall Islands,80,65.5
+Marshall Islands,85,31.0
+Marshall Islands,90,11.5
+Marshall Islands,95,1.0
+Marshall Islands,100,0.0
+Palau,0,1346.5
+Palau,5,1209.0
+Palau,10,1250.0
+Palau,15,1220.0
+Palau,20,1238.0
+Palau,25,1221.5
+Palau,30,1119.0
+Palau,35,1199.0
+Palau,40,1318.0
+Palau,45,1367.5
+Palau,50,1373.0
+Palau,55,1299.0
+Palau,60,1045.0
+Palau,65,804.5
+Palau,70,532.5
+Palau,75,290.5
+Palau,80,153.5
+Palau,85,55.5
+Palau,90,14.5
+Palau,95,1.0
+Palau,100,0.0
+Panama,0,380633.5
+Panama,5,391408.0
+Panama,10,382041.5
+Panama,15,364344.0
+Panama,20,351951.5
+Panama,25,340546.0
+Panama,30,329556.5
+Panama,35,316184.5
+Panama,40,291397.5
+Panama,45,269566.0
+Panama,50,250260.5
+Panama,55,219401.0
+Panama,60,178217.0
+Panama,65,138009.5
+Panama,70,102776.0
+Panama,75,72242.5
+Panama,80,47417.5
+Panama,85,25943.5
+Panama,90,11450.0
+Panama,95,3826.5
+Panama,100,913.5
+Papua New Guinea,0,1218886.5
+Papua New Guinea,5,1171746.5
+Papua New Guinea,10,1111045.5
+Papua New Guinea,15,1038536.0
+Papua New Guinea,20,959498.5
+Papua New Guinea,25,875846.5
+Papua New Guinea,30,800419.5
+Papua New Guinea,35,705035.0
+Papua New Guinea,40,597958.0
+Papua New Guinea,45,508643.5
+Papua New Guinea,50,417275.0
+Papua New Guinea,55,336370.0
+Papua New Guinea,60,248486.5
+Papua New Guinea,65,158049.0
+Papua New Guinea,70,95874.5
+Papua New Guinea,75,52580.5
+Papua New Guinea,80,23519.5
+Papua New Guinea,85,7915.0
+Papua New Guinea,90,1883.5
+Papua New Guinea,95,326.0
+Papua New Guinea,100,35.5
+Paraguay,0,678868.0
+Paraguay,5,668627.5
+Paraguay,10,621048.0
+Paraguay,15,600114.5
+Paraguay,20,597840.5
+Paraguay,25,601312.0
+Paraguay,30,571588.5
+Paraguay,35,512354.5
+Paraguay,40,423918.5
+Paraguay,45,346455.0
+Paraguay,50,308009.5
+Paraguay,55,275960.5
+Paraguay,60,218717.5
+Paraguay,65,162957.5
+Paraguay,70,117702.0
+Paraguay,75,77589.5
+Paraguay,80,45846.5
+Paraguay,85,21039.5
+Paraguay,90,8555.0
+Paraguay,95,2587.0
+Paraguay,100,432.0
+Peru,0,2928309.5
+Peru,5,2887856.0
+Peru,10,3006531.5
+Peru,15,2965000.0
+Peru,20,2782243.5
+Peru,25,2746920.0
+Peru,30,2686597.5
+Peru,35,2515168.5
+Peru,40,2253338.0
+Peru,45,2055685.5
+Peru,50,1811374.5
+Peru,55,1503435.0
+Peru,60,1265381.5
+Peru,65,1033245.0
+Peru,70,794890.0
+Peru,75,552082.0
+Peru,80,345850.0
+Peru,85,162438.0
+Peru,90,46839.0
+Peru,95,8598.0
+Peru,100,935.5
+Puerto Rico,0,129818.5
+Puerto Rico,5,140167.0
+Puerto Rico,10,164030.0
+Puerto Rico,15,180800.0
+Puerto Rico,20,202328.0
+Puerto Rico,25,205693.5
+Puerto Rico,30,199871.0
+Puerto Rico,35,182346.0
+Puerto Rico,40,207840.0
+Puerto Rico,45,212882.5
+Puerto Rico,50,217110.5
+Puerto Rico,55,227456.5
+Puerto Rico,60,228191.0
+Puerto Rico,65,214795.5
+Puerto Rico,70,188525.5
+Puerto Rico,75,158242.5
+Puerto Rico,80,102186.0
+Puerto Rico,85,58107.5
+Puerto Rico,90,27176.0
+Puerto Rico,95,9801.0
+Puerto Rico,100,2945.5
+Saint Barthélemy,0,448.0
+Saint Barthélemy,5,514.0
+Saint Barthélemy,10,499.0
+Saint Barthélemy,15,391.0
+Saint Barthélemy,20,554.5
+Saint Barthélemy,25,965.5
+Saint Barthélemy,30,1067.0
+Saint Barthélemy,35,930.5
+Saint Barthélemy,40,868.0
+Saint Barthélemy,45,883.5
+Saint Barthélemy,50,1007.0
+Saint Barthélemy,55,912.0
+Saint Barthélemy,60,743.5
+Saint Barthélemy,65,440.0
+Saint Barthélemy,70,291.0
+Saint Barthélemy,75,218.0
+Saint Barthélemy,80,145.5
+Saint Barthélemy,85,88.0
+Saint Barthélemy,90,25.0
+Saint Barthélemy,95,2.5
+Saint Barthélemy,100,0.5
+Saint Kitts and Nevis,0,2893.5
+Saint Kitts and Nevis,5,3087.5
+Saint Kitts and Nevis,10,3202.5
+Saint Kitts and Nevis,15,3186.0
+Saint Kitts and Nevis,20,3452.5
+Saint Kitts and Nevis,25,3619.5
+Saint Kitts and Nevis,30,3792.0
+Saint Kitts and Nevis,35,3890.0
+Saint Kitts and Nevis,40,3540.5
+Saint Kitts and Nevis,45,3230.5
+Saint Kitts and Nevis,50,3046.5
+Saint Kitts and Nevis,55,2962.0
+Saint Kitts and Nevis,60,2792.5
+Saint Kitts and Nevis,65,2251.5
+Saint Kitts and Nevis,70,1286.0
+Saint Kitts and Nevis,75,704.5
+Saint Kitts and Nevis,80,431.0
+Saint Kitts and Nevis,85,242.0
+Saint Kitts and Nevis,90,111.5
+Saint Kitts and Nevis,95,30.5
+Saint Kitts and Nevis,100,2.5
+Anguilla,0,765.0
+Anguilla,5,871.0
+Anguilla,10,1048.5
+Anguilla,15,892.5
+Anguilla,20,822.5
+Anguilla,25,992.0
+Anguilla,30,1288.0
+Anguilla,35,1613.0
+Anguilla,40,1450.0
+Anguilla,45,1262.5
+Anguilla,50,1158.5
+Anguilla,55,1077.0
+Anguilla,60,883.0
+Anguilla,65,715.0
+Anguilla,70,526.5
+Anguilla,75,285.5
+Anguilla,80,149.5
+Anguilla,85,73.0
+Anguilla,90,22.0
+Anguilla,95,4.5
+Anguilla,100,0.0
+Saint Lucia,0,10243.0
+Saint Lucia,5,10591.5
+Saint Lucia,10,11153.0
+Saint Lucia,15,12459.0
+Saint Lucia,20,14161.0
+Saint Lucia,25,16078.5
+Saint Lucia,30,15697.5
+Saint Lucia,35,14397.0
+Saint Lucia,40,13294.0
+Saint Lucia,45,12441.5
+Saint Lucia,50,12055.5
+Saint Lucia,55,11360.0
+Saint Lucia,60,9206.0
+Saint Lucia,65,6635.0
+Saint Lucia,70,4503.0
+Saint Lucia,75,3128.5
+Saint Lucia,80,1741.5
+Saint Lucia,85,783.5
+Saint Lucia,90,273.5
+Saint Lucia,95,46.5
+Saint Lucia,100,2.0
+Saint Martin (French part),0,2367.0
+Saint Martin (French part),5,2002.5
+Saint Martin (French part),10,2413.5
+Saint Martin (French part),15,2495.0
+Saint Martin (French part),20,976.0
+Saint Martin (French part),25,1696.5
+Saint Martin (French part),30,1893.5
+Saint Martin (French part),35,2123.0
+Saint Martin (French part),40,2250.0
+Saint Martin (French part),45,2477.0
+Saint Martin (French part),50,2645.5
+Saint Martin (French part),55,2741.0
+Saint Martin (French part),60,2221.0
+Saint Martin (French part),65,1534.0
+Saint Martin (French part),70,1134.5
+Saint Martin (French part),75,600.5
+Saint Martin (French part),80,297.0
+Saint Martin (French part),85,145.0
+Saint Martin (French part),90,51.5
+Saint Martin (French part),95,11.0
+Saint Martin (French part),100,2.0
+Saint Pierre and Miquelon,0,240.5
+Saint Pierre and Miquelon,5,343.0
+Saint Pierre and Miquelon,10,374.0
+Saint Pierre and Miquelon,15,373.5
+Saint Pierre and Miquelon,20,211.0
+Saint Pierre and Miquelon,25,244.5
+Saint Pierre and Miquelon,30,341.5
+Saint Pierre and Miquelon,35,368.5
+Saint Pierre and Miquelon,40,380.0
+Saint Pierre and Miquelon,45,538.0
+Saint Pierre and Miquelon,50,546.0
+Saint Pierre and Miquelon,55,455.0
+Saint Pierre and Miquelon,60,393.5
+Saint Pierre and Miquelon,65,347.5
+Saint Pierre and Miquelon,70,219.5
+Saint Pierre and Miquelon,75,197.0
+Saint Pierre and Miquelon,80,145.5
+Saint Pierre and Miquelon,85,80.0
+Saint Pierre and Miquelon,90,31.5
+Saint Pierre and Miquelon,95,10.0
+Saint Pierre and Miquelon,100,0.0
+Saint Vincent and the Grenadines,0,6687.0
+Saint Vincent and the Grenadines,5,7741.0
+Saint Vincent and the Grenadines,10,8076.5
+Saint Vincent and the Grenadines,15,7438.5
+Saint Vincent and the Grenadines,20,7633.0
+Saint Vincent and the Grenadines,25,8002.5
+Saint Vincent and the Grenadines,30,7397.5
+Saint Vincent and the Grenadines,35,7040.5
+Saint Vincent and the Grenadines,40,7253.0
+Saint Vincent and the Grenadines,45,6918.0
+Saint Vincent and the Grenadines,50,6216.5
+Saint Vincent and the Grenadines,55,6260.0
+Saint Vincent and the Grenadines,60,5655.5
+Saint Vincent and the Grenadines,65,4253.0
+Saint Vincent and the Grenadines,70,2910.5
+Saint Vincent and the Grenadines,75,1904.5
+Saint Vincent and the Grenadines,80,1231.0
+Saint Vincent and the Grenadines,85,705.0
+Saint Vincent and the Grenadines,90,280.5
+Saint Vincent and the Grenadines,95,81.0
+Saint Vincent and the Grenadines,100,13.5
+Suriname,0,54482.0
+Suriname,5,53787.5
+Suriname,10,53849.0
+Suriname,15,54797.0
+Suriname,20,53716.5
+Suriname,25,48107.5
+Suriname,30,43941.5
+Suriname,35,43869.0
+Suriname,40,40369.0
+Suriname,45,35616.5
+Suriname,50,35407.0
+Suriname,55,32102.0
+Suriname,60,25907.0
+Suriname,65,18268.5
+Suriname,70,12365.0
+Suriname,75,7915.0
+Suriname,80,5009.5
+Suriname,85,2376.0
+Suriname,90,1024.5
+Suriname,95,271.0
+Suriname,100,55.5
+Tokelau,0,168.5
+Tokelau,5,163.0
+Tokelau,10,191.0
+Tokelau,15,196.0
+Tokelau,20,149.0
+Tokelau,25,137.5
+Tokelau,30,112.0
+Tokelau,35,111.0
+Tokelau,40,120.0
+Tokelau,45,102.0
+Tokelau,50,83.0
+Tokelau,55,113.0
+Tokelau,60,84.0
+Tokelau,65,44.5
+Tokelau,70,50.0
+Tokelau,75,25.0
+Tokelau,80,28.5
+Tokelau,85,11.5
+Tokelau,90,3.0
+Tokelau,95,0.0
+Tokelau,100,0.0
+Tonga,0,12049.0
+Tonga,5,12322.0
+Tonga,10,12268.5
+Tonga,15,11377.5
+Tonga,20,9780.5
+Tonga,25,7754.0
+Tonga,30,6561.0
+Tonga,35,6136.0
+Tonga,40,5669.0
+Tonga,45,4933.5
+Tonga,50,4952.0
+Tonga,55,4151.5
+Tonga,60,3092.0
+Tonga,65,2372.0
+Tonga,70,1728.5
+Tonga,75,1272.0
+Tonga,80,818.5
+Tonga,85,381.5
+Tonga,90,131.0
+Tonga,95,22.0
+Tonga,100,1.0
+Trinidad and Tobago,0,88677.5
+Trinidad and Tobago,5,97240.0
+Trinidad and Tobago,10,102057.0
+Trinidad and Tobago,15,99333.5
+Trinidad and Tobago,20,97120.5
+Trinidad and Tobago,25,100116.0
+Trinidad and Tobago,30,116252.0
+Trinidad and Tobago,35,138063.5
+Trinidad and Tobago,40,132895.5
+Trinidad and Tobago,45,107399.5
+Trinidad and Tobago,50,92180.5
+Trinidad and Tobago,55,89978.0
+Trinidad and Tobago,60,89667.5
+Trinidad and Tobago,65,70618.5
+Trinidad and Tobago,70,51344.5
+Trinidad and Tobago,75,31422.0
+Trinidad and Tobago,80,17222.5
+Trinidad and Tobago,85,8407.0
+Trinidad and Tobago,90,3610.5
+Trinidad and Tobago,95,1127.5
+Trinidad and Tobago,100,203.5
+Turks and Caicos Islands,0,2763.5
+Turks and Caicos Islands,5,2493.0
+Turks and Caicos Islands,10,2409.5
+Turks and Caicos Islands,15,2536.0
+Turks and Caicos Islands,20,2785.0
+Turks and Caicos Islands,25,3280.0
+Turks and Caicos Islands,30,3493.0
+Turks and Caicos Islands,35,4032.5
+Turks and Caicos Islands,40,4217.5
+Turks and Caicos Islands,45,3964.5
+Turks and Caicos Islands,50,3646.0
+Turks and Caicos Islands,55,3045.5
+Turks and Caicos Islands,60,2543.5
+Turks and Caicos Islands,65,1770.0
+Turks and Caicos Islands,70,1317.5
+Turks and Caicos Islands,75,788.0
+Turks and Caicos Islands,80,528.5
+Turks and Caicos Islands,85,294.5
+Turks and Caicos Islands,90,122.0
+Turks and Caicos Islands,95,29.5
+Turks and Caicos Islands,100,2.0
+Tuvalu,0,1278.0
+Tuvalu,5,1172.5
+Tuvalu,10,1167.0
+Tuvalu,15,986.0
+Tuvalu,20,906.5
+Tuvalu,25,905.5
+Tuvalu,30,900.5
+Tuvalu,35,744.5
+Tuvalu,40,571.0
+Tuvalu,45,462.5
+Tuvalu,50,455.0
+Tuvalu,55,549.0
+Tuvalu,60,536.5
+Tuvalu,65,352.5
+Tuvalu,70,215.5
+Tuvalu,75,101.5
+Tuvalu,80,62.0
+Tuvalu,85,25.0
+Tuvalu,90,5.0
+Tuvalu,95,0.0
+Tuvalu,100,0.0
+United States of America,0,18772017.0
+United States of America,5,20265806.5
+United States of America,10,21055998.5
+United States of America,15,22398945.5
+United States of America,20,22348827.0
+United States of America,25,22516732.5
+United States of America,30,23845889.5
+United States of America,35,22840194.5
+United States of America,40,22188817.5
+United States of America,45,20346434.5
+United States of America,50,21220017.0
+United States of America,55,21012888.0
+United States of America,60,21385673.5
+United States of America,65,19330996.0
+United States of America,70,15293937.5
+United States of America,75,11414867.0
+United States of America,80,7013985.5
+United States of America,85,4066933.0
+United States of America,90,2038889.0
+United States of America,95,534414.0
+United States of America,100,104300.0
+United States Virgin Islands,0,5719.0
+United States Virgin Islands,5,6353.0
+United States Virgin Islands,10,6788.5
+United States Virgin Islands,15,5704.0
+United States Virgin Islands,20,4656.0
+United States Virgin Islands,25,4784.5
+United States Virgin Islands,30,5140.0
+United States Virgin Islands,35,5357.0
+United States Virgin Islands,40,6122.0
+United States Virgin Islands,45,6204.0
+United States Virgin Islands,50,6813.0
+United States Virgin Islands,55,7284.0
+United States Virgin Islands,60,7206.0
+United States Virgin Islands,65,6514.5
+United States Virgin Islands,70,5591.0
+United States Virgin Islands,75,4531.0
+United States Virgin Islands,80,2477.5
+United States Virgin Islands,85,1047.5
+United States Virgin Islands,90,364.0
+United States Virgin Islands,95,82.5
+United States Virgin Islands,100,11.0
+Uruguay,0,180481.5
+Uruguay,5,226630.0
+Uruguay,10,234591.0
+Uruguay,15,238945.5
+Uruguay,20,246436.0
+Uruguay,25,257522.5
+Uruguay,30,246871.0
+Uruguay,35,226079.0
+Uruguay,40,216829.0
+Uruguay,45,229081.5
+Uruguay,50,201485.0
+Uruguay,55,196203.5
+Uruguay,60,181626.0
+Uruguay,65,155513.5
+Uruguay,70,125127.0
+Uruguay,75,99715.5
+Uruguay,80,73173.5
+Uruguay,85,47735.0
+Uruguay,90,25744.5
+Uruguay,95,10201.5
+Uruguay,100,3116.5
+Venezuela (Bolivarian Republic of),0,2264854.0
+Venezuela (Bolivarian Republic of),5,2636979.5
+Venezuela (Bolivarian Republic of),10,2808944.0
+Venezuela (Bolivarian Republic of),15,2762016.0
+Venezuela (Bolivarian Republic of),20,2307285.0
+Venezuela (Bolivarian Republic of),25,1897618.0
+Venezuela (Bolivarian Republic of),30,1856753.0
+Venezuela (Bolivarian Republic of),35,1865663.0
+Venezuela (Bolivarian Republic of),40,1837422.5
+Venezuela (Bolivarian Republic of),45,1743536.5
+Venezuela (Bolivarian Republic of),50,1603486.5
+Venezuela (Bolivarian Republic of),55,1458621.0
+Venezuela (Bolivarian Republic of),60,1253409.5
+Venezuela (Bolivarian Republic of),65,990232.0
+Venezuela (Bolivarian Republic of),70,687941.5
+Venezuela (Bolivarian Republic of),75,466271.0
+Venezuela (Bolivarian Republic of),80,267822.0
+Venezuela (Bolivarian Republic of),85,104264.5
+Venezuela (Bolivarian Republic of),90,23168.0
+Venezuela (Bolivarian Republic of),95,2181.0
+Venezuela (Bolivarian Republic of),100,30.5
+Wallis and Futuna Islands,0,688.5
+Wallis and Futuna Islands,5,845.5
+Wallis and Futuna Islands,10,1005.0
+Wallis and Futuna Islands,15,1019.0
+Wallis and Futuna Islands,20,729.0
+Wallis and Futuna Islands,25,546.0
+Wallis and Futuna Islands,30,585.5
+Wallis and Futuna Islands,35,612.0
+Wallis and Futuna Islands,40,750.5
+Wallis and Futuna Islands,45,873.5
+Wallis and Futuna Islands,50,885.0
+Wallis and Futuna Islands,55,685.5
+Wallis and Futuna Islands,60,660.5
+Wallis and Futuna Islands,65,524.0
+Wallis and Futuna Islands,70,432.5
+Wallis and Futuna Islands,75,334.5
+Wallis and Futuna Islands,80,178.5
+Wallis and Futuna Islands,85,107.0
+Wallis and Futuna Islands,90,32.5
+Wallis and Futuna Islands,95,7.0
+Wallis and Futuna Islands,100,0.0
+Samoa,0,29249.0
+Samoa,5,28690.5
+Samoa,10,26588.0
+Samoa,15,22114.5
+Samoa,20,18249.5
+Samoa,25,16709.5
+Samoa,30,14364.0
+Samoa,35,11368.0
+Samoa,40,11009.5
+Samoa,45,10875.5
+Samoa,50,9423.5
+Samoa,55,8253.0
+Samoa,60,6735.0
+Samoa,65,4980.0
+Samoa,70,3258.5
+Samoa,75,1967.0
+Samoa,80,1173.0
+Samoa,85,494.0
+Samoa,90,146.5
+Samoa,95,30.5
+Samoa,100,2.0
