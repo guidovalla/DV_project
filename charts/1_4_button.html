@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditional Chart Switch</title>
+  <!-- Include D3.js library -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+
+<!-- Checkbox to toggle between charts -->
+<label>
+  Fixed Axis
+  <input type="checkbox" id="chartCheckbox" onchange="toggleChart()">
+</label>
+
+<!-- Container for the chart -->
+<div id="viz_container"></div>
+<select id="CountryButton"></select>
+
+<script>
+
+const margin = {top: 50, right: 20, bottom: 50, left: 40};
+const width = 450 - margin.left - margin.right;
+const height = 350 - margin.top - margin.bottom;
+    // Replace this with your actual D3.js chart code for Chart 1
+    var svg = d3.select("#viz_container")
+  .append("svg")
+    .attr("width", "100%")
+    .attr("height", "100%")
+    .attr("viewBox", "0 0 450 350")
+    .attr("preserveAspectRatio", "xMinYMin")
+  .append("g")
+    .attr("transform", `translate(${margin.left}, ${margin.top})`);
+
+    var Country = "Afghanistan"       
+
+  // Variables to store the scripts for Chart 1 and Chart 2
+  var scriptChart1 = function() {
+
+
+
+    d3.selectAll("rect").remove()
+    d3.selectAll("text").remove()
+
+
+
+
+
+ 
+
+    // Your D3.js code for Chart 1 here...
+    d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/1_4_1_histo.csv")
+.then(function(data){
+
+    var map = new Map();
+  var countries = [];
+  for (const item of data) {
+      if(!map.has(item.Location)){
+          map.set(item.Location, true);    // set any value to Map
+          countries.push({
+              Country: item.Location
+          });
+      }
+  }
+  countries=countries.map(d=>d.Country)
+  countries=countries.filter(d=>d!="")
+  countries=countries.sort()
+
+
+        // Initialize a Dropdown
+        d3.select("#CountryButton")
+                      .selectAll('myOptions')
+                      .data(countries)
+                      .enter()
+                      .append('option')
+                      .attr("value", d =>d) // corresponding value returned by the button
+                      .text(d=>d)
+
+    fdata  = data.filter(function (d) {
+      return d.Location == Country;
+    });
+
+
+    /////////////////////////////
+    ////////////////////////////
+    // var dropdown = document.getElementById("#CountryButton");
+    // var selectedValue = dropdown.options[dropdown.selectedIndex].value;
+
+    // console.log("selectedValue", selectedValue)
+    /////////////////////////////
+    ////////////////////////////
+    
+
+
+
+
+
+
+
+// X scale and Axis
+const xScale = d3.scaleBand()
+  .domain(fdata.map(d => d.Age))
+  .range([0, width])
+  .padding(.1);
+svg
+  .append('g')
+  .attr("transform", `translate(0, ${height})`)
+  .call(d3.axisBottom(xScale).tickSize(0).ticks(5));
+
+// Y scale and Axis
+const formater =  d3.format("~s")
+const yScale = d3.scaleLinear()
+    .domain([0, 1.2*d3.max(fdata, d => +d.Value)])
+    .range([height, 0]);
+    console.log(fdata)  
+svg
+  .append('g')
+  .call(d3.axisLeft(yScale).tickSize(0).tickPadding(6).tickFormat(formater))
+  //.call(d => d.select(".domain").remove());
+
+// set horizontal grid line
+// const GridLine = () => d3.axisLeft().scale(yScale);
+// svg
+//   .append("g")
+//     .attr("class", "grid")
+//   .call(GridLine()
+//     .tickSize(-width,0,0)
+//     .tickFormat("")
+// );
+
+// create a tooltip
+const tooltip = d3.select("body")
+  .append("div")
+    .attr("id", "chart")
+    .attr("class", "tooltip");
+
+// tolltip events
+const mouseover = function(d) {
+    tooltip
+      .style("opacity", .8)
+    d3.select(this)
+      .style("opacity", .5)
+}
+const mousemove = function(event, d) {
+  const formater =  d3.format(",")
+    tooltip
+      .html(formater(d.Value))
+      .style("top", event.pageY - 10 + "px")
+      .style("left", event.pageX + 10 + "px");
+}
+const mouseleave = function(d) {
+    tooltip
+      .style("opacity", 0)
+    d3.select(this)
+      .style("opacity", 1)
+}
+
+// Bars
+const barGroup = svg.selectAll("rect")
+  .data(fdata)
+  .enter()
+  .append("g")
+
+barGroup
+  .append("rect")
+    .attr("class", "bar")
+    .attr("fill", "#0072BC")
+    .attr("x", d => xScale(d.Age))
+    .attr("y", d => yScale(d.Value))
+    .attr("width", xScale.bandwidth())
+    .attr("height", d => height - yScale(d.Value))
+  .on("mouseover", mouseover)
+  .on("mousemove", mousemove)
+  .on("mouseleave", mouseleave);
+
+// set title
+svg
+  .append("text")
+    .attr("class", "chart-title")
+    .attr("x", -(margin.left)*0.9)
+    .attr("y", -(margin.top)/1.5)
+    .attr("text-anchor", "start")
+  .text("Trend of global displaced number | 2011 - 2021")
+
+// set Y axis label
+svg
+  .append("text")
+    .attr("class", "chart-label")
+    .attr("x", -(margin.left)*0.9)
+    .attr("y", -(margin.top/4))
+    .attr("text-anchor", "start")
+  .text("Displaced population (millions)")
+
+
+
+
+
+  d3.select("#CountryButton").on("change", function () {
+                      Country = d3.select(this).property("value");
+                      updateChart(Country);
+                  });
+
+
+
+
+
+
+
+                  function updateChart(Country){
+            d3.selectAll("rect").remove()
+            //remove previous axis
+            d3.selectAll("text").remove()
+            d3.selectAll("class", "grid").remove()
+
+            
+
+
+
+            fdata  = data.filter(function (d) {
+      return d.Location == Country;
+    });
+
+const xScale = d3.scaleBand()
+  .domain(fdata.map(d => d.Age))
+  .range([0, width])
+  .padding(.1);
+svg
+  .append('g')
+  .attr("transform", `translate(0, ${height})`)
+  .call(d3.axisBottom(xScale).tickSize(0).ticks(5));
+
+// Y scale and Axis
+const formater =  d3.format("~s")
+const yScale = d3.scaleLinear()
+    .domain([0, 1.2*d3.max(fdata, d => +d.Value)])
+    .range([height, 0]);
+    console.log(fdata)  
+svg
+  .append('g')
+  .call(d3.axisLeft(yScale).tickSize(0).tickPadding(6).tickFormat(formater))
+  .call(d => d.select(".domain").remove());
+
+// // set horizontal grid line
+// const GridLine = () => d3.axisLeft().scale(yScale);
+// svg
+//   .append("g")
+//     .attr("class", "grid")
+//   .call(GridLine()
+//     .tickSize(-width,0,0)
+//     .tickFormat("")
+// );
+
+
+    const barGroup = svg.selectAll("rect")
+  .data(fdata)
+  .enter()
+  .append("g")
+
+barGroup
+  .append("rect")
+    .attr("class", "bar")
+    .attr("fill", "#0072BC")
+    .attr("x", d => xScale(d.Age))
+    .attr("y", d => yScale(d.Value))
+    .attr("width", xScale.bandwidth())
+    .attr("height", d => height - yScale(d.Value))
+  .on("mouseover", mouseover)
+  .on("mousemove", mousemove)
+  .on("mouseleave", mouseleave);
+
+
+
+
+  // set title
+svg
+  .append("text")
+    .attr("class", "chart-title")
+    .attr("x", -(margin.left)*0.9)
+    .attr("y", -(margin.top)/1.5)
+    .attr("text-anchor", "start")
+  .text("Trend of global displaced number | 2011 - 2021")
+
+// set Y axis label
+svg
+  .append("text")
+    .attr("class", "chart-label")
+    .attr("x", -(margin.left)*0.9)
+    .attr("y", -(margin.top/4))
+    .attr("text-anchor", "start")
+  .text("Displaced population (millions)")
+
+
+
+                  }
+
+
+
+
+})
+  };
+
+  var scriptChart2 = function() {
+    Country_from_button = d3.select(this).property("value");
+    console.log("country_for button", Country_from_button)
+    var Country="Italy"  
+    //first remove the previous chart
+    d3.selectAll("rect").remove()
+    d3.selectAll("text").remove()
+
+ 
+
+// Your D3.js code for Chart 1 here...
+d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/1_4_1_histo.csv")
+.then(function(data){
+
+
+var map = new Map();
+var countries = [];
+for (const item of data) {
+  if(!map.has(item.Location)){
+      map.set(item.Location, true);    // set any value to Map
+      countries.push({
+          Country: item.Location
+      });
+  }
+}
+countries=countries.map(d=>d.Country)
+countries=countries.filter(d=>d!="")
+countries=countries.sort()
+
+
+    // Initialize a Dropdown
+    d3.select("#CountryButton")
+                  .selectAll('myOptions')
+                  .data(countries)
+                  .enter()
+                  .append('option')
+                  .attr("value", d =>d) // corresponding value returned by the button
+                  .text(d=>d)
+                  
+                  fdata  = data.filter(function (d) {
+  return d.Location == Country;
+});
+
+
+
+
+// X scale and Axis
+const xScale = d3.scaleBand()
+.domain(fdata.map(d => d.Age))
+.range([0, width])
+.padding(.1);
+svg
+.append('g')
+.attr("transform", `translate(0, ${height})`)
+.call(d3.axisBottom(xScale).tickSize(0).ticks(5));
+
+// Y scale and Axis
+const formater =  d3.format("~s")
+const yScale = d3.scaleLinear()
+.domain([0, 1.2*d3.max(data, d => +d.Value)])
+.range([height, 0]);
+console.log(fdata)  
+svg
+.append('g')
+.call(d3.axisLeft(yScale).tickSize(0).tickPadding(6).tickFormat(formater))
+//.call(d => d.select(".domain").remove());
+
+// set horizontal grid line
+// const GridLine = () => d3.axisLeft().scale(yScale);
+// svg
+//   .append("g")
+//     .attr("class", "grid")
+//   .call(GridLine()
+//     .tickSize(-width,0,0)
+//     .tickFormat("")
+// );
+
+// create a tooltip
+const tooltip = d3.select("body")
+.append("div")
+.attr("id", "chart")
+.attr("class", "tooltip");
+
+// tolltip events
+const mouseover = function(d) {
+tooltip
+  .style("opacity", .8)
+d3.select(this)
+  .style("opacity", .5)
+}
+const mousemove = function(event, d) {
+const formater =  d3.format(",")
+tooltip
+  .html(formater(d.Value))
+  .style("top", event.pageY - 10 + "px")
+  .style("left", event.pageX + 10 + "px");
+}
+const mouseleave = function(d) {
+tooltip
+  .style("opacity", 0)
+d3.select(this)
+  .style("opacity", 1)
+}
+
+// Bars
+const barGroup = svg.selectAll("rect")
+.data(fdata)
+.enter()
+.append("g")
+
+barGroup
+.append("rect")
+.attr("class", "bar")
+.attr("fill", "#0072BC")
+.attr("x", d => xScale(d.Age))
+.attr("y", d => yScale(d.Value))
+.attr("width", xScale.bandwidth())
+.attr("height", d => height - yScale(d.Value))
+.on("mouseover", mouseover)
+.on("mousemove", mousemove)
+.on("mouseleave", mouseleave);
+
+// set title
+svg
+.append("text")
+.attr("class", "chart-title")
+.attr("x", -(margin.left)*0.9)
+.attr("y", -(margin.top)/1.5)
+.attr("text-anchor", "start")
+.text("Trend of global displaced number | 2011 - 2021")
+
+// set Y axis label
+svg
+.append("text")
+.attr("class", "chart-label")
+.attr("x", -(margin.left)*0.9)
+.attr("y", -(margin.top/4))
+.attr("text-anchor", "start")
+.text("Displaced population (millions)")
+
+
+
+
+
+d3.select("#CountryButton").on("change", function () {
+                  Country = d3.select(this).property("value");
+                  updateChart(Country);
+              });
+
+
+
+
+
+
+
+              function updateChart(Country){
+        d3.selectAll("rect").remove()
+        //remove previous axis
+        d3.selectAll("text").remove()
+        d3.selectAll("class", "grid").remove()
+
+        
+
+
+
+        fdata  = data.filter(function (d) {
+  return d.Location == Country;
+});
+
+const xScale = d3.scaleBand()
+.domain(fdata.map(d => d.Age))
+.range([0, width])
+.padding(.1);
+svg
+.append('g')
+.attr("transform", `translate(0, ${height})`)
+.call(d3.axisBottom(xScale).tickSize(0).ticks(5));
+
+// Y scale and Axis
+const formater =  d3.format("~s")
+const yScale = d3.scaleLinear()
+.domain([0, 1.2*d3.max(data, d => +d.Value)])
+.range([height, 0]);
+console.log(fdata)  
+svg
+.append('g')
+.call(d3.axisLeft(yScale).tickSize(0).tickPadding(6).tickFormat(formater))
+.call(d => d.select(".domain").remove());
+
+// // set horizontal grid line
+// const GridLine = () => d3.axisLeft().scale(yScale);
+// svg
+//   .append("g")
+//     .attr("class", "grid")
+//   .call(GridLine()
+//     .tickSize(-width,0,0)
+//     .tickFormat("")
+// );
+
+
+const barGroup = svg.selectAll("rect")
+.data(fdata)
+.enter()
+.append("g")
+
+barGroup
+.append("rect")
+.attr("class", "bar")
+.attr("fill", "#0072BC")
+.attr("x", d => xScale(d.Age))
+.attr("y", d => yScale(d.Value))
+.attr("width", xScale.bandwidth())
+.attr("height", d => height - yScale(d.Value))
+.on("mouseover", mouseover)
+.on("mousemove", mousemove)
+.on("mouseleave", mouseleave);
+
+
+
+
+// set title
+svg
+.append("text")
+.attr("class", "chart-title")
+.attr("x", -(margin.left)*0.9)
+.attr("y", -(margin.top)/1.5)
+.attr("text-anchor", "start")
+.text("Trend of global displaced number | 2011 - 2021")
+
+// set Y axis label
+svg
+.append("text")
+.attr("class", "chart-label")
+.attr("x", -(margin.left)*0.9)
+.attr("y", -(margin.top/4))
+.attr("text-anchor", "start")
+.text("Displaced population (millions)")
+
+
+
+
+              }
+
+
+
+
+})
+};
+
+  // Initial chart rendering
+  var currentChart = scriptChart1([10, 20, 30, 40, 50]);
+
+  function toggleChart() {
+     var checkbox = document.getElementById('chartCheckbox');
+
+    // // Clear the chart container
+    // document.getElementById('chartContainer').innerHTML = '';
+
+    // Load the script for the appropriate chart based on the checkbox state
+    if (checkbox.checked) {
+      currentChart = scriptChart2();
+    } else {
+      currentChart = scriptChart1();
+    }
+  }
+</script>
+
+</body>
+</html>
