@@ -186,12 +186,25 @@ svg2
 
 // add labels to the graph
 svg2
+  .selectAll("text-region")
+  .data(treeData.leaves())
+  .join("text")
+    .attr("class", "tree-label")
+    .attr('opacity', d => (d.x1-d.x0)<100 ? 0:1)
+    .attr("x", d => d.x0+9)
+    .attr("y", d => d.y0+33)
+    .text(d => "Life expectancy: " + (d.data.LE/1).toFixed(0) )
+    .attr("font-size", "10px")
+    .attr("fill", "#ffffff");
+
+
+svg2
   .selectAll("text-number")
   .data(treeData.leaves())
   .join("text")
     .attr("class", "tree-label")
-    .attr("x", d => d.x0+8)
-    .attr("y", d => d.y0+15)
+    .attr("x", d => d.x0+9)
+    .attr("y", d => d.y0+18)
     .text(d => d.data.Location)
     //.text(d => Math.round(1000 * d.data.population / total) / 10 + "%")
     //.text(d => "Life expectancy: " + (d.data.LE/1).toFixed(0) )
@@ -202,16 +215,7 @@ svg2
     
 
     .attr("fill", "#94C973");
-// svg2
-//   .selectAll("text-region")
-//   .data(treeData.leaves())
-//   .join("text")
-//     .attr("class", "tree-label")
-//     .attr("x", d => d.x0+5)
-//     .attr("y", d => d.y0+30)
-//     .text(d => d.data.Location)
-//     .attr("font-size", "10px")
-//     .attr("fill", "#ffffff");
+
 
 // set title
 svg2
@@ -337,28 +341,32 @@ const sliderRange = d3
                     .on("mouseover", mouseover)
                     .on("mousemove", mousemove)
                     .on("mouseleave", mouseleave);
-                  
+                    svg2
+                    .selectAll("text-region")
+                    .data(treeData.leaves())
+                    .join("text")
+                      .attr("class", "tree-label")
+                      .attr('opacity', d => (d.x1-d.x0)<100 ? 0:1)
+                      .attr("x", d => d.x0+9)
+                      .attr("y", d => d.y0+33)
+                      .text(d => "Life expectancy: " + (d.data.LE/1).toFixed(0) )
+                      .attr("font-size", "10px")
+                      .attr("fill", "#ffffff");
+
+
                     svg2
                     .selectAll("text-number")
                     .data(treeData.leaves())
                     .join("text")
                       .attr("class", "tree-label")
-                      .attr("x", d => d.x0+5)
-                      .attr("y", d => d.y0+15)
+                      .attr("x", d => d.x0+9)
+                      .attr("y", d => d.y0+18)
                       //.text(d => Math.round(1000 * d.data.val / total) / 10 + "%")
-                      .text(d => "Life expectancy: " + (d.data.LE/1).toFixed(0) )
-                      .attr("font-size", "5px")
-                      .attr("fill", "#ffffff");
-                  svg2
-                    .selectAll("text-region")
-                    .data(treeData.leaves())
-                    .join("text")
-                      .attr("class", "tree-label")
-                      .attr("x", d => d.x0+5)
-                      .attr("y", d => d.y0+30)
                       .text(d => d.data.Location)
-                      .attr("font-size", "4px")
-                      .attr("fill", "#ffffff");
+                      .attr("font-size", "5px")
+                      .attr("fill", "#ffffff")
+                      .attr("font-weight", "bold");
+
                   }
 })
 </script>

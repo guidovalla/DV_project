@@ -55,7 +55,7 @@
 <div id="menu"></div>
 
 <div class="graph">
-<svg width="500" height="300"></svg>
+<svg width="400" height="300"></svg>
 </div>
 
 </div>
@@ -199,6 +199,16 @@ g.append("g")
 .attr("dy", "0.9em")
 .attr("fill", "#000")
 .text("Milions of people");
+
+// Append line at y=0
+g.append("line")
+    .attr("class", "zero-line")
+    .attr("x1", 0)
+    .attr("y1", y(0))
+    .attr("x2", width)
+    .attr("y2", y(0))
+    .style("stroke", "red") // Customize the color as needed
+    .style("stroke-width", 2);
 
 //append country data to svg
 let country = g.selectAll(".country")
