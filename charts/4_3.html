@@ -62,7 +62,7 @@
 
                       <script>
                           // set the dimensions and margins of the graph
-const margin3 = {top: 60, right: 20, bottom: 20, left: 100};
+const margin3 = {top: 60, right: 20, bottom: 40, left: 100};
   const width3 = 450 - margin3.left - margin3.right;
   const height3 = 350 - margin3.top - margin3.bottom;
 
@@ -160,16 +160,16 @@ const margin3 = {top: 60, right: 20, bottom: 20, left: 100};
   };
   const mousemove1 = function(event,d) {
       tooltip
-        .style("top", d3.pointer(event)[1]+250 + "px")
-        .style("left", d3.pointer(event)[0] +150+ "px")
+        .style("top", d3.pointer(event)[1]-5 + "px")
+        .style("left", d3.pointer(event)[0] +50+ "px")
         .html( `${d3.format(".3f")(d.male)}`+ " milions")
         .style("position", "absolute");
         console.log(d3.pointer(event)[0])
   };
   const mousemove2 = function(event,d) {
     tooltip
-    .style("top", d3.pointer(event)[1]+250 + "px")
-    .style("left", d3.pointer(event)[0] +300+ "px")
+    .style("top", d3.pointer(event)[1]-5 + "px")
+    .style("left", d3.pointer(event)[0] -20+ "px")
         .html(`${d3.format(".3f")(d.female)}`+ " milions")
         .style("position", "absolute");
 };
@@ -219,8 +219,8 @@ const margin3 = {top: 60, right: 20, bottom: 20, left: 100};
   svg3
       .append("text")
           .attr("class", "chart-label")
-          .attr("x", width3/3.5)
-          .attr("y", height3 + margin3.bottom/1.5)
+          .attr("x", width3/2.7)
+          .attr("y", height3 + margin3.bottom/1.2)
       .text("Population (billions)")
 
   //set legend
