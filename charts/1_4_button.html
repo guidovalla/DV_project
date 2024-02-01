@@ -34,10 +34,15 @@ const height = 350 - margin.top - margin.bottom;
   .append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-    var Country = "Afghanistan"       
+    var Country;      
 
   // Variables to store the scripts for Chart 1 and Chart 2
   var scriptChart1 = function() {
+    if (d3.select("#CountryButton").property("value")) {
+    Country = d3.select("#CountryButton").property("value");
+} else {
+    Country = "Afghanistan"; // default value
+}
 
 
 
@@ -114,7 +119,7 @@ const formater =  d3.format("~s")
 const yScale = d3.scaleLinear()
     .domain([0, 1.2*d3.max(fdata, d => +d.Value)])
     .range([height, 0]);
-    console.log(fdata)  
+    //console.log(fdata)  
 svg
   .append('g')
   .call(d3.axisLeft(yScale).tickSize(0).tickPadding(6).tickFormat(formater))
@@ -146,9 +151,10 @@ const mouseover = function(d) {
 const mousemove = function(event, d) {
   const formater =  d3.format(",")
     tooltip
-      .html(formater(d.Value))
-      .style("top", event.pageY - 10 + "px")
-      .style("left", event.pageX + 10 + "px");
+      .html("<b>Number of people:</b> "+ (d.Value/1000000).toFixed(3)+ " milions" )
+      .style("left", (d3.pointer(event)[0] > window.innerWidth / 2.5) ? (d3.pointer(event)[0] - 100) + "px" : (d3.pointer(event)[0] + 100) + "px")
+      .style("top", (d3.pointer(event)[1] > window.innerHeight / 2.5) ? (d3.pointer(event)[1]- 100) + "px" : (d3.pointer(event)[1] + 100) + "px")
+      .style("position", "absolute")
 }
 const mouseleave = function(d) {
     tooltip
@@ -199,6 +205,7 @@ svg
 
   d3.select("#CountryButton").on("change", function () {
                       Country = d3.select(this).property("value");
+                      console.log("countryyyyyyy button change", Country)
                       updateChart(Country);
                   });
 
@@ -236,7 +243,7 @@ const formater =  d3.format("~s")
 const yScale = d3.scaleLinear()
     .domain([0, 1.2*d3.max(fdata, d => +d.Value)])
     .range([height, 0]);
-    console.log(fdata)  
+    //console.log(fdata)  
 svg
   .append('g')
   .call(d3.axisLeft(yScale).tickSize(0).tickPadding(6).tickFormat(formater))
@@ -302,9 +309,11 @@ svg
   };
 
   var scriptChart2 = function() {
-    Country_from_button = d3.select(this).property("value");
-    console.log("country_for button", Country_from_button)
-    var Country="Italy"  
+    // Country_from_button = d3.select(this).property("value");
+    // console.log("country_for button", Country_from_button)
+    //value of the previous button before it was changed
+    var Country= d3.select("#CountryButton").property("value");
+    console.log("countryyyyyyy", Country)
     //first remove the previous chart
     d3.selectAll("rect").remove()
     d3.selectAll("text").remove()
@@ -362,7 +371,7 @@ const formater =  d3.format("~s")
 const yScale = d3.scaleLinear()
 .domain([0, 1.2*d3.max(data, d => +d.Value)])
 .range([height, 0]);
-console.log(fdata)  
+//console.log(fdata)  
 svg
 .append('g')
 .call(d3.axisLeft(yScale).tickSize(0).tickPadding(6).tickFormat(formater))
@@ -392,11 +401,12 @@ d3.select(this)
   .style("opacity", .5)
 }
 const mousemove = function(event, d) {
-const formater =  d3.format(",")
+//const formater =  d3.format(",")
 tooltip
-  .html(formater(d.Value))
-  .style("top", event.pageY - 10 + "px")
-  .style("left", event.pageX + 10 + "px");
+      .html("<b>Number of people:</b> "+ (d.Value/1000000).toFixed(3)+ " milions" )
+      .style("left", (d3.pointer(event)[0] > window.innerWidth / 2.5) ? (d3.pointer(event)[0] - 100) + "px" : (d3.pointer(event)[0] + 100) + "px")
+      .style("top", (d3.pointer(event)[1] > window.innerHeight / 2.5) ? (d3.pointer(event)[1]- 100) + "px" : (d3.pointer(event)[1] + 100) + "px")
+      .style("position", "absolute")
 }
 const mouseleave = function(d) {
 tooltip
@@ -484,7 +494,7 @@ const formater =  d3.format("~s")
 const yScale = d3.scaleLinear()
 .domain([0, 1.2*d3.max(data, d => +d.Value)])
 .range([height, 0]);
-console.log(fdata)  
+//console.log(fdata)  
 svg
 .append('g')
 .call(d3.axisLeft(yScale).tickSize(0).tickPadding(6).tickFormat(formater))
