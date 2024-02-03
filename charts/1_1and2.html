@@ -413,10 +413,7 @@ tooltip
 .text(function(d) { return `${d.properties.gis_name} \n Median Age: ${d3.format(".1f")(d.Value)}`
 }
 )
-.append("title")
-.text(function(d) { return `${d.properties.gis_name} \n Median Age: ${d3.format(".1f")(d.Value)}`
-}
-)};
+};
 // set legend
 svg.append("g")
 .attr("class", "legendThreshold")
@@ -487,9 +484,9 @@ updateChart(type);
 });
 function updateChart(type){
 //destroy previous chart
-d3.select("path").remove();
-d3.select("title").remove();
-d3.select("#tipDiv").remove();
+d3.selectAll("path").remove();
+d3.selectAll("title").remove();
+d3.selectAll("#tipDiv").remove();
 
 //apply filter to promises
 Promise.all(promises).then(function(data) {
