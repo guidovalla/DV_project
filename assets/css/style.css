@@ -209,8 +209,8 @@ h6 {
 
 /* BOX OBJECT STYLES */
 .box {
-  width: 100vh;
-  height: 100vh;
+  width: 100%;
+  height: 150vh;
   border: none;
   background-color: #fff;
   overflow: auto;

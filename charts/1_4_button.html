@@ -1,5 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<h5 class="card-title">Chart 3</h5>
+<p>
+  In this barchart is possible to see the age distribution of all the people in any chosen country. By hovering on a specific bar a tooltip will appear, indicating the exact value of the column chosen. A country button is present on the bottom of the chart,by selecting a specific country its data will be shown on the chart. A modal tick for the Y axis is present on top of the chart, by selecting it it's possible to enable or disable the adapting scale for the Y-axis, if it's disabled the Y-axis scale will follow the scale of the highest population country.
+</p>
+
+
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +19,22 @@
   Fixed Axis
   <input type="checkbox" id="chartCheckbox" onchange="toggleChart()">
 </label>
-
+<select id="CountryButton"></select>
 <!-- Container for the chart -->
 <div id="viz_container"></div>
-<select id="CountryButton"></select>
+
+<style>
+.tooltip {
+  background-color: #ffffff;
+  font-family: lato;
+  font-size: 12px;
+  padding: 4px;
+  color: #666666;
+  border: none;
+  box-shadow: 0px 0px 3px 0px #E6E6E6;
+  }
+  
+</style>
 
 <script>
 
@@ -28,7 +45,7 @@ const height = 350 - margin.top - margin.bottom;
     var svg = d3.select("#viz_container")
   .append("svg")
     .attr("width", "100%")
-    .attr("height", "100%")
+    .attr("height", "80%")
     .attr("viewBox", "0 0 450 350")
     .attr("preserveAspectRatio", "xMinYMin")
   .append("g")
@@ -152,8 +169,8 @@ const mousemove = function(event, d) {
   const formater =  d3.format(",")
     tooltip
       .html("<b>Number of people:</b> "+ (d.Value/1000000).toFixed(3)+ " milions" )
-      .style("left", (d3.pointer(event)[0] > window.innerWidth / 2.5) ? (d3.pointer(event)[0] - 100) + "px" : (d3.pointer(event)[0] + 100) + "px")
-      .style("top", (d3.pointer(event)[1] > window.innerHeight / 2.5) ? (d3.pointer(event)[1]- 100) + "px" : (d3.pointer(event)[1] + 100) + "px")
+      .style("left", (d3.pointer(event)[0] > window.innerWidth / 2.5) ? (d3.pointer(event)[0] - 200) + "px" : (d3.pointer(event)[0] + 200) + "px")
+      .style("top", (d3.pointer(event)[1] > window.innerHeight / 2.5) ? (d3.pointer(event)[1]- 200) + "px" : (d3.pointer(event)[1] + 200) + "px")
       .style("position", "absolute")
 }
 const mouseleave = function(d) {
@@ -188,7 +205,7 @@ svg
     .attr("x", -(margin.left)*0.9)
     .attr("y", -(margin.top)/1.5)
     .attr("text-anchor", "start")
-  .text("Trend of global displaced number | 2011 - 2021")
+  .text("Age distribution of population")
 
 // set Y axis label
 svg
@@ -197,7 +214,7 @@ svg
     .attr("x", -(margin.left)*0.9)
     .attr("y", -(margin.top/4))
     .attr("text-anchor", "start")
-  .text("Displaced population (millions)")
+  .text("People (millions)")
 
 
 
@@ -287,7 +304,7 @@ svg
     .attr("x", -(margin.left)*0.9)
     .attr("y", -(margin.top)/1.5)
     .attr("text-anchor", "start")
-  .text("Trend of global displaced number | 2011 - 2021")
+  .text("Age distribution of population")
 
 // set Y axis label
 svg
@@ -296,7 +313,7 @@ svg
     .attr("x", -(margin.left)*0.9)
     .attr("y", -(margin.top/4))
     .attr("text-anchor", "start")
-  .text("Displaced population (millions)")
+  .text("People (millions)")
 
 
 
@@ -404,8 +421,8 @@ const mousemove = function(event, d) {
 //const formater =  d3.format(",")
 tooltip
       .html("<b>Number of people:</b> "+ (d.Value/1000000).toFixed(3)+ " milions" )
-      .style("left", (d3.pointer(event)[0] > window.innerWidth / 2.5) ? (d3.pointer(event)[0] - 100) + "px" : (d3.pointer(event)[0] + 100) + "px")
-      .style("top", (d3.pointer(event)[1] > window.innerHeight / 2.5) ? (d3.pointer(event)[1]- 100) + "px" : (d3.pointer(event)[1] + 100) + "px")
+      .style("left", (d3.pointer(event)[0] > window.innerWidth / 2.5) ? (d3.pointer(event)[0] - 200) + "px" : (d3.pointer(event)[0] + 200) + "px")
+      .style("top", (d3.pointer(event)[1] > window.innerHeight / 2.5) ? (d3.pointer(event)[1]- 200) + "px" : (d3.pointer(event)[1] + 200) + "px")
       .style("position", "absolute")
 }
 const mouseleave = function(d) {
@@ -440,7 +457,7 @@ svg
 .attr("x", -(margin.left)*0.9)
 .attr("y", -(margin.top)/1.5)
 .attr("text-anchor", "start")
-.text("Trend of global displaced number | 2011 - 2021")
+.text("Age distribution of population")
 
 // set Y axis label
 svg
@@ -449,7 +466,7 @@ svg
 .attr("x", -(margin.left)*0.9)
 .attr("y", -(margin.top/4))
 .attr("text-anchor", "start")
-.text("Displaced population (millions)")
+.text("People (millions)")
 
 
 
@@ -538,7 +555,7 @@ svg
 .attr("x", -(margin.left)*0.9)
 .attr("y", -(margin.top)/1.5)
 .attr("text-anchor", "start")
-.text("Trend of global displaced number | 2011 - 2021")
+.text("Age distribution of population")
 
 // set Y axis label
 svg
@@ -547,7 +564,7 @@ svg
 .attr("x", -(margin.left)*0.9)
 .attr("y", -(margin.top/4))
 .attr("text-anchor", "start")
-.text("Displaced population (millions)")
+.text("People (millions)")
 
 
 

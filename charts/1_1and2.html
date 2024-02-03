@@ -1,4 +1,8 @@
 <h5 class="card-title">Chart 1</h5>
+<p>
+      In this choropleth chart is possible to see a chosen parameter from a selector (LE a birth, fertility and median age) for all the countries in the world, in a Robinson projection. The colour of each country varies according to the value of the parameter chosen, as shown by the legend on the bottom left of the visualization. By hovering with the mouse on any country 2 tooltips will appear: one showing a miniature chart with the evolution of the chosen parameter in the last 70 years and one showing the exact value of the chosen parameter for the selected country.
+
+</p>
 <!-- Create a container to host the charts -->
 
 <!-- first chart -->
@@ -220,7 +224,7 @@ const lines = tipSVG
 .data(current_data)
 .join("path")
 .attr("fill", "none")
-.attr("stroke", "gray")
+.attr("stroke", "blue")
 .attr("stroke-width", 2)
 .attr("d", function(d){
 return d3.line()
@@ -304,7 +308,7 @@ const lines = tipSVG
 .data(current_data)
 .join("path")
 .attr("fill", "none")
-.attr("stroke", "gray")
+.attr("stroke", "blue")
 .attr("stroke-width", 2)
 .attr("d", function(d){
 return d3.line()
@@ -393,7 +397,7 @@ const lines = tipSVG
 .data(current_data)
 .join("path")
 .attr("fill", "none")
-.attr("stroke", "gray")
+.attr("stroke", "blue")
 .attr("stroke-width", 2)
 .attr("d", function(d){
 return d3.line()
