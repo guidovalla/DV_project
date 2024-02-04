@@ -12,16 +12,19 @@ body {
 }
 
 section {
-  height: 50vh;
+  height: 35vh;
+  /* height: 150px; */
   width: 100vw;
   background-color: #dadada;
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 section p {
   font-family: sans-serif;
-  font-weight: 900;
+  font-weight: 500;
+  margin-right: 100px !important;
+  margin-left: 100px !important;
 }
 
 .quote {
@@ -127,9 +130,9 @@ body {
 
 } */
 .btn-group {
-  width: 100%;
+  /* width: 100%; */
   background-color: #dadada !important;
-  display: flex;
+  display: grid !important;
   flex-direction: row;
   align-items: center;
   justify-content: center;
@@ -138,6 +141,7 @@ body {
    a{
     border: 2px solid #4154f1;
     margin: 10px;
+    
    }
 }
 .btn {
@@ -224,7 +228,32 @@ body {
 p{
   font-size: 10px;
   text-align: center;
+
 }
+
+.logo-container {
+  width: 100%;
+  text-align: center;
+}
+
+.text {
+  text-align: left;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.header-intro {
+  transition: all 0.5s;
+  z-index: 997;
+  height: 60px;
+  /* box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1); */
+  background-color: #dadada;
+  padding-left: 20px;
+  /* Toggle Sidebar Button */
+  /* Search Bar */
+}
+
+
 
 }
 
