@@ -1,4 +1,7 @@
 <h5 class="card-title">Chart 3</h5>
+<p>
+  In this bar chart is possible to see the amount of children deaths during a year, separated by the cause of death. A slider is present at the bottom of the chart, by clicking and dragging the slider is possible to change the year visualized in the chart
+<!-- Create a container to host the charts -->
 
 <!-- Include d3 library -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -6,24 +9,74 @@
 <!-- Load slider -->
 <script src="https://unpkg.com/d3-simple-slider"></script>
 
+
+<!-- first chart -->
 <!-- Create a container to host the chart -->
 <div id="container3"></div>
 
+<style>
 
-<script>
-    // Declare the chart dimensions and margins.
-    const margin3 = { top: 70, right: 60, bottom: 200, left: 60 }
-    const width3 = 700 - margin3.left - margin3.right;
-    const height3 = 500 - margin3.top - margin3.bottom;
+  text {
+    font-family: lato;
+    font-size: 10px;
+    fill: #333333;
+  }
+  .grid path {
+    stroke-width: 0;
+  }
+  .grid .tick line {
+    stroke: #333333;
+    stroke-width: 0.3px;
+    stroke-opacity: 0.3;
+  }
+  text.chart-title {
+    font-size: 14px;
+    font-weight: bold;
+    fill:#222222
+  }
+  text.chart-label {
+    font-size: 10px;
+    font-weight: 400;
+    fill: #999999;
+  }
+  text.chart-source {
+    font-size: 8px;
+    fill: #999999;
+  }
+  text.copyright {
+    font-size: 8px;
+    fill: #999999;
+  }
+  .tooltip {
+    background-color: #ffffff;
+    font-family: lato;
+    font-size: 11px;
+    padding: 6px;
+    color: #333333;
+    border: none;
+    box-shadow: 0px 0px 3px 0px #E6E6E6;
+  }
+  </style>
+              <script>
+// set the dimensions and margins of the graph
+const margin3 = {top: 30, right: 110, bottom: 30, left: 30};
+const width3 = 600 - margin3.left - margin3.right;
+const height3 = 350 - margin3.top - margin3.bottom;
 
 
-    // Create the SVG container.
-    const svg3 = d3.select("#container3")
-        .append("svg")
-        .attr("width", width3 + margin3.left + margin3.right)
-        .attr("height", height3 + margin3.top + margin3.bottom)
-        .append("g")
-        .attr("transform", "translate(" + margin3.left + "," + margin3.top + ")");
+// Declare the chart dimensions and margins.
+/*const margin = { top: 20, right: 60, bottom: 60, left: 60 }
+const width = 700 - margin.left - margin.right;
+const height = 300 - margin.top - margin.bottom;
+*/
+// Create the SVG container.
+const svg3 = d3.select("#container3")
+.append("svg")
+.attr("width", "100%")
+  .attr("height", "60%")
+  .attr("viewBox", "0 0 500 430")
+.append("g")
+.attr("transform", "translate(" + margin3.left + "," + margin3.top + ")");
 
     // Load CSV data
     d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/3_3.csv")

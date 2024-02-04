@@ -1,4 +1,7 @@
 <h5 class="card-title">Chart 1</h5>
+<p>
+  In this bar chart is possible to see the amount of deaths during a year, separated by the age of the person at their death. A slider is present at the bottom of the chart, by clicking and dragging the slider is possible to change the year visualized in the chart
+</p>
 <!-- Create a container to host the charts -->
 
 <!-- Include d3 library -->
@@ -12,18 +15,67 @@
 <!-- Create a container to host the chart -->
 <div id="container"></div>
 
+<style>
 
-<script>
+  text {
+    font-family: lato;
+    font-size: 10px;
+    fill: #333333;
+  }
+  .grid path {
+    stroke-width: 0;
+  }
+  .grid .tick line {
+    stroke: #333333;
+    stroke-width: 0.3px;
+    stroke-opacity: 0.3;
+  }
+  text.chart-title {
+    font-size: 14px;
+    font-weight: bold;
+    fill:#222222
+  }
+  text.chart-label {
+    font-size: 10px;
+    font-weight: 400;
+    fill: #999999;
+  }
+  text.chart-source {
+    font-size: 8px;
+    fill: #999999;
+  }
+  text.copyright {
+    font-size: 8px;
+    fill: #999999;
+  }
+  .tooltip {
+    background-color: #ffffff;
+    font-family: lato;
+    font-size: 11px;
+    padding: 6px;
+    color: #333333;
+    border: none;
+    box-shadow: 0px 0px 3px 0px #E6E6E6;
+  }
+  </style>
+              <script>
+// set the dimensions and margins of the graph
+const margin = {top: 60, right: 120, bottom: 50, left: 30};
+const width = 450 - margin.left - margin.right;
+const height = 350 - margin.top - margin.bottom;
+
+
 // Declare the chart dimensions and margins.
-const margin = { top: 20, right: 60, bottom: 60, left: 60 }
+/*const margin = { top: 20, right: 60, bottom: 60, left: 60 }
 const width = 700 - margin.left - margin.right;
 const height = 300 - margin.top - margin.bottom;
-
+*/
 // Create the SVG container.
 const svg = d3.select("#container")
 .append("svg")
-.attr("width", width + margin.left + margin.right)
-.attr("height", height + margin.top + margin.bottom)
+.attr("width", "100%")
+  .attr("height", "65%")
+  .attr("viewBox", "0 0 450 350")
 .append("g")
 .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -64,7 +116,7 @@ svg.selectAll(".bar")
   .attr("y", (age) => y(dataFilter[age]))
   .attr("width", x.bandwidth())
   .attr("height", (age) => height - y(dataFilter[age]))
-  .attr("fill", "#69b3a2");
+  .attr("fill", "blue");
 
 // X-axis
 svg.append("g")
