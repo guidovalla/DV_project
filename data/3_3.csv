@@ -4,7 +4,7 @@ Period,Dim3,Value
 2021,Malaria,0.7
 2021,Injuries,13017.6
 2021,Meningitis/encephalitis,17140.0
-2021,Sepsis and other infectious conditions of the newborn,171991.5
+2021,Sepsis,171991.5
 2021,Acute lower respiratory infections,188006.2
 2021,Congenital anomalies,239560.6
 2021,Diarrhoeal diseases,30737.2
@@ -17,7 +17,7 @@ Period,Dim3,Value
 2020,Malaria,0.7
 2020,Injuries,13368.6
 2020,Meningitis/encephalitis,17438.9
-2020,Sepsis and other infectious conditions of the newborn,175581.1
+2020,Sepsis,175581.1
 2020,Acute lower respiratory infections,192774.2
 2020,Congenital anomalies,245292.4
 2020,Diarrhoeal diseases,31640.5
@@ -30,7 +30,7 @@ Period,Dim3,Value
 2019,Malaria,0.8
 2019,Injuries,14224.2
 2019,Meningitis/encephalitis,17882.0
-2019,Sepsis and other infectious conditions of the newborn,180987.2
+2019,Sepsis,180987.2
 2019,Acute lower respiratory infections,199054.3
 2019,Congenital anomalies,253377.7
 2019,Diarrhoeal diseases,32753.2
@@ -43,7 +43,7 @@ Period,Dim3,Value
 2018,Malaria,0.6
 2018,Injuries,16697.8
 2018,Meningitis/encephalitis,18371.6
-2018,Sepsis and other infectious conditions of the newborn,186597.7
+2018,Sepsis,186597.7
 2018,Acute lower respiratory infections,207095.1
 2018,Congenital anomalies,258035.5
 2018,Diarrhoeal diseases,34251.8
@@ -56,7 +56,7 @@ Period,Dim3,Value
 2017,Malaria,0.7
 2017,Injuries,14156.3
 2017,Meningitis/encephalitis,18809.7
-2017,Sepsis and other infectious conditions of the newborn,191220.2
+2017,Sepsis,191220.2
 2017,Acute lower respiratory infections,214788.9
 2017,Congenital anomalies,263024.0
 2017,Diarrhoeal diseases,35698.0
@@ -70,7 +70,7 @@ Period,Dim3,Value
 2016,HIV/AIDS,1015.8
 2016,Injuries,14779.2
 2016,Meningitis/encephalitis,19520.2
-2016,Sepsis and other infectious conditions of the newborn,197046.2
+2016,Sepsis,197046.2
 2016,Acute lower respiratory infections,223388.5
 2016,Congenital anomalies,267207.4
 2016,Diarrhoeal diseases,37696.8
@@ -84,7 +84,7 @@ Period,Dim3,Value
 2015,Tetanus,10813.2
 2015,HIV/AIDS,1091.7
 2015,Injuries,15841.2
-2015,Sepsis and other infectious conditions of the newborn,200868.4
+2015,Sepsis,200868.4
 2015,Meningitis/encephalitis,20259.2
 2015,Acute lower respiratory infections,230172.6
 2015,Congenital anomalies,267258.4
@@ -97,7 +97,7 @@ Period,Dim3,Value
 2014,HIV/AIDS,1175.0
 2014,Tetanus,11755.7
 2014,Injuries,15721.2
-2014,Sepsis and other infectious conditions of the newborn,205423.6
+2014,Sepsis,205423.6
 2014,Meningitis/encephalitis,21166.8
 2014,Acute lower respiratory infections,238606.0
 2014,Congenital anomalies,270667.1
@@ -110,7 +110,7 @@ Period,Dim3,Value
 2013,Tetanus,12558.1
 2013,HIV/AIDS,1376.3
 2013,Injuries,16171.3
-2013,Sepsis and other infectious conditions of the newborn,211500.3
+2013,Sepsis,211500.3
 2013,Meningitis/encephalitis,22105.6
 2013,Acute lower respiratory infections,250174.8
 2013,Congenital anomalies,273597.0
@@ -123,7 +123,7 @@ Period,Dim3,Value
 2012,Tetanus,13270.4
 2012,HIV/AIDS,1607.5
 2012,Injuries,17052.8
-2012,Sepsis and other infectious conditions of the newborn,218043.1
+2012,Sepsis,218043.1
 2012,Meningitis/encephalitis,23013.1
 2012,Acute lower respiratory infections,261791.1
 2012,Congenital anomalies,276346.0
@@ -136,7 +136,7 @@ Period,Dim3,Value
 2011,Tetanus,14034.2
 2011,Injuries,17306.0
 2011,HIV/AIDS,1757.6
-2011,Sepsis and other infectious conditions of the newborn,224969.0
+2011,Sepsis,224969.0
 2011,Meningitis/encephalitis,24077.2
 2011,Acute lower respiratory infections,273442.9
 2011,Congenital anomalies,273688.4
@@ -149,7 +149,7 @@ Period,Dim3,Value
 2010,Tetanus,15253.4
 2010,HIV/AIDS,1880.5
 2010,Injuries,18905.6
-2010,Sepsis and other infectious conditions of the newborn,230428.1
+2010,Sepsis,230428.1
 2010,Meningitis/encephalitis,25120.8
 2010,Congenital anomalies,271536.0
 2010,Acute lower respiratory infections,285910.7
@@ -162,7 +162,7 @@ Period,Dim3,Value
 2009,Tetanus,16811.0
 2009,Injuries,20226.5
 2009,HIV/AIDS,2082.6
-2009,Sepsis and other infectious conditions of the newborn,236906.6
+2009,Sepsis,236906.6
 2009,Meningitis/encephalitis,26243.1
 2009,Congenital anomalies,270396.5
 2009,Acute lower respiratory infections,298837.2
@@ -175,7 +175,7 @@ Period,Dim3,Value
 2008,Tetanus,18925.2
 2008,Injuries,21840.6
 2008,HIV/AIDS,2350.1
-2008,Sepsis and other infectious conditions of the newborn,243197.7
+2008,Sepsis,243197.7
 2008,Meningitis/encephalitis,26955.1
 2008,Congenital anomalies,270062.4
 2008,Acute lower respiratory infections,311130.6
@@ -187,7 +187,7 @@ Period,Dim3,Value
 2007,Prematurity,1203771.7
 2007,Tetanus,21438.7
 2007,Injuries,22205.2
-2007,Sepsis and other infectious conditions of the newborn,249644.2
+2007,Sepsis,249644.2
 2007,HIV/AIDS,2577.7
 2007,Congenital anomalies,268510.2
 2007,Meningitis/encephalitis,27893.8
@@ -199,7 +199,7 @@ Period,Dim3,Value
 2006,Prematurity,1221492.9
 2006,Tetanus,24019.3
 2006,Injuries,25136.9
-2006,Sepsis and other infectious conditions of the newborn,255196.5
+2006,Sepsis,255196.5
 2006,Congenital anomalies,269121.3
 2006,HIV/AIDS,2778.6
 2006,Meningitis/encephalitis,28633.5
@@ -211,7 +211,7 @@ Period,Dim3,Value
 2005,Measles,0.0
 2005,Malaria,1.9
 2005,Prematurity,1245896.2
-2005,Sepsis and other infectious conditions of the newborn,263769.1
+2005,Sepsis,263769.1
 2005,Injuries,26710.2
 2005,Congenital anomalies,269931.7
 2005,Tetanus,27364.4
@@ -224,7 +224,7 @@ Period,Dim3,Value
 2004,Measles,0.0
 2004,Prematurity,1275077.1
 2004,Congenital anomalies,271629.3
-2004,Sepsis and other infectious conditions of the newborn,272415.8
+2004,Sepsis,272415.8
 2004,Injuries,30560.9
 2004,Tetanus,30755.9
 2004,Meningitis/encephalitis,30777.0
@@ -237,7 +237,7 @@ Period,Dim3,Value
 2003,Measles,0.0
 2003,Prematurity,1306607.9
 2003,Congenital anomalies,273184.7
-2003,Sepsis and other infectious conditions of the newborn,279049.0
+2003,Sepsis,279049.0
 2003,Injuries,31825.8
 2003,Meningitis/encephalitis,31913.7
 2003,HIV/AIDS,3242.7
@@ -250,7 +250,7 @@ Period,Dim3,Value
 2002,Measles,0.0
 2002,Prematurity,1344318.1
 2002,Congenital anomalies,277308.9
-2002,Sepsis and other infectious conditions of the newborn,285913.7
+2002,Sepsis,285913.7
 2002,Malaria,3.6
 2002,Meningitis/encephalitis,32866.6
 2002,HIV/AIDS,3375.6
@@ -263,7 +263,7 @@ Period,Dim3,Value
 2001,Measles,0.0
 2001,Prematurity,1382798.3
 2001,Congenital anomalies,280389.6
-2001,Sepsis and other infectious conditions of the newborn,293861.9
+2001,Sepsis,293861.9
 2001,Malaria,3.1
 2001,Meningitis/encephalitis,34183.5
 2001,HIV/AIDS,3463.6
@@ -278,7 +278,7 @@ Period,Dim3,Value
 2000,Birth asphyxia and birth trauma,1002297.3
 2000,Prematurity,1417411.1
 2000,Congenital anomalies,282454.4
-2000,Sepsis and other infectious conditions of the newborn,299435.6
+2000,Sepsis,299435.6
 2000,Meningitis/encephalitis,35062.9
 2000,HIV/AIDS,3526.5
 2000,Acute lower respiratory infections,434064.3
