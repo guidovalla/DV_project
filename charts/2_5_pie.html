@@ -1,5 +1,11 @@
-<div class="card-body">
+
   <h5 class="card-title">Chart 5</h5>
+<p>
+  In this pie chart is possible to see the main causes of death in a country and their % of deaths caused compared to the total.
+On the bottom of the chart a year slider and a country selection button are present, by clicking and dragging the slider it's possible to change the year visualized and by selecting a different country the chart will visualize data related to that country.
+</p>
+
+<select id="CountryButton"></select>
   <div id="container_5"></div>
 
 <!-- Include d3 library -->
@@ -7,9 +13,8 @@
                       <!-- Load slider -->
                       <script src="https://unpkg.com/d3-simple-slider"></script>
 <!-- Create a container to host the chart -->
-<div id="container_5"></div>
 
-<select id="CountryButton"></select>
+
 
 <style>
   text {
@@ -52,14 +57,14 @@ const margin5 = {top: 80, right: 80, bottom: 80, left: 80};
 const svg = d3.select("#container_5")
   .append("svg")
     .attr("width", "100%")
-    .attr("height", "100%")
+    .attr("height", "70%")
     .attr("viewBox", "0 0 450 450")
     .attr("preserveAspectRatio", "xMinYMin")
   .append("g")
     .attr("transform", `translate(${width5 / 2}, ${height5 / 2})`);
 
     var Year=1990
-    var Country="Italy"
+    var Country="Afghanistan"
     
 
 
@@ -108,7 +113,7 @@ d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/2_3_pi
 const color = d3.scaleOrdinal()
   .domain(fdata)
   //.range(["#0072BC","#8EBEFF"])
-  .range(["#821210","#762900", "#ac430c","#dc7500","#ffc31f"])
+  .range(["#003333","#004d4d","#006666","#008080","#009999","#00b3b3","#00e6e6", "#00ffff"	, "	#1affff", "#33ffff","#95edeb","	#94d1d1","#295656","#00cccc","	#0d7373","	#364949" ,"	#1c4a4a" ])
   
 
 
@@ -187,35 +192,14 @@ svg
   .call(text => text.append("tspan")
     .attr("x", "0.2em")
     .attr("y", "-0.6em")
-    .attr("fill", "#ffffff")
+    .attr("fill", "white")
     .text(d => d.data.cause))
     .call(text => text.filter(d => (d.endAngle - d.startAngle) > 0.1).append("tspan")
     .attr("x", 0)
     .attr("y", "0.7em")
-    .attr("fill", "#ffffff")
+    .attr("fill", "white")
     .text(d => Math.round(1000 * d.data.val/ total) / 10 + '%'))
     .attr('opacity', d => (d.endAngle-d.startAngle)<0.75 ? 0:1)
-
-
-// set title
-svg
-  .append("text")
-    .attr("class", "chart-title")
-    .attr("x", -(margin5.top/2+radius))
-    .attr("y", -(margin5.top/2+radius))
-    .attr("text-anchor", "start")
-  .text("2021 UNHCR's funding")
-
-// set source
-svg
-  .append("text")
-    .attr("class", "chart-source")
-    .attr("x", -(margin5.top/2+radius))
-    .attr("y", margin5.top/3+radius)
-    .attr("text-anchor", "start")
-  .text("Source: UNHCR")
-
-
 
   //add slider 
           
@@ -251,9 +235,9 @@ svg
 
 
           function updateChart(Year, Country){
-            d3.selectAll("text").remove()
-
-
+            d3.selectAll("path").remove()
+      
+         
   fdata  = data.filter(function (d) {
       return d.year == Year;
     });
@@ -311,16 +295,16 @@ svg
   .call(text => text.append("tspan")
     .attr("x", "0.2em")
     .attr("y", "-0.6em")
-    .attr("fill", "#ffffff")
+    .attr("fill", "white")
     .text(d => d.data.cause))
   .call(text => text.filter(d => (d.endAngle - d.startAngle) > 0.25).append("tspan")
     .attr("x", 0)
     .attr("y", "0.7em")
-    .attr("fill", "#ffffff")
+    .attr("fill", "white")
     .text(d => Math.round(1000 * d.data.val/ total) / 10 + '%'))
     .attr('opacity', d => (d.endAngle-d.startAngle)<0.75 ? 0:1)
 
-          }
+  }
 })
 
 
