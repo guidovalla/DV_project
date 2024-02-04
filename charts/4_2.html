@@ -1,5 +1,9 @@
-<div class="card-body">
+
 <h5 class="card-title">Chart 2</h5>
+
+<p>
+  in this tree map is possible to see the life expectancy and population of each continent. The colour of each rectangle depends on the life expectancy of each continent, with a darker colour indicating a longer life expectancy, while the size depends on the population. A tooltip appears when hovering a rectangle, indicating the exact value of the projected LE and population for the selected rectangle. On the bottom of the chart a slider is present: by clicking and dragging the slider is possible to change the year visualized in the chart
+</p>
 
 <!-- Include d3 library -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -67,7 +71,7 @@ text.copyright {
 
 <script>
 const margin2 = {top: 30, right: 20, bottom: 30, left: 20};
-const width2 = 450 - margin2.left - margin2.right;
+const width2 = 420 - margin2.left - margin2.right;
 const height2 = 350 - margin2.top - margin2.bottom;
 
 // append the svg object to the body of the page
@@ -370,4 +374,3 @@ const sliderRange = d3
                   }
 })
 </script>
-</div>
