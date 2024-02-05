@@ -359,14 +359,7 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 
-.logo-container {
-  width: 100%;
-  text-align: center;
-}
-.logo{
-  width: 200px;
-  margin-top: 50px;
-}
+
 .logo {
   line-height: 1;
 }
