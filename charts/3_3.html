@@ -1,6 +1,6 @@
-<h5 class="card-title">Chart 3</h5>
+<h5 class="card-title">Improvements for each cause of death</h5>
 <p>
-  In this bar chart is possible to see the amount of children deaths during a year, separated by the cause of death. A slider is present at the bottom of the chart, by clicking and dragging the slider is possible to change the year visualized in the chart
+  In this bar chart is possible to see the amount of deaths during a year, separated by the cause of death. A slider is present at the bottom of the chart, by clicking and dragging the slider is possible to change the year visualized in the chart
 <!-- Create a container to host the charts -->
 
 <!-- Include d3 library -->
@@ -117,7 +117,7 @@ const svg3 = d3.select("#container3")
 .attr("x", -(margin3.left)*0.7)
 .attr("y", -(margin3.top/9))
 .attr("text-anchor", "start")
-.text("Children deaths")
+.text("Deaths")
 
             // Initial bars
             updateBars(data[0].Period);

@@ -4,9 +4,9 @@
   In this pie chart is possible to see the main causes of death in a country and their % of deaths caused compared to the total.
 On the bottom of the chart a year slider and a country selection button are present, by clicking and dragging the slider it's possible to change the year visualized and by selecting a different country the chart will visualize data related to that country.
 </p>
-
 <select id="CountryButton"></select>
   <div id="container_5"></div>
+
 
 <!-- Include d3 library -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -118,7 +118,7 @@ d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/2_3_pi
 const color = d3.scaleOrdinal()
   .domain(fdata)
   //.range(["#0072BC","#8EBEFF"])
-  .range(["#00cccc", "#009999"])
+  .range(["#009999"])
 //"#00e6e6", "#00ffff"	
   //"#006666","#008080","#009999","", "	#1affff", "#33ffff","#95edeb","	#94d1d1","#295656",,"	
 //"#003333","#004d4d"
@@ -194,6 +194,7 @@ svg
 
 svg
   .append("g")
+  // .attr("class", "text-elements")
   .attr("text-anchor", "middle")
   .selectAll("text")
   .data(dataPrepared)
@@ -211,7 +212,8 @@ svg
     .attr("fill", "white")
     .style("font-size", "10px")
     .text(d => Math.round(1000 * d.data.val/ total) / 10 + '%'))
-    .attr('opacity', d => (d.endAngle-d.startAngle)<0.75 ? 0:1)
+    .attr('opacity', d => (d.endAngle-d.startAngle)<0.75 ? 0:0.99)
+    // .attr("class", "chartElement");
 
   //add slider 
           
@@ -247,8 +249,10 @@ svg
 
 
           function updateChart(Year, Country){
-            d3.selectAll("path").remove()
-      
+            //remove the tspan text
+            svg.selectAll("tspan").remove();
+
+
          
   fdata  = data.filter(function (d) {
       return d.year == Year;
