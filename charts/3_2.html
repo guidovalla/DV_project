@@ -194,7 +194,7 @@ const sliderRange= d3
 .sliderBottom()
 .min(1950)
 .max(2021)
-.width(300)
+.width(600)
 .step(1)
 .tickFormat(d3.format('Y'))
 .ticks(5)
@@ -207,7 +207,7 @@ const sliderRange= d3
 const gRange= d3.
         select('#viz_container')
         .append("svg")
-        .attr("width", 400 + margin.left + margin.right)
+        .attr("width", 600 + margin.left + margin.right)
         .attr("height", 10 + margin.top + margin.bottom)
         .append("g")
         .attr("transform","translate(" + margin.left + "," + margin.top + ")")

@@ -415,7 +415,7 @@ const sliderRange= d3
 .sliderBottom()
 .min(2000)
 .max(2019)
-.width(300)
+.width(600)
 .step(1)
 .tickFormat(d3.format('Y'))
 .ticks(5)
@@ -433,7 +433,7 @@ updateChart(year, type);
 const gRange= d3.
 select('#slider-range')
 .append("svg")
-.attr("width", 400 + margin4.left + margin4.right)
+.attr("width", 600 + margin4.left + margin4.right)
 .attr("height", 10 + margin4.top + margin4.bottom)
 .append("g")
 .attr("transform","translate(" + margin4.left + "," + margin4.top + ")")

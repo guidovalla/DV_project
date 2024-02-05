@@ -325,7 +325,7 @@ svg
 .sliderBottom()
 .min(2000)
 .max(2019)
-.width(300)
+.width(600)
 .step(1)
 .tickFormat(d3.format('Y'))
 .ticks(5)
@@ -337,8 +337,8 @@ svg
         const gRange= d3.
         select('#container')
         .append("svg")
-        .attr("width", 400 + margin.left + margin.right)
-        .attr("height", 10 + margin.top + margin.bottom)
+        .attr("width", 600 + margin.left + margin.right)
+        .attr("height", 15 + margin.top + margin.bottom)
         .append("g")
         .attr("transform","translate(" + margin.left + "," + margin.top + ")")
         .call(sliderRange);
