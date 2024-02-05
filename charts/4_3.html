@@ -1,337 +1,353 @@
 <h5 class="card-title">Chart 3</h5>
 
 <p>
-  in this butterfly chart is possible to see the population pyramid of the world. Each rectangle represents the people belonging to a specific age group, separated by gender as seen by the legend on the top of the chart. A tooltip appears when hovering a rectangle, indicating the exact value of the projected population belonging to the selected age and gender. On the bottom of the chart a year slider is present, by clicking and dragging it it's possible to change the year visualized on the chart
+  in this butterfly chart is possible to see the population pyramid of the world. Each rectangle represents the people
+  belonging to a specific age group, separated by gender as seen by the legend on the top of the chart. A tooltip
+  appears when hovering a rectangle, indicating the exact value of the projected population belonging to the selected
+  age and gender. On the bottom of the chart a year slider is present, by clicking and dragging it it's possible to
+  change the year visualized on the chart
 
 </p>
-                            <script src="https://d3js.org/d3.v7.min.js"></script>
-                            <!-- Load slider -->
-                            <script src="https://unpkg.com/d3-simple-slider"></script>
-                      
-                            <div id="container_3"></div>
-                      <!-- <div id="slider-range_3"></div> -->
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<!-- Load slider -->
+<script src="https://unpkg.com/d3-simple-slider"></script>
+
+<div id="container_3"></div>
+<!-- <div id="slider-range_3"></div> -->
 
 
 
-                      <style>
-                    text {
-                      font-family: lato;
-                      font-size: 10px;
-                      fill: #8c7e7e;
-                    }
-                    .grid path {
-                      stroke-width: 0;
-                      stroke: #333333;
+<style>
+  * {
+    font-family: Lato;
+    font-size: 18px;
+    line-height: 1.5;
+  }
 
-                    }
-                    .grid .tick line {
-                      stroke: #333333;
-                      stroke-width: 0.3px;
-                      stroke-opacity: 0.3;
-                      
-                    }
-                    text.chart-label {
-                      font-size: 10px;
-                      font-weight: 400;
-                      fill: #999999;
-                    }
-                    
-                    text.chart-title {
-                      font-size: 14px;
-                      font-weight: bold;
-                      fill:#222222
-                    }
-                    text.chart-source {
-                      font-size: 8px;
-                      fill: #999999;
-                    }
-                    text.copyright {
-                      font-size: 8px;
-                      fill: #999999;
-                    }
-                    
-                    .tooltip {
-                      background-color: #ffffff;
-                      font-family: lato;
-                      font-size: 11px;
-                      padding: 4px;
-                      color: #666666;
-                      border: none;
-                      box-shadow: 0px 0px 3px 0px #E6E6E6;
-                    }
-                    .legend{
-                      font-size: 10px;
-                    }
-                    </style>
+  text {
+    font-family: lato;
+    font-size: 10px;
+    fill: #8c7e7e;
+  }
 
-                      <script>
-                          // set the dimensions and margins of the graph
-const margin3 = {top: 60, right: 20, bottom: 40, left: 100};
+  .grid path {
+    stroke-width: 0;
+    stroke: #333333;
+
+  }
+
+  .grid .tick line {
+    stroke: #333333;
+    stroke-width: 0.3px;
+    stroke-opacity: 0.3;
+
+  }
+
+  text.chart-label {
+    font-size: 10px;
+    font-weight: 400;
+    fill: #999999;
+  }
+
+  text.chart-title {
+    font-size: 14px;
+    font-weight: bold;
+    fill: #222222
+  }
+
+  text.chart-source {
+    font-size: 8px;
+    fill: #999999;
+  }
+
+  text.copyright {
+    font-size: 8px;
+    fill: #999999;
+  }
+
+  .tooltip {
+    background-color: #ffffff;
+    font-family: lato;
+    font-size: 11px;
+    padding: 4px;
+    color: #666666;
+    border: none;
+    box-shadow: 0px 0px 3px 0px #E6E6E6;
+  }
+
+  .legend {
+    font-size: 10px;
+  }
+</style>
+
+<script>
+  // set the dimensions and margins of the graph
+  const margin3 = { top: 60, right: 20, bottom: 40, left: 100 };
   const width3 = 450 - margin3.left - margin3.right;
   const height3 = 350 - margin3.top - margin3.bottom;
 
   // append the svg object to the body of the page
   const svg3 = d3.select("#container_3")
     .append("svg")
-      .attr("width", "100%")
-      .attr("height", "74%")
-      .attr("viewBox", "0 0 450 390")
-      .attr("preserveAspectRatio", "xMinYMin")
+    .attr("width", "100%")
+    .attr("height", "74%")
+    .attr("viewBox", "0 0 450 390")
+    .attr("preserveAspectRatio", "xMinYMin")
     .append("g")
-      .attr("transform", `translate(${margin3.left}, ${margin3.top})`);
+    .attr("transform", `translate(${margin3.left}, ${margin3.top})`);
 
   // parse the Data
   d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/4_3_new.csv")
-  .then(function(data){
+    .then(function (data) {
 
-    var uniqueYearsSet = new Set(data.map(d => d.Year));
-    var allYears = Array.from(uniqueYearsSet);
-    //console.log("years", allYears)
+      var uniqueYearsSet = new Set(data.map(d => d.Year));
+      var allYears = Array.from(uniqueYearsSet);
+      //console.log("years", allYears)
 
-    // d3.select("#YearsButton")
-    //       .selectAll('myOptions')
-    //          .data(allYears)
-    //         .enter()
-    //         .append('option')
-    //       .text(function (d) { return d; }) // text showed in the menu
-    //       .attr("value", function (d) { return d; }) // corresponding value returned by the button
-
-
-    
+      // d3.select("#YearsButton")
+      //       .selectAll('myOptions')
+      //          .data(allYears)
+      //         .enter()
+      //         .append('option')
+      //       .text(function (d) { return d; }) // text showed in the menu
+      //       .attr("value", function (d) { return d; }) // corresponding value returned by the button
 
 
-  // X scale and Axis
-  const xScaleMale = d3.scaleLinear()
-    .domain([0, 1.2*d3.max(data, d => +d.male)])
-    .range([width3/2, 0]);
-  svg3
-    .append("g")
+
+
+
+      // X scale and Axis
+      const xScaleMale = d3.scaleLinear()
+        .domain([0, 1.2 * d3.max(data, d => +d.male)])
+        .range([width3 / 2, 0]);
+      svg3
+        .append("g")
         .attr("transform", `translate(0, ${height3})`)
-    .call(d3.axisBottom(xScaleMale).tickSize(0).tickPadding(3).ticks(7, ""))
-    .call(function(d) { return d.select(".domain").remove()});
+        .call(d3.axisBottom(xScaleMale).tickSize(0).tickPadding(3).ticks(7, ""))
+        .call(function (d) { return d.select(".domain").remove() });
 
-  const xScaleFemale = d3.scaleLinear()
-    .domain([0, 1.2* d3.max(data, d => +d.female)])
-    .range([width3/2, width3]);
-  svg3
-    .append("g")
+      const xScaleFemale = d3.scaleLinear()
+        .domain([0, 1.2 * d3.max(data, d => +d.female)])
+        .range([width3 / 2, width3]);
+      svg3
+        .append("g")
         .attr("transform", `translate(0, ${height3})`)
-    .call(d3.axisBottom(xScaleFemale).tickSize(0).tickPadding(3).ticks(7, ""))
-    .call(function(d) { return d.select(".domain").remove()});
+        .call(d3.axisBottom(xScaleFemale).tickSize(0).tickPadding(3).ticks(7, ""))
+        .call(function (d) { return d.select(".domain").remove() });
 
-  // set vertical grid line
-  const GridLineF = function() { return d3.axisBottom().scale(xScaleFemale)};
-  svg3
-    .append("g")
-      .attr("class", "grid")
-    .call(GridLineF()
-      .tickSize(height3,0,0)
-      .tickFormat("")
-      .ticks(7)
-  );
-  const GridLineM = function() { return d3.axisBottom().scale(xScaleMale)};
-  svg3
-    .append("g")
-      .attr("class", "grid")
-    .call(GridLineM()
-      .tickSize(height3,0,0)
-      .tickFormat("")
-      .ticks(7)
-  );
+      // set vertical grid line
+      const GridLineF = function () { return d3.axisBottom().scale(xScaleFemale) };
+      svg3
+        .append("g")
+        .attr("class", "grid")
+        .call(GridLineF()
+          .tickSize(height3, 0, 0)
+          .tickFormat("")
+          .ticks(7)
+        );
+      const GridLineM = function () { return d3.axisBottom().scale(xScaleMale) };
+      svg3
+        .append("g")
+        .attr("class", "grid")
+        .call(GridLineM()
+          .tickSize(height3, 0, 0)
+          .tickFormat("")
+          .ticks(7)
+        );
 
-  // Y scale and Axis
-  const yScale = d3.scaleBand()
-      .domain(data.map(d => d.ages))
-      .range([height3, 0])
-      .padding(.25);
-  svg3
-      .append("g")
-      .call(d3.axisLeft(yScale).tickSize(0).tickPadding(15))
-      .call(d => d.select(".domain").remove());
+      // Y scale and Axis
+      const yScale = d3.scaleBand()
+        .domain(data.map(d => d.ages))
+        .range([height3, 0])
+        .padding(.25);
+      svg3
+        .append("g")
+        .call(d3.axisLeft(yScale).tickSize(0).tickPadding(15))
+        .call(d => d.select(".domain").remove());
 
-  // create a tooltip
-  const tooltip = d3.select("body")
-    .append("div")
-      .attr("class", "tooltip");
+      // create a tooltip
+      const tooltip = d3.select("body")
+        .append("div")
+        .attr("class", "tooltip");
 
-  // tooltip events
-  const mouseover = function(d) {
-      tooltip
-        .style("opacity", 1)
-      d3.select(this)
-        .style("stroke", "#EF4A60")
-        .style("opacity", .5)
-  };
-  const mousemove1 = function(event,d) {
-      tooltip
-        .style("top", d3.pointer(event)[1]-5 + "px")
-        .style("left", d3.pointer(event)[0] +50+ "px")
-        .html( `${d3.format(".3f")(d.male)}`+ " milions")
-        .style("position", "absolute");
+      // tooltip events
+      const mouseover = function (d) {
+        tooltip
+          .style("opacity", 1)
+        d3.select(this)
+          .style("stroke", "#EF4A60")
+          .style("opacity", .5)
+      };
+      const mousemove1 = function (event, d) {
+        tooltip
+          .style("top", d3.pointer(event)[1] - 5 + "px")
+          .style("left", d3.pointer(event)[0] + 50 + "px")
+          .html(`${d3.format(".3f")(d.male)}` + " milions")
+          .style("position", "absolute");
         console.log(d3.pointer(event)[0])
-  };
-  const mousemove2 = function(event,d) {
-    tooltip
-    .style("top", d3.pointer(event)[1]-5 + "px")
-    .style("left", d3.pointer(event)[0] -20+ "px")
-        .html(`${d3.format(".3f")(d.female)}`+ " milions")
-        .style("position", "absolute");
-};
-  const mouseleave = function(d) {
-      tooltip
-        .style("opacity", 0)
-      d3.select(this)
-        .style("stroke", "none")
-        .style("opacity", 1)
-  };
+      };
+      const mousemove2 = function (event, d) {
+        tooltip
+          .style("top", d3.pointer(event)[1] - 5 + "px")
+          .style("left", d3.pointer(event)[0] - 20 + "px")
+          .html(`${d3.format(".3f")(d.female)}` + " milions")
+          .style("position", "absolute");
+      };
+      const mouseleave = function (d) {
+        tooltip
+          .style("opacity", 0)
+        d3.select(this)
+          .style("stroke", "none")
+          .style("opacity", 1)
+      };
 
-  var Pippo = 2023
+      var Pippo = 2023
 
-  var dataFilter = data.filter(function(d){return d.Year==Pippo})
+      var dataFilter = data.filter(function (d) { return d.Year == Pippo })
 
-  // create male bars
-  svg3
-    .selectAll(".maleBar")
-      .data(dataFilter)
-    .join("rect")
-      .attr("class", "barMale")
-      .attr("x", d => xScaleMale(d.male))
-      .attr("y", d => yScale(d.ages))
-      .attr("width", d => width3/2 - xScaleMale(d.male))
-      .attr("height", yScale.bandwidth())
-      .style("fill", "#18375F")
-    .on("mouseover", mouseover)
-    .on("mousemove", mousemove1)
-    .on("mouseleave", mouseleave)
-
-  // create female bars
-  svg3
-      .selectAll(".femaleBar")
+      // create male bars
+      svg3
+        .selectAll(".maleBar")
         .data(dataFilter)
-      .join("rect")
+        .join("rect")
+        .attr("class", "barMale")
+        .attr("x", d => xScaleMale(d.male))
+        .attr("y", d => yScale(d.ages))
+        .attr("width", d => width3 / 2 - xScaleMale(d.male))
+        .attr("height", yScale.bandwidth())
+        .style("fill", "#18375F")
+        .on("mouseover", mouseover)
+        .on("mousemove", mousemove1)
+        .on("mouseleave", mouseleave)
+
+      // create female bars
+      svg3
+        .selectAll(".femaleBar")
+        .data(dataFilter)
+        .join("rect")
         .attr("class", "barFemale")
         .attr("x", xScaleFemale(0))
         .attr("y", d => yScale(d.ages))
         .attr("width", d => xScaleFemale(d.female) - xScaleFemale(0))
         .attr("height", yScale.bandwidth())
         .style("fill", "#0072BC")
-      .on("mouseover", mouseover)
-      .on("mousemove", mousemove2)
-      .on("mouseleave", mouseleave)
+        .on("mouseover", mouseover)
+        .on("mousemove", mousemove2)
+        .on("mouseleave", mouseleave)
 
-  // set x axis label
-  svg3
-      .append("text")
-          .attr("class", "chart-label")
-          .attr("x", width3/2.7)
-          .attr("y", height3 + margin3.bottom/1.2)
-      .text("Population (billions)")
+      // set x axis label
+      svg3
+        .append("text")
+        .attr("class", "chart-label")
+        .attr("x", width3 / 2.7)
+        .attr("y", height3 + margin3.bottom / 1.2)
+        .text("Population (billions)")
 
-  //set legend
-  svg3
-      .append("rect")
-          .attr("x", -(margin3.left)*0.7)
-          .attr("y", -(margin3.top/3))
-          .attr("width", 13)
-          .attr("height", 13)
-          .style("fill", "#18375F")
-  svg3
-      .append("text")
-          .attr("class", "legend")
-          .attr("x", -(margin3.left)*0.6+15)
-          .attr("y", -(margin3.top/5.5))
-      .text("Male")
-  svg3
-      .append("rect")
-          .attr("x", 40)
-          .attr("y", -(margin3.top/3))
-          .attr("width", 13)
-          .attr("height", 13)
-          .style("fill", "#0072BC")
-  svg3
-      .append("text")
-          .attr("class", "legend")
-          .attr("x", 60)
-          .attr("y", -(margin3.top/5.5))
-      .text("Female")
+      //set legend
+      svg3
+        .append("rect")
+        .attr("x", -(margin3.left) * 0.7)
+        .attr("y", -(margin3.top / 3))
+        .attr("width", 13)
+        .attr("height", 13)
+        .style("fill", "#18375F")
+      svg3
+        .append("text")
+        .attr("class", "legend")
+        .attr("x", -(margin3.left) * 0.6 + 15)
+        .attr("y", -(margin3.top / 5.5))
+        .text("Male")
+      svg3
+        .append("rect")
+        .attr("x", 40)
+        .attr("y", -(margin3.top / 3))
+        .attr("width", 13)
+        .attr("height", 13)
+        .style("fill", "#0072BC")
+      svg3
+        .append("text")
+        .attr("class", "legend")
+        .attr("x", 60)
+        .attr("y", -(margin3.top / 5.5))
+        .text("Female")
 
-         //add slider 
-        
-         const sliderRange = d3
-    .sliderBottom()
-    .min(2023)
-    .max(2100)
-    .width(600)
-    .tickFormat(d3.format('Y'))
-    .step(1)
-    .default(2023)
-    .on('onchange', val => {
-        Pippo = val;
-        update(Pippo);
-    });
+      //add slider 
+
+      const sliderRange = d3
+        .sliderBottom()
+        .min(2023)
+        .max(2100)
+        .width(600)
+        .tickFormat(d3.format('Y'))
+        .step(1)
+        .default(2023)
+        .on('onchange', val => {
+          Pippo = val;
+          update(Pippo);
+        });
 
 
-        const gRange= d3.
+      const gRange = d3.
         select('#container_3')
         .append("svg")
         .attr("width", "100%")
         .attr("height", "10%")
         .append("g")
-        .attr("transform","translate(" + margin3.right+ "," + margin3.bottom + ")")
+        .attr("transform", "translate(" + margin3.right + "," + margin3.bottom + ")")
         .call(sliderRange);
 
 
 
 
       function update(selectedYear) {
-  // Remove existing bars
-  svg3.selectAll(".barMale").remove();
-  svg3.selectAll(".barFemale").remove();
+        // Remove existing bars
+        svg3.selectAll(".barMale").remove();
+        svg3.selectAll(".barFemale").remove();
 
-  // Filter data for the selected year
-  const dataFilter = data.filter(function (d) {
-    return d.Year == selectedYear;
-  });
+        // Filter data for the selected year
+        const dataFilter = data.filter(function (d) {
+          return d.Year == selectedYear;
+        });
 
-  // Update male bars
-  svg3
-    .selectAll(".maleBar")
-    .data(dataFilter)
-    .enter()
-    .append("rect")
-    .attr("class", "barMale")
-    .attr("x", (d) => xScaleMale(d.male))
-    .attr("y", (d) => yScale(d.ages))
-    .attr("width", (d) => width3 / 2 - xScaleMale(d.male))
-    .attr("height", yScale.bandwidth())
-    .style("fill", "#18375F")
-    .on("mouseover", mouseover)
-    .on("mousemove", mousemove1)
-    .on("mouseleave", mouseleave);
+        // Update male bars
+        svg3
+          .selectAll(".maleBar")
+          .data(dataFilter)
+          .enter()
+          .append("rect")
+          .attr("class", "barMale")
+          .attr("x", (d) => xScaleMale(d.male))
+          .attr("y", (d) => yScale(d.ages))
+          .attr("width", (d) => width3 / 2 - xScaleMale(d.male))
+          .attr("height", yScale.bandwidth())
+          .style("fill", "#18375F")
+          .on("mouseover", mouseover)
+          .on("mousemove", mousemove1)
+          .on("mouseleave", mouseleave);
 
-  // Update female bars (similar code as above)
-  svg3
-    .selectAll(".femaleBar")
-    .data(dataFilter)
-    .enter()
-    .append("rect")
-    .attr("class", "barFemale")
-    .attr("x", xScaleFemale(0))
-    .attr("y", (d) => yScale(d.ages))
-    .attr("width", (d) => xScaleFemale(d.female) - xScaleFemale(0))
-    .attr("height", yScale.bandwidth())
-    .style("fill", "#0072BC")
-    .on("mouseover", mouseover)
-    .on("mousemove", mousemove2)
-    .on("mouseleave", mouseleave);
-}
+        // Update female bars (similar code as above)
+        svg3
+          .selectAll(".femaleBar")
+          .data(dataFilter)
+          .enter()
+          .append("rect")
+          .attr("class", "barFemale")
+          .attr("x", xScaleFemale(0))
+          .attr("y", (d) => yScale(d.ages))
+          .attr("width", (d) => xScaleFemale(d.female) - xScaleFemale(0))
+          .attr("height", yScale.bandwidth())
+          .style("fill", "#0072BC")
+          .on("mouseover", mouseover)
+          .on("mousemove", mousemove2)
+          .on("mouseleave", mouseleave);
+      }
 
 
-  
-  d3.select("#YearsButton").on("change", function(d) {
-    Pippo = d3.select(this).property("value")
-    update(Pippo)
-  })
 
-  })
-                      </script>
+      d3.select("#YearsButton").on("change", function (d) {
+        Pippo = d3.select(this).property("value")
+        update(Pippo)
+      })
+
+    })
+</script>

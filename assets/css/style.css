@@ -1,4 +1,8 @@
-
+*{
+  font-family: Lato;
+  font-size: 18px;
+  line-height: 1.5;  
+}
 :root {
   scroll-behavior: smooth;
 }
@@ -354,10 +358,25 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+
+.logo-container {
+  width: 100%;
+  text-align: center;
+}
+.logo{
+  width: 200px;
+  margin-top: 50px;
+}
 .logo {
   line-height: 1;
 }
 
+@media (max-width: 480px) {
+  .logo {
+  margin-top: 50px;
+  width: 100px;
+}
+}
 @media (min-width: 1200px) {
   .logo {
     width: 280px;

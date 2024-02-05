@@ -15,12 +15,12 @@ in this linechart is possible to see the variation of some parameters over time.
 
 <style>
 
-  *{
-    font-family: Lato;
-    font-size: 18px;
-    line-height: 1.5;
-  }
-
+ 
+*{
+  font-family: Lato;
+  font-size: 18px;
+  line-height: 1.5;
+}
   .axis-x path {
     stroke: #000;
   }
@@ -165,18 +165,7 @@ return d3.max(c.values, function(d) {
 })
 ]);
 
-//console.log("y domain", y.domain());
 
-//define color scale
-// z.domain(countries.map(function(c, i) {
-//     return {
-//         id: c.id,
-//         color: lineColors[i % lineColors.length] // Assign color from the array
-//     };
-// }));
-
-
-//console.log("z domain", z.domain());
 
 //append x axis
 g.append("g")
@@ -189,7 +178,7 @@ g.append("g")
 .attr("x", 310)
 .attr("dy", "0.9em")
 .attr("fill", "#000")
-.text("Year")
+// .text("Year")
 .append("text")
 // .attr("transform", "rotate(-90)")
 .attr("y", 20)
