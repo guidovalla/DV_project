@@ -17,6 +17,11 @@ On the bottom of the chart a year slider and a country selection button are pres
 
 
 <style>
+    * {
+    font-family: Verdana;
+    font-size: 18px;
+    line-height: 1.5;
+  }
   text {
     font-family: lato;
     font-size: 10px;
@@ -194,11 +199,13 @@ svg
     .attr("x", "0.2em")
     .attr("y", "-0.6em")
     .attr("fill", "white")
+    .style("font-size", "13px")
     .text(d => d.data.cause))
     .call(text => text.filter(d => (d.endAngle - d.startAngle) > 0.1).append("tspan")
     .attr("x", 0)
     .attr("y", "0.7em")
     .attr("fill", "white")
+    .style("font-size", "13px")
     .text(d => Math.round(1000 * d.data.val/ total) / 10 + '%'))
     .attr('opacity', d => (d.endAngle-d.startAngle)<0.75 ? 0:1)
 
@@ -293,11 +300,13 @@ svg
     .attr("x", "0.2em")
     .attr("y", "-0.6em")
     .attr("fill", "white")
+    .style("font-size", "13px")
     .text(d => d.data.cause))
   .call(text => text.filter(d => (d.endAngle - d.startAngle) > 0.25).append("tspan")
     .attr("x", 0)
     .attr("y", "0.7em")
     .attr("fill", "white")
+    .style("font-size", "13px")
     .text(d => Math.round(1000 * d.data.val/ total) / 10 + '%'))
     .attr('opacity', d => (d.endAngle-d.startAngle)<0.75 ? 0:1)
    

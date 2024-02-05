@@ -142,7 +142,6 @@
     .on("mousemove", mousemove)
     .on("mouseleave", mouseleave);
   
-
   // add labels to the graph
   svg5
     .selectAll("text-number")
@@ -155,14 +154,11 @@
       .text(d => (d.data.val/10).toFixed(2)+ "%")
       .attr("font-size", "5px")
       .attr("fill", "#ffffff");
-      
-  
-      svg5
+  svg5
     .selectAll("text-region")
     .data(treeData.leaves())
-    .join("text").style("font-size", "8px")
+    .join("text").style("font-size", "4px")
       .attr("class", "tree-label")
-      .attr('opacity', d => (d.x1-d.x0)<100 ? 0:1)
       .attr("x", d => d.x0+5)
       .attr("y", d => d.y0+30)
       .text(d => d.data.cause)
