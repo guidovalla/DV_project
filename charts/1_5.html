@@ -1,4 +1,4 @@
-<h5 class="card-title">Chart 4</h5>
+<h5 class="card-title">Gender life expectancy gap</h5>
 <p>
   In this dumbell chart is possible to see the life expectancy gap across male and female at various ages. The green end represents the male LE, while the pink one represents the female one.
 </p>
@@ -17,12 +17,56 @@
         font-size: 18px;
         line-height: 1.5;
       }
-</style>
+  
+  
+  text {
+  font-family: lato;
+  font-size: 11px;
+  fill: #666666;
+  }
+  .grid path {
+  stroke-width: 0;
+  stroke: #333333;
+  }
+  .grid .tick line {
+  stroke: #333333;
+  stroke-width: 0.3px;
+  stroke-opacity: 0.3;
+  }
+  text.chart-title {
+  font-size: 15px;
+  font-weight: 600;
+  fill:#222222
+  }
+  text.chart-label {
+  font-size: 11px;
+  font-weight: 400;
+  fill: #999999;
+  }
+  text.chart-source {
+  font-size: 9px;
+  fill: #999999;
+  }
+  text.copyright {
+  font-size: 9px;
+  fill: #999999;
+  }
+  .tooltip {
+  background-color: #ffffff;
+  font-family: lato;
+  font-size: 11px;
+  padding: 4px;
+  color: #666666;
+  border: none;
+  box-shadow: 0px 0px 3px 0px #E6E6E6;
+  }
+  </style>
+  
 
 <script>
 
     // set the dimensions and margins of the graph
-    const margin5 = {top: 10, right: 30, bottom: 30, left: 50},
+    const margin5 = {top: 10, right: 30, bottom: 30, left: 70},
         width5 = 460 - margin5.left - margin5.right,
         height5 = 500 - margin5.top - margin5.bottom;
     

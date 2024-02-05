@@ -1,7 +1,7 @@
-<h5 class="card-title">Chart 1</h5>
+<h5 class="card-title">Life expectancy vs GDP per capita</h5>
                
 <p>
-In this bubble chart is possible to see the LE of various countries compared to their GDP per capita (Preston curve). The x axis is kept on a logarithmic scale for a better visualization, in order to avoid clogging the left end of the chart. Each bubble represents a country, with their size depending on the population and colour depedning on their continent, as seend in the legend on the top right. By hovering a bubble a tooltip appears, indicating the name of the country, the exact value of GDP per capita and their population. On the bottom of the chart a year slider is present, by clicking and dragging it it's possible to change the year visualized on the chart
+In this bubble chart is possible to see the LE of various countries compared to their GDP per capita (Preston curve). The x axis is kept on a logarithmic scale for a better visualization, in order to avoid clogging the left end of the chart. Each bubble represents a country, with their size depending on the population and colour depending on their continent, as seend in the legend on the top right. By hovering a bubble a tooltip appears, indicating the name of the country, the exact value of GDP per capita and their population. On the bottom of the chart a year slider is present, by clicking and dragging it it's possible to change the year visualized on the chart
 </p>
 
                       <!-- Include d3 library -->
@@ -211,13 +211,13 @@ svg
     .attr("y", d => yScale(+d.Lifeexpectancy));
 
 // set title
-svg
-  .append("text")
-    .attr("class", "chart-title")
-    .attr("x", -(margin.left)*0.5)
-    .attr("y", -(margin.top)/1.5)
-    .attr("text-anchor", "start")
-  .text("Life expectancy vs GDP per capita")
+// svg
+//   .append("text")
+//     .attr("class", "chart-title")
+//     .attr("x", -(margin.left)*0.5)
+//     .attr("y", -(margin.top)/1.5)
+//     .attr("text-anchor", "start")
+//   .text("Life expectancy vs GDP per capita")
 
 // set X axis label
 svg

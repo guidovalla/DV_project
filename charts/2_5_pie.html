@@ -1,5 +1,5 @@
 
-  <h5 class="card-title">Chart 5</h5>
+  <h5 class="card-title">Death Causes</h5>
 <p>
   In this pie chart is possible to see the main causes of death in a country and their % of deaths caused compared to the total.
 On the bottom of the chart a year slider and a country selection button are present, by clicking and dragging the slider it's possible to change the year visualized and by selecting a different country the chart will visualize data related to that country.
@@ -118,9 +118,13 @@ d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/2_3_pi
 const color = d3.scaleOrdinal()
   .domain(fdata)
   //.range(["#0072BC","#8EBEFF"])
-  .range(["#003333","#004d4d","#006666","#008080","#009999","#00b3b3","#00e6e6", "#00ffff"	, "	#1affff", "#33ffff","#95edeb","	#94d1d1","#295656","#00cccc","	#0d7373","	#364949" ,"	#1c4a4a" ])
-  
-
+  .range(["#00cccc", "#009999"])
+//"#00e6e6", "#00ffff"	
+  //"#006666","#008080","#009999","", "	#1affff", "#33ffff","#95edeb","	#94d1d1","#295656",,"	
+//"#003333","#004d4d"
+//#0d7373"
+// "#364949" ,"#1c4a4a"
+ 
 
 
 
@@ -171,7 +175,7 @@ const mouseleave = function(d) {
   tooltip
     .style("opacity", 0)
   d3.select(this)
-    .style("stroke", "none")
+  .style("stroke", "#000000")
     .style("opacity", 1)
 };
 
@@ -181,7 +185,7 @@ svg
 .join('path')
   .attr('d', arc)
   .attr('fill', d => color(d.data.cause))
-  .attr("stroke", "#ffffff")
+  .attr("stroke", "#000000")
   .style("stroke-width", "2px")
   .each(function(d) { this._current - d; })
   .on("mouseover", mouseover)
@@ -199,13 +203,13 @@ svg
     .attr("x", "0.2em")
     .attr("y", "-0.6em")
     .attr("fill", "white")
-    .style("font-size", "13px")
+    .style("font-size", "10px")
     .text(d => d.data.cause))
     .call(text => text.filter(d => (d.endAngle - d.startAngle) > 0.1).append("tspan")
     .attr("x", 0)
     .attr("y", "0.7em")
     .attr("fill", "white")
-    .style("font-size", "13px")
+    .style("font-size", "10px")
     .text(d => Math.round(1000 * d.data.val/ total) / 10 + '%'))
     .attr('opacity', d => (d.endAngle-d.startAngle)<0.75 ? 0:1)
 
@@ -282,7 +286,7 @@ arc = d3.arc()
 .join('path')
   .attr('d', arc)
   .attr('fill', d => color(d.data.cause))
-  .attr("stroke", "#ffffff")
+  .attr("stroke", "#000000")
   .style("stroke-width", "2px")
   .each(function(d) { this._current - d; })
   .on("mouseover", mouseover)
@@ -300,13 +304,13 @@ svg
     .attr("x", "0.2em")
     .attr("y", "-0.6em")
     .attr("fill", "white")
-    .style("font-size", "13px")
+    .style("font-size", "10px")
     .text(d => d.data.cause))
   .call(text => text.filter(d => (d.endAngle - d.startAngle) > 0.25).append("tspan")
     .attr("x", 0)
     .attr("y", "0.7em")
     .attr("fill", "white")
-    .style("font-size", "13px")
+    .style("font-size", "10px")
     .text(d => Math.round(1000 * d.data.val/ total) / 10 + '%'))
     .attr('opacity', d => (d.endAngle-d.startAngle)<0.75 ? 0:1)
    
