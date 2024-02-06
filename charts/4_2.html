@@ -158,8 +158,8 @@ const mouseover = function(d) {
 const mousemove = function(event,d) {
   //f = d3.format(",")
   tooltip
-  .style("top", d3.pointer(event)[1]+50 + "px")
-    .style("left", d3.pointer(event)[0]+50 + "px")
+  .style("top", d3.pointer(event)[1]+160 + "px")
+    .style("left", d3.pointer(event)[0]+160 + "px")
     //data pop round to 2 decimal 
     .html("Population: " + `${d.data.Pop.toFixed(2)}`+ " milions" + "<br>" + "Life expectancy: " + `${d.data.LE.toFixed(2)}` + " years")
     .style("position", "absolute");
