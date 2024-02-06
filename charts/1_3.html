@@ -1,6 +1,6 @@
 <h5 class="card-title">Total Life Expetancy at all ages by Region</h5>
 
-<p>
+<p, style="font-size: 16px;">
   In this linechart is possible to see the real LE at various ages of all the continents, separated by their colour. By hovering on a specific line a tooltip will appear, indicating the region of the selected line and highlighting it
 </p>
 
@@ -19,9 +19,11 @@
 
 
 * {
-      font-family: Verdana;
+  font-family: Verdana;
       font-size: 18px;
       line-height: 1.5;
+      max-width: 700px; 
+      margin: 0 auto; 
     }
 
 
@@ -69,7 +71,7 @@ box-shadow: 0px 0px 3px 0px #E6E6E6;
 </style>
 <script>
 // set the dimensions and margins of the graph
-const margin3 = {top: 80, right: 20, bottom: 50, left: 40};
+const margin3 = {top: 80, right: 20, bottom: 50, left: 20};
 const width3 = 450 - margin3.left - margin3.right;
 const height3 = 350 - margin3.top - margin3.bottom;
 

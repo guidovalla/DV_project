@@ -32,6 +32,7 @@ h6 {
   font-family: "Nunito", sans-serif;
 }
 
+
 /*--------------------------------------------------------------
 # Main
 --------------------------------------------------------------*/
@@ -252,6 +253,11 @@ h6 {
 
 .card-body {
   padding: 0 20px 20px 20px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: visible; */
 }
 
 .card-img-overlay {
