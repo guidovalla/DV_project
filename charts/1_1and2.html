@@ -27,7 +27,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 
 <!-- Create a container to host the chart -->
-<div id="viz_container"></div>
+<div id="viz_container", style=" border: 1px solid"></div>
 <style>
 
 * {
@@ -36,6 +36,9 @@
       line-height: 1.5;
       max-width: 700px; 
       margin: 0 auto;
+    }
+h5 {
+padding-top: 20px;
     }
 
 text {
@@ -81,7 +84,7 @@ height = 350;
 const svg = d3.select("#viz_container")
 .append("svg")
 .attr("width", "100%")
-.attr("height", "80%")
+.attr("height", "70vh")
 .attr("viewBox","0 0  550 450")
 .attr("preserveAspectRatio","xMinYMin");
 

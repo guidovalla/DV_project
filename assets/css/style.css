@@ -30,6 +30,7 @@ h4,
 h5,
 h6 {
   font-family: "Nunito", sans-serif;
+  padding-top: 20px;
 }
 
 
@@ -213,12 +214,31 @@ h6 {
 
 
 /* BOX OBJECT STYLES */
-.box {
+.box_bubble {
   width: 100%;
-  height: 100vh;
+  height: 145vh;
   border: none;
   background-color: #fff;
-  overflow: auto;
+  overflow: hidden;
+
+}
+
+.box_sec4 {
+  width: 100%;
+  height: 130vh;
+  border: none;
+  background-color: #fff;
+  overflow: hidden;
+
+}
+
+.box {
+  width: 100%;
+  height: 120vh;
+  border: none;
+  background-color: #fff;
+  overflow: hidden;
+
 }
 
 /* Card */
@@ -252,7 +272,12 @@ h6 {
 }
 
 .card-body {
-  padding: 0 20px 20px 20px;
+  padding: 0 0px 0px 0px;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  display: flex;
+  height: 732 px;
     /* display: flex;
     flex-direction: column;
     align-items: center;

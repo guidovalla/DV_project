@@ -1,3 +1,4 @@
+
 <h5 class="card-title">Age distribution of population by country</h5>
 <p, style="font-size: 16px;">
   In this barchart is possible to see the age distribution of all the people in any chosen country. By hovering on a specific bar a tooltip will appear, indicating the exact value of the column chosen. A country button is present on the bottom of the chart,by selecting a specific country its data will be shown on the chart. A modal tick for the Y axis is present on top of the chart, by selecting it it's possible to enable or disable the adapting scale for the Y-axis, if it's disabled the Y-axis scale will follow the scale of the highest population country.
@@ -32,6 +33,10 @@
       max-width: 700px; 
       margin: 0 auto; 
 }
+
+h5 {
+padding-top: 20px;
+    }
 
 text {
 font-family: lato;
@@ -86,7 +91,7 @@ const height = 350 - margin.top - margin.bottom;
     var svg = d3.select("#viz_container")
   .append("svg")
     .attr("width", "100%")
-    .attr("height", "80%")
+    .attr("height", "70%")
     .attr("viewBox", "0 0 450 350")
     .attr("preserveAspectRatio", "xMinYMin")
   .append("g")
