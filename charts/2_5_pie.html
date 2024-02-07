@@ -61,15 +61,15 @@ padding-top: 20px;
 <script>
 // set the dimensions and margins of the graph
 
-const margin5 = {top: 80, right: 80, bottom: 80, left: 80};
-      height5 = 450,
-      width5 = 450
+const margin5 = {top: 80, right: 100, bottom: 80, left: 100};
+      height5 = 400,
+      width5 = 400
 
 // append the svg object to the body of the page
 const svg = d3.select("#container_5")
   .append("svg")
     .attr("width", "100%")
-    .attr("height", "50%")
+    .attr("height", "40%")
     .attr("viewBox", "0 0 400 400")
     .attr("preserveAspectRatio", "xMinYMin")
   .append("g")
@@ -228,7 +228,7 @@ svg
   .sliderBottom()
   .min(1990)
   .max(2019)
-  .width(600)
+  .width(400)
   .step(1)
   .tickFormat(d3.format('Y'))
   .ticks(5)
@@ -247,7 +247,7 @@ svg
           const gRange= d3.
           select('#container_5')
           .append("svg")
-          .attr("width", 600 + margin5.left + margin5.right)
+          .attr("width", 400 + margin5.left + margin5.right)
           .attr("height", 50 + margin5.top + margin5.bottom)
           .append("g")
           .attr("transform","translate(" + margin5.left + "," + margin5.top + ")")
