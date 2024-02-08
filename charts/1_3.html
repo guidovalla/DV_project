@@ -1,4 +1,4 @@
-<h5 class="card-title">Total Life Expetancy at all ages by Region</h5>
+<h5 class="card-title">Total Life Expectancy at all ages by Region</h5>
 
 <p, style="font-size: 16px;">
   In this linechart is possible to see the real LE at various ages of all the continents, separated by their colour. By hovering on a specific line a tooltip will appear, indicating the region of the selected line and highlighting it
@@ -140,7 +140,7 @@ svg3
 
 // Y scale and Axis
 const yScale = d3.scaleLinear()
-.domain([0,110])
+.domain([60,110])
 .range([height3, 0]);
 svg3
 .append('g')
@@ -176,7 +176,7 @@ const lines = svg3
 return d3.line()
 .curve(d3.curveCardinal)
 .x(d => xScale(d.AgeStart))
-.y((d => yScale(d.Value) -2*(d.AgeStart)))
+.y((d => yScale(d.Value) -4*(d.AgeStart)))
 (d[1])
 
 })
