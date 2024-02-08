@@ -94,8 +94,10 @@ const svg3 = d3.select("#viz_container3")
 d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/1_3.csv").then(function(data) {
 
 //pivot the data
-const dataGrouped = d3.group(data, d => d.Location)
-console.log(dataGrouped)
+var dataGrouped = d3.group(data, d => d.Location)
+
+//remove world data
+dataGrouped.delete("World")
 // create a tooltip
 const tooltip = d3.select("#viz_container3")
 .append("div")
@@ -127,7 +129,7 @@ d3.select(this)
 .style("opacity", 1)
 };
 // list of value keys
-const typeKeys = ["World", "Africa", "Asia", "Europe", "South-America", "North-America", "Oceania"];
+const typeKeys = [ "Africa", "Asia", "Europe", "South-America", "North-America", "Oceania"];
 
 // X scale and Axis
 const xScale = d3.scaleLinear()
@@ -160,7 +162,7 @@ svg3
 
 // color palette
 const color = d3.scaleOrdinal()
-.range(["#030D2E","#EF4A60", "#18375F","#E1CC0D","#00B398","#589BE5","#8EBE0F" ])
+.range(["#EF4A60", "#18375F","#E1CC0D","#00B398","#589BE5","#8EBE0F" ])
 
 //,  ,"#E1CC0D", "#8EBE0F","#18375F"
 
@@ -176,7 +178,7 @@ const lines = svg3
 return d3.line()
 .curve(d3.curveCardinal)
 .x(d => xScale(d.AgeStart))
-.y((d => yScale(d.Value) -4*(d.AgeStart)))
+.y((d => yScale(d.Value) -4.5*(d.AgeStart)))
 (d[1])
 
 })
@@ -217,13 +219,13 @@ svg3
     var xCircle = 355
     var xLabel = 395
     var size= 20
-    var allgroups= ["World","Africa", "Asia", "Europe", "North-America", "Oceania", "South-America"]
+    var allgroups= ["Africa", "Asia", "Europe", "North-America", "Oceania", "South-America"]
     svg3.selectAll("myrect")
       .data(allgroups)
       .enter()
       .append("circle")
-        .attr("cx", 270)
-        .attr("cy", function(d,i){ return 70 + i/2*(size+5)+ (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
+        .attr("cx", 210)
+        .attr("cy", function(d,i){ return 0 + i/2*(size+5)+ (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
         .attr("r", 5)
         .style("fill", function(d){ return color(d)})
 
@@ -234,8 +236,8 @@ svg3
       .data(allgroups)
       .enter()
       .append("text")
-        .attr("x", 280 + size*.8)
-        .attr("y", function(d,i){ return 70+i/2 * (size + 5) + (size/2)}) 
+        .attr("x", 210 + size*.8)
+        .attr("y", function(d,i){ return 0+i/2 * (size + 5) + (size/2)}) 
         .style("fill", function(d){ return color(d)})
         .text(function(d){ return d})
         .attr("text-anchor", "left")
