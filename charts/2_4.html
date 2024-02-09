@@ -102,6 +102,10 @@ d3.csv("https://raw.githubusercontent.com/guidovalla/DV_project/main/data/2_2.cs
   filteredData =filteredData.filter(function (d) {
     return d.Tobacco != "";
   });
+
+  filteredData =filteredData.filter(function (d) {
+    return d.Tobacco != "0";
+  });
   
   filteredData =filteredData.filter(function (d) {
     return d.Population != "";
@@ -377,6 +381,10 @@ filteredData = data.filter(function (d) {
   });
   filteredData =filteredData.filter(function (d) {
     return d.Population != "";
+  });
+
+  filteredData =filteredData.filter(function (d) {
+    return d.Tobacco != "";
   });
   filteredData =filteredData.filter(function (d) {
     return d.Lifeexpectancy != "";
