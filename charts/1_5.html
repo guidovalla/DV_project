@@ -106,6 +106,41 @@ padding-top: 20px;
         .padding(1);
       svg5.append("g")
         .call(d3.axisLeft(y))
+
+        const tooltip = d3.select("#container_5")
+        .append("div")
+        .attr("class", "tooltip");
+
+      // tooltip events
+      const mouseover = function (d) {
+        tooltip
+          .style("opacity", 1)
+        d3.select(this)
+          .style("stroke", "#EF4A60")
+          .style("opacity", .5)
+      };
+      const mousemove1 = function (event, d) {
+        tooltip
+          .style("top", d3.pointer(event)[1] +120+ "px")
+          .style("left", d3.pointer(event)[0] +450 + "px")
+          .html("<b>Males</b> "+ "<br>" + "Age range: "+ d.Age + "<br>" + "Life expectancy: " + `${d3.format(".1f")(d.Male)}` + " years")
+          .style("position", "absolute");
+        console.log(d3.pointer(event)[0])
+      };
+      const mousemove2 = function (event, d) {
+        tooltip
+          .style("top", d3.pointer(event)[1] +120 + "px")
+          .style("left", d3.pointer(event)[0] +400 + "px")
+          .html("<b>Females</b> "+ "<br>" + "Age range: "+ d.Age + "<br>" + "Life expectancy: " + `${d3.format(".1f")(d.Female)}` + " years")
+          .style("position", "absolute");
+      };
+      const mouseleave = function (d) {
+        tooltip
+          .style("opacity", 0)
+        d3.select(this)
+          .style("stroke", "none")
+          .style("opacity", 1)
+      };
     
       // Lines
       svg5.selectAll("myline")
@@ -126,6 +161,9 @@ padding-top: 20px;
           .attr("cy", function(d) { return y(d.Age); })
           .attr("r", "6")
           .style("fill", "#69b3a2")
+          .on("mouseover", mouseover)
+        .on("mousemove", mousemove1)
+        .on("mouseleave", mouseleave)
     
       // Circles of variable 2
       svg5.selectAll("mycircle")
@@ -135,6 +173,9 @@ padding-top: 20px;
           .attr("cy", function(d) { return y(d.Age); })
           .attr("r", "6")
           .style("fill", "#C8959A")
+          .on("mouseover", mouseover)
+        .on("mousemove", mousemove2)
+        .on("mouseleave", mouseleave)
     })
 
 </script>
