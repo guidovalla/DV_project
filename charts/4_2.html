@@ -226,6 +226,8 @@ svg2
   .selectAll("text-region")
   .data(treeData.leaves())
   .join("text")
+  .call(text => text.append("tspan"))
+  .attr("class", "tree-label")
     .attr("x", d => d.x0+9)
     .attr("y", d => d.y0+33)
     .attr('opacity', d => (d.x1-d.x0)<100 ? 0:1)
@@ -238,6 +240,8 @@ svg2
   .selectAll("text-number")
   .data(treeData.leaves())
   .join("text")
+  .call(text => text.append("tspan"))
+  
     .attr("class", "tree-label")
     .attr("x", d => d.x0+9)
     .attr("y", d => d.y0+18)
@@ -323,7 +327,7 @@ const sliderRange = d3
             
                   d3.selectAll("rect").remove()
                   // d3.selectAll("tspan").remove()
-                  d3.selectAll("text").remove()
+                  d3.selectAll("text.tree-label").remove()
                   //filter the data
                   fdata  = data.filter(function (d) {
                       return d.Time == Year;
@@ -400,6 +404,8 @@ const sliderRange = d3
   .selectAll("text-region")
   .data(treeData.leaves())
   .join("text")
+  .call(text => text.append("tspan"))
+  .attr("class", "tree-label")
     .attr("x", d => d.x0+9)
     .attr("y", d => d.y0+33)
     .attr('opacity', d => (d.x1-d.x0)<100 ? 0:1)
@@ -412,6 +418,7 @@ svg2
   .selectAll("text-number")
   .data(treeData.leaves())
   .join("text")
+  .call(text => text.append("tspan"))
     .attr("class", "tree-label")
     .attr("x", d => d.x0+9)
     .attr("y", d => d.y0+18)
@@ -441,6 +448,7 @@ svg2
                     .selectAll("text-number")
                     .data(treeData.leaves())
                     .join("text")
+                    .call(text => text.append("tspan"))
                       .attr("class", "tree-label")
                       .attr("x", d => d.x0+9)
                       .attr("y", d => d.y0+18)
