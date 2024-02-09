@@ -127,7 +127,7 @@ fdata.forEach(function(d) {
   fdata.push({Location: "root", LE: "", Pop: "", parent: "",})
   //console.log("fdata", fdata)
 
-const total = d3.sum(fdata.map(function(d) {
+var total = d3.sum(fdata.map(function(d) {
   return (d.enabled) ? d.Pop : 0;  }));
 
 // reshape data
@@ -165,7 +165,7 @@ const mousemove = function(event,d) {
   .style("top", d3.pointer(event)[1]+160 + "px")
     .style("left", d3.pointer(event)[0]+160 + "px")
     //data pop round to 2 decimal 
-    .html("Population: " + `${d.data.Pop.toFixed(2)}`+ " milions" + "<br>" + "Life expectancy: " + `${d.data.LE.toFixed(2)}` + " years")
+    .html("Percentage over total world population: " + `${(1000*(d.data.Pop/total)/10).toFixed(2)}`+ "%" + "<br>"+"Population: " + `${d.data.Pop.toFixed(2)}`+ " milions" + "<br>" + "Life expectancy: " + `${d.data.LE.toFixed(2)}` + " years")
     .style("position", "absolute");
     
   
@@ -232,7 +232,7 @@ svg2
     .attr("y", d => d.y0+33)
     .attr('opacity', d => (d.x1-d.x0)<100 ? 0:1)
     .attr("font-size", "8px")
-    .attr("fill", "#cacaca")
+    .attr("fill", "#0a0a0a")
     .text(d => "Life expectancy: " + (d.data.LE/1).toFixed(0) )
 
 
@@ -343,8 +343,6 @@ const sliderRange = d3
                         fdata.push({Location: "root", LE: "", Pop: "", parent: "",})
                         //console.log("fdata", fdata)
 
-                      const total = d3.sum(fdata.map(function(d) {
-                        return (d.enabled) ? d.Pop : 0;  }));
                   // reshape fdata
                   const treeData = d3.stratify()
                     .id(d => d.Location)
@@ -361,7 +359,8 @@ const sliderRange = d3
                     .padding(2)
                     (treeData);
                     const myColors = ["#89CFF0", "#0096FF", "#005eab", "#00008B", "#060c36"];
-
+                    total = d3.sum(fdata.map(function(d) {
+  return (d.enabled) ? d.Pop : 0;  }));
                     // Create a d3.scaleSequential based on the custom colors
                     const colorScale = d3.scaleSequential()
                       .domain([60, d3.max(treeData.leaves(), d => d.data.LE)])
@@ -410,7 +409,7 @@ const sliderRange = d3
     .attr("y", d => d.y0+33)
     .attr('opacity', d => (d.x1-d.x0)<100 ? 0:1)
     .attr("font-size", "8px")
-    .attr("fill", "#cacaca")
+    .attr("fill", "#0a0a0a")
     .text(d => "Life expectancy: " + (d.data.LE/1).toFixed(0) )
 
 
@@ -455,7 +454,7 @@ svg2
                       //.text(d => Math.round(1000 * d.data.val / total) / 10 + "%")
                       .text(d => d.data.Location)
                       .attr("font-size", "5px")
-                      .attr("fill", "#ffffff")
+                      .attr("fill", "#0a0a0a")
                       .attr("font-weight", "bold");
 
                   }
