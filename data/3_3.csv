@@ -1,7 +1,4 @@
 Period,Dim3,Value
-2021,Tuberculosis,0.0
-2021,Measles,0.0
-2021,Malaria,0.7
 2021,Injuries,13017.6
 2021,Meningitis/encephalitis,17140.0
 2021,Sepsis,171991.5
@@ -12,9 +9,6 @@ Period,Dim3,Value
 2021,Tetanus,7718.6
 2021,HIV/AIDS,834.7
 2021,Prematurity,866284.3
-2020,Tuberculosis,0.0
-2020,Measles,0.0
-2020,Malaria,0.7
 2020,Injuries,13368.6
 2020,Meningitis/encephalitis,17438.9
 2020,Sepsis,175581.1
@@ -25,9 +19,6 @@ Period,Dim3,Value
 2020,Tetanus,8020.2
 2020,Prematurity,888402.8
 2020,HIV/AIDS,905.0
-2019,Tuberculosis,0.0
-2019,Measles,0.0
-2019,Malaria,0.8
 2019,Injuries,14224.2
 2019,Meningitis/encephalitis,17882.0
 2019,Sepsis,180987.2
@@ -38,9 +29,6 @@ Period,Dim3,Value
 2019,Tetanus,8205.1
 2019,Prematurity,916271.4
 2019,HIV/AIDS,939.7
-2018,Tuberculosis,0.0
-2018,Measles,0.0
-2018,Malaria,0.6
 2018,Injuries,16697.8
 2018,Meningitis/encephalitis,18371.6
 2018,Sepsis,186597.7
@@ -51,9 +39,6 @@ Period,Dim3,Value
 2018,Tetanus,8697.6
 2018,Prematurity,943107.7
 2018,HIV/AIDS,952.9
-2017,Tuberculosis,0.0
-2017,Measles,0.0
-2017,Malaria,0.7
 2017,Injuries,14156.3
 2017,Meningitis/encephalitis,18809.7
 2017,Sepsis,191220.2
@@ -64,9 +49,6 @@ Period,Dim3,Value
 2017,Tetanus,9067.4
 2017,Prematurity,968927.3
 2017,HIV/AIDS,978.8
-2016,Tuberculosis,0.0
-2016,Measles,0.0
-2016,Malaria,1.1
 2016,HIV/AIDS,1015.8
 2016,Injuries,14779.2
 2016,Meningitis/encephalitis,19520.2
@@ -77,9 +59,6 @@ Period,Dim3,Value
 2016,Birth asphyxia and birth trauma,649167.4
 2016,Tetanus,9925.3
 2016,Prematurity,992847.0
-2015,Tuberculosis,0.0
-2015,Measles,0.0
-2015,Malaria,0.0
 2015,Prematurity,1017651.8
 2015,Tetanus,10813.2
 2015,HIV/AIDS,1091.7
@@ -90,9 +69,6 @@ Period,Dim3,Value
 2015,Congenital anomalies,267258.4
 2015,Diarrhoeal diseases,39372.1
 2015,Birth asphyxia and birth trauma,664143.0
-2014,Tuberculosis,0.0
-2014,Measles,0.0
-2014,Malaria,1.1
 2014,Prematurity,1043652.1
 2014,HIV/AIDS,1175.0
 2014,Tetanus,11755.7
@@ -103,9 +79,6 @@ Period,Dim3,Value
 2014,Congenital anomalies,270667.1
 2014,Diarrhoeal diseases,41467.7
 2014,Birth asphyxia and birth trauma,684036.4
-2013,Tuberculosis,0.0
-2013,Measles,0.0
-2013,Malaria,1.2
 2013,Prematurity,1074245.1
 2013,Tetanus,12558.1
 2013,HIV/AIDS,1376.3
@@ -116,9 +89,6 @@ Period,Dim3,Value
 2013,Congenital anomalies,273597.0
 2013,Diarrhoeal diseases,43824.9
 2013,Birth asphyxia and birth trauma,705812.2
-2012,Tuberculosis,0.0
-2012,Measles,0.0
-2012,Malaria,0.0
 2012,Prematurity,1099779.6
 2012,Tetanus,13270.4
 2012,HIV/AIDS,1607.5
@@ -129,9 +99,6 @@ Period,Dim3,Value
 2012,Congenital anomalies,276346.0
 2012,Diarrhoeal diseases,46046.2
 2012,Birth asphyxia and birth trauma,728076.4
-2011,Tuberculosis,0.0
-2011,Measles,0.0
-2011,Malaria,1.2
 2011,Prematurity,1116862.6
 2011,Tetanus,14034.2
 2011,Injuries,17306.0
@@ -142,9 +109,6 @@ Period,Dim3,Value
 2011,Congenital anomalies,273688.4
 2011,Diarrhoeal diseases,48426.9
 2011,Birth asphyxia and birth trauma,747246.2
-2010,Tuberculosis,0.0
-2010,Measles,0.0
-2010,Malaria,0.0
 2010,Prematurity,1138852.9
 2010,Tetanus,15253.4
 2010,HIV/AIDS,1880.5
@@ -155,9 +119,6 @@ Period,Dim3,Value
 2010,Acute lower respiratory infections,285910.7
 2010,Diarrhoeal diseases,50846.9
 2010,Birth asphyxia and birth trauma,766630.0
-2009,Tuberculosis,0.0
-2009,Measles,0.0
-2009,Malaria,0.0
 2009,Prematurity,1161619.2
 2009,Tetanus,16811.0
 2009,Injuries,20226.5
@@ -168,9 +129,6 @@ Period,Dim3,Value
 2009,Acute lower respiratory infections,298837.2
 2009,Diarrhoeal diseases,53123.3
 2009,Birth asphyxia and birth trauma,788057.2
-2008,Tuberculosis,0.0
-2008,Measles,0.0
-2008,Malaria,1.6
 2008,Prematurity,1182134.1
 2008,Tetanus,18925.2
 2008,Injuries,21840.6
@@ -181,9 +139,6 @@ Period,Dim3,Value
 2008,Acute lower respiratory infections,311130.6
 2008,Diarrhoeal diseases,55663.8
 2008,Birth asphyxia and birth trauma,806907.4
-2007,Tuberculosis,0.0
-2007,Measles,0.0
-2007,Malaria,1.4
 2007,Prematurity,1203771.7
 2007,Tetanus,21438.7
 2007,Injuries,22205.2
@@ -194,8 +149,6 @@ Period,Dim3,Value
 2007,Acute lower respiratory infections,324676.2
 2007,Diarrhoeal diseases,57928.1
 2007,Birth asphyxia and birth trauma,822824.9
-2006,Tuberculosis,0.0
-2006,Measles,0.0
 2006,Prematurity,1221492.9
 2006,Tetanus,24019.3
 2006,Injuries,25136.9
@@ -204,12 +157,8 @@ Period,Dim3,Value
 2006,HIV/AIDS,2778.6
 2006,Meningitis/encephalitis,28633.5
 2006,Acute lower respiratory infections,337953.0
-2006,Malaria,6.9
 2006,Diarrhoeal diseases,60256.0
 2006,Birth asphyxia and birth trauma,841057.0
-2005,Tuberculosis,0.0
-2005,Measles,0.0
-2005,Malaria,1.9
 2005,Prematurity,1245896.2
 2005,Sepsis,263769.1
 2005,Injuries,26710.2
@@ -220,8 +169,6 @@ Period,Dim3,Value
 2005,Acute lower respiratory infections,353831.6
 2005,Diarrhoeal diseases,63510.0
 2005,Birth asphyxia and birth trauma,863489.6
-2004,Tuberculosis,0.0
-2004,Measles,0.0
 2004,Prematurity,1275077.1
 2004,Congenital anomalies,271629.3
 2004,Sepsis,272415.8
@@ -230,11 +177,8 @@ Period,Dim3,Value
 2004,Meningitis/encephalitis,30777.0
 2004,HIV/AIDS,3106.4
 2004,Acute lower respiratory infections,369863.7
-2004,Malaria,5.0
 2004,Diarrhoeal diseases,66405.4
 2004,Birth asphyxia and birth trauma,892433.5
-2003,Tuberculosis,0.0
-2003,Measles,0.0
 2003,Prematurity,1306607.9
 2003,Congenital anomalies,273184.7
 2003,Sepsis,279049.0
@@ -243,15 +187,11 @@ Period,Dim3,Value
 2003,HIV/AIDS,3242.7
 2003,Tetanus,34193.5
 2003,Acute lower respiratory infections,384469.3
-2003,Malaria,6.6
 2003,Diarrhoeal diseases,69099.8
 2003,Birth asphyxia and birth trauma,919004.8
-2002,Tuberculosis,0.0
-2002,Measles,0.0
 2002,Prematurity,1344318.1
 2002,Congenital anomalies,277308.9
 2002,Sepsis,285913.7
-2002,Malaria,3.6
 2002,Meningitis/encephalitis,32866.6
 2002,HIV/AIDS,3375.6
 2002,Injuries,34703.2
@@ -259,12 +199,9 @@ Period,Dim3,Value
 2002,Acute lower respiratory infections,400335.3
 2002,Diarrhoeal diseases,72190.2
 2002,Birth asphyxia and birth trauma,949184.3
-2001,Tuberculosis,0.0
-2001,Measles,0.0
 2001,Prematurity,1382798.3
 2001,Congenital anomalies,280389.6
 2001,Sepsis,293861.9
-2001,Malaria,3.1
 2001,Meningitis/encephalitis,34183.5
 2001,HIV/AIDS,3463.6
 2001,Injuries,38069.8
@@ -272,9 +209,6 @@ Period,Dim3,Value
 2001,Tetanus,42312.7
 2001,Diarrhoeal diseases,74917.1
 2001,Birth asphyxia and birth trauma,976280.8
-2000,Tuberculosis,0.0
-2000,Measles,0.0
-2000,Malaria,1.8
 2000,Birth asphyxia and birth trauma,1002297.3
 2000,Prematurity,1417411.1
 2000,Congenital anomalies,282454.4
