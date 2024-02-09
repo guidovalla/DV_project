@@ -162,7 +162,7 @@ svg2.append("g")
 .attr("class", "legendThreshold")
 .attr("transform", "translate(5,255)");
 var legend = d3.legendColor()
-.labelFormat(d3.format(".0%"))
+.labelFormat(d3.format(".1%"))
 .labels(d3.legendHelpers.thresholdLabels)
 .labelOffset(3)
 .shapePadding(0)
